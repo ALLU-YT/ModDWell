@@ -82,31 +82,34 @@ let newSlideIndex = 0;
   
     showNewSlides();
 
-
-      
-      document.addEventListener("DOMContentLoaded", function() {
-        const closeButton = document.querySelector('.x');
-        const blogDiv = document.querySelector('.blog');
-    
-        closeButton.addEventListener('click', function() {
-          blogDiv.style.display = 'none';
-        });
+    $(document).ready(function(){
+      $('#showButton').click(function(){
+        $('.show_all').toggle(); // Toggle the visibility of the container
+        $(this).hide();
       });
+    });
 
-      document.addEventListener("DOMContentLoaded", function() {
-        const paragraphs = document.querySelectorAll('.blog p');
-        let currentIndex = 0;
-    
-        function showNextParagraph() {
-          paragraphs.forEach(p => p.style.display = 'none');
-          paragraphs[currentIndex].style.display = 'block';
-          currentIndex = (currentIndex + 1) % paragraphs.length;
-        }
-    
-        setInterval(showNextParagraph, 1500);
+    document.addEventListener("DOMContentLoaded", function() {
+      const paragraphs = document.querySelectorAll('.blog p');
+      let currentIndex = 0;
+  
+      function showNextParagraph() {
+        paragraphs.forEach(p => p.style.display = 'none');
+        paragraphs[currentIndex].style.display = 'block';
+        currentIndex = (currentIndex + 1) % paragraphs.length;
+      }
+  
+      setInterval(showNextParagraph, 1500);
+    });
+  
+    document.addEventListener("DOMContentLoaded", function() {
+      const closeButton = document.querySelector('.x');
+      const blogDiv = document.querySelector('.blog');
+  
+      closeButton.addEventListener('click', function() {
+        blogDiv.style.display = 'none';
       });
-
-
+    });
       // nav 
       // $(document).ready(function(){
       //   $('.nav-link').click(function(){
@@ -213,3 +216,12 @@ function setSliderPosition() {
 
 
 
+  // Function to toggle the visibility of the list
+    function toggleList(listId) {
+      var list = document.getElementById(listId);
+      if (list.style.display === "none" || list.style.display === "") { // Check for both 'none' and '' (initial)
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
+      }
+    }

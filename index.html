@@ -8,16 +8,13 @@
     <!-- Roboto_font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Include Swiper CSS -->
-  <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
+ 
    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
   
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link
@@ -37,25 +34,7 @@
   </head>
   <body>
    
-    <style>
-      .product-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.product-image img {
-    transition: transform 0.3s ease;
-}
-
-.product-image:hover img {
-    transform: scale(1.1); /* Adjust the scale factor for desired zoom level */
-}
-
-/* Other styles for product content, discount label, etc. go here */
-
-    </style>
    
-      
       
 <div class="blog">
   <div ></div>
@@ -311,7 +290,7 @@
 
 
         <!-- category -->
-        <div class="category_head">
+        <div class="category_head" style="padding-bottom: 25px;">
           <h2>Most Popular Categories</h2>
         </div>
 
@@ -532,26 +511,9 @@
 </div>
 </div>
  
-<style>
-  .outline-button {
-        display: inline-block;
-        padding: 10px 20px;
-        border: 2px solid #425A8B; /* White border color */
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
 
-    .outline-button:hover {
-        background-color: rgba(0, 0, 0, 0);
-        color: #425A8B;
-    }
-</style>
 <div style="display: flex;justify-content: center;">
-  <button id="showButton" class="outline-button">View All</button>
+  <button id="showButton" class="outline-button">View More</button>
 
 </div>
 
@@ -646,14 +608,7 @@
 
 </div>
 </div>
-<script>
-  $(document).ready(function(){
-    $('#showButton').click(function(){
-      $('.show_all').toggle(); // Toggle the visibility of the container
-      $(this).hide();
-    });
-  });
-</script>
+
 <!-- Trending Prodcuts -->
 <div class="category_head" style="padding-bottom: 30px; margin-top: 30px;">
   <h2>Trending Products</h2>
@@ -810,24 +765,41 @@
 <!-- Subscribe -->
 <hr style="margin-top: 50px; margin-bottom: 50px;">
 
-<div class="container">
-  <div class="row">
-   
-      <img src="assets/d1.jpg" class="Subscribe_now_container">
-      <div class="Sub_now_container">
-        <h3 >Stay in touch!</h3>
-        <p>Be first to know about all new interior features!</p>
-        <div class="d-flex align-items-center">
-          <input type="text" placeholder="Enter your email..." class="timmee-input">
-  
-          <div class="Subscribe">Subscribe now</div>
-  
+<div class="system_stayintouch">
+  <div class="container">
+    <div class="row">
+     
+        <img src="assets/d1.jpg" class="Subscribe_now_container">
+        <div class="Sub_now_container">
+          <h3 >Stay in touch!</h3>
+          <p>Be first to know about all new interior features!</p>
+          <div class="d-flex align-items-center">
+            <input type="text" placeholder="Enter your email..." class="timmee-input">
+    
+            <div class="Subscribe">Subscribe now</div>
+    
+          </div>
         </div>
-      </div>
-   
+     
+    </div>
   </div>
+  
 </div>
 
+
+
+<div class="mobile_stayintouch">
+<div class="container">
+  <h3 >Stay in touch!</h3>
+  <div class="d-flex align-items-center">
+    <input type="text" placeholder="Enter your email..." class="timmee-input">
+
+  
+
+  </div>
+  <div class="Subscribe">Subscribe now</div>
+</div>
+</div>
 
 
 
@@ -944,91 +916,14 @@
   <p style="font-size: 14px; color: #ffffff8c;">Address</p>
   <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
 
-<style>
-  /* Style for the button */
-  .buttons {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the list */
-  .list {
-    display: none; /* Initially hide the list */
-    list-style-type: none;
-    padding: 0;
-    animation: fadeIn 0.9s ease; /* Add animation */
-  }
-
-  /* Style for list items */
-  .list-item {
-    margin-bottom: 5px;
-  }
-
-  /* Animation keyframes */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-</style>
 <div class="container"><div class="row">
-  <style>
-    /* Style for the button */
-    .buttons {
-      background-color: black;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-   
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    
-    /* Style for the list */
-    .list {
-      display: none; /* Initially hide the list */
-      list-style-type: none;
-      padding: 0;
-      animation: fadeIn 0.5s ease; /* Add animation */
-      border-radius: 5px;
+  
  
-    }
-  
-    /* Style for list items */
-    .list-item {
-      margin: 0px;
-      text-align: start;
-      padding-left: 20px;
-    }
-  
-    /* Animation keyframes */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-  </head>
-  <body>
   <div style="display: flex;flex-direction: column;">
   
   <!-- Button 1 to toggle the first list -->
-  <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Menu<span class="arrow-down">&#9660;</span> <!-- Down arrow icon --></button>
-  
+  <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Menu<span class="fas fa-plus"></span> <!-- Down arrow icon --></button>
+  <hr>
   <!-- List 1 to be displayed -->
   <ul class="list" id="myList1">
     <li class="list-item">Home</li>
@@ -1040,8 +935,8 @@
   </ul>
   
   <!-- Button 2 to toggle the second list -->
-  <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Show List 2 <span class="arrow-down">&#9660;</span></button>
-  
+  <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Show List 2 <span class="fas fa-plus"></span></button>
+  <hr>
   <!-- List 2 to be displayed -->
   <ul class="list" id="myList2">
     <li class="list-item">Item A</li>
@@ -1050,8 +945,8 @@
   </ul>
   
   <!-- Button 3 to toggle the third list -->
-  <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">My Account<span class="arrow-down">&#9660;</span></button>
-  
+  <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">My Account<span class="fas fa-plus"></span></button>
+  <hr>
   <!-- List 3 to be displayed -->
   <ul class="list" id="myList3">
     <li class="list-item">Login</li>
@@ -1062,35 +957,14 @@
   </ul></div>
   <button> <i class="fas fa-envelope fa-1x text-primary" style="width: 30px;"></i>moddwell@tprsenterprises.in</button>
   <button> <i class="fas fa-phone fa-1x text-success" style="width: 30px;"></i></i>+91 72003 92758</button>
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.116); color: rgba(255, 255, 255, 0.267); font-size: 14px;">
     Copyright@ 2022 Moddwell. All Rights Reserved Powered by
-    <a  style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+    <a  style="color: rgba(255, 255, 255, 0.301); font-size: 14px;" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
   </div>
-  <script>
-    // Function to toggle the visibility of the list
-    function toggleList(listId) {
-      var list = document.getElementById(listId);
-      if (list.style.display === "none" || list.style.display === "") { // Check for both 'none' and '' (initial)
-        list.style.display = "block";
-      } else {
-        list.style.display = "none";
-      }
-    }
-  </script>
-  
+ 
 </div></div>
 </div>
-<script>
-  // Function to toggle the visibility of the list
-  function toggleList(listId) {
-    var list = document.getElementById(listId);
-    if (list.style.display === "none" || list.style.display === "") { // Check for both 'none' and '' (initial)
-      list.style.display = "block";
-    } else {
-      list.style.display = "none";
-    }
-  }
-</script>
+
 
 
 
@@ -1116,8 +990,7 @@
         </ion-icon>
       </div>
     </div>
-  </body>
-</html>
+ 
 <script>
   function change(item) {
     const buttons = document.querySelectorAll("ion-icon");
@@ -1134,7 +1007,10 @@
 
 
 
-
+<script
+type="module"
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
   
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
