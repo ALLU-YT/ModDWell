@@ -1119,6 +1119,7 @@ body.dark .search-field i{
 }
 .mobilehead{
   display: none;
+  width: 100%;height: 100px; justify-content: space-between; align-items: center;
 
 }
 
@@ -1127,6 +1128,7 @@ body.dark .search-field i{
 @media only screen and (max-width: 600px) {
   .mobilehead{
     display: flex;
+    width: 100%;height: 100px; justify-content: space-between; align-items: center;
   
   }
   .mobile_footer{
