@@ -1171,7 +1171,7 @@ body.dark .search-field i{
         padding: 0.5em;
         margin: 0.5em;
         margin-top: 0;
-        transition: 0.5s ease-in-out;
+        transition: 0.3s ease-in-out;
         border-radius: 100%;
         border: 3px solid#1D1D1D;
       }
@@ -1428,7 +1428,7 @@ text-align: center;
 }
 
 .timmee-input {
-  width: 150px;
+  width: 300px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
   border: none;
