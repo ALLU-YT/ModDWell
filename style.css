@@ -9,7 +9,7 @@ body{
    
 }
 .container{
-    display: flex;
+   
     justify-content: center;
 }
 
@@ -888,47 +888,6 @@ nav{
 
 } */
 
-nav .nav-bar{
-    position: relative;
-    height: 100%;
-    max-width: 1000px;
-    width: 100%;
-    background-color: black;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav .nav-bar .sidebarOpen{
-    color: var(--text-color);
-    font-size: 25px;
-    padding: 5px;
-    cursor: pointer;
-    display: none;
-}
-
-nav .nav-bar .logo a{
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.menu .logo-toggle{
-    display: none;
-}
-
-.nav-bar .nav-links{
-    display: flex;
-    align-items: start;
-}
-
-.nav-bar .nav-links li{
-    margin: 0 5px;
-    list-style: none;
-}
 
 .nav-links li a{
     position: relative;
@@ -957,10 +916,6 @@ nav .nav-bar .logo a{
     opacity: 1;
 }
 
-.nav-bar .darkLight-searchBox{
-    display: flex;
-    align-items: center;
-}
 
 .darkLight-searchBox .dark-light,
 .darkLight-searchBox .searchToggle{
@@ -1080,10 +1035,7 @@ body.dark .search-field i{
 }
 
 @media (max-width: 790px) {
-    nav .nav-bar .sidebarOpen{
-        display: block;
-    }
-
+  
     .menu{
         position: fixed;
         height: 100%;
@@ -1100,10 +1052,6 @@ body.dark .search-field i{
         left: -0%;
     }
 
-    nav.active .nav-bar .navLogo a{
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
 
     .menu .logo-toggle{
         display: block;
@@ -1119,15 +1067,7 @@ body.dark .search-field i{
         cursor: pointer;
     }
 
-    .nav-bar .nav-links{
- flex-direction: column;
-     
-        padding: 0px;
-        padding-left: 23px;
-        padding-top: 15px;
-    }
-
-
+   
 }
 
 /* mobilenav */
@@ -1167,11 +1107,28 @@ body.dark .search-field i{
       #showButton{
         display: none;
       }
+
+      /* mobile_Footer */
     
+.mobile_footer{
+  text-align: center;
+  display: none;
+}
+.footer_h_mobile img{
+  width: 200px;
+}
+
 
 /* MediaQuery............................................ */
 @media only screen and (max-width: 600px) {
+  .mobile_footer{
+    text-align: center;
+    display: block;
+  }
   /* viewallcss */
+  .system_footer{
+    display: none;
+  }
   #showButton{
     display: block;
   }
@@ -1442,6 +1399,7 @@ text-align: center;
   position: relative;
    height:100%;
     width:100%;
+  
 }
 .Sub_now_container{
   position: absolute;
@@ -1452,6 +1410,7 @@ text-align: center;
 }
 .Sub_now_container h3{
   font-size: 18px;
+  padding-left: 10px;
 }
 .Sub_now_container p{
   font-size: 13px;
@@ -1465,6 +1424,7 @@ text-align: center;
   border: none;
   color: white;
   padding: 3px;
+  margin-left: 10px;
   backdrop-filter: blur(5px); /* Blur effect */
 }
 
@@ -1492,13 +1452,4 @@ text-align: center;
 
 
 
-@media (max-width: 599px) {
-  .links-container .list-unstyled {
-    display: none; /* Hide the list by default */
-  }
-  
-  .links-container.active .list-unstyled {
-    display: block; /* Show the list when the parent container has the "active" class */
-  }
-  
-}
+
