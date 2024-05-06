@@ -36,7 +36,23 @@
   </head>
   <body>
    
+    <style>
+      .product-image {
+    position: relative;
+    overflow: hidden;
+}
 
+.product-image img {
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.1); /* Adjust the scale factor for desired zoom level */
+}
+
+/* Other styles for product content, discount label, etc. go here */
+
+    </style>
    
       
       
@@ -498,23 +514,7 @@
             <div class="add-to-cart" href="#">add to cart</div>
         </div>
     </div>
-    <style>
-      .product-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.product-image img {
-    transition: transform 0.3s ease;
-}
-
-.product-image:hover img {
-    transform: scale(1.1); /* Adjust the scale factor for desired zoom level */
-}
-
-/* Other styles for product content, discount label, etc. go here */
-
-    </style>
+   
     
 </div>
 <div class="col-md-3 col-sm-6">
@@ -582,7 +582,33 @@
 </div>
 </div>
  
-<div class="container" style="margin-top: 30px;">
+<style>
+  .outline-button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #425A8B; /* White border color */
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .outline-button:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #425A8B;
+    }
+</style>
+<div style="display: flex;justify-content: center;">
+  <button id="showButton" class="outline-button">View All</button>
+
+</div>
+
+
+
+<div class="show_all">
+  <div class="container" style="margin-top: 30px;">
   <div class="row">
     <div class="col-md-3 col-sm-6">
       <div class="product-grid">
@@ -669,7 +695,15 @@
 </div>
 
 </div>
-
+</div>
+<script>
+  $(document).ready(function(){
+    $('#showButton').click(function(){
+      $('.show_all').toggle(); // Toggle the visibility of the container
+      $(this).hide();
+    });
+  });
+</script>
 <!-- Trending Prodcuts -->
 <div class="category_head" style="padding-bottom: 30px; margin-top: 30px;">
   <h2>Trending Products</h2>
@@ -866,7 +900,7 @@
         <!-- Linkedin -->
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
         <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+  
       </section>
       <!-- Section: Social media -->
 
@@ -897,15 +931,17 @@
             </div>
           </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-           <div class="footer_h">
-            <h5 class="text-uppercase">Links</h5>
-            <ul class="list-unstyled mb-0">
-              <p class="tooter_p">Terms $ Conditions</p>
-              <p class="tooter_p">Return Policy</p>
-              <p class="tooter_p">About</p>
-              <p class="tooter_p">Privacy Policy</li>
-            </ul>
-           </div>
+              <div class="links-container">
+                <h5 class="text-uppercase">Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li class="tooter_p">Terms & Conditions</li>
+                  <li class="tooter_p">Return Policy</li>
+                  <li class="tooter_p">About</li>
+                  <li class="tooter_p">Privacy Policy</li>
+                </ul>
+              </div>
+              
+              
           </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
            <div class="footer_h">
@@ -947,7 +983,19 @@
     </div>
     <!-- Copyright -->
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var linksLabel = document.querySelector(".text-uppercase");
+  var linksContainer = document.querySelector(".links-container");
 
+  linksLabel.addEventListener("click", function() {
+    linksContainer.classList.toggle("active");
+  });
+});
+
+
+
+</script>
   
     <div class="custom_btn_phone">
       <div class="bottom-bar">

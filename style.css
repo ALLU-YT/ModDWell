@@ -1164,11 +1164,23 @@ body.dark .search-field i{
         color: white;
       }
 
-
+      #showButton{
+        display: none;
+      }
+    
 
 /* MediaQuery............................................ */
 @media only screen and (max-width: 600px) {
-  
+  /* viewallcss */
+  #showButton{
+    display: block;
+  }
+
+  .show_all{
+    
+    display: none; /* Initially hide the container */
+  }
+
 
 /* mobilenav */
  .custom_btn_phone {
@@ -1480,3 +1492,13 @@ text-align: center;
 
 
 
+@media (max-width: 599px) {
+  .links-container .list-unstyled {
+    display: none; /* Hide the list by default */
+  }
+  
+  .links-container.active .list-unstyled {
+    display: block; /* Show the list when the parent container has the "active" class */
+  }
+  
+}
