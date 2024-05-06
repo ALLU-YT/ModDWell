@@ -314,7 +314,9 @@ padding-top: 10px;
   object-fit: cover;
   transition: transform 0.3s ease; /* Apply smooth transition effect */
 }
-
+#collapsibleNavbar{
+  font-family: "Montserrat", sans-serif;
+}
 
 .image-container:hover .image {
   transform: scale(1.1); /* Scale the image up by 10% on hover */
@@ -739,10 +741,14 @@ display: none;
 }
 
 /* nav */
+.nav-links{
+  font-family: "Montserrat", sans-serif;
+}
 
 .navbar-dark .navbar-nav .nav-link {
   color: white;
   font-size: 14px;
+
 }
 @keyframes pulse {
   0% {
@@ -1143,7 +1149,7 @@ body.dark .search-field i{
         border-radius: 20px 20px 0 0;
       }
       .icon_new {
-        font-size: 1.5em;
+        font-size: 19px;
         padding: 0.5em;
         margin: 0.5em;
         margin-top: 0;
@@ -1183,7 +1189,7 @@ body.dark .search-field i{
         border-radius: 20px 20px 0 0;
       }
       .icon_new {
-        font-size: 1.5em;
+        font-size: 19px;
         padding: 0.5em;
         margin: 0.5em;
         margin-top: 0;
