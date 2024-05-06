@@ -1197,7 +1197,7 @@ body.dark .search-field i{
         border: 3px solid#1D1D1D;
       }
       .active {
-        transform: scale(1) translateY(-.6em);
+        /* transform: scale(1) translateY(-.6em); */
         background: linear-gradient(135deg, #23f, #6589ff);
         border: 3px solid #bcbbbb;
         color: white;
