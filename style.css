@@ -1117,10 +1117,18 @@ body.dark .search-field i{
 .footer_h_mobile img{
   width: 200px;
 }
+.mobilehead{
+  display: none;
+
+}
 
 
 /* MediaQuery............................................ */
 @media only screen and (max-width: 600px) {
+  .mobilehead{
+    display: flex;
+  
+  }
   .mobile_footer{
     text-align: center;
     display: block;
