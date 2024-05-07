@@ -1,107 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dropdown Menu</title>
-<style>
-  /* Style for the button */
-  .buttons {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the list */
-  .list {
-    display: none; /* Initially hide the list */
-    list-style-type: none;
-    padding: 0;
-    animation: fadeIn 0.5s ease; /* Add animation */
-  }
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
 
-  /* Style for list items */
-  .list-item {
-    margin-bottom: 5px;
-  }
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
 
-  /* Animation keyframes */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
 
-  /* Style for dropdown arrow icon */
-  .arrow-down {
-    margin-left: 5px;
-    transition: transform 0.3s ease; /* Add transition effect */
-  }
-</style>
-</head>
-<body>
-<div style="display: flex;flex-direction: column;">
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
 
-<!-- Button 1 to toggle the first list -->
-<button class="buttons" onclick="toggleList('myList1')">
-  Show List 1
-  <span class="arrow-down">&#9660;</span> <!-- Down arrow icon -->
-</button>
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
 
-<!-- List 1 to be displayed -->
-<ul class="list" id="myList1">
-  <li class="list-item">Item 1</li>
-  <li class="list-item">Item 2</li>
-  <li class="list-item">Item 3</li>
-</ul>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <input type="text" name="" id="" />
+    </div>
 
-<!-- Button 2 to toggle the second list -->
-<button class="buttons" onclick="toggleList('myList2')">
-  Show List 2
-  <span class="arrow-down">&#9660;</span> <!-- Down arrow icon -->
-</button>
+    <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+      ><i class="bi bi-search">s</i></span
+    >
 
-<!-- List 2 to be displayed -->
-<ul class="list" id="myList2">
-  <li class="list-item">Item A</li>
-  <li class="list-item">Item B</li>
-  <li class="list-item">Item C</li>
-</ul>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+      }
 
-<!-- Button 3 to toggle the third list -->
-<button class="buttons" onclick="toggleList('myList3')">
-  Show List 3
-  <span class="arrow-down">&#9660;</span> <!-- Down arrow icon -->
-</button>
-
-<!-- List 3 to be displayed -->
-<ul class="list" id="myList3">
-  <li class="list-item">Item X</li>
-  <li class="list-item">Item Y</li>
-  <li class="list-item">Item Z</li>
-</ul></div>
-
-<script>
-  // Function to toggle the visibility of the list and change arrow direction
-  function toggleList(listId) {
-    var list = document.getElementById(listId);
-    var arrow = document.querySelector('[data-target="' + listId + '"] .arrow-down');
-    if (list.style.display === "none" || list.style.display === "") { // Check for both 'none' and '' (initial)
-      list.style.display = "block";
-      arrow.style.transform = "rotate(180deg)"; // Rotate arrow for down direction
-    } else {
-      list.style.display = "none";
-      arrow.style.transform = "rotate(0deg)"; // Rotate arrow for up direction
-    }
-  }
-</script>
-
-</body>
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
 </html>
