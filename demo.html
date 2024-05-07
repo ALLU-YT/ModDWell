@@ -4,101 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
+  <style>
+    .carousel {
+      background-color: rgb(81, 255, 0);
+    }
+
+    .carousel-cell {
+      margin-left: 150px;
+      width: 80%;
+      background: rgb(69, 4, 247);
+      border-radius: 5px;
+    }
+    /* cell number */
+
+    .carousel-cell p {
+      text-align: center;
+      font-size: 18px;
+      padding-top: 8px;
+      color: rgb(255, 255, 255);
+    }
+  </style>
 
   <body>
-    <p class="item-1">
-      This is your last chance. After this, there is no turning back.
-    </p>
-
-    <p class="item-2">
-      You take the blue pill - the story ends, you wake up in your bed and
-      believe whatever you want to believe.
-    </p>
-
-    <p class="item-3">
-      You take the red pill - you stay in Wonderland and I show you how deep the
-      rabbit-hole goes.
-    </p>
-
-    <style>
-      .item-1,
-      .item-2,
-      .item-3 {
-        position: absolute;
-        display: block;
-        top: 2em;
-        width: 60%;
-        font-size: 2em;
-        animation-duration: 20s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-      }
-
-      .item-1 {
-        animation-name: anim-1;
-      }
-
-      .item-2 {
-        animation-name: anim-2;
-      }
-
-      .item-3 {
-        animation-name: anim-3;
-      }
-
-      @keyframes anim-1 {
-        0%,
-        8.3% {
-          left: -100%;
-          opacity: 0;
-        }
-        8.3%,
-        25% {
-          left: 25%;
-          opacity: 1;
-        }
-        33.33%,
-        100% {
-          left: 110%;
-          opacity: 0;
-        }
-      }
-
-      @keyframes anim-2 {
-        0%,
-        33.33% {
-          left: -100%;
-          opacity: 0;
-        }
-        41.63%,
-        58.29% {
-          left: 25%;
-          opacity: 1;
-        }
-        66.66%,
-        100% {
-          left: 110%;
-          opacity: 0;
-        }
-      }
-
-      @keyframes anim-3 {
-        0%,
-        66.66% {
-          left: -100%;
-          opacity: 0;
-        }
-        74.96%,
-        91.62% {
-          left: 25%;
-          opacity: 1;
-        }
-        100% {
-          left: 110%;
-          opacity: 0;
-        }
-      }
-    </style>
+    <div style="width: 100%; background-color: rgb(0, 255, 64)">
+      <div
+        class="carousel"
+        data-flickity='{ "autoPlay": true, "prevNextButtons": false, "pageDots": false }'
+      >
+        <div class="carousel-cell">
+          <p>Text 1</p>
+        </div>
+        <div class="carousel-cell">
+          <p>Text 2</p>
+        </div>
+        <div class="carousel-cell">
+          <p>Text 3</p>
+        </div>
+      </div>
+    </div>
+    <i class="bi bi-x"></i>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

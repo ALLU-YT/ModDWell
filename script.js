@@ -1,4 +1,6 @@
 let slideIndex = 0;
+let slideInterval;
+
 showSlides();
 
 function showSlides() {
@@ -12,17 +14,18 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 3000); // Change image every 3 seconds
+  slideInterval = setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
 function nextSlide() {
-  clearTimeout(showSlides); // Stop the automatic slideshow
+  clearTimeout(slideInterval); // Stop the automatic slideshow
   showSlides();
 }
 
 function prevSlide() {
-  clearTimeout(showSlides); // Stop the automatic slideshow
+  clearTimeout(slideInterval); // Stop the automatic slideshow
   slideIndex -= 2;
+  let slides = document.getElementsByClassName("mySlides");
   if (slideIndex < 0) {
     slideIndex = slides.length - 1;
   } // Loop back to last slide if needed
@@ -92,18 +95,18 @@ $(document).ready(function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const paragraphs = document.querySelectorAll(".blog p");
-  let currentIndex = 0;
+// document.addEventListener("DOMContentLoaded", function () {
+//   const paragraphs = document.querySelectorAll(".blog p");
+//   let currentIndex = 0;
 
-  function showNextParagraph() {
-    paragraphs.forEach((p) => (p.style.display = "none"));
-    paragraphs[currentIndex].style.display = "block";
-    currentIndex = (currentIndex + 1) % paragraphs.length;
-  }
+//   function showNextParagraph() {
+//     paragraphs.forEach((p) => (p.style.display = "none"));
+//     paragraphs[currentIndex].style.display = "block";
+//     currentIndex = (currentIndex + 1) % paragraphs.length;
+//   }
 
-  setInterval(showNextParagraph, 1500);
-});
+//   setInterval(showNextParagraph, 1500);
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".x");

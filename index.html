@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Include Swiper CSS -->
 
-
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
@@ -32,41 +32,65 @@
 </head>
 
 <body>
+    <style>
+        .carousel {
+            background-color: #425A8B;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        .carousel-cell {
+            margin-left: 150px;
+            width: 80%;
+            background: #425A8B;
+            height: 35px;
+        }
+        /* cell number */
+        
+        .carousel-cell p {
+            text-align: center;
+            align-items: center;
+            padding-top: 8px;
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+
+    <body>
+        <div style="width: 100%; background-color:#425A8B;align-items: center;text-align: center;">
+            <div class="carousel" data-flickity='{ "autoPlay": true, "prevNextButtons": false, "pageDots": false }'>
+                <div class="carousel-cell" style="height: 10px;">
+                    <p>Text 1</p>
+                </div>
+                <div class="carousel-cell">
+                    <p>Text 2</p>
+                </div>
+                <div class="carousel-cell">
+                    <p>Text 3</p>
+                </div>
+            </div>
+
+        </div>
 
 
 
-    <div class="blog">
-        <div></div>
-        <p>Use Seasonality Whenever Possible. ...</p>
-        <p>Incorporate Flash Deals. ...</p>
-        <p>Use Pop-Ups For Your Limited Time Offers. ...</p>
 
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x x" viewBox="0 0 16 16" style="margin-right: 10px;">
-      <path d="M3.354 3.354a.5.5 0 0 1 .708 0L8 7.293l4.948-4.949a.5.5 0 0 1 .708.708L8.707 8l4.95 4.948a.5.5 0 0 1-.708.708L8 8.707l-4.948 4.95a.5.5 0 1 1-.708-.708L7.293 8 2.345 3.052a.5.5 0 0 1 0-.708z"/>
-    </svg>
-
-
-    </div>
-
-    <!-- mobilehead -->
-    <div class="mobilehead">
-        <div></div>
-        <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="padding-left: 20px;
+        <!-- mobilehead -->
+        <div class="mobilehead">
+            <div></div>
+            <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="padding-left: 20px;
   width: 200px;" alt="Logo">
 
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
   >
   <input type="text" name="" placeholder="search..." id="" style="background: transparent;border-color: #f3f3f35c;padding-left: 5px; position: relative;margin-top: 40px;margin-left: 6%;width: 90%;/* left: 0px; *//* right: 0px; */">
 </div>
 
 <span style="font-size: 30px; cursor: pointer;padding-right: 20px;" onclick="openNav()"
-  ><i class="bi bi-search search-icon fs-3"></i></span
+  ><i class="bi bi-search search-iconn fs-3"></i></span
 >
     </div>
-
-
 
 
     <header class="header_conatiner">
@@ -76,9 +100,12 @@
 
         <!-- Centered search input and icon -->
         <div class="d-flex align-items-center">
-            <input type="text" placeholder="I am shopping for..." class="timme-input">
+            <div class="search-container">
+                <input type="text" class="timme-input" placeholder="I am shopping for...">
+                <i class="fas fa-search search-icon fa-.5x"></i>
+            </div>
 
-            <i class="bi bi-search timme-search-icon"></i>
+       
 
         </div>
 
@@ -115,30 +142,30 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Trending</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Led Mirror</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Mirror cabinet</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Corner SHelf</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Magnetic board</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Glass frames</a>
-            </li>
-            </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Led Mirror</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mirror cabinet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Corner SHelf</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Magnetic board</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Glass frames</a>
+                </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    </nav>
-    </div>
+        </nav>
+        </div>
 
 
 
@@ -146,41 +173,42 @@
 
 
 
-    <div class="slideshow-containers" style="position: relative; z-index: 0">
-        <!-- Full-width images with number and caption text -->
-        <div class="new-slide" style="position: relative">
-            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2.png" style="width: 100%;" height="500px" alt="Banner 1" />
-            <div class="banner_text">Big & Fresh Offers</div>
-            <div class="banner_text_2">DECORA & CRAFTS</div>
-            <div class="banner_text_3">Sale On This Weekend</div>
-            <div style="position: absolute; bottom: 10px; left: 50px; z-index: 2;">
-                <button class="custom_arrow_button" onclick="prevNewSlide()"><i class="bi bi-arrow-left"></i></button>
-                <button class="custom_arrow_button" onclick="nextNewSlide()"><i class="bi bi-arrow-right"></i></button>
+        <div class="slideshow-containers" style="position: relative; z-index: 0">
+            <!-- Full-width images with number and caption text -->
+            <div class="new-slide" style="position: relative">
+                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2.png" style="width: 100%;" height="500px" alt="Banner 1" />
+                <div class="banner_text">Big & Fresh Offers</div>
+                <div class="banner_text_2">DECORA & CRAFTS</div>
+                <div class="banner_text_3">Sale On This Weekend</div>
+                <div style="position: absolute; bottom: 10px; left: 50px; z-index: 2;">
+                    <button class="custom_arrow_button" onclick="prevNewSlide()"><i class="bi bi-arrow-left"></i></button>
+                    <button class="custom_arrow_button" onclick="nextNewSlide()"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="new-slide" style="position: relative">
+                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2-2.png" style="width: 100%" height="500px" alt="Banner 2" />
+                <div class="banner_text">Big & Fresh Offers</div>
+                <div class="banner_text_2">DECORA</div>
+                <div class="banner_text_3">Sale On This Weekend</div>
+                <div style="position: absolute; bottom: 10px; left: 50px; z-index: 2; color: #425A8B;">
+                    <button class="custom_arrow_button" onclick="prevNewSlide()"><i class="bi bi-arrow-left"></i></button>
+                    <button class="custom_arrow_button" onclick="nextNewSlide()"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="new-slide" style="position: relative">
+                <img src="https://cdn.shopify.com/s/files/1/0685/2034/5908/files/final-homepage.001.webp?v=1674885602" style="width: 100%" height="500px" alt="Banner 3" />
+                <div class="banner_text">Big & Fresh Offers</div>
+                <div class="banner_text_2">DECORA & CRAFTS</div>
+                <div class="banner_text_3">Sale On This Weekend</div>
+                <div style="position: absolute; bottom: 10px; left: 50px; z-index: 2; color: #425A8B;">
+                    <button class="custom_arrow_button" onclick="prevNewSlide()"><i class="bi bi-arrow-left"></i></button>
+                    <button class="custom_arrow_button" onclick="nextNewSlide()"><i class="bi bi-arrow-right"></i></button>
+                </div>
             </div>
         </div>
 
-        <div class="new-slide" style="position: relative">
-            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2-2.png" style="width: 100%" height="500px" alt="Banner 2" />
-            <div class="banner_text">Big & Fresh Offers</div>
-            <div class="banner_text_2">DECORA</div>
-            <div class="banner_text_3">Sale On This Weekend</div>
-            <div style="position: absolute; bottom: 10px; left: 50px; z-index: 2; color: #425A8B;">
-                <button class="custom_arrow_button" onclick="prevNewSlide()"><i class="bi bi-arrow-left"></i></button>
-                <button class="custom_arrow_button" onclick="nextNewSlide()"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </div>
-
-        <div class="new-slide" style="position: relative">
-            <img src="https://cdn.shopify.com/s/files/1/0685/2034/5908/files/final-homepage.001.webp?v=1674885602" style="width: 100%" height="500px" alt="Banner 3" />
-            <div class="banner_text">Big & Fresh Offers</div>
-            <div class="banner_text_2">DECORA & CRAFTS</div>
-            <div class="banner_text_3">Sale On This Weekend</div>
-            <div style="position: absolute; bottom: 10px; left: 50px; z-index: 2; color: #425A8B;">
-                <button class="custom_arrow_button" onclick="prevNewSlide()"><i class="bi bi-arrow-left"></i></button>
-                <button class="custom_arrow_button" onclick="nextNewSlide()"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -188,187 +216,186 @@
 
 
 
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-4 col-md-3">
+                    <!-- Adjusted width for smaller screens -->
+                    <div style="width: 100%" class="banner_images">
+                        <div style="width: 100%; position: relative;">
+                            <div class="image-container" style="position: relative; height: 500px; background: rgb(219, 216, 216);">
+                                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner1.png" style="height: 100%; width: 100%; object-fit: cover;" class="image" alt="First slide" />
+                                <div class="text-container_1" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">
+                                    <a href="#" class="btn-flip" data-back="Shop Now!" data-front="Office Collection"></a>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-4 col-md-3">
-                <!-- Adjusted width for smaller screens -->
-                <div style="width: 100%" class="banner_images">
-                    <div style="width: 100%; position: relative;">
-                        <div class="image-container" style="position: relative; height: 500px; background: rgb(219, 216, 216);">
-                            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner1.png" style="height: 100%; width: 100%; object-fit: cover;" class="image" alt="First slide" />
-                            <div class="text-container_1" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">
-                                <a href="#" class="btn-flip" data-back="Shop Now!" data-front="Office Collection"></a>
+
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-6">
+                    <!-- Adjusted width for smaller screens -->
+                    <div class="slideshow-container" style="position: relative; z-index: 0">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade" style="position: relative">
+                            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2.png" style="width: 100%;" height="500px" alt="Banner 1" />
+                            <div class="banner_text">Big & Fresh Offers</div>
+                            <div class="banner_text_2">DECORA & CRAFTS</div>
+                            <div class="banner_text_3">Sale On This Weekend</div>
+                            <div style="  position: absolute;
+              bottom: 10px;
+              left: 50px;
+              z-index: 2;
+              ">
+                                <button class="custom_arrow_button" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+                                <button class="custom_arrow_button" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="mySlides fade" style="position: relative">
+                            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2-2.png" style="width: 100%" height="500px" alt="Banner 2" />
+                            <div class="banner_text">Big & Fresh Offers</div>
+                            <div class="banner_text_2">DECORA</div>
+                            <div class="banner_text_3">Sale On This Weekend</div>
+                            <div style="  position: absolute;
+              bottom: 10px;
+              left: 50px;
+              z-index: 2;
+              color: #425A8B;">
+                                <button class="custom_arrow_button" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+                                <button class="custom_arrow_button" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="mySlides fade" style="position: relative">
+                            <img src="https://cdn.shopify.com/s/files/1/0685/2034/5908/files/final-homepage.001.webp?v=1674885602" style="width: 100%" height="500px" alt="Banner 3" />
+                            <div class="banner_text">Big & Fresh Offers</div>
+                            <div class="banner_text_2">DECORA & CRAFTS</div>
+                            <div class="banner_text_3">Sale On This Weekend</div>
+
+                            <div style="  position: absolute;
+              bottom: 10px;
+              left: 50px;
+              z-index: 2;
+              color: #425A8B;">
+                                <button class="custom_arrow_button" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+                                <button class="custom_arrow_button" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
 
 
+                    <br />
 
+                    <!-- The buttons -->
+
+
+                    <br />
+
+                    <!-- The dots/circles -->
+                    <div style="text-align: center; display: none">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-6">
-                <!-- Adjusted width for smaller screens -->
-                <div class="slideshow-container" style="position: relative; z-index: 0">
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade" style="position: relative">
-                        <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2.png" style="width: 100%;" height="500px" alt="Banner 1" />
-                        <div class="banner_text">Big & Fresh Offers</div>
-                        <div class="banner_text_2">DECORA & CRAFTS</div>
-                        <div class="banner_text_3">Sale On This Weekend</div>
-                        <div style="  position: absolute;
-              bottom: 10px;
-              left: 50px;
-              z-index: 2;
-              ">
-                            <button class="custom_arrow_button" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
-                            <button class="custom_arrow_button" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
+                <div class="col-12 col-sm-4 col-md-3">
+                    <!-- Adjusted width for smaller screens -->
+                    <div style="width: 100%; position: relative;" class="banner_images">
+                        <div class="image-container" style="position: relative; height: 500px; background: rgb(219, 216, 216);">
+                            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner1.png" style="height: 100%; width: 100%; object-fit: cover;" class="image" alt="First slide" />
+                            <div class="text-container_1" style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);">
+                                <a href="#" class="btn-flip" data-back="Shop Now!" data-front="Office Collection"></a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="mySlides fade" style="position: relative">
-                        <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner2-2.png" style="width: 100%" height="500px" alt="Banner 2" />
-                        <div class="banner_text">Big & Fresh Offers</div>
-                        <div class="banner_text_2">DECORA</div>
-                        <div class="banner_text_3">Sale On This Weekend</div>
-                        <div style="  position: absolute;
-              bottom: 10px;
-              left: 50px;
-              z-index: 2;
-              color: #425A8B;">
-                            <button class="custom_arrow_button" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
-                            <button class="custom_arrow_button" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="mySlides fade" style="position: relative">
-                        <img src="https://cdn.shopify.com/s/files/1/0685/2034/5908/files/final-homepage.001.webp?v=1674885602" style="width: 100%" height="500px" alt="Banner 3" />
-                        <div class="banner_text">Big & Fresh Offers</div>
-                        <div class="banner_text_2">DECORA & CRAFTS</div>
-                        <div class="banner_text_3">Sale On This Weekend</div>
-
-                        <div style="  position: absolute;
-              bottom: 10px;
-              left: 50px;
-              z-index: 2;
-              color: #425A8B;">
-                            <button class="custom_arrow_button" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
-                            <button class="custom_arrow_button" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
                 </div>
 
 
-                <br />
-
-                <!-- The buttons -->
 
 
-                <br />
 
-                <!-- The dots/circles -->
-                <div style="text-align: center; display: none">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-3">
-                <!-- Adjusted width for smaller screens -->
-                <div style="width: 100%; position: relative;" class="banner_images">
-                    <div class="image-container" style="position: relative; height: 500px; background: rgb(219, 216, 216);">
-                        <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/banner1.png" style="height: 100%; width: 100%; object-fit: cover;" class="image" alt="First slide" />
-                        <div class="text-container_1" style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);">
-                            <a href="#" class="btn-flip" data-back="Shop Now!" data-front="Office Collection"></a>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
-
-
-
-
-
-
-
         </div>
-    </div>
 
 
-    <!-- category -->
-    <div class="category_head" style="padding-bottom: 25px;">
-        <h2>Most Popular Categories</h2>
-    </div>
+        <!-- category -->
+        <div class="category_head" style="padding-bottom: 25px;">
+            <h2>Most Popular Categories</h2>
+        </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2 col-sm-4 col-4">
-                        <div class="icon">
-                            <img src="assets/Icons-03.png" alt="Icon 1" />
-                            <p>Corner shelf</p>
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <div class="icon">
+                                <img src="assets/Icons/Icons-01.png" alt="Icon 1" />
+                                <p>Corner shelf</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-2 col-sm-4 col-4">
-                        <div class="icon">
-                            <img src="assets/Icons-01.png" alt="Icon 1" />
-                            <p>Digital frame</p>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <div class="icon">
+                                <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
+                                <p>Digital frame</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-4">
-                        <div class="icon">
-                            <img src="assets/Icons-05.png" alt="Icon 1" />
-                            <p>LED Mirror</p>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <div class="icon">
+                                <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
+                                <p>LED Mirror</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-4">
-                        <div class="icon">
-                            <img src="assets/Icons-02.png" alt="Icon 1" />
-                            <p>Magnetic board</p>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <div class="icon">
+                                <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
+                                <p>Magnetic board</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-4">
-                        <div class="icon">
-                            <img src="assets/Icons-04.png" alt="Icon 1" />
-                            <p>Mirror cabinet</p>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <div class="icon">
+                                <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
+                                <p>Mirror cabinet</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-4">
-                        <div class="icon">
-                            <img src="assets/Icons-04.png" alt="Icon 1" />
-                            <p>Mirror cabinet</p>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <div class="icon">
+                                <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
+                                <p>Mirror cabinet</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-
         </div>
-    </div>
 
 
 
 
-    <!-- trending products -->
-    <div class="category_head" style="padding-bottom: 30px">
-        <h2>Trending products</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="product_img">
-                    <div class="image_with_text">
-                        <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/reading-table.png" class="img-fluid" alt="Reading Table" />
-                        <span class="image_text">
+        <!-- trending products -->
+        <div class="category_head" style="padding-bottom: 30px">
+            <h2>Trending products</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product_img">
+                        <div class="image_with_text">
+                            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/reading-table.png" class="img-fluid" alt="Reading Table" />
+                            <span class="image_text">
                 <strong>Reading Table</strong> <br />Under $50
               </span>
-                    </div>
+                        </div>
 
-                    <div class="image_with_text">
-                        <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/table-lamp.png" class="img-fluid" alt="Table Lamp" />
-                        <span class="image_text">
+                        <div class="image_with_text">
+                            <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/table-lamp.png" class="img-fluid" alt="Table Lamp" />
+                            <span class="image_text">
                 <strong>Table Lamp</strong> <br />Under $50</span
               >
             </div>
@@ -386,13 +413,13 @@
             <br />
             <button class="button">Click Me!</button>
           </span>
-                    </div>
+                        </div>
 
-                    <div class="col-md-4">
-                        <div class="product_img">
-                            <div class="image_with_text">
-                                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/relax.png" class="img-fluid" alt="Table Lamp" />
-                                <span class="image_text">
+                        <div class="col-md-4">
+                            <div class="product_img">
+                                <div class="image_with_text">
+                                    <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage6/relax.png" class="img-fluid" alt="Table Lamp" />
+                                    <span class="image_text">
                 <strong>Table Lamp</strong> <br />Under $50</span
               >
             </div>
@@ -425,97 +452,223 @@
                 <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
             </a>
             <span class="product-discount-label">-33%</span>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
+                                    <ul class="product-links">
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h2>LED Mirror</h2>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year y</h3>
+                                    </div>
+
+
+                                    <div class="price">$79.90</div>
+                                    <div class="add-to-cart" href="#">add to cart</div>
+                                </div>
                             </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
+
+
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
+                                    </a>
+                                    <span class="product-discount-label">-33%</span>
+                                    <ul class="product-links">
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h2>LED Mirror</h2>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
+
+                                    <div class="price">$79.90</div>
+                                    <div class="add-to-cart" href="#">add to cart</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
+                                    </a>
+                                    <span class="product-discount-label">-33%</span>
+                                    <ul class="product-links">
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h2>LED Mirror</h2>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
+
+                                    <div class="price">$79.90</div>
+                                    <div class="add-to-cart" href="#">add to cart</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid">
+                                <div class="product-image">
+                                    <a href="#" class="image">
+                                        <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
+                                    </a>
+                                    <span class="product-discount-label">-33%</span>
+                                    <ul class="product-links">
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                    </ul>
+                                </div>
+                                <div class="product-content">
+                                    <h2>LED Mirror</h2>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
+
+                                    <div class="price">$79.90</div>
+                                    <div class="add-to-cart" href="#">add to cart</div>
+                                </div>
                             </div>
                         </div>
 
+                    </div>
+                </div>
 
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard3_1_5029cfb9-b4a5-4690-8c36-a81fe0e490fe.webp?v=1710856846&width=713">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
-                                </a>
-                                <span class="product-discount-label">-33%</span>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
+
+                <div style="display: flex;justify-content: center;">
+                    <button id="showButton" class="outline-button">View More</button>
 
                 </div>
-            </div>
-
-
-            <div style="display: flex;justify-content: center;">
-                <button id="showButton" class="outline-button">View More</button>
-
-            </div>
 
 
 
-            <div class="show_all">
-                <div class="container" style="margin-top: 30px;">
+                <div class="show_all">
+                    <div class="container" style="margin-top: 30px;">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
+                                        </a>
+                                        <span class="product-discount-label">-33%</span>
+                                        <ul class="product-links">
+                                            <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h2>LED Mirror</h2>
+                                        <div style="display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 1; /* Number of lines to display */
+                                    overflow: hidden;">
+                                            <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                        </div>
+                                        <div class="price">$79.90</div>
+                                        <div class="add-to-cart" href="#">add to cart</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard3_1_5029cfb9-b4a5-4690-8c36-a81fe0e490fe.webp?v=1710856846&width=713">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h2>LED Mirror</h2>
+                                        <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                            <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                        </div>
+                                        <div class="price">$79.90</div>
+                                        <div class="add-to-cart" href="#">add to cart</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h2>LED Mirror</h2>
+                                        <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                            <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                        </div>
+                                        <div class="price">$79.90</div>
+                                        <div class="add-to-cart" href="#">add to cart</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h2>LED Mirror</h2>
+                                        <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                            <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                        </div>
+                                        <div class="price">$79.90</div>
+                                        <div class="add-to-cart" href="#">add to cart</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Trending Prodcuts -->
+                <div class="category_head" style="padding-bottom: 30px; margin-top: 30px;">
+                    <h2>Trending Products</h2>
+                </div>
+
+                <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="product-grid">
@@ -525,14 +678,17 @@
                                     </a>
                                     <span class="product-discount-label">-33%</span>
                                     <ul class="product-links">
-                                        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
                                     </ul>
                                 </div>
                                 <div class="product-content">
                                     <h2>LED Mirror</h2>
-                                    <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
                                     <div class="price">$79.90</div>
                                     <div class="add-to-cart" href="#">add to cart</div>
                                 </div>
@@ -545,14 +701,17 @@
                                         <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard3_1_5029cfb9-b4a5-4690-8c36-a81fe0e490fe.webp?v=1710856846&width=713">
                                     </a>
                                     <ul class="product-links">
-                                        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
                                     </ul>
                                 </div>
                                 <div class="product-content">
                                     <h2>LED Mirror</h2>
-                                    <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
                                     <div class="price">$79.90</div>
                                     <div class="add-to-cart" href="#">add to cart</div>
                                 </div>
@@ -564,15 +723,19 @@
                                     <a href="#" class="image">
                                         <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
                                     </a>
+                                    <span class="product-discount-label">-33%</span>
                                     <ul class="product-links">
-                                        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
                                     </ul>
                                 </div>
                                 <div class="product-content">
                                     <h2>LED Mirror</h2>
-                                    <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
                                     <div class="price">$79.90</div>
                                     <div class="add-to-cart" href="#">add to cart</div>
                                 </div>
@@ -585,14 +748,17 @@
                                         <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
                                     </a>
                                     <ul class="product-links">
-                                        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
                                     </ul>
                                 </div>
                                 <div class="product-content">
                                     <h2>LED Mirror</h2>
-                                    <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
+                                    <div style="display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 1; /* Number of lines to display */
+                                overflow: hidden;">
+                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
+                                    </div>
                                     <div class="price">$79.90</div>
                                     <div class="add-to-cart" href="#">add to cart</div>
                                 </div>
@@ -600,445 +766,351 @@
                         </div>
 
                     </div>
-
                 </div>
-            </div>
-
-            <!-- Trending Prodcuts -->
-            <div class="category_head" style="padding-bottom: 30px; margin-top: 30px;">
-                <h2>Trending Products</h2>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
-                                </a>
-                                <span class="product-discount-label">-33%</span>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard3_1_5029cfb9-b4a5-4690-8c36-a81fe0e490fe.webp?v=1710856846&width=713">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
-                                </a>
-                                <span class="product-discount-label">-33%</span>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h2>LED Mirror</h2>
-                                <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warranty....</h3>
-                                <div class="price">$79.90</div>
-                                <div class="add-to-cart" href="#">add to cart</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
 
-            <!-- Services -->
-            <div class="container" style="padding-top: 30px;">
-                <div class="row">
-
-                    <div class="col-md-3 col-sm-12">
-                        <div class="services_container">
-                            <div class="icon_container">
-                                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/template/delivery.svg" alt="">
-                            </div>
-                            <div class="text_container">
-                                <h3>
-                                    Free Delivery</h3>
-                                <h4>From all orders over $10</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                        <div class="services_container">
-                            <div class="icon_container">
-                                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/template/support.svg" alt="">
-                            </div>
-                            <div class="text_container">
-                                <h3>
-                                    Free Delivery</h3>
-                                <h4>From all orders over $10</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                        <div class="services_container">
-                            <div class="icon_container">
-                                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/template/delivery.svg" alt="">
-                            </div>
-                            <div class="text_container">
-                                <h3>
-                                    Free Delivery</h3>
-                                <h4>From all orders over $10</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                        <div class="services_container">
-                            <div class="icon_container">
-                                <img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/template/support.svg" alt="">
-                            </div>
-                            <div class="text_container">
-                                <h3>
-                                    Free Delivery</h3>
-                                <h4>From all orders over $10</h4>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-
-            <!-- Subscribe -->
-            <hr style="margin-top: 50px; margin-bottom: 50px;">
-
-            <div class="system_stayintouch">
-                <div class="container">
+                <!-- Services -->
+                <div class="container" style="padding-top: 30px;">
                     <div class="row">
 
-                        <img src="assets/d1.jpg" class="Subscribe_now_container">
-                        <div class="Sub_now_container">
-                            <h3>Stay in touch!</h3>
-                            <p>Be first to know about all new interior features!</p>
-                            <div class="d-flex align-items-center">
+                        <div class="col-md-3 col-sm-12">
+                            <div class="services_container">
+                                <div class="icon_container">
+                                    <img src="assets/easy returns (2).png" alt="">
+                                </div>
+                                <div class="text_container">
+                                    <h3>
+                                        Easy Returns</h3>
+                                    <h4>Return with Ease</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="services_container">
+                                <div class="icon_container">
+                                    <img src="assets/secure (2).png" alt="">
+                                </div>
+                                <div class="text_container">
+                                    <h3>
+                                        Secure Checkout</h3>
+                                    <h4>Secure Payment</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="services_container">
+                                <div class="icon_container">
+                                    <img src="assets/happy customers (2).png" alt="">
+                                </div>
+                                <div class="text_container">
+                                    <h3>
+                                        Happy Customers</h3>
+                                    <h4>5000+ Customers</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="services_container">
+                                <div class="icon_container">
+                                    <img src="assets/fast delivery (2).png" alt="">
+                                </div>
+                                <div class="text_container">
+                                    <h3>
+                                        Fast delivery</h3>
+                                    <h4>From all orders over $10</h4>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <!-- Subscribe -->
+                <hr style="margin-top: 50px; margin-bottom: 50px;">
+
+                <div class="system_stayintouch">
+                    <div class="container">
+                        <div class="row">
+
+                            <img src="assets/d1.jpg" class="Subscribe_now_container">
+                            <div class="Sub_now_container">
+                                <h3>Stay in touch!</h3>
+                                <p>Be first to know about all new interior features!</p>
+                                <div class="d-flex align-items-center">
+                                    <input type="text" placeholder="Enter your email..." class="timmee-input">
+
+                                    <div class="Subscribe">Subscribe now</div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="mobile_stayintouch">
+                    <div class="container">
+                        <h3>Stay in touch!</h3>
+                        <div class="d-flex">
+                            <div style="position: relative;">
                                 <input type="text" placeholder="Enter your email..." class="timmee-input">
-
-                                <div class="Subscribe">Subscribe now</div>
-
+                                <button class="Subscribe-btn">Subscribe now</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
+                <style>
+                    .Subscribe-btn {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        padding: 5px 10px;
+                        background-color: #425A8B;
+                        color: #fff;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                    }
+                    
+                    .timmee-input {
+                        padding-right: 200px
+                        /* Adjust according to button width and padding */
+                    }
+                </style>
 
-            </div>
 
 
-            <div class="mobile_stayintouch">
-                <div class="container">
-                    <h3>Stay in touch!</h3>
-                    <div class="d-flex">
-                        <div style="position: relative;">
-                            <input type="text" placeholder="Enter your email..." class="timmee-input">
-                            <button class="Subscribe-btn">Subscribe now</button>
+                <!-- Footer -->
+                <div style="padding-top: 15px;"></div>
+                <hr>
+                <div class="system_footer">
+                    <footer class="bg-black text-center text-white">
+                        <!-- Grid container -->
+                        <div class="container-fluid p-4">
+                            <!-- Section: Social media -->
+                            <section class="mb-4">
+                                <!-- Facebook -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                                <!-- Twitter -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                                <!-- Google -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                                <!-- Instagram -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                                <!-- Linkedin -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                                <!-- Github -->
+
+                            </section>
+
+
+                            <!-- Section: Links -->
+                            <section class="mb-4">
+                                <!--Grid row-->
+                                <div class="row">
+                                    <!--Grid column-->
+                                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                                        <div class="footer_h">
+                                            <h5 class="text-uppercase"></h5>
+                                            <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
+                                            <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                                        <div class="footer_h">
+                                            <h5 class="text-uppercase">Links</h5>
+                                            <ul class="list-unstyled mb-0">
+                                                <p class="tooter_p">Terms $ Conditions</p>
+                                                <p class="tooter_p">Return Policy</p>
+                                                <p class="tooter_p">About</p>
+                                                <p class="tooter_p">Privacy Policy</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                                        <div class="footer_h">
+                                            <h5 class="text-uppercase">CONTACT INFO</h5>
+                                            <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
+                                            <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+                                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
+                                            <p class="tooter_p">+91 72003 92758</p>
+                                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
+                                            <p class="tooter_p">moddwell@tprsenterprises.in/p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                                        <div class="footer_h">
+                                            <h5 class="text-uppercase">MY ACCOUNT</h5>
+                                            <ul class="list-unstyled mb-0">
+                                                <p class="tooter_p">Login</p>
+                                                <p class="tooter_p">Order History</p>
+                                                <p class="tooter_p">My Wishlist</p>
+                                                <p class="tooter_p">Track Order</p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!-- Repeat the above grid column structure for additional link sections -->
+
+                                </div>
+                                <!--Grid row-->
+                            </section>
+                            <!-- Section: Links -->
                         </div>
-                    </div>
-                </div>
-            </div>
-            <style>
-                .Subscribe-btn {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    padding: 5px 10px;
-                    background-color: #425A8B;
-                    color: #fff;
-                    border: none;
-                    cursor: pointer;
-                    border-radius: 5px;
-                }
-                
-                .timmee-input {
-                    padding-right: 200px
-                    /* Adjust according to button width and padding */
-                }
-            </style>
+                        <!-- Grid container -->
 
-
-
-            <!-- Footer -->
-            <div style="padding-top: 15px;"></div>
-            <hr>
-            <div class="system_footer">
-                <footer class="bg-black text-center text-white">
-                    <!-- Grid container -->
-                    <div class="container-fluid p-4">
-                        <!-- Section: Social media -->
-                        <section class="mb-4">
-                            <!-- Facebook -->
-                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-                            <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                            <!-- Google -->
-                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-                            <!-- Instagram -->
-                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-                            <!-- Linkedin -->
-                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-                            <!-- Github -->
-
-                        </section>
-
-
-                        <!-- Section: Links -->
-                        <section class="mb-4">
-                            <!--Grid row-->
-                            <div class="row">
-                                <!--Grid column-->
-                                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                                    <div class="footer_h">
-                                        <h5 class="text-uppercase"></h5>
-                                        <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
-                                        <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                                    <div class="footer_h">
-                                        <h5 class="text-uppercase">Links</h5>
-                                        <ul class="list-unstyled mb-0">
-                                            <p class="tooter_p">Terms $ Conditions</p>
-                                            <p class="tooter_p">Return Policy</p>
-                                            <p class="tooter_p">About</p>
-                                            <p class="tooter_p">Privacy Policy</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                                    <div class="footer_h">
-                                        <h5 class="text-uppercase">CONTACT INFO</h5>
-                                        <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
-                                        <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
-                                        <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
-                                        <p class="tooter_p">+91 72003 92758</p>
-                                        <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
-                                        <p class="tooter_p">moddwell@tprsenterprises.in/p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                                    <div class="footer_h">
-                                        <h5 class="text-uppercase">MY ACCOUNT</h5>
-                                        <ul class="list-unstyled mb-0">
-                                            <p class="tooter_p">Login</p>
-                                            <p class="tooter_p">Order History</p>
-                                            <p class="tooter_p">My Wishlist</p>
-                                            <p class="tooter_p">Track Order</p>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--Grid column-->
-
-                                <!-- Repeat the above grid column structure for additional link sections -->
-
-                            </div>
-                            <!--Grid row-->
-                        </section>
-                        <!-- Section: Links -->
-                    </div>
-                    <!-- Grid container -->
-
-                    <!-- Copyright -->
-                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                        Copyright@ 2022 Moddwell. All Rights Reserved Powered by
-                        <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
-                    </div>
-                    <!-- Copyright -->
-                </footer>
-            </div>
-
-
-            <div class="mobile_footer">
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-                    <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                    <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-                    <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-                    <!-- Github -->
-
-                </section>
-                <div class="footer_h_mobile">
-                    <h5 class="text-uppercase"></h5>
-                    <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" alt="">
-                    <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
-                </div>
-                <p style="font-size: 14px; color: #ffffff8c;">Address</p>
-                <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
-
-                <div class="container">
-                    <div class="row">
-
-
-                        <div style="display: flex;flex-direction: column;">
-
-                            <!-- Button 1 to toggle the first list -->
-                            <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Menu<i class="bi bi-plus"></i> <!-- Down arrow icon --></button>
-                            <hr>
-                            <!-- List 1 to be displayed -->
-                            <ul class="list" id="myList1">
-                                <li class="list-item">Home</li>
-                                <li class="list-item">Led Mirror</li>
-                                <li class="list-item">Mirror cabinet</li>
-                                <li class="list-item">Corner SHelf</li>
-                                <li class="list-item">Magnetic board</li>
-                                <li class="list-item">Glass frames</li>
-                            </ul>
-
-                            <!-- Button 2 to toggle the second list -->
-                            <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Show List 2 <i class="bi bi-plus"></i></button>
-                            <hr>
-                            <!-- List 2 to be displayed -->
-                            <ul class="list" id="myList2">
-                                <li class="list-item">Terms & conditons</li>
-                                <li class="list-item">Retrun Policy</li>
-                                <li class="list-item">Privacy policy</li>
-                                <li class="list-item">About us</li>
-                            </ul>
-
-                            <!-- Button 3 to toggle the third list -->
-                            <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">My Account<i class="bi bi-plus"></i></span></button>
-                            <hr>
-                            <!-- List 3 to be displayed -->
-                            <ul class="list" id="myList3">
-                                <li class="list-item">Login</li>
-                                <li class="list-item">Order History</li>
-                                <li class="list-item">My Wishlist
-                                    <li class="list-item">Track Order
-                                    </li>
-                            </ul>
-                        </div>
-                        <button> <i class="fas fa-envelope fa-1x text-primary" style="width: 30px;"></i>moddwell@tprsenterprises.in</button>
-                        <button> <i class="fas fa-phone fa-1x text-success" style="width: 30px;"></i></i>+91 72003 92758</button>
-                        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.116); color: rgba(255, 255, 255, 0.267); font-size: 14px;">
+                        <!-- Copyright -->
+                        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                             Copyright@ 2022 Moddwell. All Rights Reserved Powered by
-                            <a style="color: rgba(255, 255, 255, 0.301); font-size: 14px;" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+                            <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
                         </div>
+                        <!-- Copyright -->
+                    </footer>
+                </div>
 
+
+                <div class="mobile_footer">
+                    <section class="mb-4">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                        <!-- Linkedin -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- Github -->
+
+                    </section>
+                    <div class="footer_h_mobile">
+                        <h5 class="text-uppercase"></h5>
+                        <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" alt="">
+                        <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+                    </div>
+                    <p style="font-size: 14px; color: #ffffff8c;">Address</p>
+                    <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+
+                    <div class="container">
+                        <div class="row">
+
+
+                            <div style="display: flex;flex-direction: column;">
+
+                                <!-- Button 1 to toggle the first list -->
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Menu<i class="bi bi-plus"></i> <!-- Down arrow icon --></button>
+                                <hr>
+                                <!-- List 1 to be displayed -->
+                                <ul class="list" id="myList1">
+                                    <li class="list-item">Home</li>
+                                    <li class="list-item">Led Mirror</li>
+                                    <li class="list-item">Mirror cabinet</li>
+                                    <li class="list-item">Corner SHelf</li>
+                                    <li class="list-item">Magnetic board</li>
+                                    <li class="list-item">Glass frames</li>
+                                </ul>
+
+                                <!-- Button 2 to toggle the second list -->
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Show List 2 <i class="bi bi-plus"></i></button>
+                                <hr>
+                                <!-- List 2 to be displayed -->
+                                <ul class="list" id="myList2">
+                                    <li class="list-item">Terms & conditons</li>
+                                    <li class="list-item">Retrun Policy</li>
+                                    <li class="list-item">Privacy policy</li>
+                                    <li class="list-item">About us</li>
+                                </ul>
+
+                                <!-- Button 3 to toggle the third list -->
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">My Account<i class="bi bi-plus"></i></span></button>
+                                <hr>
+                                <!-- List 3 to be displayed -->
+                                <ul class="list" id="myList3">
+                                    <li class="list-item">Login</li>
+                                    <li class="list-item">Order History</li>
+                                    <li class="list-item">My Wishlist
+                                        <li class="list-item">Track Order
+                                        </li>
+                                </ul>
+                            </div>
+                            <button> <i class="fas fa-envelope fa-1x text-primary" style="width: 30px;"></i>moddwell@tprsenterprises.in</button>
+                            <button> <i class="fas fa-phone fa-1x text-success" style="width: 30px;"></i></i>+91 72003 92758</button>
+                            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.116); color: rgba(255, 255, 255, 0.267); font-size: 14px;">
+                                Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+                                <a style="color: rgba(255, 255, 255, 0.301); font-size: 14px;" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
 
 
-            <div style="width: 100%;height: 100px;background: rgb(0, 0, 0);">
+                <div style="width: 100%;height: 100px;background: rgb(0, 0, 0);">
 
-            </div>
-
-            <div class="custom_btn_phone">
-                <div class="bottom-bar">
-                    <ion-icon name="home-outline" class="icon_new" onclick="change(this)">
-                    </ion-icon>
-                    <ion-icon name="folder-outline" class="icon_new" onclick="change(this)">
-                    </ion-icon>
-                    <ion-icon name="add-circle-outline" class="icon_new active" onclick="change(this)">
-                    </ion-icon>
-                    <ion-icon name="person-outline" class="icon_new" onclick="change(this)">
-                    </ion-icon>
-                    <ion-icon name="image-outline" class="icon_new" onclick="change(this)">
-                    </ion-icon>
                 </div>
-            </div>
 
-            <script>
-                function change(item) {
-                    const buttons = document.querySelectorAll("ion-icon");
-                    buttons.forEach(function(obj) {
-                        obj.classList.remove("active");
-                    });
-                    item.classList.add("active");
-                }
-            </script>
+                <div class="custom_btn_phone">
+                    <div class="bottom-bar">
+                        <ion-icon name="home-outline" class="icon_new" onclick="change(this)">
+                        </ion-icon>
+                        <ion-icon name="folder-outline" class="icon_new" onclick="change(this)">
+                        </ion-icon>
+                        <ion-icon name="add-circle-outline" class="icon_new active" onclick="change(this)">
+                        </ion-icon>
+                        <ion-icon name="person-outline" class="icon_new" onclick="change(this)">
+                        </ion-icon>
+                        <ion-icon name="image-outline" class="icon_new" onclick="change(this)">
+                        </ion-icon>
+                    </div>
+                </div>
 
-
-
-
-
-
-
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-            <!-- Bootstrap Bundle with Popper -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-
-
-            <!-- Footer -->
-
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+                <script>
+                    function change(item) {
+                        const buttons = document.querySelectorAll("ion-icon");
+                        buttons.forEach(function(obj) {
+                            obj.classList.remove("active");
+                        });
+                        item.classList.add("active");
+                    }
+                </script>
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-            <script src="script.js"></script>
-</body>
+
+
+
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+                <!-- Bootstrap Bundle with Popper -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+                <!-- Footer -->
+
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+                <script src="script.js"></script>
+    </body>
 
 
 
