@@ -57,7 +57,7 @@
     </style>
 
     <body>
-        <div style="width: 100%; background-color:#425A8B;align-items: center;text-align: center;">
+        <div style="width: 100%; background-color: #425A8B;  position: relative; z-index: 1; " class="close_the div">
             <div class="carousel" data-flickity='{ "autoPlay": true, "prevNextButtons": false, "pageDots": false }'>
                 <div class="carousel-cell" style="height: 10px;">
                     <p>Text 1</p>
@@ -69,10 +69,11 @@
                     <p>Text 3</p>
                 </div>
             </div>
-
         </div>
 
-
+        <div style="position: absolute; top: 2px;right: 10px; z-index: 2;">
+            <div id="closeButton" style="border: none; background: transparent;" class="btn btn-outline-light"><i class="bi bi-x"></i></div>
+        </div>
 
 
         <!-- mobilehead -->
@@ -110,12 +111,17 @@
         </div>
 
         <!-- Right side buttons -->
-        <div>
+        <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
+            <p style="font-size: 11px;
+            margin-right: 6px;
+            padding-top: 10px;">Sign Up Now</p>
+            <i class="bi bi-person" style="margin-right: 10px;"></i>
             <!-- Bootstrap Wishlist button -->
-            <i class="bi bi-heart headicon"></i>
+            <i class="bi bi-heart headicon" style="margin-right: 10px;"></i>
             <!-- Bootstrap Cart button -->
             <i class="fa fa-shopping-cart headicon"></i>
         </div>
+        
     </header>
 
 

@@ -135,3 +135,17 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Get reference to the close button
+  var closeButton = document.getElementById("closeButton");
+
+  // Add click event listener to the close button
+  closeButton.addEventListener("click", function () {
+    // Get reference to the div to close
+    var divToClose = document.querySelector(".close_the");
+
+    // Hide both the div and the button
+    divToClose.style.display = "none";
+    closeButton.style.display = "none";
+  });
+});

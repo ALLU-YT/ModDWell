@@ -1239,6 +1239,12 @@ body.dark .search-field i {
   display: none;
 }
 
+.bi-person {
+  font-size: 20px;
+  margin-right: 10px;
+  /* Adjust the size as needed */
+}
+
 /* MediaQuery............................................ */
 
 @media only screen and (max-width: 600px) {
