@@ -397,7 +397,7 @@ button {
 }
 
 .carousel {
-  background-color: #425a8b;
+  background-color: 18578c;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -405,7 +405,7 @@ button {
 .carousel-cell {
   margin-left: 150px;
   width: 80%;
-  background: #425a8b;
+  background: 18578c;
   height: 35px;
 }
 
@@ -427,7 +427,7 @@ button {
   z-index: 2;
   font-weight: bold;
   font-size: 35px;
-  color: #425a8b;
+  color: 18578c;
 }
 
 .custom_arrow_button {
@@ -830,10 +830,7 @@ button {
 .services_container {
   display: flex;
   align-items: center;
-  border-width: 1px;
-  border-style: solid;
   /* Set the border style */
-  border-color: #18578c;
   /* Set the border color */
 }
 
@@ -1264,7 +1261,6 @@ body.dark .search-field i {
 
 .bi-person {
   font-size: 20px;
-  margin-right: 10px;
   /* Adjust the size as needed */
 }
 
