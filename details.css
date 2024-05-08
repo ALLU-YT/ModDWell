@@ -239,10 +239,12 @@ img {
 .SizeBox:hover {
   border: 2px solid #738c18; /* Initial border color */
 }
-
 .size_text {
   font-size: 14px;
-  padding: 10px 10px 0px 10px; /* top right bottom left */
+  margin: 9px;
+  padding: 9px;
+  line-height: 0;
+  /* padding: 10px 10px 0px 10px; */ /* top right bottom left */
 }
 
 /* PinCodeINputField */
