@@ -396,6 +396,29 @@ button {
   /* Show text on hover */
 }
 
+.carousel {
+  background-color: #425a8b;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.carousel-cell {
+  margin-left: 150px;
+  width: 80%;
+  background: #425a8b;
+  height: 35px;
+}
+
+/* cell number */
+
+.carousel-cell p {
+  text-align: center;
+  align-items: center;
+  padding-top: 8px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
 .banner_text {
   position: absolute;
   display: none;
@@ -732,7 +755,7 @@ button {
   /* Semi-transparent background */
   border: none;
   color: white;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   backdrop-filter: blur(5px);
   /* Blur effect */
 }
