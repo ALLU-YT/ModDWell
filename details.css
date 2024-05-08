@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  background: black;
+  margin: 0px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.timme-input {
+  width: 600px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent background */
+  border: none;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  backdrop-filter: blur(5px);
+  /* Blur effect */
+}
+
+.headicon {
+  padding-right: 20px;
+}
+
+.bi-person {
+  font-size: 20px;
+  /* Adjust the size as needed */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background: #425a8b;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  /* you can adjust the color as needed */
+  pointer-events: none;
+  /* so the icon won't interfere with input */
+}
+
+button {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-5);
+  color: var(--gray-8);
+  background: var(--gray-0);
+  border: 0;
+  padding: var(--size-4) var(--size-8);
+  transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+  transition: transform 0.1s;
+  position: relative;
+}
+
+/* productsDetailsCss */
+.card-wrapper {
+  max-width: 1100px;
+  background: black;
+  margin: 0 auto;
+  align-items: end;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.img-display {
+  overflow: hidden;
+}
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.img-showcase img {
+  min-width: 100%;
+}
+.img-select {
+  display: flex;
+}
+.img-item {
+  margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
+  margin-right: 0;
+}
+.img-item:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    background: black;
+
+    align-items: end;
+  }
+  .card-wrapper {
+    height: 100vh;
+  }
+  .product-imgs {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+}
+
+/* productDetailsRightSection */
+.productDetsilsHead {
+  font-size: 22px;
+  font-weight: 300px;
+}
+
+.overFlowContainer {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* Number of lines to display */
+  overflow: hidden;
+  width: 500px;
+}
+
+/* Star_css_code */
+.rating {
+  float: left;
+  border: none;
+}
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 125%;
+  line-height: 1.2;
+  color: #ddd;
+}
+.rating:not(:checked) > label:before {
+  content: "★ ";
+}
+.rating > input:checked ~ label {
+  color: #f70;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+}
+.rating > label:active {
+  position: relative;
+}
+
+.produt_Price {
+  line-height: 1;
+  font-size: 28px;
+  font-weight: 600;
+  color: #18578c;
+  padding-top: 6px;
+}
+.product_Price_strike {
+  font-size: 17px;
+  font-weight: 400;
+  padding-left: 10px;
+  color: #ffffff91;
+}
+.Add_on p {
+  font-size: 15px;
+  line-height: 0;
+  padding-top: 10px;
+}
+.AddOnContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.AddOnContainerBox {
+  border: 2px solid #18578c; /* Initial border color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+.AddOnContainerBox:hover {
+  border: 2px solid #738c18; /* Initial border color */
+}
+.warranty_p {
+  font-size: 14px;
+  padding: 10px 10px 0px 10px; /* top right bottom left */
+}
+.warranty_amount {
+  font-size: 15px;
+  line-height: 0px;
+  font-weight: 400;
+  padding: 0px 0px 10px 10px; /* top right bottom left */
+}
+.warranty_amount_rs {
+  font-size: 12px;
+
+  line-height: 0px;
+  padding: 0px 10px 10px 10px; /* top right bottom left */
+}
+
+/* size container */
+.selected {
+  border: 2px solid yellow;
+}
+
+.SizeContainer {
+  display: flex;
+}
+.SizeBox {
+  margin: 3px;
+  border: 2px solid #18578c; /* Initial border color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+.SizeBox:hover {
+  border: 2px solid #738c18; /* Initial border color */
+}
+
+.size_text {
+  font-size: 14px;
+  padding: 10px 10px 0px 10px; /* top right bottom left */
+}
+
+/* PinCodeINputField */
+.pinCodeInput {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  margin: 10;
+  /* margin-left: 8px; */
+  padding: 5px;
+  backdrop-filter: blur(5px);
+  padding-left: 10px;
+}
+.PinCode-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  background-color: #425a8b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Details */
+
+.DetailsOuterBox {
+  width: 100%;
+  margin-top: 15px;
+  background: #18578c;
+  border-radius: 10px;
+}
+.DetailsOuterBox h3 {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.inner_flex_content {
+  display: flex;
+  justify-content: space-between;
+}
+.inerBox {
+  background: black;
+  margin: 10px;
+  border-radius: 5px;
+}
+.innerDetails {
+  margin: 5px 10px 10px 10px;
+}
+.innerDetails_head {
+  font-size: 13px;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.507);
+}
+.innerDetails_head_content {
+  font-size: 15px;
+  padding: 5px;
+}

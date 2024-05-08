@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Roboto_font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="details.css" />
+  </head>
+
+  <!-- Header -->
+
+  <body>
+    <header class="header_conatiner">
+      <!-- Left side logo image -->
+      <img
+        src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+        style="padding-left: 20px; width: 200px"
+        alt="Logo"
+      />
+
+      <!-- Centered search input and icon -->
+      <div class="d-flex align-items-center">
+        <div class="search-container">
+          <input
+            type="text"
+            class="timme-input"
+            placeholder="I am shopping for..."
+          />
+          <i class="fas fa-search search-icon fa-.5x"></i>
+        </div>
+      </div>
+
+      <!-- Right side buttons -->
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        "
+      >
+        <p style="font-size: 11px; margin-right: 6px; padding-top: 10px">
+          Sign Up Now
+        </p>
+        <button><i class="bi bi-person headicon"></i></button>
+        <!-- Bootstrap Wishlist button -->
+        <button><i class="bi bi-heart headicon"></i></button>
+        <!-- Bootstrap Cart button -->
+        <button><i class="bi bi-cart headicon"></i></button>
+      </div>
+    </header>
+    <hr />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <!-- Product_Details_Banner -->
+
+          <div class="card-wrapper">
+            <div class="card">
+              <!-- card left -->
+              <div class="product-imgs">
+                <div class="img-display">
+                  <div class="img-showcase">
+                    <img src="assets/Banner/Bathroom 1.jpg" alt="shoe image" />
+                    <img
+                      src="assets/Banner/Bathroom 2.jpg
+                      "
+                      alt="shoe image"
+                    />
+                    <img
+                      src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg"
+                      alt="shoe image"
+                    />
+                    <img
+                      src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg"
+                      alt="shoe image"
+                    />
+                  </div>
+                </div>
+                <div class="img-select">
+                  <div class="img-item">
+                    <a href="#" data-id="1">
+                      <img
+                        src="assets/Banner/Bathroom 1.jpg"
+                        alt="shoe image"
+                      />
+                    </a>
+                  </div>
+                  <div class="img-item">
+                    <a href="#" data-id="2">
+                      <img
+                        src="assets/Banner/Bathroom 2.jpg
+                        "
+                        alt="shoe image"
+                      />
+                    </a>
+                  </div>
+                  <div class="img-item">
+                    <a href="#" data-id="3">
+                      <img
+                        src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg"
+                        alt="shoe image"
+                      />
+                    </a>
+                  </div>
+                  <div class="img-item">
+                    <a href="#" data-id="4">
+                      <img
+                        src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg"
+                        alt="shoe image"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card right -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Product_Details -->
+        <div class="col-6">
+          <div class="overFlowContainer">
+            <h1 class="productDetsilsHead">
+              DIGITALLY PRINTED GLASS PHOTO FRAME (large)
+            </h1>
+          </div>
+
+          <div style="display: block">
+            <fieldset class="rating">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5">5 stars</label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4">4 stars</label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3">3 stars</label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2">2 stars</label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1">1 star</label>
+            </fieldset>
+          </div>
+          <br />
+          <div style="display: flex; justify-content: start; align-items: end">
+            <div>
+              <h3 class="produt_Price">Rs 5012.00</h3>
+            </div>
+            <h4 class="product_Price_strike"><strike>5012.00</strike></h4>
+          </div>
+          <div class="Add_on"><p>Add On</p></div>
+          <hr />
+          <div class="AddOnContainer">
+            <div class="AddOnContainerBox" id="addonContainer1">
+              <p class="warranty_p">Warranty and AMC (Optional)</p>
+              <div style="display: flex; align-items: center">
+                <p class="warranty_amount">Price :</p>
+                <p class="warranty_amount_rs">200</p>
+              </div>
+            </div>
+
+            <div class="AddOnContainerBox" id="addonContainer2">
+              <p class="warranty_p">Warranty and AMC (Optional)</p>
+              <div style="display: flex; align-items: center">
+                <p class="warranty_amount">Price :</p>
+                <p class="warranty_amount_rs">200</p>
+              </div>
+            </div>
+
+            <div class="AddOnContainerBox" id="addonContainer3">
+              <p class="warranty_p">Warranty and AMC (Optional)</p>
+              <div style="display: flex; align-items: center">
+                <p class="warranty_amount">Price :</p>
+                <p class="warranty_amount_rs">200</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SizeBoxContainer -->
+
+          <div class="Add_on" style="padding-top: 10px"><p>Size</p></div>
+          <hr />
+
+          <div class="SizeContainer">
+            <div class="SizeBox" id="sizeboxContainer1">
+              <p class="size_text">600mm x 450mm</p>
+            </div>
+
+            <div class="SizeBox" id="sizeboxContainer2">
+              <p class="size_text">600mm x 450mm</p>
+            </div>
+
+            <div class="SizeBox" id="sizeboxContainer3">
+              <p class="size_text">600mm x 450mm</p>
+            </div>
+          </div>
+
+          <hr />
+          <button type="button" class="btn btn-primary">
+            <i class="bi bi-cart"></i>
+            Add to Cart
+          </button>
+          <button
+            type="button"
+            class="btn"
+            style="background: #18578c; color: white"
+          >
+            <i class="bi bi-bag"></i>
+            Buy Now
+          </button>
+          <button type="button" class="btn btn-success">
+            <i class="bi bi-whatsapp"></i>
+            whatsapp
+          </button>
+        
+       
+      <!-- PinCodeInputField -->
+            
+        
+            <div style="position: relative;padding-top: 15px;">
+              <div style="position: relative; display: inline-block;">
+                <input
+                  type="text"
+                  placeholder="Pincode"
+                  class="pinCodeInput"
+                  style="padding-right: 236px;"
+                />
+                <button class="PinCode-btn">CHECK</button>
+              </div>
+            </div>
+        
+
+            <!-- DetailsBox -->
+            <div class="DetailsOuterBox">
+              <h3 class="details_head">Details</h3>
+                <div class="inerBox">
+                 <div class="inner_flex_content">
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Name</Div>
+                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
+                  </div>
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Size</Div>
+                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
+                  </div>
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Thickness</Div>
+                    <Div class="innerDetails_head_content">40mm</Div>
+                  </div>
+                 </div>
+                 <div class="inner_flex_content">
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Name</Div>
+                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
+                  </div>
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Size</Div>
+                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
+                  </div>
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Thickness</Div>
+                    <Div class="innerDetails_head_content">40mm</Div>
+                  </div>
+                 </div>
+                 <div class="inner_flex_content">
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Name</Div>
+                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
+                  </div>
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Size</Div>
+                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
+                  </div>
+                  <div class="innerDetails">
+                    <Div class="innerDetails_head">Thickness</Div>
+                    <Div class="innerDetails_head_content">40mm</Div>
+                  </div>
+                 </div>
+                   
+                </div>
+               <div style="line-height: 0px;">&nbsp;</div>
+            </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="details.js"></script>
+  </body>
+</html>
