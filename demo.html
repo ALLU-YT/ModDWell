@@ -3,62 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <fieldset class="rating">
-      <input type="radio" id="star5" name="rating" value="5" />
-      <label for="star5">5 stars</label>
-      <input type="radio" id="star4" name="rating" value="4" />
-      <label for="star4">4 stars</label>
-      <input type="radio" id="star3" name="rating" value="3" />
-      <label for="star3">3 stars</label>
-      <input type="radio" id="star2" name="rating" value="2" />
-      <label for="star2">2 stars</label>
-      <input type="radio" id="star1" name="rating" value="1" />
-      <label for="star1">1 star</label>
-    </fieldset>
+    <title>Color Changing Checkbox</title>
     <style>
-      .rating {
-        float: left;
-        border: none;
+      /* Styling for the checkbox */
+      .checkbox-container {
+        display: inline-block;
+        vertical-align: middle;
       }
-      .rating:not(:checked) > input {
-        position: absolute;
-        top: -9999px;
-        clip: rect(0, 0, 0, 0);
-      }
-      .rating:not(:checked) > label {
-        float: right;
-        width: 1em;
-        padding: 0 0.1em;
-        overflow: hidden;
-        white-space: nowrap;
+
+      .checkbox-label {
+        display: inline-block;
         cursor: pointer;
-        font-size: 200%;
-        line-height: 1.2;
-        color: #ddd;
       }
-      .rating:not(:checked) > label:before {
-        content: "★ ";
+
+      .checkbox-input {
+        display: none; /* hide the actual checkbox */
       }
-      .rating > input:checked ~ label {
-        color: #f70;
+
+      .checkbox-custom {
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 5px;
       }
-      .rating:not(:checked) > label:hover,
-      .rating:not(:checked) > label:hover ~ label {
-        color: gold;
-      }
-      .rating > input:checked + label:hover,
-      .rating > input:checked + label:hover ~ label,
-      .rating > input:checked ~ label:hover,
-      .rating > input:checked ~ label:hover ~ label,
-      .rating > label:hover ~ input:checked ~ label {
-        color: #ea0;
-      }
-      .rating > label:active {
-        position: relative;
+
+      /* Styling for when checkbox is checked */
+      .checkbox-custom.checked {
+        background-color: green;
       }
     </style>
+  </head>
+  <body>
+    <!-- Checkbox HTML -->
+    <div class="checkbox-container">
+      <label class="checkbox-label" for="myCheckbox">
+        <input
+          type="checkbox"
+          id="myCheckbox"
+          class="checkbox-input"
+          onchange="changeColor(this)"
+        />
+        <span class="checkbox-custom"></span>
+      </label>
+    </div>
+
+    <!-- JavaScript to toggle color -->
+    <script>
+      function changeColor(checkbox) {
+        var checkboxCustom = checkbox.nextElementSibling;
+        if (checkbox.checked) {
+          checkboxCustom.classList.add("checked");
+        } else {
+          checkboxCustom.classList.remove("checked");
+        }
+      }
+    </script>
   </body>
 </html>
