@@ -193,45 +193,58 @@
           <hr />
           <div class="AddOnContainer">
            
-            <div class="AddOnContainerBox" id="addonContainer1">
-              <div style="display: flex; align-items: center;">
-                <div class="custom-checkbox"></div>
-
-                  <div>
-                      <p class="warranty_p">Warranty and AMC (Optional)</p>
-                      <div style="display: flex; align-items: center;">
-                        <p class="warranty_amount">$</p>
-                        <p class="warranty_amount_rs">200</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="AddOnContainerBox" id="addonContainer1">
+           <div class="AddOnContainerBox" id="addonContainer1">
+    <div style="display: flex; align-items: center;">
+        <form class="buttons">
+            <label>
+                <input type="checkbox" name="check">
+                <span class="label-text"></span>
+            </label>
+        </form>
+        <div style="padding: 14px 5px 0px 8px;">
+            <p class="warranty_p">Warranty and AMC (Optional)</p>
             <div style="display: flex; align-items: center;">
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="margin-left: 5px;">
-                <div>
-                    <p class="warranty_p">Warranty and AMC (Optional)</p>
-                    <div style="display: flex; align-items: center;">
-                        <p class="warranty_amount">Price :</p>
-                        <p class="warranty_amount_rs">200</p>
-                    </div>
-                </div>
+                <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+                <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="AddOnContainerBox" id="addonContainer1">
+<div class="AddOnContainerBox" id="addonContainer1">
+  <div style="display: flex; align-items: center;">
+      <form class="buttons">
+          <label>
+              <input type="checkbox" name="check">
+              <span class="label-text"></span>
+          </label>
+      </form>
+      <div style="padding: 14px 5px 0px 8px;">
+          <p class="warranty_p">Defogger</p>
           <div style="display: flex; align-items: center;">
-              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="margin-left: 5px;">
-              <div>
-                  <p class="warranty_p">Defogger</p>
-                  <div style="display: flex; align-items: center;">
-                      <p class="warranty_amount">Price :</p>
-                      <p class="warranty_amount_rs">200</p>
-                  </div>
-              </div>
+              <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+              <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
           </div>
       </div>
+  </div>
+</div>
+<div class="AddOnContainerBox" id="addonContainer1">
+  <div style="display: flex; align-items: center;">
+      <form class="buttons">
+          <label>
+              <input type="checkbox" name="check">
+              <span class="label-text"></span>
+          </label>
+      </form>
+      <div style="padding: 14px 5px 0px 8px;">
+          <p class="warranty_p">Additional Light colour</p>
+          <div style="display: flex; align-items: center;">
+              <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+              <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+          </div>
+      </div>
+  </div>
+</div>
           </div>
 
           <!-- SizeBoxContainer -->
@@ -240,56 +253,83 @@
           <hr />
 
           <div class="SizeContainer">
-            <div class="SizeBox" id="sizeboxContainer1">
-              <p class="size_text">600mm x 450mm</p>
+            <div class="SizeBox">
+              <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer1" class="size_text">600mm x 450mm</label>
             </div>
 
-            <div class="SizeBox" id="sizeboxContainer2">
-              <p class="size_text">600mm x 450mm</p>
+            <div class="SizeBox">
+              <input type="radio" name="size" id="sizeboxContainer2" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer2" class="size_text">600mm x 450mm</label>
             </div>
 
-            <div class="SizeBox" id="sizeboxContainer3">
-              <p class="size_text">600mm x 450mm</p>
+            <div class="SizeBox">
+              <input type="radio" name="size" id="sizeboxContainer3" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer3" class="size_text">600mm x 450mm</label>
             </div>
+
           </div>
 
+          <!-- Social Media Icon -->
+
+            <div style="display: flex; padding-top: 10px;">
+              <div style="margin-right: 10px;">
+                <i class="bi bi-envelope"></i></div>
+                <div style="margin-right: 10px;">
+                  <i class="bi bi-envelope"></i></div>
+                  <div style="margin-right: 10px;">
+                    <i class="bi bi-envelope"></i></div>
+            </div>
+
+            <!-- Buttons -->
           <hr />
-          <button type="button" class="btn btn-primary">
+         <div style="display: flex; align-items: center;">
+          <button type="button" class="btn btn-success wtspButton">
+            <i class="bi bi-whatsapp"></i>
+            whatsapp
+          </button>
+          <i class="bi bi-heart"></i>
+        
+        </div>
+
+
+
+         <div>
+          <button type="button" class="btn btn-primary addtocartButton">
             <i class="bi bi-cart"></i>
             Add to Cart
           </button>
           <button
             type="button"
-            class="btn"
-            style="background: #18578c; color: white"
+            class="btn buyNowButton"
+ style="color: white;"
           >
             <i class="bi bi-bag"></i>
             Buy Now
           </button>
-          <button type="button" class="btn btn-success">
-            <i class="bi bi-whatsapp"></i>
-            whatsapp
-          </button>
-        
+         </div>
+       
        
       <!-- PinCodeInputField -->
             
         
-            <div style="position: relative;padding-top: 15px;">
-              <div style="position: relative; display: inline-block;">
+            <div style="position: relative;padding-top: 15px; display: flex;align-items: center;">
+              <div>
                 <input
                   type="text"
                   placeholder="Pincode"
                   class="pinCodeInput"
                   style="padding-right: 236px;"
                 />
-                <button class="PinCode-btn">CHECK</button>
+                
+               
               </div>
+              <button class="PinCode-btn">CHECK</button>
             </div>
         
 
             <!-- DetailsBox -->
-            <div class="DetailsOuterBox">
+            <!-- <div class="DetailsOuterBox">
               <h3 class="details_head">Details</h3>
                 <div class="inerBox">
                  <div class="inner_flex_content">
@@ -337,7 +377,7 @@
                    
                 </div>
                <div style="line-height: 0px;">&nbsp;</div>
-            </div>
+            </div> -->
           
             </div>
           </div>

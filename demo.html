@@ -3,60 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color Changing Checkbox</title>
-    <style>
-      /* Styling for the checkbox */
-      .checkbox-container {
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      .checkbox-label {
-        display: inline-block;
-        cursor: pointer;
-      }
-
-      .checkbox-input {
-        display: none; /* hide the actual checkbox */
-      }
-
-      .checkbox-custom {
-        width: 20px;
-        height: 20px;
-        background-color: gray;
-        border-radius: 5px;
-      }
-
-      /* Styling for when checkbox is checked */
-      .checkbox-custom.checked {
-        background-color: green;
-      }
-    </style>
+    <title>Document</title>
   </head>
   <body>
-    <!-- Checkbox HTML -->
-    <div class="checkbox-container">
-      <label class="checkbox-label" for="myCheckbox">
-        <input
-          type="checkbox"
-          id="myCheckbox"
-          class="checkbox-input"
-          onchange="changeColor(this)"
-        />
-        <span class="checkbox-custom"></span>
-      </label>
-    </div>
+    <body>
+      <!-- From: https://www.youtube.com/watch?v=ojWA8pdT-zY -->
+    
+      <form class="buttons">
+        <label>
+        <input type="checkbox" name="check">
+          <span class="label-text">
+          </span>
+        </input>
+     
+      </form>
+    </body>
+    <style>
+    /* From: https://www.youtube.com/watch?v=ojWA8pdT-zY */
 
-    <!-- JavaScript to toggle color -->
-    <script>
-      function changeColor(checkbox) {
-        var checkboxCustom = checkbox.nextElementSibling;
-        if (checkbox.checked) {
-          checkboxCustom.classList.add("checked");
-        } else {
-          checkboxCustom.classList.remove("checked");
-        }
-      }
-    </script>
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+
+
+
+label{
+	cursor: pointer;
+	color: #666;
+  initial-value: tick;
+	}
+
+input[type="checkbox"]{
+		display: none;
+		
+			+ .label-text:before{
+			content: "\f096";
+			font-family: "FontAwesome";
+      color: #d8e4db88;
+			content: "\f14a";
+font-size: 30px;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+      content: tick;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			width: 1em;
+			display: inline-block;
+			margin-right: 5px;
+				}
+		&:checked + .label-text:before{
+			content: "\f14a";
+			color: #06e93f ;
+			animation: tick 150ms ease-in;
+			}
+      &:disabled + .label-text{
+			color: #aaa;
+				
+				&:before{
+					content: "\f0c8";
+					color: #ffffff;
+				}
+		}
+	}
+	
+@keyframes tick{
+	0%{
+		transform: scale(0);
+	}
+	90%{
+		transform: scale(1.4);
+	}
+	100%{
+		transform: scale(1);
+	}
+	
+	
+}
+
+    </style>
   </body>
 </html>
