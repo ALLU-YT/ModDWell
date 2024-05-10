@@ -167,7 +167,7 @@
             </h1>
           </div>
 
-          <div style="display: block">
+          <div style="display: block;padding-top: 5px;">
             <fieldset class="rating">
               <input type="radio" id="star5" name="rating" value="5" />
               <label for="star5">5 stars</label>
@@ -187,39 +187,52 @@
               <h3 class="produt_Price">Rs 5012.00</h3>
             </div>
             <h4 class="product_Price_strike"><strike>5012.00</strike></h4>
+            <h4 class="product_Price_strike" style="color: yellow;">(75% OFF)</h4>
+          </div>
+
+           <!-- Social Media Icon -->
+
+           <div class="socialMediaIcon">
+            <div style="margin-right: 10px;">
+              <i class="bi bi-envelope"></i></div>
+              <div style="margin-right: 10px;">
+                <i class="bi bi-envelope"></i></div>
+                <div style="margin-right: 10px;">
+                  <i class="bi bi-envelope"></i></div>
           </div>
           <!-- //AddOnes -->
           <div class="Add_on"><p>Add On</p></div>
           <hr />
           <div class="AddOnContainer">
            
-           <div class="AddOnContainerBox" id="addonContainer1">
-    <div style="display: flex; align-items: center;">
-        <form class="buttons">
-            <label>
-                <input type="checkbox" name="check">
-                <span class="label-text"></span>
-            </label>
-        </form>
-        <div style="padding: 14px 5px 0px 8px;">
-            <p class="warranty_p">Warranty and AMC (Optional)</p>
-            <div style="display: flex; align-items: center;">
-                <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
-                <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="AddOnContainerBox" id="addonContainer1">
+              <div style="display: flex; align-items: center;">
+                  <form class="buttons">
+                      <label>
+                          <input type="checkbox" name="check" id="check_ed">
+                          <span class="label-text"></span>
+                      </label>
+                  </form>
+                  <div style="padding: 14px 5px 0px 8px;" id="check_ed_wrapper">
+                      <p class="warranty_p">Warranty and AMC (Optional)</p>
+                      <div style="display: flex; align-items: center;">
+                          <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+                          <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    
 
 <div class="AddOnContainerBox" id="addonContainer1">
   <div style="display: flex; align-items: center;">
       <form class="buttons">
           <label>
-              <input type="checkbox" name="check">
+              <input type="checkbox" name="check"  id="check_ed_1">
               <span class="label-text"></span>
           </label>
       </form>
-      <div style="padding: 14px 5px 0px 8px;">
+      <div style="padding: 14px 5px 0px 8px;"  id="check_ed_wrapper_1">
           <p class="warranty_p">Defogger</p>
           <div style="display: flex; align-items: center;">
               <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
@@ -232,11 +245,11 @@
   <div style="display: flex; align-items: center;">
       <form class="buttons">
           <label>
-              <input type="checkbox" name="check">
+              <input type="checkbox" name="check" id="check_ed_2">
               <span class="label-text"></span>
           </label>
       </form>
-      <div style="padding: 14px 5px 0px 8px;">
+      <div style="padding: 14px 5px 0px 8px;"  id="check_ed_wrapper_2">
           <p class="warranty_p">Additional Light colour</p>
           <div style="display: flex; align-items: center;">
               <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
@@ -270,114 +283,50 @@
 
           </div>
 
-          <!-- Social Media Icon -->
-
-            <div style="display: flex; padding-top: 10px;">
-              <div style="margin-right: 10px;">
-                <i class="bi bi-envelope"></i></div>
-                <div style="margin-right: 10px;">
-                  <i class="bi bi-envelope"></i></div>
-                  <div style="margin-right: 10px;">
-                    <i class="bi bi-envelope"></i></div>
-            </div>
+         
 
             <!-- Buttons -->
           <hr />
          <div style="display: flex; align-items: center;">
-          <button type="button" class="btn btn-success wtspButton">
-            <i class="bi bi-whatsapp"></i>
-            whatsapp
-          </button>
+          <button
+          type="button"
+          class="btn buyNowButton"
+          style="color: white;"
+        >
+          <i class="bi bi-bag"></i>
+          Buy Now
+        </button>
+        
           <i class="bi bi-heart"></i>
         
         </div>
 
 
 
-         <div>
+         <div style="margin-top:13px;">
           <button type="button" class="btn btn-primary addtocartButton">
             <i class="bi bi-cart"></i>
             Add to Cart
           </button>
-          <button
-            type="button"
-            class="btn buyNowButton"
- style="color: white;"
-          >
-            <i class="bi bi-bag"></i>
-            Buy Now
+          <button type="button" class="btn btn-success wtspButton">
+            <i class="bi bi-whatsapp"></i>
+            whatsapp
           </button>
          </div>
        
        
       <!-- PinCodeInputField -->
-            
-        
-            <div style="position: relative;padding-top: 15px; display: flex;align-items: center;">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Pincode"
-                  class="pinCodeInput"
-                  style="padding-right: 236px;"
-                />
-                
-               
-              </div>
-              <button class="PinCode-btn">CHECK</button>
-            </div>
-        
-
-            <!-- DetailsBox -->
-            <!-- <div class="DetailsOuterBox">
-              <h3 class="details_head">Details</h3>
-                <div class="inerBox">
-                 <div class="inner_flex_content">
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Name</Div>
-                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Size</Div>
-                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Thickness</Div>
-                    <Div class="innerDetails_head_content">40mm</Div>
-                  </div>
-                 </div>
-                 <div class="inner_flex_content">
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Name</Div>
-                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Size</Div>
-                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Thickness</Div>
-                    <Div class="innerDetails_head_content">40mm</Div>
-                  </div>
-                 </div>
-                 <div class="inner_flex_content">
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Name</Div>
-                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Size</Div>
-                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Thickness</Div>
-                    <Div class="innerDetails_head_content">40mm</Div>
-                  </div>
-                 </div>
-                   
-                </div>
-               <div style="line-height: 0px;">&nbsp;</div>
-            </div> -->
+      <div class="Add_on"><p>Deliver to</p></div>
+      <hr />
+      <form>
+        <!-- Container for input field and button -->
+        <div class="input-container">
+            <!-- Input field for pin code -->
+            <input type="text" placeholder="Enter Pin Code" id="pinCodeInput" />
+            <!-- Button to check -->
+            <button type="button" onclick="checkPinCode()">Check</button>
+        </div>
+    </form>
           
             </div>
           </div>

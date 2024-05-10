@@ -3,84 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pin Code Checker</title>
+    <style>
+      /* Style the container */
+      .input-container {
+        position: relative;
+        width: 227px;
+        /* margin-right: 10px; */
+      }
+
+      /* Style the input field */
+      .input-container input[type="text"] {
+        /* width: 100%; */
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none; /* Remove outline on focus */
+      }
+
+      /* Style the button */
+      .input-container button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 5px 10px;
+        background-color: #4caf5000;
+        color: #412ecd;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Change button color on hover */
+      .input-container button:hover {
+        background-color: #45a04900;
+      }
+    </style>
   </head>
   <body>
-    <body>
-      <!-- From: https://www.youtube.com/watch?v=ojWA8pdT-zY -->
-    
-      <form class="buttons">
-        <label>
-        <input type="checkbox" name="check">
-          <span class="label-text">
-          </span>
-        </input>
-     
-      </form>
-    </body>
-    <style>
-    /* From: https://www.youtube.com/watch?v=ojWA8pdT-zY */
-
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
-
-
-
-
-label{
-	cursor: pointer;
-	color: #666;
-  initial-value: tick;
-	}
-
-input[type="checkbox"]{
-		display: none;
-		
-			+ .label-text:before{
-			content: "\f096";
-			font-family: "FontAwesome";
-      color: #d8e4db88;
-			content: "\f14a";
-font-size: 30px;
-			font-style: normal;
-			font-weight: normal;
-			font-variant: normal;
-      content: tick;
-			text-transform: none;
-			line-height: 1;
-			-webkit-font-smoothing: antialiased;
-			width: 1em;
-			display: inline-block;
-			margin-right: 5px;
-				}
-		&:checked + .label-text:before{
-			content: "\f14a";
-			color: #06e93f ;
-			animation: tick 150ms ease-in;
-			}
-      &:disabled + .label-text{
-			color: #aaa;
-				
-				&:before{
-					content: "\f0c8";
-					color: #ffffff;
-				}
-		}
-	}
-	
-@keyframes tick{
-	0%{
-		transform: scale(0);
-	}
-	90%{
-		transform: scale(1.4);
-	}
-	100%{
-		transform: scale(1);
-	}
-	
-	
-}
-
-    </style>
+    <form>
+      <!-- Container for input field and button -->
+      <div class="input-container">
+        <!-- Input field for pin code -->
+        <input type="text" placeholder="Enter Pin Code" id="pinCodeInput" />
+        <!-- Button to check -->
+        <button type="button" onclick="checkPinCode()">Check</button>
+      </div>
+    </form>
   </body>
 </html>

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 body {
-  background: black;
+  background: #1d1d1d;
   margin: 0px;
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -71,7 +71,7 @@ button {
 /* productsDetailsCss */
 .card-wrapper {
   max-width: 1100px;
-  background: black;
+  /* background: black; */
   margin: 0 auto;
   align-items: end;
 }
@@ -107,15 +107,14 @@ img {
 
 @media screen and (min-width: 992px) {
   .card {
-    background: black;
-
+    background: #1d1d1d;
     align-items: end;
   }
   .card-wrapper {
     height: 100vh;
   }
   .product-imgs {
-    width: 550px;
+    width: 510px;
     display: flex;
     flex-direction: column;
 
@@ -184,8 +183,8 @@ img {
   line-height: 1;
   font-size: 28px;
   font-weight: 600;
-  color: #18578c;
-  padding-top: 6px;
+  color: #ffffff;
+  padding-top: 5px;
 }
 .product_Price_strike {
   font-size: 17px;
@@ -193,10 +192,14 @@ img {
   padding-left: 10px;
   color: #ffffff91;
 }
+.socialMediaIcon {
+  display: flex;
+  padding-left: 5px;
+}
 .Add_on p {
   font-size: 15px;
   line-height: 0;
-  padding-top: 10px;
+  padding-top: 26px;
 }
 .AddOnContainer {
   display: flex;
@@ -204,7 +207,7 @@ img {
 }
 .AddOnContainerBox {
   cursor: pointer; /* Change cursor to pointer on hover */
-  background: #18578c;
+  background: #1d1d1d;
   margin-right: 10px;
   border-radius: 3px;
   height: 43px;
@@ -251,28 +254,39 @@ img {
 }
 
 /* PinCodeINputField */
-.pinCodeInput {
-  width: 100%;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  margin: 10;
-  /* margin-left: 8px; */
-  padding: 5px;
-  backdrop-filter: blur(5px);
-  padding-left: 10px;
-}
-.PinCode-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #425a8b;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.input-container {
+  position: relative;
+  width: 227px;
+  /* margin-right: 10px; */
 }
 
+/* Style the input field */
+.input-container input[type="text"] {
+  width: 100%;
+  border: none;
+
+  background: #1d1d1d;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: white;
+  outline: none; /* Remove outline on focus */
+}
+
+/* Style the button */
+.input-container button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px 10px;
+  background-color: #4caf5000;
+  color: #2eb5cd;
+  border: none;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+.input-container button:hover {
+  background-color: #45a04900;
+}
 /* Details */
 
 .DetailsOuterBox {
@@ -310,27 +324,34 @@ img {
 
 /* buttons */
 .wtspButton {
-  width: 304px;
+  width: 229px;
   font-size: 15px;
-  margin-bottom: 5px;
-  height: 35px;
-  margin-right: 30px;
+  margin-bottom: 12px;
+  height: 52px;
+  margin-right: 15px;
 }
 
 .addtocartButton {
-  width: 173px;
   font-size: 15px;
-  border: none;
+  border: 2px solid #18588c; /* Fix border color */
+
   margin-bottom: 5px;
-  background: #18578c;
-  height: 35px;
+  background: transparent;
+  height: 62px;
+  margin-right: 9px;
+
+  width: 229px;
+
+  margin-bottom: 12px;
+  height: 52px;
 }
 .buyNowButton {
-  width: 173px;
+  width: 223px;
   font-size: 15px;
   margin-bottom: 5px;
-  border: 2px solid #18588c; /* Fix border color */
-  height: 35px;
+  background: #18578c;
+  margin-right: 23px;
+  height: 62px;
   color: white;
 }
 
@@ -348,7 +369,7 @@ input[type="checkbox"] {
   + .label-text:before {
     content: "\f096";
     font-family: "FontAwesome";
-    color: #d8e4db25;
+    color: #d8e4db6b;
     content: "\f14a";
 
     font-size: 22px;
@@ -366,7 +387,7 @@ input[type="checkbox"] {
   }
   &:checked + .label-text:before {
     content: "\f14a";
-    color: #06e93f;
+    color: #17ff02;
     animation: tick 150ms ease-in;
   }
   &:disabled + .label-text {

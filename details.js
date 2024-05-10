@@ -23,41 +23,27 @@ function slideImage() {
 
 window.addEventListener("resize", slideImage);
 
-// // AddOnJs
-// // Get all the container elements
-// var containers = document.querySelectorAll(".AddOnContainerBox");
+// AddOn Checked Wrapper
+// JavaScript to toggle checkbox when the div is clicked
+document
+  .getElementById("check_ed_wrapper")
+  .addEventListener("click", function () {
+    var checkbox = document.getElementById("check_ed");
+    checkbox.checked = !checkbox.checked;
+  });
 
-// // Add click event listener to each container
-// containers.forEach(function (container) {
-//   container.addEventListener("click", function () {
-//     // Toggle 'selected' class for the clicked container
-//     container.classList.toggle("selected");
-//     // Check if the container is selected
-//     if (container.classList.contains("selected")) {
-//       // If selected, change border color to yellow
-//       container.style.borderColor = "yellow";
-//     } else {
-//       // If not selected, revert border color to original
-//       container.style.borderColor = "#18578c";
-//     }
-//   });
-// });
+document
+  .getElementById("check_ed_wrapper_1")
+  .addEventListener("click", function () {
+    var checkbox = document.getElementById("check_ed_1");
+    checkbox.checked = !checkbox.checked;
+  });
 
-// // Get all elements with the class 'SizeBox'
-// // Get all the container elements
-// var SizedBoxContainers = document.querySelectorAll(".SizeBox");
+document
+  .getElementById("check_ed_wrapper_2")
+  .addEventListener("click", function () {
+    var checkbox = document.getElementById("check_ed_2");
+    checkbox.checked = !checkbox.checked;
+  });
 
-// // Add click event listener to each container
-// SizedBoxContainers.forEach(function (container) {
-//   container.addEventListener("click", function () {
-//     // Deselect all containers
-//     SizedBoxContainers.forEach(function (c) {
-//       c.classList.remove("selected");
-//       c.style.borderColor = "#18578c";
-//     });
-
-//     // Select the clicked container
-//     container.classList.add("selected");
-//     container.style.borderColor = "yellow";
-//   });
-// });
+// pincodejs
