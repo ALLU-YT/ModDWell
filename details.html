@@ -397,6 +397,97 @@
       </div>
     </div>
 
+    <div class="container">
+      <div class="row">
+          <style>
+      .tab-bar {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        height: 35px;
+        justify-content: center;
+        background-color: rgb(0, 0, 0);
+       border-radius: 10px;
+      }
+
+      .tab {
+        background-color: rgb(0, 0, 0);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: white;
+        float: left;
+        border-color: rgb(255, 145, 2);
+        transition: background-color 0.3s;
+      }
+
+      .tab:hover {
+        background-color: #f0f0f054;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+
+   <div class="container" style="width: 86%;">
+    <div class="row">
+       <div class="tab-bar">
+      <button class="tab" onclick="openTab(event, 'tab1')">Details</button>
+      <button class="tab" onclick="openTab(event, 'tab2')">Material</button>
+      <button class="tab" onclick="openTab(event, 'tab3')">Packs</button>
+      <button class="tab" onclick="openTab(event, 'tab4')">Packaging</button>
+      <button class="tab" onclick="openTab(event, 'tab5')">Product faq</button>
+      <button class="tab" onclick="openTab(event, 'tab6')">Reviews</button>
+    </div>
+       <div id="tab1" class="tab-content active">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+dd
+          </div>
+           <div class="col-6">
+            d
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tab2" class="tab-content">Content for Tab 2</div>
+    <div id="tab3" class="tab-content">Content for Tab 3</div>
+    <div id="tab4" class="tab-content">Content for Tab 4</div>
+    <div id="tab5" class="tab-content">Content for Tab 5</div>
+    <div id="tab6" class="tab-content">Content for Tab 6</div>
+
+    </div>
+   </div>
+
+ 
+    <script>
+      document.getElementById("tab1").style.display = "block";
+      document.getElementsByClassName("tab")[0].style.backgroundColor =
+        "#f0f0f054";
+
+      function openTab(evt, tabName) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].style.backgroundColor = "rgb(0, 0, 0)"; // Reset background color of all tabs
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.style.backgroundColor = "#f0f0f054"; // Set background color of selected tab
+      }
+    </script>
+      </div>
+    </div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

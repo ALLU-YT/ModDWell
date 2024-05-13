@@ -3,9 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    hai
+    <title>Tab Bar</title>
+    <style>
+      .tab-bar {
+        overflow: hidden;
+
+      }
+
+      .tab {
+        background-color: rgb(0, 0, 0);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: white;
+        float: left;
+        border-color: rgb(255, 145, 2);
+        transition: background-color 0.3s;
+      }
+
+      .tab:hover {
+        background-color: #f0f0f0;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+
+    <div class="tab-bar">
+      <button class="tab" onclick="openTab(event, 'tab1')">Tab 1</button>
+      <button class="tab" onclick="openTab(event, 'tab2')">Tab 2</button>
+      <button class="tab" onclick="openTab(event, 'tab3')">Tab 3</button>
+      <button class="tab" onclick="openTab(event, 'tab4')">Tab 4</button>
+      <button class="tab" onclick="openTab(event, 'tab5')">Tab 5</button>
+      <button class="tab" onclick="openTab(event, 'tab6')">Tab 6</button>
+    </div>
+
+    <div id="tab1" class="tab-content active">Content for Tab 1</div>
+    <div id="tab2" class="tab-content">Content for Tab 2</div>
+    <div id="tab3" class="tab-content">Content for Tab 3</div>
+    <div id="tab4" class="tab-content">Content for Tab 4</div>
+    <div id="tab5" class="tab-content">Content for Tab 5</div>
+    <div id="tab6" class="tab-content">Content for Tab 6</div>
+
+    <script>
+      document.getElementById("tab1").style.display = "block";
+      document.getElementsByClassName("tab")[0].style.backgroundColor =
+        "#f0f0f0";
+
+      function openTab(evt, tabName) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].style.backgroundColor = "rgb(0, 0, 0)"; // Reset background color of all tabs
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.style.backgroundColor = "#f0f0f0"; // Set background color of selected tab
+      }
+    </script>
   </body>
 </html>
