@@ -48,10 +48,29 @@ document
 
 // pincodejs
 
+// headeSearchDiv
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+}
+
+// tabbar
+document.getElementById("tab1").style.display = "block";
+document.getElementsByClassName("tab")[0].style.backgroundColor = "#f0f0f054";
+
+function openTab(evt, tabName) {
+  var i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  tabLinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].style.backgroundColor = "rgb(0, 0, 0)"; // Reset background color of all tabs
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.style.backgroundColor = "#f0f0f054"; // Set background color of selected tab
 }
