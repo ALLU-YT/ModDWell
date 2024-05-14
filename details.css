@@ -244,7 +244,6 @@ img {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1; /* Number of lines to display */
   overflow: hidden;
-  width: 500px;
 }
 
 /* Star_css_code */
@@ -357,7 +356,7 @@ img {
   border: 2px solid #18578c; /* Initial border color */
   cursor: pointer; /* Change cursor to pointer on hover */
   display: flex;
-  width: 190px;
+  width: 173px;
   border-radius: 3px;
   justify-content: center;
   align-items: center;
