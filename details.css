@@ -550,6 +550,11 @@ input[type="checkbox"] {
   }
 }
 
+/* ProductsPoints */
+.products_points {
+  font-size: 15px;
+}
+
 /* fullmediaQuery after 600px */
 /* CSS for screens wider than 600px */
 @media only screen and (max-width: 600px) {
@@ -620,5 +625,47 @@ input[type="checkbox"] {
   }
   .mobile_size_container {
     display: block;
+  }
+  .size_text_mobile {
+    margin: 9px;
+    font-size: 13px;
+    /* padding: 9px; */
+    color: white;
+    line-height: 0;
+    padding: 8px 8px 8px 0px; /* top right bottom left */
+  }
+
+  /* addtocartButton */
+  .buyNowButton {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 5px;
+    background: #18578c;
+    margin-right: 10px;
+    height: 50px;
+    color: white;
+  }
+
+  .wtspButton {
+    font-size: 15px;
+    margin-bottom: 12px;
+    height: 45px;
+    margin-right: 15px;
+  }
+
+  .addtocartButton {
+    font-size: 15px;
+    border: 2px solid #18588c; /* Fix border color */
+
+    margin-bottom: 5px;
+    background: transparent;
+    height: 62px;
+    margin-right: 9px;
+
+    margin-bottom: 12px;
+    height: 45px;
+  }
+  .products_points {
+    font-size: 12px;
   }
 }
