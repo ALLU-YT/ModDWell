@@ -113,7 +113,7 @@ width: 200px;" alt="Logo">
 
 
 
-<hr>
+<hr class="hr_tag">
 
 
     <!-- secondHeader -->
@@ -751,6 +751,35 @@ width: 200px;" alt="Logo">
 
       </div>
   </div>
+
+
+  <!-- div.mobileFooter  -->
+  <div class="custom_btn_phone">
+    <div class="bottom-bar">
+        <ion-icon name="home-outline" class="icon_new" onclick="change(this)">
+        </ion-icon>
+        <ion-icon name="folder-outline" class="icon_new" onclick="change(this)">
+        </ion-icon>
+        <ion-icon name="add-circle-outline" class="icon_new activee" onclick="change(this)">
+        </ion-icon>
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this)">
+        </ion-icon>
+        <ion-icon name="image-outline" class="icon_new" onclick="change(this)">
+        </ion-icon>
+    </div>
+</div>
+
+<script>
+    function change(item) {
+        const buttons = document.querySelectorAll("ion-icon");
+        buttons.forEach(function(obj) {
+            obj.classList.remove("activee");
+        });
+        item.classList.add("activee");
+    }
+</script>
+
+
 
 
 
