@@ -59,7 +59,7 @@ function closeNav() {
 
 // tabbar
 document.getElementById("tab1").style.display = "block";
-document.getElementsByClassName("tab")[0].style.backgroundColor = "#f0f0f054";
+document.getElementsByClassName("tab")[0].style.backgroundColor = "#33333";
 
 function openTab(evt, tabName) {
   var i, tabContent, tabLinks;
@@ -69,8 +69,20 @@ function openTab(evt, tabName) {
   }
   tabLinks = document.getElementsByClassName("tab");
   for (i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].style.backgroundColor = "rgb(0, 0, 0)"; // Reset background color of all tabs
+    tabLinks[i].style.backgroundColor = "#33333"; // Reset background color of all tabs
   }
   document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.style.backgroundColor = "#f0f0f054"; // Set background color of selected tab
+  evt.currentTarget.style.backgroundColor = "#33333"; // Set background color of selected tab
+}
+
+// tabbarmobile
+// Function to toggle the visibility of the list
+function toggleList(listId) {
+  var list = document.getElementById(listId);
+  if (list.style.display === "none" || list.style.display === "") {
+    // Check for both 'none' and '' (initial)
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
 }

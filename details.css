@@ -444,7 +444,7 @@ img {
   justify-content: space-between;
 }
 .inerBox {
-  background: black;
+  background: #333333;
   margin: 10px;
   border-radius: 5px;
 }
@@ -472,7 +472,7 @@ img {
 
 .addtocartButton {
   font-size: 15px;
-  border: 2px solid #000000; /* Fix border color */
+  border: 2px solid #18588c;
 
   margin-bottom: 5px;
   background: transparent;
@@ -562,13 +562,16 @@ input[type="checkbox"] {
   align-items: center;
   height: 35px;
   justify-content: center;
-  background-color: rgb(0, 0, 0);
-  border-radius: 10px;
+  background-color: #333333;
+  border-bottom: 1px solid white;
+
+  border-radius: 10px 10px 0 0; /* top-left and top-right */
+
   border-color: 2px #18578c solid;
 }
 
 .tab {
-  background-color: rgb(0, 0, 0);
+  background-color: #333333;
   border: none;
   outline: none;
   cursor: pointer;
@@ -642,134 +645,62 @@ input[type="checkbox"] {
   background: #555; /* Color of the scrollbar handle on hover */
   border-radius: 100px;
 }
-
-/* /
-/
-/
-/
-/
-/
-/
-/
-/
-/ */
-
-/* fullmediaQuery after 600px */
-/* CSS for screens wider than 600px */
-@media only screen and (max-width: 600px) {
-  /* Add your CSS styles here */
-  /* header */
-  .header_conatiner {
-    display: none;
-  }
-  /* m0obileheader */
-  .mobilehead {
-    display: flex;
-    width: 100%;
-    height: 69px;
-    padding-top: 25px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  /* .directory */
-  .directory {
-    padding-left: 2%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 10px;
-  }
-  /* productDetailsRightSection */
-  .productDetsilsHead {
-    font-family: "Montserrat", sans-serif;
-    padding-top: 15px;
-    font-size: 13px;
-    font-weight: 300px;
-  }
-
-  /* prodcutPrice */
-  .produt_Price {
-    line-height: 1;
-    font-size: 24px;
-    font-weight: 600;
-    color: #ffffff;
-    padding-top: 5px;
-  }
-  .product_Price_strike {
-    font-size: 15px;
-    font-weight: 400;
-    padding-left: 10px;
-    color: #ffffff91;
-  }
-  .socialMediaIcon {
-    display: flex;
-    padding-left: 5px;
-  }
-  /* //addoon */
-  .AddOnContainer {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .AddOnContainerBox {
-    width: 50%; /* This makes sure two boxes fit in a row by default */
-    box-sizing: border-box; /* To include padding and borders in the width */
-  }
-
-  .AddOnContainerBox {
-    width: 100%; /* On screens smaller than 600px, make each box take full width */
-  }
-  /* size */
-  .SizeContainer {
-    display: none;
-  }
-  .mobile_size_container {
-    display: block;
-  }
-  .size_text_mobile {
-    margin: 9px;
-    font-size: 13px;
-    /* padding: 9px; */
-    color: white;
-    line-height: 0;
-    padding: 8px 8px 8px 0px; /* top right bottom left */
-  }
-
-  /* addtocartButton */
-  .buyNowButton {
-    width: 100%;
-    font-size: 15px;
-    margin-bottom: 5px;
-    background: #18578c;
-    margin-right: 10px;
-    height: 50px;
-    color: white;
-  }
-
-  .wtspButton {
-    font-size: 15px;
-    margin-bottom: 12px;
-    height: 45px;
-    margin-right: 15px;
-  }
-
-  .addtocartButton {
-    font-size: 15px;
-    border: 2px solid #18588c; /* Fix border color */
-
-    margin-bottom: 5px;
-    background: transparent;
-    height: 62px;
-    margin-right: 9px;
-
-    margin-bottom: 12px;
-    height: 45px;
-  }
-  .products_points {
-    font-size: 12px;
-  }
+#tab_bar_system_ui {
+  display: block;
+}
+#mobileTabBar {
+  display: none;
 }
 
-/* New Products */
+/* dropdown */
+
+.dropButton {
+  height: 44px;
+  font-size: 14px;
+  background-color: #333333;
+  color: white;
+  padding: 1px 11px;
+  margin-top: 10px;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white; /* 4 pixels */
+}
+/* Style for the list */
+.list {
+  display: none;
+  /* Initially hide the list */
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 0.5s ease;
+  /* Add animation */
+  border-radius: 5px;
+  background-color: #333333;
+}
+/* Style for list items */
+.list-item {
+  margin: 0px;
+  text-align: start;
+  padding-left: 13px;
+  font-size: 13px;
+  padding-top: 5px;
+  color: #fbfbfbb8;
+  /* padding: 5px; */
+}
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* product card */
 
 .product-image {
   position: relative;
@@ -1007,3 +938,138 @@ input[type="checkbox"] {
   /* text-transform: uppercase; */
   margin: 0 0 15px;
 }
+
+/* /
+/
+/
+/
+/
+/
+/
+/
+/
+/ */
+
+/* fullmediaQuery after 600px */
+/* CSS for screens wider than 600px */
+@media only screen and (max-width: 600px) {
+  /* Add your CSS styles here */
+  /* header */
+  .header_conatiner {
+    display: none;
+  }
+  /* m0obileheader */
+  .mobilehead {
+    display: flex;
+    width: 100%;
+    height: 69px;
+    padding-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* .directory */
+  .directory {
+    padding-left: 2%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 10px;
+  }
+  /* productDetailsRightSection */
+  .productDetsilsHead {
+    font-family: "Montserrat", sans-serif;
+    padding-top: 15px;
+    font-size: 13px;
+    font-weight: 300px;
+  }
+
+  /* prodcutPrice */
+  .produt_Price {
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-top: 5px;
+  }
+  .product_Price_strike {
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 10px;
+    color: #ffffff91;
+  }
+  .socialMediaIcon {
+    display: flex;
+    padding-left: 5px;
+  }
+  /* //addoon */
+  .AddOnContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .AddOnContainerBox {
+    width: 50%; /* This makes sure two boxes fit in a row by default */
+    box-sizing: border-box; /* To include padding and borders in the width */
+  }
+
+  .AddOnContainerBox {
+    width: 100%; /* On screens smaller than 600px, make each box take full width */
+  }
+  /* size */
+  .SizeContainer {
+    display: none;
+  }
+  .mobile_size_container {
+    display: block;
+  }
+  .size_text_mobile {
+    margin: 9px;
+    font-size: 13px;
+    /* padding: 9px; */
+    color: white;
+    line-height: 0;
+    padding: 8px 8px 8px 0px; /* top right bottom left */
+  }
+
+  /* addtocartButton */
+  .buyNowButton {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 5px;
+    background: #18578c;
+    margin-right: 10px;
+    height: 50px;
+    color: white;
+  }
+
+  .wtspButton {
+    font-size: 15px;
+    margin-bottom: 12px;
+    height: 45px;
+    margin-right: 15px;
+  }
+
+  .addtocartButton {
+    font-size: 15px;
+    border: 2px solid #18588c; /* Fix border color */
+
+    margin-bottom: 5px;
+    background: transparent;
+    height: 62px;
+    margin-right: 9px;
+
+    margin-bottom: 12px;
+    height: 45px;
+  }
+  .products_points {
+    font-size: 12px;
+  }
+  /* tabbaruisystem */
+  #tab_bar_system_ui {
+    display: none;
+  }
+  #mobileTabBar {
+    display: block;
+  }
+}
+
+/* New Products */
