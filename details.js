@@ -86,3 +86,12 @@ function toggleList(listId) {
     list.style.display = "none";
   }
 }
+
+// loginpopup
+document.getElementById("popupBtn").addEventListener("click", function () {
+  document.getElementById("popupBackground").style.display = "block";
+});
+
+document.getElementById("closeBtn").addEventListener("click", function () {
+  document.getElementById("popupBackground").style.display = "none";
+});

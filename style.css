@@ -1226,9 +1226,9 @@ body.dark .search-field i {
 }
 
 .active {
-  transform: scale(1.25) translateY(-1em);
+  transform: scale(1.25) translateY(-0em);
   background: linear-gradient(135deg, #23f, #6589ff);
-  border: 4px solid #bcbbbb;
+  /* border: 4px solid #bcbbbb; */
   color: white;
 }
 
@@ -1338,9 +1338,9 @@ body.dark .search-field i {
     border: 3px solid#1D1D1D;
   }
   .active {
-    transform: scale(1.2) translateY(-0.6em);
-    background: linear-gradient(100deg, #23f, #6589ff);
-    border: 3px solid #bcbbbb;
+    transform: scale(1.25) translateY(-0em);
+    background: linear-gradient(135deg, #23f, #6589ff);
+    /* border: 4px solid #bcbbbb; */
     color: white;
   }
   nav {
