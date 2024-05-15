@@ -133,7 +133,7 @@ button {
   outline: none; /* Remove outline on focus */
 }
 .border-line {
-  border-bottom: 1px solid rgb(0, 13, 255);
+  border-bottom: 1px solid rgb(0, 0, 0);
   padding: 0px;
   padding-top: 20px;
   /* padding-top: 58px; */
@@ -146,7 +146,7 @@ button {
 }
 .forgot_box p {
   font-size: 12px;
-  color: #23f;
+  color: rgb(0, 0, 0);
 }
 .loginbutton {
   background: #18578c;
