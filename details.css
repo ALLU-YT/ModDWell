@@ -1347,7 +1347,7 @@ input[type="checkbox"] {
   #mobileTabBar {
     display: block;
   }
-
+  /* navbarmobile */
   .custom_btn_phone {
     display: flex;
     width: 100%;
