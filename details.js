@@ -95,3 +95,51 @@ document.getElementById("popupBtn").addEventListener("click", function () {
 document.getElementById("closeBtn").addEventListener("click", function () {
   document.getElementById("popupBackground").style.display = "none";
 });
+
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground").style.display = "none";
+  });
+
+// SignUpPopup button
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground_signup").style.display = "block";
+  });
+
+document
+  .getElementById("closeBtn_signup")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground_signup").style.display = "none";
+  });
+
+document
+  .getElementById("signinPopupbtn_ui")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground").style.display = "block";
+  });
+// // signinPopupbtn
+// document
+//   .getElementById("signinPopupbtn")
+//   .addEventListener("click", function () {
+//     document.getElementsByClassName("popupBackground_ui")[0].style.display =
+//       "block";
+//   });
+
+// document
+//   .getElementById("closeBtn")
+//   .addEventListener("click", function () {
+//     document.getElementById("popupBackground_signup").style.display = "none";
+//   });
+//Mobile Signup
+function openNavSignup() {
+  document.getElementById("mySidenavSignUp").style.width = "300px";
+}
+
+function closeNavSignup() {
+  document.getElementById("mySidenavSignUp").style.width = "0";
+}
+
+// CreateyourAccount for mobile
