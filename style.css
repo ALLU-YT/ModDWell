@@ -281,7 +281,10 @@ button {
 }
 
 /* Animation when hovering over the button */
-
+.homeCategory {
+  display: flex;
+  justify-self: center;
+}
 .button:hover {
   background: #18578c;
   transform: scale(1.1);
