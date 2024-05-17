@@ -7,7 +7,7 @@
   flex-direction: column; /* Align items vertically */
   justify-content: center; /* Center content horizontally and vertically */
   cursor: pointer;
-  padding: 25px;
+  padding: 15px;
   text-align: center; /* Center text horizontally */
 }
 
