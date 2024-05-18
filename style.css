@@ -239,7 +239,7 @@ header {
 
 .icon {
   cursor: pointer;
-  padding: 20px;
+  padding: 14px;
   align-items: center;
   /* Center vertically */
   text-align: center;
@@ -249,7 +249,11 @@ header {
 .icon p {
   margin-top: 6px;
   /* Remove default margin */
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 0px;
 }
+
 
 /* Button_css  */
 
