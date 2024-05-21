@@ -269,6 +269,59 @@ button {
 .bi-person {
   font-size: 24px; /* Adjust as needed */
 }
+/* addToCartPopUp */
+
+#addToCartPopupBackground {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 75%;
+  display: none;
+  left: 50%;
+  width: 400px;
+  /* height: 300px; */
+  background-color: #ffffff;
+  color: black;
+}
+
+#addToCartcloseBtn {
+  cursor: pointer;
+}
+.addToCardHead {
+  color: blue;
+  font-weight: 500;
+  padding-right: 20px;
+}
+.addToCardImg {
+  width: 100px;
+  border-radius: 100px;
+  display: flex;
+  padding: 5px;
+}
+.addToCardTitle {
+  padding-left: 10px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.addToCardButton {
+  background: #18578c;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 8px;
+  width: 45%;
+  font-size: 14px;
+}
+.addToCardContinue {
+  background: #1a1b1b;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 8px;
+  width: 45%;
+  font-size: 14px;
+}
 /* secondHEader */
 .navbar {
   padding: 0px;
@@ -1211,7 +1264,14 @@ input[type="checkbox"] {
 #mobile_similar_products {
   display: none;
 }
+/* //systemfooter? */
+.footer_h {
+  text-align: start;
+}
 
+.tooter_p {
+  font-size: 15px;
+}
 /* /
 /
 /

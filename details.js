@@ -143,3 +143,18 @@ function closeNavSignup() {
 }
 
 // CreateyourAccount for mobile
+
+//addToCartPopup
+document
+  .getElementById("addToCartPopup")
+  .addEventListener("click", function () {
+    document.getElementById("addToCartPopupBackground").style.display = "block";
+  });
+
+document
+  .getElementById("addToCartcloseBtn")
+  .addEventListener("click", function () {
+    document.getElementById("addToCartPopupBackground").style.display = "none";
+  });
+
+//addToAddtresPopup

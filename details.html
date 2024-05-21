@@ -517,10 +517,42 @@
 
 
          <div style="margin-top:13px; display: flex;">
-          <button type="button" class="btn btn-primary addtocartButton">
+          <button id="addToCartPopup" type="button" class="btn btn-primary addtocartButton">
             <i class="bi bi-cart"></i>
             Add to Cart
           </button>
+
+          <!-- //addToCartPopup -->
+          <div id="addToCartPopupBackground">
+    
+      
+          <div style="display: flex;justify-content: space-between; align-items: start; padding: 10px;">
+            <p class="addToCardHead">Item added to your cart!</p>
+            <button id="addToCartcloseBtn">Close</button>
+          </div>
+            <div style="display: flex; align-items: center;">
+              <img class="addToCardImg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
+              <div class="addToCardTitle">Woven with Love - Small - (600mm x 450mm) X 1 
+                <p><span style="color: rgba(0, 0, 0, 0.692);">Price</span> : 4665 </p></div>
+            </div>
+       
+            
+          <a href="AddToCartFolder/addToCartPage.html"> <button class="addToCardButton">Proceed to Cart</button></a>
+           <button class="addToCardContinue">Continue Shopping</button>
+           
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
           <button type="button" class="btn btn-success wtspButton">
             <i class="bi bi-whatsapp"></i>
             whatsapp
@@ -1069,7 +1101,93 @@ padding-top: 12px;">
 </div>
 
 
+<!-- footer -->
+  <!-- footer -->
+  <div class="system_footer">
+    <footer class="bg-black text-center text-white">
+      <hr>
+        <!-- Grid container -->
+        <div class="container-fluid p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Github -->
 
+            </section>
+
+
+            <!-- Section: Links -->
+            <section class="mb-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer_h">
+                            <h5 class="text-uppercase"></h5>
+                            <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
+                            <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer_h">
+                            <h5 class="text-uppercase">Links</h5>
+                            <ul class="list-unstyled mb-0">
+                                <p class="tooter_p">Terms $ Conditions</p>
+                                <p class="tooter_p">Return Policy</p>
+                                <p class="tooter_p">About</p>
+                                <p class="tooter_p">Privacy Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer_h">
+                            <h5 class="text-uppercase">CONTACT INFO</h5>
+                            <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
+                            <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
+                            <p class="tooter_p">+91 72003 92758</p>
+                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
+                            <p class="tooter_p">moddwell@tprsenterprises.in/p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer_h">
+                            <h5 class="text-uppercase">MY ACCOUNT</h5>
+                            <ul class="list-unstyled mb-0">
+                                <p class="tooter_p">Login</p>
+                                <p class="tooter_p">Order History</p>
+                                <p class="tooter_p">My Wishlist</p>
+                                <p class="tooter_p">Track Order</p>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!-- Repeat the above grid column structure for additional link sections -->
+
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+            <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
 
 <script>
@@ -1100,8 +1218,7 @@ function displyLoginUpForm() {
 
 
 
-  <!-- CustomHeight -->
-    <div style="width: 100%; height: 50px;  background: #1d1d1d;padding-top: 20px; color: black;margin-top: 20px;"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       type="module"
