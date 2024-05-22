@@ -279,6 +279,7 @@ button {
   left: 50%;
   width: 400px;
   /* height: 300px; */
+  border-radius: 5px;
   background-color: #ffffff;
   color: black;
 }
@@ -287,15 +288,15 @@ button {
   cursor: pointer;
 }
 .addToCardHead {
-  color: blue;
-  font-weight: 500;
-  padding-right: 20px;
+  font-weight: 600;
+  padding-right: 33%;
+  padding-left: 10px;
 }
 .addToCardImg {
   width: 100px;
   border-radius: 100px;
   display: flex;
-  padding: 5px;
+  padding: 7px;
 }
 .addToCardTitle {
   padding-left: 10px;
@@ -1457,3 +1458,7 @@ input[type="checkbox"] {
 }
 
 /* New Products */
+.img_icn_smg {
+  width: 25px;
+  height: 25px;
+}
