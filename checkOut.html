@@ -44,7 +44,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
     />
 
-    <link rel="stylesheet" href="/details.css" />
+    <link rel="stylesheet" href="details.css" />
     <link rel="stylesheet" href="addToCart.css" />
   </head>
   <body>
@@ -366,169 +366,139 @@
        </div>
       </div>
   
-      <!-- OrderContentIcons -->
+  <!-- Address -->
    
        <div class="container">
         <div class="row">
           <div class="orderContainerData">
-          
-           <div style="display: flex; justify-content: center;align-items: center;">
-            <div style="width: 30%; margin-right: 10px;display: flex;">Product</div>
-            <div class="orderContainerhead">Price</div>
-            <div class="orderContainerhead">Quantity</div>
-            <div class="orderContainerhead">Total</div>  
-            <div class="orderContainerhead">Remove</div>
-          </div>
-          <hr>
-          <!-- //details -->
-          <div style="display: flex; margin-top: 10px;">
-            <div style="width: 30%; margin-right: 10px;display: flex;align-items: center;"><img class="orderContainerDataimg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
-              <div class="product_d">
-                Woven with Love - Small - (600mm x 450mm)
+        
+
+            <!-- address -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 addressContainer">
+         
+        
+         
+          <div style="display: flex;">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+              <label>
+                <input type="radio" name="option" value="" />
+                <span class="round-radio"></span>
+              </label>
+              <div style="display: flex; flex-direction: column; padding-top: 10px; flex-grow: 1;">
+                <p class="AddressDetailsP">Address:</p>
+                <p class="AddressDetailsP">Postal code:</p>
+                <p class="AddressDetailsP">City:</p>
+                <p class="AddressDetailsP">State:</p>
+                <p class="AddressDetailsP">Country:</p>
+                <p class="AddressDetailsP">Phone:</p>
               </div>
-            </div>
-            <div class="orderContainerDetails">
-              <div class="product_d">
-                RS 2000
-              </div>
-            </div>
-            <div style="width: 20%;
-          
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;">
-              <div id="decrement">-</div>
-              <div id="counter">1</div>
-              <div id="increment">+</div>
-            </div>
-            <div class="orderContainerDetails"">
-              <div class="product_d">
-                RS 2000
-              </div>
-            </div>
-            <div class="orderContainerDetails"">
-              <div class="product_d">
-                <i class="bi bi-trash"></i>
-              </div>
+              <i class="bi bi-three-dots-vertical" style="margin-left: auto; margin-top: 10px;"></i>
             </div>
           </div>
-                         <!-- //details -->
-          <div style="display: flex; margin-top: 10px;">
-            <div style="width: 30%; margin-right: 10px;display: flex;align-items: center;"><img class="orderContainerDataimg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
-              <div class="product_d">
-                Woven with Love - Small - (600mm x 450mm)
-              </div>
-            </div>
-            <div class="orderContainerDetails">
-              <div class="product_d">
-                RS 2000
-              </div>
-            </div>
-            <div style="width: 20%;
           
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;">
-              <div id="decrement">-</div>
-              <div id="counter">1</div>
-              <div id="increment">+</div>
-            </div>
-            <div class="orderContainerDetails"">
-              <div class="product_d">
-                RS 2000
+
+        </div>
+        <div class="col-lg-6 addressContainer">
+         
+        
+         
+          <div style="display: flex;">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+              <label>
+                <input type="radio" name="option" value="" />
+                <span class="round-radio"></span>
+              </label>
+              <div style="display: flex; flex-direction: column; padding-top: 10px; flex-grow: 1;">
+                <p class="AddressDetailsP">Address:</p>
+                <p class="AddressDetailsP">Postal code:</p>
+                <p class="AddressDetailsP">City:</p>
+                <p class="AddressDetailsP">State:</p>
+                <p class="AddressDetailsP">Country:</p>
+                <p class="AddressDetailsP">Phone:</p>
               </div>
-            </div>
-            <div class="orderContainerDetails"">
-              <div class="product_d">
-                <i class="bi bi-trash"></i>
-              </div>
+              <i class="bi bi-three-dots-vertical" style="margin-left: auto; margin-top: 10px;"></i>
             </div>
           </div>
-            <!-- //details -->
-            <div style="display: flex; margin-top: 10px;">
-              <div style="width: 30%; margin-right: 10px;display: flex;align-items: center;"><img class="orderContainerDataimg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
-                <div class="product_d">
-                  Woven with Love - Small - (600mm x 450mm)
-                </div>
-              </div>
-              <div class="orderContainerDetails">
-                <div class="product_d">
-                  RS 2000
-                </div>
-              </div>
-              <div style="width: 20%;
+          
+
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- ADDASSRESS CONTAINER -->
+    <div style="align-items: center;display: flex;justify-content: center;">
+      <div class="AddaddressContainer" id="addToAddressPopup">
+
+        <i class="bi bi-plus" style="font-size: 24px;"></i>
+
+      </div>
+        <!-- //addToCartPopup -->
+        <!-- ADDRESSPOPUP -->
+        <div id="addToADdressPopupBackground">
+    
+      
+          <div style="display: flex;justify-content: space-between; align-items: start; padding: 10px;">
+            <p class="addToCardHead">New Address</p>
+            <button id="addToAddresscloseBtn">Close</button>
+          </div>
             
-              margin-right: 10px;
-              display: flex;
-              align-items: center;
-              justify-content: space-around;">
-                <div id="decrement">-</div>
-                <div id="counter">1</div>
-                <div id="increment">+</div>
-              </div>
-              <div class="orderContainerDetails"">
-                <div class="product_d">
-                  RS 2000
-                </div>
-              </div>
-              <div class="orderContainerDetails"">
-                <div class="product_d">
-                  <i class="bi bi-trash"></i>
-                </div>
-              </div>
-            </div>
-              <!-- //details -->
-          <div style="display: flex; margin-top: 10px;">
-            <div style="width: 30%; margin-right: 10px;display: flex;align-items: center;"><img class="orderContainerDataimg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
-              <div class="product_d">
-                Woven with Love - Small - (600mm x 450mm)
-              </div>
-            </div>
-            <div class="orderContainerDetails">
-              <div class="product_d">
-                RS 2000
-              </div>
-            </div>
-            <div style="width: 20%;
-          
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;">
-              <div id="decrement">-</div>
-              <div id="counter">1</div>
-              <div id="increment">+</div>
-            </div>
-            <div class="orderContainerDetails"">
-              <div class="product_d">
-                RS 2000
-              </div>
-            </div>
-            <div class="orderContainerDetails"">
-              <div class="product_d">
-                <i class="bi bi-trash"></i>
-              </div>
-            </div>
-          </div>   
-          <hr>
-          <div style="display: flex;justify-content: space-between;">
-            <p style="color: #ffffff4b;">Subtotal</p>
-            <p style="padding-right: 7%;">Rs 4665</p>
-          </div>
-          <div style="display: flex;justify-content: space-between;">
-            <a href="" style="text-decoration: none;"><p style="color: #201591;">return to Shop</p></a>
-            <button class="continuebtn" onclick="nnafovag()">Continue to Shipping</button>
+          <form style="padding: 0px 10px 20px 10px;">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" style="color: rgb(0, 0, 0); font-weight: 600;">Address*</label>
 
-<script>
-    function nnafovag() {
-        // Redirect to another page
-        window.location.href = 'checkOut.html';
-    }
-</script>
-
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1" style="color: rgb(0, 0, 0); font-weight: 600;">State</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="State">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1" style="color: rgb(0, 0, 0); font-weight: 600;">City</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1" style="color: rgb(0, 0, 0); font-weight: 600;">Postal Code</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="State">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1" style="color: rgb(0, 0, 0); font-weight: 600;">Phone</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="State">
+            </div>
+          </form>
+            
+          <div  style="display: flex; justify-content: end; margin-right: 10px; margin-bottom: 10px;">
+            <button class="savebtn">Save</button>
           </div>
+          </div>
+     </div>
+      
+
+     <div>
+      <hr>
+     
+      <div style="display: flex;justify-content: space-between;">
+        <a href="" style="text-decoration: none;"><p style="color: #201591;">return to Shop</p></a>
+        <button class="continuebtn" onclick="nnafovag()">Continue to Delivery info</button>
+     
+
+        <script>
+            function nnafovag() {
+                // Redirect to another page
+                window.location.href = 'delivery.html';
+            }
+        </script>
+      </div>
+     </div>
+
            </div>
            
 
@@ -538,24 +508,7 @@
    
     
     <hr>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-            let count = 1;
 
-            document.getElementById('decrement').addEventListener('click', function() {
-                if (count > 0) {
-                    count--;
-                    document.getElementById('counter').textContent = count;
-                }
-            });
-
-            document.getElementById('increment').addEventListener('click', function() {
-                count++;
-                document.getElementById('counter').textContent = count;
-            });
-        });
-
-    </script>
     <!-- footer -->
      <div class="system_footer">
                         <footer class="bg-black text-center text-white">
@@ -665,6 +618,20 @@
         document.getElementsByClassName("mobilelogin")[0].style.display =
           "block";
       }
+      document
+  .getElementById("addToAddressPopup")
+  .addEventListener("click", function () {
+    document.getElementById("addToADdressPopupBackground").style.display =
+      "block";
+  });
+
+document
+  .getElementById("addToAddresscloseBtn")
+  .addEventListener("click", function () {
+    document.getElementById("addToADdressPopupBackground").style.display =
+      "none";
+  });
+
     </script>
 
     <!-- CustomHeight -->
@@ -698,6 +665,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="/details.js"></script>
+    <script src="details.js"></script>
   </body>
 </html>
