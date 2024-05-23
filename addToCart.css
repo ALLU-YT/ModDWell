@@ -29,7 +29,7 @@ body {
   margin: 0;
 }
 .priceamount {
-  font-size: 14px;
+  font-size: 13px;
 
   line-height: 0;
   color: rgb(255, 255, 255);
@@ -240,4 +240,17 @@ body {
 
 .custom-checkbox-container label:hover::before {
   border-color: #007bff;
+}
+
+.ProductDetailsCard_confirm {
+  height: 500px;
+  background: white;
+  width: 100%;
+  margin-top: 40px;
+  border-color: 1px solid blue;
+
+  /* height: 400px; */
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-bottom: 40px;
 }
