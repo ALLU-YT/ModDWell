@@ -1,0 +1,118 @@
+.ProfileDashBoard {
+  width: 280px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.profileHead {
+  height: 200px;
+  background: #18578c;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.profileimageanaData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.profileimageanaData img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profileimageanaData h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.profileimageanaData p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  border-radius: 4px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.menuItem i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menuItem p {
+  margin: 0;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+}
+
+.menuItem:hover {
+  background: #a7a3a3;
+}
+
+.menuItem.active {
+  background: #e0e0e0;
+}
+
+/* purchasehistoryContainer */
+.purchasehistoryContainer {
+  height: 100%;
+  background: white;
+  color: black;
+  height: 500px;
+}
+.purchasehistory_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.purchasehistory_th,
+.purchasehistory_td {
+  padding: 22px 15px;
+  border: 1 solid transparent;
+}
+
+.purchasehistory_th {
+  background-color: #f4f4f4;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.purchasehistory_td {
+  background-color: #fff;
+}
+
+.purchasehistory_td.options {
+  text-align: center; /* Center-align options column */
+}
+.purchasehistory_td {
+  font-size: 14px;
+  font-weight: 500;
+}
