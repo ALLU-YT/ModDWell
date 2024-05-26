@@ -311,80 +311,109 @@
         <div class="category_head" style="padding-bottom: 25px;">
             <h2>Most Popular Categories</h2>
         </div>
- <div class="system_category">
-        
-    <div  class="" style="display: flex; ">
-                
-        <div class="icon">
-            <img src="assets/Icons/Icons-01.png" alt="Icon 1" />
-            <p>Corner shelf</p>
-        </div>
-
-        <div class="icon">
-            <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
-            <p>Digital frame</p>
-        </div>
-
-        <div class="icon">
-            <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
-            <p>LED Mirror</p>
-        </div>
+ <style>
    
-        <div class="icon">
-            <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
-            <p>Magnetic board</p>
-        </div>
-        <div class="icon">
-            <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
-            <p>Magnetic board</p>
-        </div>
-   
+      .containeres {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        <div class="icon">
-            <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
-            <p>Mirror cabinet</p>
-        </div>
+        padding: 10px 39px 10px 39px;
+      }
+
+      .icon {
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     
-   
-        <div class="icon">
-            <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
-            <p>Mirror cabinet</p>
-        </div>
-          <div class="icon">
-          <a href="categorypage.html">  <img src="assets/Icons/Icons-03.png" alt="Icon 1" /></a>
-            <p>Mirror cabinet</p>
-        </div>
-   
+        text-align: center;
+        flex: 1 1 calc(12.5% - 20px); /* 8 icons in a row with some spacing */
+        max-width: calc(12.5% - 20px); /* Ensure it respects the spacing */
+        box-sizing: border-box;
+      }
 
-     </div>
+      .icon img {
+        max-width: 100%;
+        height: auto;
+        width:79px;
+      }
 
- </div>
+      .icon p {
+        margin: 1px 0 0;
+        color: #ffffff;
+        font-size: 13px;
+        text-decoration: none;
+      }
 
+      .icon a {
+        text-decoration: none;
+        color: inherit;
+      }
 
- <div class="mobile_category">
-   <div style="display: flex;justify-content: space-between;">
-    <div class="mobile_category_icon">
-        <img src="assets/Icons/Icons-01.png" alt="">
+      @media (max-width: 1200px) {
+        .icon {
+          flex: 1 1 calc(25% - 20px); /* 4 icons in a row */
+          max-width: calc(25% - 20px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .icon {
+          flex: 1 1 1 1 calc(50% - 20px); /* 2 icons in a row */
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .icon {
+          flex: 1 1 1 1 100%; /* 1 icon in a row */
+          max-width: 100%;
+        }
+      }
+    </style>
+
+    <div class="containeres">
+      <div class="icon">
+        <a href="singleCategoryProducts.html">
+          <img src="assets/Icons/Icons-01.png" alt="Icon 1" />
+          <p>Corner shelf</p>
+        </a>
+      </div>
+      <div class="icon">
+        <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
+        <p>Digital frame</p>
+      </div>
+      <div class="icon">
+        <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
+        <p>Digital frame</p>
+      </div>
+      <div class="icon">
+        <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
+        <p>LED Mirror</p>
+      </div>
+      <div class="icon">
+        <img src="assets/Icons/Icons-05.png" alt="Icon 1" />
+        <p>Magnetic board</p>
+      </div>
+      <div class="icon">
+        <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
         <p>Mirror cabinet</p>
-    </div>
-    <div class="mobile_category_icon">
-        <img src="assets/Icons/Icons-02.png" alt="">
+      </div>
+      <div class="icon">
+        <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
         <p>Mirror cabinet</p>
+      </div>
+      <div class="icon">
+        <a href="categorypage.html">
+          <img src="assets/Icons/Icons-03.png" alt="Icon 1" />
+          <p>Mirror cabinet</p>
+        </a>
+      </div>
     </div>
-    <div class="mobile_category_icon">
-        <img src="assets/Icons/Icons-03.png" alt="">
-        <p>Mirror cabinet</p>
-    </div>
-    <a href="categorypage.html">
-        <div class="mobile_category_icon">
-        <img src="assets/Icons/Icons-04.png" alt="">
-        <p>Mirror cabinet</p>
-    </div>
-    </a>
-   </div>
- </div>
 
-
+     
         <!-- trending products -->
         <div class="category_head" style="padding-bottom: 30px">
             <h2>Trending products</h2>

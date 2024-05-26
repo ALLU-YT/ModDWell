@@ -1293,35 +1293,9 @@ body.dark .search-field i {
 .mobile_category_icon img {
   width: 50px;
 }
-.mobile_category_icon p {
-  font-size: 10px;
-}
+
 @media only screen and (max-width: 600px) {
-  .system_category {
-    display: none;
-  }
-  /* mobilevategory? */
-  .mobile_category {
-    display: block;
-  }
-  .mobile_category_icon {
-    cursor: pointer;
-    padding: 10px;
-    align-items: center;
-    /* Center vertically */
-    text-align: center;
-    /* Center text horizontally */
-  }
-
-  .mobile_category_icon img {
-    width: 70px;
-  }
-  .mobile_category_icon p {
-    font-size: 11px;
-    line-height: 0px;
-    padding-top: 5px;
-  }
-
+  
   .outline-button {
     display: inline-block;
     padding: 10px 20px;
@@ -1534,9 +1508,7 @@ body.dark .search-field i {
   .icon img {
     width: 50px;
   }
-  .icon p {
-    font-size: 12px;
-  }
+
   /* Category */
   /* category */
   .category_head h2 {

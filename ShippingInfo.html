@@ -446,7 +446,9 @@
                   </div>
               </div>
            <div style="display: flex; justify-content: end;">
-          <button class="OpenAddressFormBtn">Add New Address</button>
+          <button class="OpenAddressFormBtn" style="  padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc; border-radius: 5px;">Add New Address</button>
          <div class="address-popup" id="addressPopup">
       <div class="address-form-container">
         <span class="close-address-btn" id="closeAddressBtn">&times;</span>
@@ -459,11 +461,11 @@
             name="address"
             placeholder="Your Address"
             required
-          />
+          / style="width: 100%;">
 
           <label for="state">State*</label>
-          <select id="state" name="state" required>
-            <option value="">Select your State</option>
+          <select id="state" name="state" required style="width: 100%;">
+            <option value="" style="width: 100%;">Select your State</option>
             <!-- Add state options here -->
           </select>
 
@@ -474,7 +476,7 @@
             name="city"
             placeholder="Please enter your nearest city"
             required
-          />
+          / style="width: 100%;">
 
           <label for="postalCode">Postal code*</label>
           <input
@@ -483,7 +485,7 @@
             name="postalCode"
             placeholder="Your Postal Code"
             required
-          />
+          / style="width: 100%;">
 
           <label for="phone">Phone*</label>
           <input
@@ -492,7 +494,7 @@
             name="phone"
             placeholder="+880"
             required
-          />
+          / style="width: 100%;">
 
           <button type="submit">Submit</button>
         </form>
@@ -541,7 +543,13 @@
             
             <div style="position: relative;">
               <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code">
-              <button class="applybtn">Apply</button>
+              <button class="applybtn" style=" position: absolute;
+  right: 5px;
+  color: red;
+  margin-left: 5px;
+  top: 0;
+  font-size: 13px;
+  height: 100%;">Apply</button>
             </div>
             
             
