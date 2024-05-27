@@ -1,5 +1,5 @@
 body {
-   background: #1d1d1d;
+  background: #1d1d1d;
   margin: 0px;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -253,7 +253,6 @@ header {
   font-weight: 100;
   line-height: 0px;
 }
-
 
 /* Button_css  */
 
@@ -1273,29 +1272,8 @@ body.dark .search-field i {
 
 /* MediaQuery............................................ */
 /* systemcategory */
-.system_category {
-  display: flex;
-  justify-content: center;
-}
-/* mobilevategory? */
-.mobile_category {
-  display: none;
-}
-.mobile_category_icon {
-  cursor: pointer;
-  padding: 7px;
-  align-items: center;
-  /* Center vertically */
-  text-align: center;
-  /* Center text horizontally */
-}
-
-.mobile_category_icon img {
-  width: 50px;
-}
 
 @media only screen and (max-width: 600px) {
-  
   .outline-button {
     display: inline-block;
     padding: 10px 20px;
