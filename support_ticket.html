@@ -43,20 +43,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
     />
-    <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-  ></script>
 
     <link rel="stylesheet" href="details.css" />
-    <link rel="stylesheet" href="addToCart.css" />
+    <link rel="stylesheet" href="profile.css">
   </head>
   <body>
     <div style="background: black">
       <header class="header_conatiner" style="background: black">
         <!-- Left side logo image -->
         <img
-          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+          src="/assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
           style="padding-left: 20px; width: 200px"
           alt="Logo"
         />
@@ -121,7 +117,8 @@
                       placeholder="Password"
                     />
                     <div class="forgot_box">
-            
+                      <!-- <input type="checkbox" name="" id="">
+            <p>Remember Me</p> -->
                       <p>Forgot password?</p>
                     </div>
                     <button class="loginbutton">Login in</button>
@@ -344,445 +341,84 @@
       </div>
       <hr />
     </div>
+   
 
-<div class="container" >
-<div class="row" style="margin-left: 15px;">
-
+<div class="container-fluid" style="margin-bottom: 20px;">
+<div class="row">
+  <div class="col-lg-3">
+    <!-- sideBAr -->
+    <div style="display: flex; justify-content: end;">
+      <div class="ProfileDashBoard">
+        <div class="profileHead">
+          <div class="profileimageanaData">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>Ameen</h3>
+            <p>ameeofficial33@gmail.com</p>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menuItem">
+            <i class="bi bi-house"></i>
+            <p>Dashboard</p>
+          </div>
+          <div class="menuItem" onclick="purchaseHistroyPage();">
+            <i class="bi bi-file-earmark-text"></i>
+            <p>Purchase History</p>
+          </div>
+          <div class="menuItem active">
+            <i class="bi bi-heart"></i>
+            <p>Wishlist</p>
+          </div>
+          <div class="menuItem">
+            <i class="bi bi-life-preserver"></i>
+            <p>Support Ticket</p>
+          </div>
+          <div class="menuItem">
+            <i class="bi bi-person"></i>
+            <p>Manage Profile</p>
+          </div>
+        </div>
+      </div>
+    </div>
   
-<!-- <p style="font-size: 13px;color: rgba(255, 255, 255, 0.308); ">This is the cart from the item you wish to purchase.</p> -->
-</div>
-</div>
-<!-- orderHeadIcons -->
-<!-- full Order Details -->
-<div class="container" style="margin-bottom: 25px;">
-  <div class="row">
-
-      <!-- productCartContainer -->
-
+  </div>
+  <div class="col-lg-9">
+    <p style="font-weight: 600;">Wishlist</p>
+    <div class="purchasehistoryContainer_wishList">
      <div class="container">
       <div class="row">
-    
-       
-       
-            <div class="col-lg-8">
-              <p>Order Details</p>
-             
-              <style>
-                /* Style the tab bar container */
-                .tab-bar-container {
-                  overflow: hidden;
-                }
-          
-                /* Style the tab bar */
-                .tab-bar {
-                  display: flex;
-                  transition: transform 0.3s ease; /* Apply transition effect to transform property */
-                }
-          
-                /* Style the tab buttons */
-                .tab-bar button {
-                  background-color: #0000005b;
-                  border: none;
-                  outline: none;
-                  cursor: pointer;
-                  padding: 10px 20px;
-                  flex: 1; /* Equal width for all tab buttons */
-                  transition: background-color 0.3s ease; /* Apply transition effect to background-color property */
-                }
-          
-                /* Change background color of buttons on hover */
-                .tab-bar button:hover {
-                  background-color: #ddd;
-                }
-          
-                /* Create an active/current tab button */
-                .tab-bar button.active {
-                  background-color: #000000; /* Change the background color to black for active tab */
-                  color: #fff; /* Change the text color to white for better visibility */
-                }
-          
-                /* Style the tab content */
-                .tab-content {
-                  display: none;
-                  padding: 20px;
-                }
-          
-                /* Show the active tab content */
-                .tab-content.active {
-                  display: block;
-                }
-              </style>
-                
-               
-                
-                <div class="tab-bar-container">
-                  <div class="tab-bar">
-                    <button class="tablinks" onclick="openTab(event, 'tab1')" id="defaultOpen">Order Details</button>
-                    <button class="tablinks" onclick="openTab(event, 'tab2')">Order Summary</button>
-                   
-                  </div>
-                </div>
-                
-                <div id="tab1" class="tab-content active">
-                  <div class="scrollable-content_purchase">
-                    <div>
-                      <div style="display: flex;justify-content: space-between;">
-    
-                        <div style="display: flex; align-items: start;">
-                          <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
-                          <div style="display: flex;flex-direction: column;padding-left: 10px;">
-                           <div style="display: flex;justify-content: space-between;">
-                            <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
-                           </div>
-                            <p class="ProductDemo">Demo1,Demo2</p>
-                            <p style="margin: 0;"><span class="spanPrice">Price:</span> 
-                             <span class="priceamount"
-                             class="priceamount">2000</span> </p>
-                             <p><span class="spanPrice">Total:</span> 
-                              <span class="priceamount"
-                              class="priceamount">2000</span> </p>
-                              
-                
-                          </div>
-                         
-                        </div>
-    
-    
-                        <div style="display: flex;flex-direction: column;justify-content: space-between;">
-                     
-                          <div style="width: 100px; color: white; align-items: center; text-align: end;">
-                            <!-- <i class="bi bi-x"></i> -->
-                          </div>
-                            <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
-                              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.774);">
-                                Quantity
-                              </span> 1
-                            </div>
-                          
-                        </div>
-                      </div>   
-                    <hr style="color: white; margin-top: 0;">
-             
-                  </div>
-                  
-                  <div>
-                    <div style="display: flex;justify-content: space-between;">
-    
-                      <div style="display: flex; align-items: start;">
-                        <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
-                        <div style="display: flex;flex-direction: column;padding-left: 10px;">
-                         <div style="display: flex;justify-content: space-between;">
-                          <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
-                         </div>
-                          <p class="ProductDemo">Demo1,Demo2</p>
-                          <p style="margin: 0;"><span class="spanPrice">Price:</span> 
-                           <span class="priceamount"
-                           class="priceamount">2000</span> </p>
-                           <p><span class="spanPrice">Total:</span> 
-                            <span class="priceamount"
-                            class="priceamount">2000</span> </p>
-                            
-              
-                        </div>
-                       
-                      </div>
-    
-    
-                      <div style="display: flex;flex-direction: column;justify-content: space-between;">
-                   
-                        <div style="width: 100px; color: white; align-items: center; text-align: end;">
-                          <!-- <i class="bi bi-x"></i> -->
-                        </div>
-                          <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
-                            <span style="font-size: 14px; color: rgba(255, 255, 255, 0.774);">
-                              Quantity
-                            </span> 1
-                          </div>
-                        
-                      </div>
-                    </div>   
-                  <hr style="color: white; margin-top: 0;">
-           
-                </div>
-                <div>
-                  <div style="display: flex;justify-content: space-between;">
-    
-                    <div style="display: flex; align-items: start;">
-                      <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
-                      <div style="display: flex;flex-direction: column;padding-left: 10px;">
-                       <div style="display: flex;justify-content: space-between;">
-                        <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
-                       </div>
-                        <p class="ProductDemo">Demo1,Demo2</p>
-                        <p style="margin: 0;"><span class="spanPrice">Price:</span> 
-                         <span class="priceamount"
-                         class="priceamount">2000</span> </p>
-                         <p><span class="spanPrice">Total:</span> 
-                          <span class="priceamount"
-                          class="priceamount">2000</span> </p>
-                          
-            
-                      </div>
-                     
-                    </div>
-    
-    
-                    <div style="display: flex;flex-direction: column;justify-content: space-between;">
-                 
-                      <div style="width: 100px; color: white; align-items: center; text-align: end;">
-                        <!-- <i class="bi bi-x"></i> -->
-                      </div>
-                        <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
-                          <span style="font-size: 14px; color: rgba(255, 255, 255, 0.774);">
-                            Quantity
-                          </span> 1
-                        </div>
-                      
-                    </div>
-                  </div>   
-                <hr style="color: white; margin-top: 0;">
-         
-              </div>
-                  <div>
-                    <div style="display: flex; align-items: start;padding-top: 32px;">
-                    <img class="productimg" src="https://moddwell.com/public/uploads/all/7bQU1u91buP7qLLn0TqMzZvDUsjZmmAVdDyuyWIK.png" alt="">
-                    <div style="display: flex;flex-direction: column;padding-left: 10px;">
-                      <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
-                      <p class="ProductDemo">Demo1,Demo2</p>
-                      <p style="margin: 0;"><span class="spanPrice">Price:</span> 
-                       <span class="priceamount"
-                       class="priceamount">2000</span> </p>
-                       <p><span class="spanPrice">Total:</span> 
-                        <span class="priceamount"
-                        class="priceamount">2000</span> </p>
-            
-                    </div>
-                    
-                  </div>
-                  <hr style="color: white; margin-top: 0;">
-                   
-                </div>
-                  </div>
-                </div>
-                
-                <div id="tab2" class="tab-content">
-                  <div class="container" style="height: 400px;">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="order-container">
-                          <table class="order-table">
-                            <tr>
-                              <th>Order Code</th>
-                              <td>MD24-000189</td>
-                            </tr>
-                            <tr>
-                              <th>Customer</th>
-                              <td>Ameen</td>
-                            </tr>
-                            <tr>
-                              <th>Email</th>
-                              <td>Ameen@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <th>Shipping address</th>
-                              <td class="order-status">ameen, thiruvananthapuram, 695301,</td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="order-container">
-                          <table class="order-table">
-                            <tr>
-                              <th>Order date</th>
-                              <td>30-09-2024</td>
-                            </tr>
-                            <tr>
-                              <th>Order status</th>
-                              <td>Pending</td>
-                            </tr>
-                            <tr>
-                              <th>Total order amount</th>
-                              <td>7000</td>
-                            </tr>
-                            <tr>
-                              <th>Shipping Method</th>
-                              <td class="order-status">flat shipping rate</td>
-                            </tr>
-                            <tr>
-                              <th>Payment Method</th>
-                              <td class="order-status">G-pay</td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-               
-                </div>
-                
-              
-                
-                <script>
-                  // Open the default tab
-                  document.getElementById("defaultOpen").click();
-            
-                  // Function to open tabs
-                  function openTab(evt, tabName) {
-                    // Get all tab buttons
-                    var tabButtons = document.getElementsByClassName("tablinks");
-            
-                    // Remove 'active' class from all tab buttons
-                    for (var i = 0; i < tabButtons.length; i++) {
-                      tabButtons[i].classList.remove("active");
-                    }
-            
-                    // Add 'active' class to the clicked tab button
-                    evt.currentTarget.classList.add("active");
-            
-                    // Get all tab contents
-                    var tabContents = document.getElementsByClassName("tab-content");
-            
-                    // Hide all tab contents
-                    for (var i = 0; i < tabContents.length; i++) {
-                      tabContents[i].style.display = "none";
-                    }
-            
-                    // Show the clicked tab content
-                    document.getElementById(tabName).style.display = "block";
-                  }
-                </script>
-
-            
-            </div>
-                <!-- </div> -->
-                <div class="col-lg-4">
-                  <div class="ProductDetailsCard">
-                      <div style="padding: 20px;">
-                        <p class="SummeryHead">Order Summary</p>
-                        <div style="display: flex; justify-content: space-between;">
-                          <p class="subtotalbold">Subtotal</p>
-                          <p class="subtotallite">14000</p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                          <p class="subtotalbold">Total Shipping</p>
-                          <p class="subtotallite">14000</p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                          <p class="subtotalbold">Tax</p>
-                          <p class="subtotallite">14000</p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                          <p class="subtotalbold">Total</p>
-                          <p class="subtotallite">14000</p>
-                        </div>
-                      <div class="form_1_btns common_btns">
-                        <button class="shipping btn_next" onclick="navToPage();">Continue to Shipping</button>
-                      </div>
-                      <div style="display: flex; justify-content: space-between;">
-                
-                        <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
-                        <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
-                        <img class="paymentIcons" src="assets/Payment Icons/UPI.png" alt="">
-                       
-                        <img class="paymentIcons" src="assets/Payment Icons/phonpe.png" alt="">
-                        
-                      </div>
-                      </div>
-                      
-                  </div>
-        <script>
-function navToPage(){
-    window.location.href = "ShippingInfo.html";
-}
-
-        </script>
-        
-        <!-- coupen -->
-        <!-- <div class="ProductDetailsCard_2">
-          <div style="padding: 16px;">
-            <p class="SummeryHead">Have a Coupon</p>
-            
-            <div style="position: relative;">
-              <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code">
-              <button class="applybtn">Apply</button>
-            </div>
-            
-            
-          </div>
-        
-        </div> -->
-        
-        
-                </div>
-       
+      <div style="display: flex; justify-content: center
+      ;">
    
-    
-        
+    <div class="AddTicketContainer" id="addTicketBtn">
+      <button class="addTicket"><i class="bi bi-plus-lg" style="width: 10px;padding: 10px;"></i></button>
+      <p style="color: blue; padding-top: 10PX;">Create a Ticket</p>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="alertp">This is an alert box in the middle of the screen.</p>
+      </div>
+    </div>
+
+
+  
+      </div>
+      <div style="width: 100%;background-color: bisque;">
+ff
+      </div>
       </div>
      </div>
-
-
-    
- 
-  </div>
-
-  </div>
-</div>
-
-<div class="container" style="margin-top: 50px;margin-bottom: 50px;" >
-  <div class="row">
-  
-
- 
-      <style>
-        .order-container {
-          width: 100%;
-          background: white;
-          color: black;
-          padding: 20px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          border-radius: 8px;
-          /* max-width: 600px; */
-          margin: 20px auto;
-        }
-        .order-table {
-          width: 100%;
-          border-collapse: collapse;
-        }
-        .order-table th, .order-table td {
-          text-align: left;
-          padding: 10px;
-          border-bottom: 1px solid #ddd;
-        }
-        .order-table th {
-          background-color: #f8f8f8;
-          font-weight: 600;
-          font-size: 12px;
-        }
-        .order-table td {
-          background-color: #f8f8f8;
-          font-weight: 400;
-          font-size: 12px;
-        }
-        .order-row {
-          display: flex;
-          justify-content: space-between;
-        }
-        .order-row p {
-          margin: 0;
-        }
-        .order-status {
-          color: #ff9800;
-        }
-      </style>
-   
      
+    </div>
   </div>
+</div>
 </div>
 
 
-   
     <!-- footer -->
      <div class="system_footer">
                         <footer class="bg-black text-center text-white">
@@ -870,6 +506,10 @@ function navToPage(){
                         </footer>
                     </div>
     <script>
+function purchaseHistroyPage(){
+  window.location.href ="profile.html"
+}
+
       function change(item) {
         const buttons = document.querySelectorAll("ion-icon");
         buttons.forEach(function (obj) {
@@ -892,10 +532,44 @@ function navToPage(){
         document.getElementsByClassName("mobilelogin")[0].style.display =
           "block";
       }
+      document.querySelectorAll('.menuItem').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.menuItem').forEach(el => el.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("addTicketBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+  document.body.classList.add("modal-open");
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+};
     </script>
 
     <!-- CustomHeight -->
-    
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       type="module"
@@ -925,7 +599,6 @@ function navToPage(){
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <!-- <script src="details.js"></script> -->
-    <script src="addToCard.js"></script>
+    <script src="/details.js"></script>
   </body>
 </html>

@@ -402,7 +402,7 @@
                     <div style="display: flex;flex-direction: column;justify-content: space-between;">
                  
                       <div style="width: 100px; color: white; align-items: center; text-align: end;">
-                        <i class="bi bi-x"></i>
+                        <button class="closeBtnAddtoCart"><i class="bi bi-x"></i></button>
                       </div>
                         <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
                           <div>-</div>
@@ -442,7 +442,7 @@
                   <div style="display: flex;flex-direction: column;justify-content: space-between;">
                  
                     <div style="width: 100px; color: white; align-items: center; text-align: end;">
-                      <i class="bi bi-x"></i>
+                      <button class="closeBtnAddtoCart"><i class="bi bi-x"></i></button>
                     </div>
                       <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
                         <div>-</div>
@@ -545,7 +545,17 @@
                       <div class="form_1_btns common_btns">
                         <button class="shipping btn_next" onclick="navToPage();">Continue to Shipping</button>
                       </div>
-                      <p class="Estimated" >Estimated Delivery by <span style="font-weight: 600;">28 April,2024</span></p>
+                      <!-- payment Icons -->
+                      <div style="display: flex; justify-content: space-between;">
+                
+                        <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
+                        <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
+                        <img class="paymentIcons" src="assets/Payment Icons/UPI.png" alt="">
+                       
+                        <img class="paymentIcons" src="assets/Payment Icons/phonpe.png" alt="">
+                        
+                      </div>
+                     
                       </div>
                       
                   </div>
@@ -559,7 +569,10 @@ function navToPage(){
         <!-- coupen -->
         <div class="ProductDetailsCard_2">
           <div style="padding: 16px;">
-            <p class="SummeryHead">Have a Coupon</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <p class="SummeryHead">Have a Coupon</p>
+              <button style="background: #18578c;padding: 8px; border-radius: 5px; font-size: 12px;">View Coupon</button>
+            </div>
             
             <div style="position: relative;">
               <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code">

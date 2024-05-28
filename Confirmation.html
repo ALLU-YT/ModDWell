@@ -367,20 +367,13 @@
             <div class="col-lg-8">
               <p>Shopping Cart</p>
               <div style="display: flex; align-items: center; margin-left: 10px;">
-                <i class="bi bi-check" style="color: green;font-size: 30px;"></i>
-
-                <span style="font-weight: bold;">Cart</span>
-                <hr width="50px;" style="margin: 5px;">
-                <i class="bi bi-check" style="color: green;font-size: 30px;"></i>
-                <span style="font-size: 14px;font-weight: bold;">Shipping info</span>
-                <hr width="50px;" style="margin: 5px;">
-                <i class="bi bi-check" style="color: green;font-size: 30px;"></i>
-                <span style="font-size: 14px; font-weight: bold;">Payment</span>
-                <hr width="50px;" style="margin: 5px;">
-                <i class="bi bi-check" style="color: green;font-size: 30px;"></i>
-                <span style="font-size: 14px;font-weight: bold;">Confirmation</span>
-            </div>
+                <span style="font-size: 14px; font-weight: bold;"><span style="color: #4CAF50;">✔ </span>Cart 
+              </span>
+              <hr width="50px;" style="margin: 5px;">
+              <span style="font-size: 12px;font-size: 14px; font-weight: bold;"><span style="color: #4CAF50;">✔ </span> Shipping info </span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 12px;font-size: 14px; font-weight: bold;"><span style="color: #4CAF50;">✔ </span> Payment</span> <hr width="50px;" style="margin: 5px;"><span style="font-size: 12px;font-size: 14px; font-weight: bold;"> <span style="color: #4CAF50;">✔ </span>Confirmation</span>
             
+            
+              </div>
               <div class="scrollable-content">
                 <div>
                   <div style="display: flex;justify-content: space-between;">
@@ -497,9 +490,19 @@
                 <div class="col-lg-4">
                   <div class="ProductDetailsCard_confirm">
                      
-                      
-                  </div>
+                      <img src="assets/Success-01.png" alt="">
+                      <h3>Thank you for Ordering</h3>
+                      <h4>We appreciate your business and hope you enjoy your purchase</h4>
+                      <div style="display: flex; justify-content: space-around;">
+                        <button class="vieworder" onclick="ProfilePage();">VIEW ORDER</button>
+                        <button class="CONTINUESHOPPING">CONTINUE SHOPPING</button>
+                      </div>
+                    </div>
         <script>
+function ProfilePage(){
+  window.location.href = 'profile.html';
+}
+
 function navToPage(){
     window.location.href = "ShippingInfo.html";
 }

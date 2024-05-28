@@ -83,7 +83,19 @@
   height: 100%;
   background: white;
   color: black;
-  height: 500px;
+  height: 556px;
+  border-radius: 8px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.purchasehistoryContainer_wishList {
+  /* background: white; */
+  /* color: black; */
+  height: 556px;
+  border-radius: 8px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.purchasehistoryContainer_wishList::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
 .purchasehistory_table {
   width: 100%;
@@ -115,4 +127,92 @@
 .purchasehistory_td {
   font-size: 14px;
   font-weight: 500;
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb on hover */
+}
+
+/* support_ticket Container */
+
+/* Styles for the AddTicketContainer */
+.AddTicketContainer {
+  cursor: pointer;
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 10px 100px 10px 100px; /* Adjusted padding for symmetry */
+  text-align: center;
+  background: white;
+  color: black;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Soft shadow */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.AddTicketContainer:hover {
+  transform: translateY(10px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+    /* Enhanced shadow on hover */ 0 12px 40px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Styles for the modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Class to hide overflow on body */
+.modal-open {
+  overflow: hidden;
+}
+.alertp {
+  margin-top: 20px;
 }
