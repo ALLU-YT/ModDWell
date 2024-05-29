@@ -515,35 +515,14 @@
         </div>
 
 
-
-         <div style="margin-top:13px; display: flex;">
-          <button id="addToCartPopup" type="button" class="btn btn-primary addtocartButton">
+        <div style="margin-top:13px; display: flex;">
+          <button id="addTicketBtn" type="button" class="btn btn-primary addtocartButton">
             <i class="bi bi-cart"></i>
             Add to Cart
           </button>
 
           <!-- //addToCartPopup -->
-          <div id="addToCartPopupBackground">
-    
-      
-          <div style="display: flex; align-items: start; padding: 10px;">
-            <img class="img_icn_smg" src="assets\checked.png" alt="">
-            <p class="addToCardHead">Item added to your cart!</p>
-            <i id="addToCartcloseBtn" class="bi bi-x-square-fill"></i>
-            
-          </div>
-            <div style="display: flex; align-items: center;">
-              <img class="addToCardImg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
-              <div class="addToCardTitle">Woven with Love - Small - (600mm x 450mm) X 1 
-                <p><span style="color: rgba(0, 0, 0, 0.692);">Price</span> : 4665 </p></div>
-            </div>
-       
-            
-          <a href="addToCartPage.html"> <button class="addToCardButton">Proceed to Cart</button></a>
-           <button class="addToCardContinue">Continue Shopping</button>
-           
-          </div>
-
+         
 
 
 
@@ -589,6 +568,60 @@
         </div>
       </div>
     </div>
+    <div id="myModal" class="modal" style="color: black; display: none;">
+      <div class="modal-content">
+        <div style="display: flex; align-items: start; padding: 10px;">
+          <img class="img_icn_smg" src="assets\checked.png" alt="">
+          <p class="addToCardHead">Item added to your cart!</p>
+          <i id="addToCartcloseBtn" class="bi bi-x-square-fill"></i>
+          
+        </div>
+          <div style="display: flex; align-items: center;">
+              <img class="addToCardImg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
+              <div class="addToCardTitle">Woven with Love - Small - (600mm x 450mm) X 1 
+                  <p><span style="color: rgba(0, 0, 0, 0.692);">Price</span> : 4665 </p>
+              </div>
+          </div>
+          <a href="addToCartPage.html"><button class="addToCardButton">Proceed to Cart</button></a>
+          <button class="addToCardContinue">Continue Shopping</button>
+      </div>
+  </div>
+</div>
+
+    <script>
+      // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("addTicketBtn");
+
+// Get the <i> element that closes the modal
+var closeBtn = document.getElementById("addToCartcloseBtn");
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+modal.style.display = "block";
+document.body.classList.add("modal-open");
+};
+
+// When the user clicks on <i> (x), close the modal
+closeBtn.onclick = function () {
+modal.style.display = "none";
+document.body.classList.remove("modal-open");
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+};
+
+      </script>
+
+
+
 <!-- Tapbars -->
   
    <div class="container" style="width: 86%;" id="tab_bar_system_ui">`

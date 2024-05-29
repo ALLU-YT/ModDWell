@@ -190,7 +190,7 @@
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 30%; /* Could be more or less, depending on screen size */
   text-align: center;
 }
 
@@ -215,4 +215,80 @@
 }
 .alertp {
   margin-top: 20px;
+}
+.TicketdIV p {
+  font-weight: 600;
+}
+.custom-line {
+  height: 1px; /* Adjust the height as needed */
+  background-color: #4caf50; /* Solid color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+}
+.error {
+  width: 150px;
+}
+
+/* POPUPaDDtICKET CONTAINER */
+.form-container {
+  margin-top: 5px;
+}
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.form-group label {
+  flex-basis: 30%;
+  align-self: center;
+}
+.form-group input[type="text"],
+.form-group textarea {
+  flex-basis: 65%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+.form-group input[type="file"] {
+  padding: 10px;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-actions button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-actions button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+.form-actions button.submit {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* manageProfile */
+
+.addressContainer {
+  width: 100%;
+  border: 1px solid blue;
+}
+.address_p p {
+  font-size: 12px;
+  line-height: 0;
+  font-weight: 600;
+  padding: 4px;
+}
+
+.addressContainer_add {
+  width: 80%;
+  border: 1px solid blue;
 }

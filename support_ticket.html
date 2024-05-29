@@ -357,23 +357,23 @@
           </div>
         </div>
         <div class="menu">
-          <div class="menuItem">
+          <div class="menuItem" onclick="Dashboard();">
             <i class="bi bi-house"></i>
             <p>Dashboard</p>
           </div>
-          <div class="menuItem" onclick="purchaseHistroyPage();">
-            <i class="bi bi-file-earmark-text"></i>
+          <div class="menuItem "  onclick="Purchase();">
+            <i class="bi bi-file-earmark-text"" ></i>
             <p>Purchase History</p>
           </div>
-          <div class="menuItem active">
+          <div class="menuItem" onclick="wishListPage();">
             <i class="bi bi-heart"></i>
             <p>Wishlist</p>
           </div>
-          <div class="menuItem">
+          <div class="menuItem active" onclick="supportTicketPage();">
             <i class="bi bi-life-preserver"></i>
             <p>Support Ticket</p>
           </div>
-          <div class="menuItem">
+          <div class="menuItem" onclick="manageProfile();">
             <i class="bi bi-person"></i>
             <p>Manage Profile</p>
           </div>
@@ -396,26 +396,67 @@
     </div>
 
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="color: black;">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <p class="alertp">This is an alert box in the middle of the screen.</p>
+        
+     <div style="display: flex;justify-content: space-between;">
+      <p style="font-weight: 400px;">Create a Ticket</p>
+      <span class="close">&times;</span>
+     </div>
+     <div class="custom-line"></div>
+     <div class="form-container">
+      <form>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+        <div class="form-group">
+          <label for="description">Detailed Description</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
+        <div class="form-actions">
+          <button type="button" class="cancel">Cancel</button>
+          <button type="submit" class="submit">Send Ticket</button>
+        </div>
+      </form>
+    </div>
       </div>
     </div>
 
 
   
       </div>
-      <div style="width: 100%;background-color: bisque;">
-ff
-      </div>
+      
       </div>
      </div>
-     
+     <p style="font-weight: 600;">Ticket</p>
+     <div style="width: 100%;background-color: rgb(255, 255, 255); color: black; height: 556px;align-items: center;">
+      <div style="display: flex;justify-content: space-between;padding: 8px;" class="TicketdIV">
+        <p>Ticket ID</p>
+        <p>Sending Date</p>
+        <p>Subject</p>
+        <p>Status</p>
+        <p>Options</p>
+      </div>
+      <div class="custom-line"></div>
+     <div style="display: flex; justify-content: center;align-items: center;">
+   <div>
+    <img class="error" src="https://cdn1.iconfinder.com/data/icons/web-and-seo-66/96/Artboard_6-64.png" alt="">
+    Nothing found
+   </div>
+     </div>
+     </div>
     </div>
+    
   </div>
+  
 </div>
+
 </div>
 
 
@@ -566,6 +607,24 @@ window.onclick = function (event) {
     document.body.classList.remove("modal-open");
   }
 };
+
+
+
+function wishListPage(){
+  window.location.href = "wishListPage.html"
+}
+function supportTicketPage(){
+  window.location.href = "support_ticket.html"
+}
+function Dashboard(){
+  window.location.href = "index.html"
+}
+function Purchase(){
+  window.location.href = "profile.html"
+}
+function manageProfile(){
+  window.location.href = "manageProfile.html"
+}
     </script>
 
     <!-- CustomHeight -->
