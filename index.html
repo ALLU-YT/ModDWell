@@ -93,14 +93,445 @@
             <p style="font-size: 11px;
             margin-right: 6px;
             padding-top: 10px;">Sign Up Now</p>
-          <button>  <i class="bi bi-person headicon"></i></button>
+          <button id="addTicketBtn">  <i class="bi bi-person headicon"></i></button>
+
+
+          <style>
+  
+            /* loginPopUpp */
+            #popupBackground {
+              display: block;
+              position: fixed;
+              top: 0;
+              left: 0;
+              border-radius: 10px;
+              width: 100%;
+              height: 100%;
+              color: black;
+              background-color: #3333330e; /* Dark background color */
+              background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
+              background-size: cover;
+            
+            }
+            
+            #popupContent {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 855px;
+              height: 580px;
+              transform: translate(-50%, -50%);
+              background-color: #ffffff;
+              /* padding: 20px; */
+              display: flex; /* Display children side by side */
+              border-radius: 20px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
+            }
+            
+            #imageContainer {
+              /* Occupy 50% width */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10px;
+            }
+            
+            #loginFormContainer {
+              flex: 1; /* Occupy 50% width */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            #closeBtn {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+            }
+            #closeBtn_signup {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+            }
+            .login_head {
+              font-size: 20px;
+              font-weight: 600;
+            }
+            
+            .border-line {
+              border: none;
+            
+              outline: none; /* Remove outline on focus */
+            }
+            .border-line {
+              border-bottom: 1px solid rgb(0, 0, 0);
+              padding: 0px;
+              padding-top: 20px;
+              /* padding-top: 58px; */
+            }
+            .forgot_box {
+              display: flex;
+              justify-content: end;
+              margin-top: 5px;
+              padding: 0px;
+            }
+            .forgot_box p {
+              font-size: 12px;
+              color: rgb(0, 0, 0);
+            }
+            .loginbutton {
+              background: #18578c;
+              color: white;
+              padding: 10px;
+              border-radius: 30px;
+            }
+            .img_facebook {
+              width: 30px;
+              height: 30px;
+              padding: 2px;
+              margin-right: 10px;
+            }
+            /* head */
+            /* Styling for the button icon (assuming Bootstrap icons are used) */
+            .bi-person {
+              font-size: 24px; /* Adjust as needed */
+            }
+            
+            /* SignUpPopUp */
+            
+            #popupBackground_signup {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              border-radius: 10px;
+              width: 100%;
+              height: 100%;
+              color: black;
+              background-color: #3333330e; /* Dark background color */
+              background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
+              background-size: cover;
+              z-index: 9999; /* Ensure the popup is on top of other elements */
+            }
+            
+            #popupBackground_signup_ui {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 855px;
+              height: 580px;
+              transform: translate(-50%, -50%);
+              background-color: #ffffff;
+              /* padding: 20px; */
+              display: flex; /* Display children side by side */
+              border-radius: 20px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
+            }
+            
+            #imageContainer_signup {
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10px;
+            }
+            
+            #loginFormContainer_signup {
+              flex: 1; /* Occupy 50% width */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            #closeBtn_signup {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+            }
+            
+            .login_head {
+              font-size: 20px;
+              font-weight: 600;
+            }
+            
+            .border-line {
+              border: none;
+            
+              outline: none; /* Remove outline on focus */
+            }
+            .border-line {
+              border-bottom: 1px solid rgb(0, 0, 0);
+              padding: 0px;
+              padding-top: 20px;
+              /* padding-top: 58px; */
+            }
+            .forgot_box {
+              display: flex;
+              justify-content: end;
+              margin-top: 5px;
+              padding: 0px;
+            }
+            .forgot_box p {
+              font-size: 12px;
+              color: rgb(0, 0, 0);
+            }
+            .loginbutton {
+              background: #18578c;
+              color: white;
+              padding: 10px;
+              border-radius: 30px;
+            }
+            .img_facebook {
+              width: 30px;
+              height: 30px;
+              padding: 2px;
+              margin-right: 10px;
+            }
+            /* head */
+            /* Styling for the button icon (assuming Bootstrap icons are used) */
+            .bi-person {
+              font-size: 24px; /* Adjust as needed */
+            }
+              /* Styles for the modal background */
+              .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+                z-index: 9999; /* Ensure the popup is on top of other elements */
+              }
+            
+              /* Modal content */
+              .modal-content {
+                background-color: #fefefe;
+              
+              
+                width: 100%; /* Could be more or less, depending on screen size */
+             
+              }
+            
+              /* Close button */
+              .close {
+                color: #aaa;
+                float: right;
+                font-size: 18px;
+               color: black;
+              }
+            
+              .close:hover,
+              .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+            
+              /* Class to hide overflow on body */
+              .modal-open {
+                overflow: hidden;
+              }
+            </style>
+            <div id="myModal" class="modal" style="color: black">
+              <!-- Modal content -->
+              <div class="modal-content">
+                
+                <div id="popupBackground">
+                  <div id="popupContent">
+                    <button id="closeBtn" class="close">Close</button>
+                    <div id="imageContainer">
+                      <img
+                        src="assets\Banner\LED Mirror.jpg"
+                        alt="Image"
+                        style="    padding: 8px;
+                        max-width: 100%;
+                        border-radius: 20px;
+                        max-height: 100%;"
+                      />
+                    </div>
+                    <div id="loginFormContainer">
+                     <div class="container" style="padding: 98px;
+                     padding-top: 202px;">
+                      <div class="row">
+                  <H3 class="login_head">Login to your account.</H3>
+                  
+                <input type="text" class="border-line" placeholder="Email">
+                <input type="text" class="border-line" placeholder="Password">
+                <div class="forgot_box">
+                  <!-- <input type="checkbox" name="" id="">
+                  <p>Remember Me</p> -->
+                  <p>Forgot password?</p>
+                  
+                </div>
+                <Button class="loginbutton">Login in</Button>
+              <div style="display: flex;justify-content: center;">
+                <div style="background: rgba(0, 0, 0, 0.276); border:solid 1px #1d1d1d2b; width: 30px;margin-top: 25px;">
+            
+                </div>
+              </div>
+              <p style="font-size: 14px; padding-top: 35px;">Or Login With</p>
+              
+             <div style="display: flex; justify-content: center;">
+              <img class="img_facebook" src="assets/5365678_fb_facebook_facebook logo_icon.png" alt="" >
+              <img class="img_facebook" src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"  alt="">
+             </div>
+            <button>
+            <p style="font-size:14px; padding-top: 35px;" ><br>
+            
+            <span style="color: blue; font-size: 13px;font-weight: 600;" id="signupPopupbtn">  Sign Up</span></p>
+            </button>
+            
+            
+            
+            
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="popupBackground_signup">
+                  <div id="popupBackground_signup_ui">
+                    <button id="closeBtn" class="close_signUp">Close</button>
+                    <div id="imageContainer_signup">
+                      <img
+                        src="assets\Banner\LED Mirror.jpg"
+                        alt="Image"
+                        style="    padding: 8px;
+                        max-width: 100%;
+                        border-radius: 20px;
+                        max-height: 100%;"
+                      />
+                    </div>
+                    <div id="loginFormContainer_signup">
+                     <div class="container" style="padding: 98px;
+                     padding-top: 202px;">
+                      <div class="row">
+                  <H3 class="login_head">Create an account..</H3>
+                  
+                <input type="text" class="border-line" style="margin-top: 20px;" placeholder="Full Name">
+                <input type="text" class="border-line" placeholder="Email">
+                <input type="text" class="border-line" placeholder="Password">
+                <input type="text" class="border-line" placeholder="Confirm Password">
+                
+                <Button class="loginbutton" style="margin-top: 20px;">Create Account</Button>
+                <div style="display: flex;justify-content: center;">
+                <div style="background: rgba(0, 0, 0, 0.276); border:solid 1px #1d1d1d2b; width: 30px;margin-top: 25px;">
+                
+                </div>
+                </div>
+                <p style="font-size: 14px; padding-top: 35px;">Or join With</p>
+                
+                <div style="display: flex; justify-content: center;">
+                <img class="img_facebook" src="assets/5365678_fb_facebook_facebook logo_icon.png" alt="" >
+                <img class="img_facebook" src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"  alt="">
+                </div>
+                <p style="font-size:14px; padding-top: 5px;" ><br>
+                
+                
+                  
+                
+                <span style="color: blue; font-size: 13px;font-weight: 600;cursor: pointer;" id="signinPopupbtn">  Sign in</span></p>
+                
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+                
+                    </div>
+                 
+                </div>
+            
             <!-- Bootstrap Wishlist button -->
-           <button> <i class="bi bi-heart headicon" ></i></button>
+           <button > <a href="wishListPage.html" style="text-decoration: none; color: white;"><i class="bi bi-heart headicon" ></i></a></button>
+
             <!-- Bootstrap Cart button -->
-         <a href="/AddToCartFolder/addToCartPage.html" style="text-decoration: none; color: white;">  <button> <i class="bi bi-cart headicon"></i></button></a>
+         <a href="addToCartPage.html" style="text-decoration: none; color: white;">  <button> <i class="bi bi-cart headicon"></i></button></a>
         </div>
         
     </header>
+
+<!-- //LoginPage -->
+
+    <script>
+      // Get the modal
+      
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground").style.display = "none";
+  });
+
+// SignUpPopup button
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground_signup").style.display = "block";
+  });
+  document
+  .getElementById("signinPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground_signup").style.display = "none";
+  });
+
+// SignUpPopup button
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground").style.display = "block";
+  });
+
+
+
+
+
+
+
+
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("addTicketBtn");
+
+  
+      var span = document.getElementsByClassName("close")[0];
+       var span_2 = document.getElementsByClassName("close_signUp")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+        document.body.classList.add("modal-open");
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+      };
+
+       // When the user clicks on <span> (x), close the modal
+        span_2.onclick = function () {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+      };
+
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove("modal-open");
+        }
+      };
+    </script>
 
 
 
@@ -505,7 +936,7 @@
               position: absolute;
               left: 50%;
               transform: translateX(-50%);
-              bottom: -20px;
+              bottom: -30px;
               width: 100%;
               white-space: nowrap;
               overflow: hidden;
@@ -554,76 +985,14 @@
                       />
                       <div class="gallery-label">Bed</div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" onclick="categoryPage();">
                       <img
                         src="https://via.placeholder.com/100"
                         alt="Placeholder 6"
                       />
-                      <div class="gallery-label">Desk</div>
+                      <div class="gallery-label">View More</div>
                     </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 7"
-                      />
-                      <div class="gallery-label">Cabinet</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 8"
-                      />
-                      <div class="gallery-label">Mirror</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 9"
-                      />
-                      <div class="gallery-label">Armchair</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 10"
-                      />
-                      <div class="gallery-label">Bookshelf</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 11"
-                      />
-                      <div class="gallery-label">Coffee Table</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 12"
-                      />
-                      <div class="gallery-label">Dining Table</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 13"
-                      />
-                      <div class="gallery-label">Wardrobe</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 14"
-                      />
-                      <div class="gallery-label">Side Table</div>
-                    </div>
-                    <div class="gallery-item">
-                      <img
-                        src="https://via.placeholder.com/100"
-                        alt="Placeholder 15"
-                      />
-                      <div class="gallery-label">Stool</div>
-                    </div>
+          
                   </div>
                 </div>
               </div>
@@ -632,6 +1001,10 @@
       
        
           <script>
+function categoryPage(){
+  window.location.href = "categorypage.html";
+}
+
             document.addEventListener("DOMContentLoaded", function () {
               const gallery = document.querySelector(".gallery");
               let isDown = false;
@@ -1180,7 +1553,7 @@
                 <div class="system_footer">
                     <footer class="bg-black text-center text-white">
                         <!-- Grid container -->
-                        <div class="container-fluid p-4">
+                        <div class="container p-4">
                             <!-- Section: Social media -->
                             <section class="mb-4">
                                 <!-- Facebook -->
@@ -1221,17 +1594,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                                        <div class="footer_h">
-                                            <h5 class="text-uppercase">CONTACT INFO</h5>
-                                            <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
-                                            <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
-                                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
-                                            <p class="tooter_p">+91 72003 92758</p>
-                                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
-                                            <p class="tooter_p">moddwell@tprsenterprises.in/p>
-                                        </div>
-                                    </div>
+                                  
                                     <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
                                         <div class="footer_h">
                                             <h5 class="text-uppercase">MY ACCOUNT</h5>
@@ -1243,6 +1606,17 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                                      <div class="footer_h">
+                                          <h5 class="text-uppercase">CONTACT INFO</h5>
+                                          <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
+                                          <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+                                          <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
+                                          <p class="tooter_p">+91 72003 92758</p>
+                                          <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
+                                          <p class="tooter_p">moddwell@tprsenterprises.in/p>
+                                      </div>
+                                  </div>
                                     <!--Grid column-->
 
                                     <!-- Repeat the above grid column structure for additional link sections -->
@@ -1255,10 +1629,16 @@
                         <!-- Grid container -->
 
                         <!-- Copyright -->
-                        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                            Copyright@ 2022 Moddwell. All Rights Reserved Powered by
-                            <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
-                        </div>
+                        <div class="text-center p-3" style="background-color: #37363a; font-size: 14px; text-align: center;margin-bottom: 5px; padding: 0px; height: 35px; line-height: 0px;">
+                          <div style="margin-bottom: 10px;">
+                              <p class="text-center">
+                                  Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+                                  <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+                              </p>
+                          </div>
+                      </div>
+                      
+                      
                         <!-- Copyright -->
                     </footer>
                 </div>
@@ -1343,7 +1723,7 @@
 
 
 
-                <div style="width: 100%;height: 100px;background: rgb(0, 0, 0);">
+         
 
                 </div>
 

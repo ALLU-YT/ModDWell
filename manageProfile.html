@@ -343,7 +343,7 @@
     </div>
    
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding-bottom: 20px;">
 <div class="row">
   <div class="col-lg-3">
     <!-- sideBAr -->
@@ -361,7 +361,7 @@
             <i class="bi bi-house"></i>
             <p>Dashboard</p>
           </div>
-          <div class="menuItem ">
+          <div class="menuItem "onclick="Profile();">
             <i class="bi bi-file-earmark-text"></i>
             <p>Purchase History</p>
           </div>
@@ -373,7 +373,7 @@
             <i class="bi bi-life-preserver"></i>
             <p>Support Ticket</p>
           </div>
-          <div class="menuItem active" onclick="Profile();">
+          <div class="menuItem active">
             <i class="bi bi-person"></i>
             <p>Manage Profile</p>
           </div>
@@ -464,7 +464,7 @@
             .form-container {
                 padding: 20px;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
             }
     
             form {
@@ -525,7 +525,7 @@
    
   
       <div id="Paris" class="tabcontent">
-        <div class="container">
+        <div class="container" style="padding-top: 25px;">
           <div class="row">
             <div class="col-lg-6">
               <div class="addressContainer">
@@ -555,11 +555,7 @@
             </div>
            <div style="display: flex;justify-content: center; margin-top: 20px;">
             <div class="OpenAddressFormBtn addressContainer_add">
-              <div class="address_p" style="padding-top: 10px; align-items: center">
-                <p style="text-align: center; font-size: 14px; font-weight: 400px">
-                  Add address
-                </p>
-              </div>
+            <button  style="background: #18578c;padding: 10px;border-radius: 5px;font-size: 14px; color: white;">Add Address</button>
             </div>
            </div>
           </div>
@@ -639,17 +635,17 @@
         });
       </script>
   <style>
-      .OpenAddressFormBtn {
+      /* .OpenAddressFormBtn {
         border-radius: 5px;
         width: 161px;
         cursor: pointer;
         padding-top: 4px;
         transition: background-color 0.3s ease;
-      }
+      } */
 
-      .OpenAddressFormBtn:hover {
+      /* .OpenAddressFormBtn:hover {
         background-color: #0056b3;
-      }
+      } */
 
       .address-popup {
         display: none;

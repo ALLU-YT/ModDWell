@@ -361,11 +361,11 @@
             <i class="bi bi-house"></i>
             <p>Dashboard</p>
           </div>
-          <div class="menuItem active" onclick="purchase();">
+          <div class="menuItem" onclick="purchase();">
             <i class="bi bi-file-earmark-text"></i>
             <p>Purchase History</p>
           </div>
-          <div class="menuItem" onclick="wishListPage();">
+          <div class="menuItem active" onclick="wishListPage();">
             <i class="bi bi-heart"></i>
             <p>Wishlist</p>
           </div>
@@ -845,6 +845,34 @@ function manageProfile(){
 });
 
     </script>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector('.purchasehistoryContainer_wishList');
+    let lastScrollTop = 0;
+
+    container.addEventListener('scroll', function() {
+      const st = container.scrollTop;
+      if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+        // Scrolling down and at the bottom of the container
+        window.scrollBy({
+          top: 100, // Adjust this value as needed
+          behavior: 'smooth'
+        });
+      } else if (st < lastScrollTop && container.scrollTop === 0) {
+        // Scrolling up and at the top of the container
+        window.scrollBy({
+          top: -100, // Adjust this value as needed
+          behavior: 'smooth'
+        });
+      }
+      lastScrollTop = st;
+    });
+  });
+</script>
 
     <!-- CustomHeight -->
    

@@ -90,7 +90,7 @@
 .purchasehistoryContainer_wishList {
   /* background: white; */
   /* color: black; */
-  height: 556px;
+  height: 592px;
   border-radius: 8px;
   overflow-y: auto; /* Enable vertical scrolling */
 }
@@ -271,7 +271,8 @@
   color: white;
 }
 .form-actions button.submit {
-  background-color: #4caf50;
+  background-color: #18578c;
+  font-size: 14px;
   color: white;
 }
 
@@ -286,9 +287,4 @@
   line-height: 0;
   font-weight: 600;
   padding: 4px;
-}
-
-.addressContainer_add {
-  width: 80%;
-  border: 1px solid blue;
 }

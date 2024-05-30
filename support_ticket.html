@@ -404,7 +404,7 @@
       <p style="font-weight: 400px;">Create a Ticket</p>
       <span class="close">&times;</span>
      </div>
-     <div class="custom-line"></div>
+     <div class="custom-line" style="margin-bottom: 14px;"></div>
      <div class="form-container">
       <form>
         <div class="form-group">
@@ -476,6 +476,33 @@
 </div>
 
 </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector('.purchasehistoryContainer');
+    let lastScrollTop = 0;
+
+    container.addEventListener('scroll', function() {
+      const st = container.scrollTop;
+      if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+        // Scrolling down and at the bottom of the container
+        window.scrollBy({
+          top: 100, // Adjust this value as needed
+          behavior: 'smooth'
+        });
+      } else if (st < lastScrollTop && container.scrollTop === 0) {
+        // Scrolling up and at the top of the container
+        window.scrollBy({
+          top: -100, // Adjust this value as needed
+          behavior: 'smooth'
+        });
+      }
+      lastScrollTop = st;
+    });
+  });
+</script>
+
 
 
     <!-- footer -->
@@ -597,6 +624,10 @@ function purchaseHistroyPage(){
     item.classList.add('active');
   });
 });
+
+
+
+
   // Get the modal
   var modal = document.getElementById("myModal");
 

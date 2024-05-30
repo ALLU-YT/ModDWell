@@ -152,3 +152,26 @@ document
   });
 
 //addToAddtresPopup
+
+// addTo cart view coupon
+function viewcoupon() {
+  // Get the elements by class name (without the dot)
+  const couponElements = document.getElementsByClassName(
+    "ProductDetailsCard_2"
+  );
+
+  // Iterate over each element and set the height
+  for (let i = 0; i < couponElements.length; i++) {
+    couponElements[i].style.height = "210px";
+  }
+
+  // Get the element by class name (without the dot)
+  const noActiveCouponsElements =
+    document.getElementsByClassName("NoActiveCoupons");
+
+  // Check if there are elements with the class name "NoActiveCoupons"
+  if (noActiveCouponsElements.length > 0) {
+    // Set the display style to block for the first element found
+    noActiveCouponsElements[0].style.display = "block";
+  }
+}

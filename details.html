@@ -456,18 +456,25 @@
           <div class="Add_on" style="padding-top: 10px"><p>Size</p></div>
           <hr />
 
-          <div class="SizeContainer" >
-            <div class="SizeBox" for="sizeboxContainer1">
+<!-- 
+          <div class="SizeBox" for="sizeboxContainer1" onclick="document.getElementById('sizeboxContainer1').click()">
+            <input type="radio" name="size" id="sizeboxContainer1" style="display: none;">
+            <label class="size_text">600mm x 450mm</label>
+          </div>
+           -->
+
+          <div class="SizeContainer"  >
+            <div class="SizeBox" for="sizeboxContainer1"  for="sizeboxContainer1" onclick="document.getElementById('sizeboxContainer1').click()" >
               <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
-              <label for="sizeboxContainer1" class="size_text">600mm x 450mm</label>
+              <label class="size_text">600mm x 450mm</label>
             </div>
 
-            <div class="SizeBox">
+            <div class="SizeBox"  for="sizeboxContainer2" onclick="document.getElementById('sizeboxContainer2').click()" >
               <input type="radio" name="size" id="sizeboxContainer2" style="margin: 0px 0px 0px 5px;">
               <label for="sizeboxContainer2" class="size_text">600mm x 450mm</label>
             </div>
 
-            <div class="SizeBox">
+            <div class="SizeBox"  for="sizeboxContainer3" onclick="document.getElementById('sizeboxContainer3').click()" >
               <input type="radio" name="size" id="sizeboxContainer3" style="margin: 0px 0px 0px 5px;">
               <label for="sizeboxContainer3" class="size_text">600mm x 450mm</label>
             </div>
@@ -568,7 +575,7 @@
         </div>
       </div>
     </div>
-    <div id="myModal" class="modal" style="color: black; display: none;">
+    <!-- <div id="myModal" class="modal" style="color: black; display: none;">
       <div class="modal-content">
         <div style="display: flex; align-items: start; padding: 10px;">
           <img class="img_icn_smg" src="assets\checked.png" alt="">
@@ -579,46 +586,130 @@
           <div style="display: flex; align-items: center;">
               <img class="addToCardImg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
               <div class="addToCardTitle">Woven with Love - Small - (600mm x 450mm) X 1 
-                  <p><span style="color: rgba(0, 0, 0, 0.692);">Price</span> : 4665 </p>
+                  <p style="text-align: start;"><span style="color: rgba(0, 0, 0, 0.692);">Price</span> : 4665 </p>
               </div>
           </div>
           <a href="addToCartPage.html"><button class="addToCardButton">Proceed to Cart</button></a>
           <button class="addToCardContinue">Continue Shopping</button>
       </div>
-  </div>
+  </div> -->
 </div>
 
-    <script>
-      // Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("addTicketBtn");
 
-// Get the <i> element that closes the modal
-var closeBtn = document.getElementById("addToCartcloseBtn");
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-modal.style.display = "block";
-document.body.classList.add("modal-open");
-};
 
-// When the user clicks on <i> (x), close the modal
-closeBtn.onclick = function () {
-modal.style.display = "none";
-document.body.classList.remove("modal-open");
-};
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-if (event.target == modal) {
+
+
+
+
+<style>
+  /* Styles for the modal background */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  }
+
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px; /* Could be more or less, depending on screen size */
+    text-align: center;
+  }
+
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Class to hide overflow on body */
+  .modal-open {
+    overflow: hidden;
+  }
+</style>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal" style="color: black">
+  <!-- Modal content -->
+  <div class="modal-content">
+   <div style="display: flex; align-items: start;">
+    <img class="img_icn_smg" src="assets\checked.png" alt="">
+    <p style="font-weight: bold; padding-left: 10px;">Item added to your cart!</p>
+    <span class="close" style="position: relative;
+    top: -9px;
+    right: -205px;">&times;</span>
+   </div>
+   <div style="display: flex; align-items: center;">
+    <img class="addToCardImg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
+    <div class="addToCardTitle">Woven with Love - Small - (600mm x 450mm) X 1 
+        <p style="text-align: start;margin: 5px;"><span style="color: rgba(0, 0, 0, 0.692);">Price</span> : 4665 </p>
+    </div>
+        </div>
+        
+    <div style="display: flex; justify-content: space-around; margin-top: 3px">
+     <button onclick="addtoCart();" class="addToCardButton" style="background-color: #18578c; padding: 5px; color: white;width: 50%;border-radius: 5px; font-size: 14px;">Proceed to Cart</button></a>
+      <button class="addToCardContinue" style="background-color: #333333; padding: 5px; color: white; width: 48%; border-radius: 5px; font-size: 14px;">Continue Shopping</button>
+    </div>
+    </div>
+  </div>
+</div>
+<script>
+  function addtoCart(){
+    window.location.href = 'addToCartPage.html';
+  }
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("addTicketBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function () {
+    modal.style.display = "block";
+    document.body.classList.add("modal-open");
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
-}
-};
+  };
 
-      </script>
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  };
+</script>
+
+
 
 
 
@@ -704,20 +795,16 @@ if (event.target == modal) {
   </div>
   
   <div id="tab2" class="tab-content" style="width: 100%; height: 400px; color: white; background-color:#333333; overflow-y: scroll;">
- <p class="TapBar_p">  
-  Glass boards have a modern and stylish appearance that adds an aesthetic touch to any space. They are available in a variety of colors and finishes to complement different decor styles, making them a versatile choice for offices, classrooms, and homes.
-  Glass magnetic boards offer the functionality of traditional magnetic boards with the added benefits of a glass surface. Magnets adhere firmly to the glass surface, allowing you to attach notes, photos, documents, and other magnetic accessories securely.
-  Modern offices and home offices can benefit from the stylish use of glass boards. They come in various sizes and colors, adding a stylish touch to the environment. Various colored backings can give contrast and aesthetic appeal while allowing written material to be easily visible. Glass boards have a modern and stylish appearance that adds an aesthetic touch to any space. They are available in a variety of colors and finishes to complement different decor styles, making them a versatile choice for offices, classrooms, and homes.
-  Glass magnetic boards offer the functionality of traditional magnetic boards with the added benefits of a glass surface. Magnets adhere firmly to the glass surface, allowing you to attach notes, photos, documents, and other magnetic accessories securely.
-  Modern offices and home offices can benefit from the stylish use of glass boards. They come in various sizes and colors, adding a stylish touch to the environment. Various colored backings can give contrast and aesthetic appeal while allowing written material to be easily visible. Glass boards have a modern and stylish appearance that adds an aesthetic touch to any space. They are available in a variety of colors and finishes to complement different decor styles, making them a versatile choice for offices, classrooms, and homes.
-  Glass magnetic boards offer the functionality of traditional magnetic boards with the added benefits of a glass surface. Magnets adhere firmly to the glass surface, allowing you to attach notes, photos, documents, and other magnetic accessories securely.
-  Modern offices and home offices can benefit from the stylish use of glass boards. They come in various sizes and colors, adding a stylish touch to the environment. Various colored backings can give contrast and aesthetic appeal while allowing written material to be easily visible. Glass boards have a modern and stylish appearance that adds an aesthetic touch to any space. They are available in a variety of colors and finishes to complement different decor styles, making them a versatile choice for offices, classrooms, and homes.
-  Glass magnetic boards offer the functionality of traditional magnetic boards with the added benefits of a glass surface. Magnets adhere firmly to the glass surface, allowing you to attach notes, photos, documents, and other magnetic accessories securely.
-  Modern offices and home offices can benefit from the stylish use of glass boards. They come in various sizes and colors, adding a stylish touch to the environment. Various colored backings can give contrast and aesthetic appeal while allowing written material to be easily visible.</p>
+    <div class="square">
+      <p class="TapBar_p">  
+        Glass boards have a modern and stylish appearance that adds an aesthetic touch to any space. They are available in a variety of colors and finishes to complement different decor styles, making them a versatile choice for offices, classrooms, and homes. Glass magnetic boards offer the functionality of traditional magnetic boards with the added benefits of a glass surface. Magnets adhere firmly to the glass surface, allowing you to attach notes, photos, documents, and other magnetic accessories securely. Modern offices and home offices can benefit from the stylish use of glass boards. They come in various sizes and colors, adding a stylish touch to the environment. Various colored backings can give contrast and aesthetic appeal while allowing written material to be easily visible.
+      </p>
+    </div>
+    
 </div>
 <div id="tab3" class="tab-content"  style="width: 100%;height: 400px; color: white; background-color:#333333; overflow-y: scroll;">
    
-  <p class="TapBar_p">   There have been no reviews for this product yet.</p>
+  <p class="TapBar_p" style="text-align: center; padding-top: 20px;">   There have been no reviews for this product yet.</p>
 </div>
 <div id="tab4" class="tab-content"  style="padding-top: 31px; width: 100%; height: 90%;padding-bottom: 30px; color: white; background-color: #333333; overflow-y: scroll;">
   <div class="container">
@@ -830,9 +917,8 @@ if (event.target == modal) {
                       </div>
                   </div>
 </div>
-<div id="tab5" class="tab-content" style="padding-top: 31px; width: 100%; height: 90%;padding-bottom: 30px; color: white; background-color: #333333; overflow-y: scroll;">
-  
-
+<div id="tab5" class="tab-content"  style="padding-top: 31px; width: 100%; height: 413px;padding-bottom: 30px; color: white; background-color: #333333; overflow-y: scroll;">
+ 
 </div>
 
  
@@ -1138,52 +1224,65 @@ padding-top: 12px;">
 
 <!-- footer -->
   <!-- footer -->
+  <div style="padding-top: 15px;"></div>
+
   <div class="system_footer">
-    <footer class="bg-black text-center text-white">
-      <hr>
-        <!-- Grid container -->
-        <div class="container-fluid p-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-                <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Github -->
+      <footer class="bg-black text-center text-white">
+          <!-- Grid container -->
+          <div class="container p-4">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                  <!-- Google -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                  <!-- Instagram -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                  <!-- Linkedin -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                  <!-- Github -->
 
-            </section>
+              </section>
 
 
-            <!-- Section: Links -->
-            <section class="mb-4">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <div class="footer_h">
-                            <h5 class="text-uppercase"></h5>
-                            <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
-                            <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <div class="footer_h">
-                            <h5 class="text-uppercase">Links</h5>
-                            <ul class="list-unstyled mb-0">
-                                <p class="tooter_p">Terms $ Conditions</p>
-                                <p class="tooter_p">Return Policy</p>
-                                <p class="tooter_p">About</p>
-                                <p class="tooter_p">Privacy Policy</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+              <!-- Section: Links -->
+              <section class="mb-4">
+                  <!--Grid row-->
+                  <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase"></h5>
+                              <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
+                              <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase">Links</h5>
+                              <ul class="list-unstyled mb-0">
+                                  <p class="tooter_p">Terms $ Conditions</p>
+                                  <p class="tooter_p">Return Policy</p>
+                                  <p class="tooter_p">About</p>
+                                  <p class="tooter_p">Privacy Policy</li>
+                              </ul>
+                          </div>
+                      </div>
+                    
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase">MY ACCOUNT</h5>
+                              <ul class="list-unstyled mb-0">
+                                  <p class="tooter_p">Login</p>
+                                  <p class="tooter_p">Order History</p>
+                                  <p class="tooter_p">My Wishlist</p>
+                                  <p class="tooter_p">Track Order</p>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
                         <div class="footer_h">
                             <h5 class="text-uppercase">CONTACT INFO</h5>
                             <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
@@ -1194,37 +1293,31 @@ padding-top: 12px;">
                             <p class="tooter_p">moddwell@tprsenterprises.in/p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <div class="footer_h">
-                            <h5 class="text-uppercase">MY ACCOUNT</h5>
-                            <ul class="list-unstyled mb-0">
-                                <p class="tooter_p">Login</p>
-                                <p class="tooter_p">Order History</p>
-                                <p class="tooter_p">My Wishlist</p>
-                                <p class="tooter_p">Track Order</p>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Grid column-->
+                      <!--Grid column-->
 
-                    <!-- Repeat the above grid column structure for additional link sections -->
+                      <!-- Repeat the above grid column structure for additional link sections -->
 
-                </div>
-                <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
+                  </div>
+                  <!--Grid row-->
+              </section>
+              <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: #37363a; font-size: 14px; text-align: center;margin-bottom: 5px; padding: 0px; height: 35px; line-height: 0px;">
+            <div style="margin-bottom: 10px;">
+                <p class="text-center">
+                    Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+                    <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+                </p>
+            </div>
         </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            Copyright@ 2022 Moddwell. All Rights Reserved Powered by
-            <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
-
+        
+        
+          <!-- Copyright -->
+      </footer>
+  </div>
 <script>
     function change(item) {
 

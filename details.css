@@ -294,7 +294,7 @@ button {
 }
 .addToCardImg {
   width: 100px;
-  border-radius: 100px;
+  /* border-radius: 100px; */
   display: flex;
   padding: 7px;
 }
@@ -305,13 +305,13 @@ button {
   flex-direction: column;
   font-weight: 600;
 }
-.addToCardButton {
+/* .addToCardButton {
   background: #18578c;
   color: white;
   padding: 8px;
   border-radius: 5px;
   margin: 8px;
-  width: 100%;
+
   font-size: 14px;
 }
 .addToCardContinue {
@@ -320,9 +320,9 @@ button {
   padding: 8px;
   border-radius: 5px;
   margin: 8px;
-  width: 100%;
+
   font-size: 14px;
-}
+} */
 
 .modal {
   display: none; /* Hidden by default */
@@ -855,7 +855,7 @@ input[type="checkbox"] {
   }
   &:checked + .label-text:before {
     content: "\f14a";
-    color: #17ff02;
+    color: #18578c;
     animation: tick 150ms ease-in;
   }
   &:disabled + .label-text {
@@ -910,8 +910,17 @@ input[type="checkbox"] {
   border-color: rgb(255, 145, 2);
   transition: background-color 0.3s;
 }
+.square {
+  width: 100%; /* Adjust width as needed */
+  padding: 10px;
+  overflow: hidden;
+}
+
 .TapBar_p {
-  padding-top: 30px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .tab:hover {
