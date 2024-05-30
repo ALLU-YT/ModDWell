@@ -491,18 +491,24 @@
                   <div class="ProductDetailsCard_confirm">
                      
          <div style="display: flex; justify-content: center;">
-         <video id="myVideo" style="width: 200px;" height="200px"  autoplay src="assets/success-3932239-3259598.mp4"></video>
+          <video id="myVideo" style="width: 200px;"  autoplay src="assets/success-3932239-3259598.mp4"></video>
 
-<script>
-    // Get the video element
-    var video = document.getElementById("myVideo");
-
-    // Listen for the 'ended' event
-    video.addEventListener("ended", function() {
-        // Pause the video when it ends
-        video.pause();
-    });
-</script>
+          <script>
+              // Get the video element
+              var video = document.getElementById("myVideo");
+          
+              // Pause the video after 3 seconds
+              setTimeout(function() {
+                  video.pause();
+              }, 3000); // 3000 milliseconds = 3 seconds
+          
+              // Listen for the 'ended' event
+              video.addEventListener("ended", function() {
+                  // Pause the video when it ends
+                  video.pause();
+              });
+          </script>
+          
 
          </div>
 
