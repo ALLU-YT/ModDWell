@@ -311,7 +311,7 @@
         <div class="category_head" style="padding-bottom: 25px;">
             <h2>Most Popular Categories</h2>
         </div>
-        <style>
+        <!-- <style>
             .category {
               text-align: center;
               padding: 10px;
@@ -448,7 +448,223 @@
               <div class="col-6 col-sm-4 col-md-3 col-lg-1 category"></div>
               <div class="col-6 col-sm-4 col-md-3 col-lg-1 category"></div>
             </div>
+          </div> -->
+
+
+
+
+
+          <style>
+       
+      
+            .gallery-wrapper {
+              overflow: hidden;
+              margin: auto;
+              /* border: 2px solid #ccc; */
+              border-radius: 10px;
+              width: 713px;
+            }
+      
+            .gallery {
+              display: flex;
+              height: 135px;
+              cursor: grab;
+              user-select: none; /* Prevent text selection */
+              overflow-x: auto; /* Enable horizontal scrolling */
+              scroll-behavior: smooth; /* Smooth scrolling */
+              -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+              scrollbar-width: none; /* Hide scrollbar for Firefox */
+            }
+      
+            .gallery::-webkit-scrollbar {
+              display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+            }
+      
+            .gallery:active {
+              cursor: grabbing;
+            }
+      
+            .gallery-item {
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              margin: 10px; /* Adjusted margin for Bootstrap grid */
+              object-fit: cover;
+              flex-shrink: 0;
+              position: relative;
+            }
+      
+            .gallery-item img {
+              border-radius: 50%; /* Set border radius to 50% */
+            }
+      
+            .gallery-label {
+              text-align: center;
+              font-size: 14px;
+              margin-top: 5px;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: -20px;
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          </style>
+      
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="gallery-wrapper">
+                  <div class="gallery">
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 1"
+                      />
+                      <div class="gallery-label">Chair</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 2"
+                      />
+                      <div class="gallery-label">Table</div>
+                    </div>
+                    <!-- Add more gallery items with images and labels -->
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 3"
+                      />
+                      <div class="gallery-label">Lamp</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 4"
+                      />
+                      <div class="gallery-label">Sofa</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 5"
+                      />
+                      <div class="gallery-label">Bed</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 6"
+                      />
+                      <div class="gallery-label">Desk</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 7"
+                      />
+                      <div class="gallery-label">Cabinet</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 8"
+                      />
+                      <div class="gallery-label">Mirror</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 9"
+                      />
+                      <div class="gallery-label">Armchair</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 10"
+                      />
+                      <div class="gallery-label">Bookshelf</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 11"
+                      />
+                      <div class="gallery-label">Coffee Table</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 12"
+                      />
+                      <div class="gallery-label">Dining Table</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 13"
+                      />
+                      <div class="gallery-label">Wardrobe</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 14"
+                      />
+                      <div class="gallery-label">Side Table</div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://via.placeholder.com/100"
+                        alt="Placeholder 15"
+                      />
+                      <div class="gallery-label">Stool</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+      
+       
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const gallery = document.querySelector(".gallery");
+              let isDown = false;
+              let startX;
+              let scrollLeft;
+      
+              gallery.addEventListener("mousedown", (e) => {
+                isDown = true;
+                gallery.classList.add("active");
+                startX = e.pageX - gallery.offsetLeft;
+                scrollLeft = gallery.scrollLeft;
+                e.preventDefault();
+              });
+      
+              gallery.addEventListener("mouseleave", () => {
+                isDown = false;
+                gallery.classList.remove("active");
+              });
+      
+              gallery.addEventListener("mouseup", () => {
+                isDown = false;
+                gallery.classList.remove("active");
+              });
+      
+              gallery.addEventListener("mousemove", (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - gallery.offsetLeft;
+                const walk = (x - startX) * 2; // Adjust scroll speed
+                gallery.scrollLeft = scrollLeft - walk;
+              });
+            });
+          </script>
 
         <!-- trending products -->
         <div class="category_head" style="padding-bottom: 30px">
