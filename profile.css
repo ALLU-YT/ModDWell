@@ -281,7 +281,10 @@
 .addressContainer {
   width: 100%;
   border: 1px solid blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Slight shadow */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for 3D effect */
 }
+
 .address_p p {
   font-size: 12px;
   line-height: 0;
