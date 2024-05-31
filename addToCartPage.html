@@ -576,7 +576,8 @@ function navToPage(){
             
             <div style="position: relative;">
               <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code">
-              <button class="applybtn">Apply</button>
+              <button class="applybtn" style="padding-bottom: 5px; padding-right: 5px ; "  onmouseover="this.style.color='blue'"
+              onmouseout="this.style.color=''">Apply</button>
             </div>
             
             <p class="NoActiveCoupons" style="padding-top: 10px;  color: black; font-size: 14px; font-weight: bold;display: none;">No Active Coupons</p>
@@ -699,6 +700,32 @@ function navToPage(){
           <!-- Copyright -->
       </footer>
   </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector('.scrollable-content');
+      let lastScrollTop = 0;
+  
+      container.addEventListener('scroll', function() {
+        const st = container.scrollTop;
+        if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+          // Scrolling down and at the bottom of the container
+          window.scrollBy({
+            top: 100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        } else if (st < lastScrollTop && container.scrollTop === 0) {
+          // Scrolling up and at the top of the container
+          window.scrollBy({
+            top: -100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        }
+        lastScrollTop = st;
+      });
+    });
+  </script>
     <script>
       function change(item) {
         const buttons = document.querySelectorAll("ion-icon");

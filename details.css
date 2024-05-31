@@ -744,7 +744,7 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 5px 10px;
+  padding: 3px 10px;
   background-color: #4caf5000;
   color: #2eb5cd;
   border: none;
@@ -753,7 +753,8 @@ img {
 
 /* Change button color on hover */
 .input-container button:hover {
-  background-color: #45a04900;
+  background-color: #ffffff71;
+  color: rgb(255, 255, 255);
 }
 /* Details */
 
@@ -885,55 +886,6 @@ input[type="checkbox"] {
   font-size: 15px;
 }
 /* tapbar */
-.tab-bar {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  height: 35px;
-  justify-content: center;
-  background-color: #333333;
-  border-bottom: 1px solid white;
-
-  border-radius: 10px 10px 0 0; /* top-left and top-right */
-
-  border-color: 2px #18578c solid;
-}
-
-.tab {
-  background-color: #333333;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  color: white;
-  float: left;
-  border-color: rgb(255, 145, 2);
-  transition: background-color 0.3s;
-}
-.square {
-  width: 100%; /* Adjust width as needed */
-  padding: 10px;
-  overflow: hidden;
-}
-
-.TapBar_p {
-  text-align: justify;
-  text-justify: inter-word;
-  margin: 0;
-  padding-top: 10px;
-}
-
-.tab:hover {
-  background-color: #f0f0f054;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
 
 /* scrollbar styling */
 #tab1 #tab2 #tab3 #tab4 #tab5 {
@@ -1118,7 +1070,7 @@ input[type="checkbox"] {
 }
 
 .product-grid .product-links li button {
-  color: #2c2c2c;
+  color: #18578c;
   background: #fff;
   font-size: 16px;
   line-height: 42px;
@@ -1217,7 +1169,7 @@ input[type="checkbox"] {
 }
 
 .product-grid .price {
-  color: #18578c;
+  color: #ffffff;
   font-size: 17px;
   font-weight: 600;
   display: block;

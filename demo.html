@@ -1,50 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Button Hover Effect</title>
-    <style>
-      body {
-        background-color: #333;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-      .container_add {
-        display: flex;
-        justify-content: space-between;
-        width: 100px;
-        align-items: center;
-        text-align: start;
-      }
-      .closeBtnAddtoCartt {
-        width: 30px; /* Fixed width */
-        height: 30px; /* Fixed height */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none; /* Remove default button border */
-        background: none; /* Remove default button background */
-        color: inherit; /* Inherit text color */
-        cursor: pointer; /* Add pointer cursor on hover */
-        transition: background 0.3s, color 0.3s; /* Smooth transition for background and color */
-      }
-      .closeBtnAddtoCartt:hover {
-        color: rgba(255, 255, 255, 0.596);
-        background: #616263d5;
-        border-radius: 50%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container_add">
-      <button class="closeBtnAddtoCartt">-</button>
-      <div>1</div>
-      <button class="closeBtnAddtoCartt">+</button>
-    </div>
-  </body>
-</html>
+<div class="row">
+  <div class="tab-bar">
+    <button class="tab" onclick="openTab(event, 'tab1')" id="defaultOpen">
+      Details
+    </button>
+    <button class="tab" onclick="openTab(event, 'tab2')">Description</button>
+    <button class="tab" onclick="openTab(event, 'tab3')">Review</button>
+    <button class="tab" onclick="openTab(event, 'tab4')">
+      Similar products
+    </button>
+    <button class="tab" onclick="openTab(event, 'tab5')">FAQ</button>
+  </div>
+  <div id="tab1" class="tab-content active">
+    <!-- Add 'active' class to display by default -->
+    <!-- Content for tab 1 -->
+    Details Content
+  </div>
+  <div id="tab2" class="tab-content">
+    <!-- Content for tab 2 -->
+    Description Content
+  </div>
+  <div id="tab3" class="tab-content">
+    <!-- Content for tab 3 -->
+    Review Content
+  </div>
+  <div id="tab4" class="tab-content">
+    <!-- Content for tab 4 -->
+    Similar Products Content
+  </div>
+  <div id="tab5" class="tab-content">
+    <!-- Content for tab 5 -->
+    FAQ Content
+  </div>
+</div>
+
+<style>
+  .tab-bar {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    justify-content: center;
+    background-color: #333333;
+    border-bottom: 1px solid white;
+    border-radius: 10px 10px 0 0; /* top-left and top-right */
+  }
+
+  .tab {
+    background-color: #333333;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+    float: left;
+    border-color: rgb(255, 145, 2);
+    transition: background-color 0.3s;
+  }
+
+  .tab:hover {
+    background-color: #f0f0f054;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .tab.active {
+    background-color: white;
+    color: #333333; /* Change text color for better visibility */
+  }
+</style>
+
+<script>
+  document.getElementById("defaultOpen").click(); // Simulate click on the default tab on page load
+
+  function openTab(evt, tabName) {
+    var i, tabContent, tabLinks;
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
+
+    // Remove 'active' class from all tabs
+    var tabLinks = document.getElementsByClassName("tab");
+    for (i = 0; i < tabLinks.length; i++) {
+      tabLinks[i].classList.remove("active");
+      tabLinks[i].style.backgroundColor = "#333333"; // Set background color of all tabs to default
+    }
+    // Add 'active' class to the clicked tab
+    evt.currentTarget.classList.add("active");
+    evt.currentTarget.style.backgroundColor = "white"; // Set background color of selected tab to white
+  }
+</script>

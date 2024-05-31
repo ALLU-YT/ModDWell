@@ -676,10 +676,8 @@
                           <p class="subtotalbold">Total</p>
                           <p class="subtotallite">14000</p>
                         </div>
-                      <div class="form_1_btns common_btns">
-                        <button class="shipping btn_next" onclick="navToPage();">Continue to Shipping</button>
-                      </div>
-                      <div style="display: flex; justify-content: space-between;">
+                     
+                      <div style="display: flex; justify-content:center;">
                 
                         <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
                         <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
@@ -870,6 +868,31 @@ function navToPage(){
                         </footer>
                     </div>
     <script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector('.scrollable-content_purchase');
+      let lastScrollTop = 0;
+  
+      container.addEventListener('scroll', function() {
+        const st = container.scrollTop;
+        if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+          // Scrolling down and at the bottom of the container
+          window.scrollBy({
+            top: 100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        } else if (st < lastScrollTop && container.scrollTop === 0) {
+          // Scrolling up and at the top of the container
+          window.scrollBy({
+            top: -100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        }
+        lastScrollTop = st;
+      });
+    });
+
       function change(item) {
         const buttons = document.querySelectorAll("ion-icon");
         buttons.forEach(function (obj) {

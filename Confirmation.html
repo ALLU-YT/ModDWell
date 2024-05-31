@@ -82,10 +82,10 @@
             text-align: center;
           "
         >
-          <p style="font-size: 11px; margin-right: 6px; padding-top: 10px">
+          <!-- <p style="font-size: 11px; margin-right: 6px; padding-top: 10px">
             Sign Up Now
-          </p>
-          <button id="popupBtn"><i class="bi bi-person headicon"></i></button>
+          </p> -->
+          <button onclick="purchaseHistory();" id="popupBtn"><i class="bi bi-person headicon"></i></button>
           <!-- poppup container -->
           <div id="popupBackground">
             <div id="popupContent">
@@ -521,7 +521,7 @@
                     </div>
         <script>
 function ProfilePage(){
-  window.location.href = 'profile.html';
+  window.location.href = 'purchaseHistorpage.html';
 }
 
 function navToPage(){
@@ -646,6 +646,34 @@ function navToPage(){
           <!-- Copyright -->
       </footer>
   </div>
+  <script>
+function purchaseHistory(){
+  window.location.href = 'profile.html';
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector('.scrollable-content');
+      let lastScrollTop = 0;
+  
+      container.addEventListener('scroll', function() {
+        const st = container.scrollTop;
+        if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+          // Scrolling down and at the bottom of the container
+          window.scrollBy({
+            top: 100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        } else if (st < lastScrollTop && container.scrollTop === 0) {
+          // Scrolling up and at the top of the container
+          window.scrollBy({
+            top: -100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        }
+        lastScrollTop = st;
+      });
+    });
+  </script>
     <script>
       function change(item) {
         const buttons = document.querySelectorAll("ion-icon");

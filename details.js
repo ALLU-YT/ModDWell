@@ -58,34 +58,6 @@ function closeNav() {
 }
 
 // tabbar
-document.getElementById("tab1").style.display = "block";
-document.getElementsByClassName("tab")[0].style.backgroundColor = "#33333";
-
-function openTab(evt, tabName) {
-  var i, tabContent, tabLinks;
-  tabContent = document.getElementsByClassName("tab-content");
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = "none";
-  }
-  tabLinks = document.getElementsByClassName("tab");
-  for (i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].style.backgroundColor = "#33333"; // Reset background color of all tabs
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.style.backgroundColor = "#33333"; // Set background color of selected tab
-}
-
-// tabbarmobile
-// Function to toggle the visibility of the list
-function toggleList(listId) {
-  var list = document.getElementById(listId);
-  if (list.style.display === "none" || list.style.display === "") {
-    // Check for both 'none' and '' (initial)
-    list.style.display = "block";
-  } else {
-    list.style.display = "none";
-  }
-}
 
 // loginpopup
 document.getElementById("popupBtn").addEventListener("click", function () {
@@ -175,3 +147,5 @@ function viewcoupon() {
     noActiveCouponsElements[0].style.display = "block";
   }
 }
+
+// scroll

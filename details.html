@@ -717,16 +717,101 @@
   
    <div class="container" style="width: 86%;" id="tab_bar_system_ui">`
     <div class="row">
-       <div class="tab-bar">
-      <button class="tab" onclick="openTab(event, 'tab1')">Details</button>
-      <button class="tab" onclick="openTab(event, 'tab2')">Description</button>
-      <button class="tab" onclick="openTab(event, 'tab3')">Review</button>
-      <button class="tab" onclick="openTab(event, 'tab4')">Similar products</button>
-      <button class="tab" onclick="openTab(event, 'tab5')">FAQ</button>
-      
-    </div>
-   
-    <div id="tab1" class="tab-content active" style="width: 100%; height: 400px; color: white; background-color:#333333; overflow-y: scroll;">
+      <div class="tab-bar">
+        <button class="tab active" onclick="openTab(event, 'tab1')" id="defaultOpen">
+          Details
+        </button>
+        <button class="tab" onclick="openTab(event, 'tab2')">Description</button>
+        <button class="tab" onclick="openTab(event, 'tab3')">Review</button>
+        <button class="tab" onclick="openTab(event, 'tab4')">
+          Similar products
+        </button>
+        <button class="tab" onclick="openTab(event, 'tab5')">FAQ</button>
+      </div>
+    <style>
+      .tab-bar {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #333333;
+    border-bottom: 1px solid white;
+    border-radius: 10px 10px 0 0; /* top-left and top-right */
+  }
+
+  .tab {
+    background-color: #333333;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+    float: left;
+    border-color: rgb(255, 145, 2);
+    transition: background-color 0.3s;
+  }
+
+.square {
+  width: 100%; /* Adjust width as needed */
+  padding: 10px;
+  overflow: hidden;
+}
+
+.TapBar_p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.tab:hover {
+    background-color: #f0f0f054;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .tab.active {
+    background-color: white;
+    color: #333333; /* Change text color for better visibility */
+  }
+
+    </style>
+<script>
+  document.getElementById("defaultOpen").click(); // Simulate click on the default tab on page load
+
+  function openTab(evt, tabName) {
+    var i, tabContent, tabLinks;
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
+
+    // Remove 'active' class from all tabs
+    var tabLinks = document.getElementsByClassName("tab");
+    for (i = 0; i < tabLinks.length; i++) {
+      tabLinks[i].classList.remove("active");
+      tabLinks[i].style.backgroundColor = "#333333"; // Set background color of all tabs to default
+    }
+    // Add 'active' class to the clicked tab
+    evt.currentTarget.classList.add("active");
+    evt.currentTarget.style.backgroundColor = "white"; // Set background color of selected tab to white
+  }
+</script>
+
+
+
+
+
+    <div id="tab1" class="tab-content active" style="width: 100%; height: 415px; color: white; background-color:#333333; overflow-y: scroll;">
        <!-- DetailsBox -->
             <div class="DetailsOuterBox">
               <!-- <h3 class="details_head">Details</h3> -->
@@ -794,7 +879,7 @@
           
   </div>
   
-  <div id="tab2" class="tab-content" style="width: 100%; height: 400px; color: white; background-color:#333333; overflow-y: scroll;">
+  <div id="tab2" class="tab-content" style="width: 100%; height: 415px; color: white; background-color:#333333; overflow-y: scroll;">
     <div class="square">
       <p class="TapBar_p">  
         Glass boards have a modern and stylish appearance that adds an aesthetic touch to any space. They are available in a variety of colors and finishes to complement different decor styles, making them a versatile choice for offices, classrooms, and homes. Glass magnetic boards offer the functionality of traditional magnetic boards with the added benefits of a glass surface. Magnets adhere firmly to the glass surface, allowing you to attach notes, photos, documents, and other magnetic accessories securely. Modern offices and home offices can benefit from the stylish use of glass boards. They come in various sizes and colors, adding a stylish touch to the environment. Various colored backings can give contrast and aesthetic appeal while allowing written material to be easily visible.
@@ -802,7 +887,7 @@
     </div>
     
 </div>
-<div id="tab3" class="tab-content"  style="width: 100%;height: 400px; color: white; background-color:#333333; overflow-y: scroll;">
+<div id="tab3" class="tab-content"  style="width: 100%;height: 415px; color: white; background-color:#333333; overflow-y: scroll;">
    
   <p class="TapBar_p" style="text-align: center; padding-top: 20px;">   There have been no reviews for this product yet.</p>
 </div>
@@ -917,8 +1002,13 @@
                       </div>
                   </div>
 </div>
-<div id="tab5" class="tab-content"  style="padding-top: 31px; width: 100%; height: 413px;padding-bottom: 30px; color: white; background-color: #333333; overflow-y: scroll;">
- 
+<div id="tab5" class="tab-content"  style="padding-top: 31px; width: 100%; height: 415px;padding-bottom: 30px; color: white; background-color: #333333; overflow-y: scroll;">
+<div style="padding-left:20px ;">
+  <h6>How do I track my order?</h6>
+<p>Log in to your account, go to 'My Orders', and click 'Track Order' next to the relevant order.</p>
+<h6>What payment methods are accepted?</h6>
+<p>Log in to your account, go to 'My Orders', and click 'Track Order' next to the relevant order.</p>
+</div>
 </div>
 
  

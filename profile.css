@@ -84,6 +84,7 @@
   background: white;
   color: black;
   height: 556px;
+
   border-radius: 8px;
   overflow-y: auto; /* Enable vertical scrolling */
 }
