@@ -869,7 +869,10 @@ img {
 .modal-open {
   overflow: hidden;
 }
-
+.headCart {
+  font-weight: bold;
+  padding-left: 10px;
+}
 /* customChceckBox */
 
 label {
@@ -1459,7 +1462,7 @@ input[type="checkbox"] {
   }
   /* Styles for the modal background */
   .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -1469,11 +1472,17 @@ input[type="checkbox"] {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
   }
+  .addToCardTitle {
+    /* padding-left: 10px; */
+    font-size: 12px;
+    text-align: start;
+    font-weight: 600;
+  }
 
   /* Modal content */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 55% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 95%; /* Could be more or less, depending on screen size */
@@ -1503,7 +1512,12 @@ input[type="checkbox"] {
   .modal-open {
     overflow: hidden;
   }
-
+  .headCart {
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-top: 4px;
+  }
   /* navbarmobile */
   .custom_btn_phone {
     display: flex;
