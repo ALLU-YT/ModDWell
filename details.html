@@ -484,22 +484,22 @@
 
          <div class="mobile_size_container">
           <div class="SizeContainer_mobile" >
-            <div class="SizeBox_mobile">
-              <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
-              <label for="sizeboxContainer1" class="size_text_mobile">600 x 450</label>
+            <div class="SizeBox_mobile"  onclick="document.getElementById('sizeboxContainer11').click()">
+              <input type="radio" name="size" id="sizeboxContainer11" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer11" class="size_text_mobile">600 x 450</label>
             </div>
 
-            <div class="SizeBox_mobile">
-              <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
-              <label for="sizeboxContainer1" class="size_text_mobile">600 x 450</label>
+            <div class="SizeBox_mobile" onclick="document.getElementById('sizeboxContainer12').click()">
+              <input type="radio" name="size" id="sizeboxContainer12" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer12" class="size_text_mobile">600 x 450</label>
             </div>
 
            
 
           </div>
-          <div class="SizeBox_mobile">
-            <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
-            <label for="sizeboxContainer1" class="size_text_mobile">600 x 450</label>
+          <div class="SizeBox_mobile" onclick="document.getElementById('sizeboxContainer13').click()">
+            <input type="radio" name="size" id="sizeboxContainer13" style="margin: 0px 0px 0px 5px;">
+            <label for="sizeboxContainer13" class="size_text_mobile">600 x 450</label>
           </div>
 
 
@@ -604,51 +604,6 @@
 
 
 
-<style>
-  /* Styles for the modal background */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
-  }
-
-  /* Modal content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 500px; /* Could be more or less, depending on screen size */
-    text-align: center;
-  }
-
-  /* Close button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* Class to hide overflow on body */
-  .modal-open {
-    overflow: hidden;
-  }
-</style>
-
 
 <!-- The Modal -->
 <div id="myModal" class="modal" style="color: black">
@@ -657,9 +612,7 @@
    <div style="display: flex; align-items: start;">
     <img class="img_icn_smg" src="assets\checked.png" alt="">
     <p style="font-weight: bold; padding-left: 10px;">Item added to your cart!</p>
-    <span class="close" style="position: relative;
-    top: -9px;
-    right: -205px;">&times;</span>
+    <span class="close">&times;</span>
    </div>
    <div style="display: flex; align-items: center;">
     <img class="addToCardImg" src="https://moddwell.com/public/assets/img/placeholder.jpg" alt="">
