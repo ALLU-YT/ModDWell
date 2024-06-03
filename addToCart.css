@@ -515,7 +515,10 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: center;
 }
-
+.addAddress {
+  display: flex;
+  justify-content: end;
+}
 /* tabBar Css */
 
 @media only screen and (max-width: 600px) {
@@ -556,6 +559,7 @@ button[type="submit"]:hover {
     margin-bottom: 40px;
   }
   .ProductDetailsCard_shipping {
+    display: none;
     margin-top: 40px;
     border-color: 1px solid blue;
 
@@ -585,8 +589,9 @@ button[type="submit"]:hover {
     background: #18578c;
     color: white;
     width: 100%;
-    padding: 12px;
+    padding: 8px;
     font-size: 13px;
+    margin-top: 10px;
     border-radius: 10px;
   }
   .shippingg {
@@ -597,5 +602,19 @@ button[type="submit"]:hover {
   }
   .icons_payment {
     display: none;
+  }
+  .addAddress {
+    display: flex;
+    justify-content: center;
+  }
+  .address-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 92%;
+    max-width: 400px;
+    position: relative;
+    animation: slideIn 0.3s;
   }
 }
