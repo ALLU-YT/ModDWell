@@ -1310,14 +1310,11 @@ input[type="checkbox"] {
 #mobile_similar_products {
   display: none;
 }
+.mobile_footer {
+  display: none;
+}
 /* //systemfooter? */
-.footer_h {
-  text-align: start;
-}
 
-.tooter_p {
-  font-size: 15px;
-}
 /* /
 /
 /
@@ -1557,6 +1554,22 @@ input[type="checkbox"] {
   .bottom_bar_p {
     line-height: 0px;
     font-size: 13px;
+  }
+  /* footer */
+  .mobile_footer {
+    text-align: center;
+    display: block;
+  }
+  /* viewallcss */
+  .system_footer {
+    display: none;
+  }
+  #showButton {
+    display: block;
+  }
+  .show_all {
+    display: none;
+    /* Initially hide the container */
   }
 }
 

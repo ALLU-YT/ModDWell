@@ -1409,9 +1409,94 @@ function homePage(){
 
 
 
+<div class="mobile_footer">
+  <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+      <!-- Github -->
+
+  </section>
+  <div class="footer_h_mobile">
+      <h5 class="text-uppercase"></h5>
+      <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" alt="">
+      <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+  </div>
+  <p style="font-size: 14px; color: #ffffff8c;">Address</p>
+  <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+
+  <div class="container">
+      <div class="row">
 
 
+          <div style="display: flex;flex-direction: column;">
 
+              <!-- Button 1 to toggle the first list -->
+              <button class="buttons" style="margin: 0px;" onclick="toggleListt('myList11')">Menu<i class="bi bi-plus"></i> <!-- Down arrow icon --></button>
+              <hr>
+              <!-- List 1 to be displayed -->
+              <ul class="list" id="myList11">
+                  <li class="list-item">Home</li>
+                  <li class="list-item">Led Mirror</li>
+                  <li class="list-item">Mirror cabinet</li>
+                  <li class="list-item">Corner SHelf</li>
+                  <li class="list-item">Magnetic board</li>
+                  <li class="list-item">Glass frames</li>
+              </ul>
+
+              <!-- Button 2 to toggle the second list -->
+              <button class="buttons" style="margin: 0px;" onclick="toggleListt('myList22')">Show List 2 <i class="bi bi-plus"></i></button>
+              <hr>
+              <!-- List 2 to be displayed -->
+              <ul class="list" id="myList22">
+                  <li class="list-item">Terms & conditons</li>
+                  <li class="list-item">Retrun Policy</li>
+                  <li class="list-item">Privacy policy</li>
+                  <li class="list-item">About us</li>
+              </ul>
+
+              <!-- Button 3 to toggle the third list -->
+              <button class="buttons" style="margin: 0px;" onclick="toggleListt('myList33')">My Account<i class="bi bi-plus"></i></span></button>
+              <hr>
+              <!-- List 3 to be displayed -->
+              <ul class="list" id="myList33">
+                  <li class="list-item">Login</li>
+                  <li class="list-item">Order History</li>
+                  <li class="list-item">My Wishlist
+                      <li class="list-item">Track Order
+                      </li>
+              </ul>
+          </div>
+          <button> <i class="fas fa-envelope fa-1x text-primary" style="width: 30px;"></i>moddwell@tprsenterprises.in</button>
+          <button> <i class="fas fa-phone fa-1x text-success" style="width: 30px;"></i></i>+91 72003 92758</button>
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.116); color: rgba(255, 255, 255, 0.267); font-size: 14px;">
+              Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+              <a style="color: rgba(255, 255, 255, 0.301); font-size: 14px;" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+<script>
+  // footer tab
+  function toggleListt(listId) {
+  var list = document.getElementById(listId);
+  if (list.style.display === "none" || list.style.display === "") {
+    // Check for both 'none' and '' (initial)
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
+}
+</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       type="module"
