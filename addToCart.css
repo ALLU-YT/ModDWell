@@ -618,7 +618,7 @@ button[type="submit"]:hover {
     animation: slideIn 0.3s;
   }
   .scrollable-content_address {
-    height: 94%;
+    height: 74%;
     overflow-y: auto;
     margin-top: 25px;
     /* border: 1px solid #ccc; */
