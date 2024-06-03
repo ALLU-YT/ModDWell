@@ -1188,14 +1188,14 @@ padding-top: 12px;">
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
   </div>
        <div style="display: block;">
-        <ion-icon name="home-outline" class="icon_new activee" onclick="change(this)">
+        <ion-icon name="home-outline" class="icon_new " onclick="change(this);  homePage();">
          
         </ion-icon>
     
-        <p class="bottom_bar_p" style="line-height: 0px;">Welcome</p>
+        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
        </div>
        <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new " onclick="change(this)">
+        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this);">
          
         </ion-icon>
     
@@ -1381,7 +1381,17 @@ function displyLoginUpForm() {
     document.getElementsByClassName("mobileSignup")[0].style.display = "none";
     document.getElementsByClassName("mobilelogin")[0].style.display = "block";
 }
+function openNavSignup() {
+  document.getElementById("mySidenavSignUp").style.width = "300px";
+}
 
+function closeNavSignup() {
+  document.getElementById("mySidenavSignUp").style.width = "0";
+}
+
+function homePage(){
+  window.location.href = "index.html"
+}
 
 </script>
 
