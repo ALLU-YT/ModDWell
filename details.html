@@ -1059,6 +1059,18 @@
 
       </div>
   </div>
+  <script>
+// Function to toggle the visibility of the list
+function toggleList(listId) {
+  var list = document.getElementById(listId);
+  if (list.style.display === "none" || list.style.display === "") {
+    // Check for both 'none' and '' (initial)
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
+}    
+  </script>
   <!-- MobileSimilar Products -->
 <div class="container" style="
 padding-top: 12px;">

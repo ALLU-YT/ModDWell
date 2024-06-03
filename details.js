@@ -106,6 +106,13 @@ document
 //     document.getElementById("popupBackground_signup").style.display = "none";
 //   });
 //Mobile Signup
+// function openNavSignup() {
+//   document.getElementById("mySidenavSignUp").style.width = "300px";
+// }
+
+// function closeNavSignup() {
+//   document.getElementById("mySidenavSignUp").style.width = "0";
+// }
 
 // CreateyourAccount for mobile
 
