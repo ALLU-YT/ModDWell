@@ -378,15 +378,23 @@ s<!DOCTYPE html>
                 <hr width="50px;" style="margin: 5px;">
                 <span style="font-size: 12px; margin-right: 10px;">4. Confirmation</span>
             </div> -->
-            <div style="display: flex; align-items: center; margin-left: 10px;">
-              <span style="font-size: 14px; font-weight: bold;"><span style="color: #4CAF50;">✔ </span>Cart 
+            <div   class="cartBars">
+              <span style="font-size: 12px; font-weight: bold;"><span style="color: #4CAF50;">✔ </span>Cart 
             </span>
             <hr width="50px;" style="margin: 5px;">
             <span style="font-size: 12px;font-size: 14px; font-weight: bold;">2 .Shipping info </span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 12px;"> 3. Payment</span> <hr width="50px;" style="margin: 5px;"><span style="font-size: 12px;"> 4. Confirmation</span>
           
           
             </div>
-
+            <div class="cartBars_mobile"">
+              <span style="font-size: 11px; font-weight: bold;display: flex;"><span style="color: #4CAF50;display: flex;">✔</span>&nbsp;Cart 
+            </span>
+            <hr width="50px;" style="margin: 5px;">
+            <span style="font-size: 11px;">Address</span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 11px;">Payment</span>
+             <hr width="50px;" style="margin: 5px;"><span style="font-size: 11px;">Confirmation</span>
+          
+          
+            </div>
 
 
 <!-- AddressContainer -->
@@ -512,7 +520,7 @@ s<!DOCTYPE html>
             </div>
                 <!-- </div> -->
                 <div class="col-lg-4">
-                  <div class="ProductDetailsCard">
+                  <div class="ProductDetailsCard_shipping" style="background: white;">
                       <div style="padding: 20px;">
                         <p class="SummeryHead">Order Summary</p>
                         <div style="display: flex; justify-content: space-between;">
@@ -524,6 +532,11 @@ s<!DOCTYPE html>
                           <p class="subtotallite">14000</p>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
+                          <p class="subtotalbold">Coupon</p>
+                          <p class="subtotallite">0</p>
+                        </div>
+                     
+                        <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Tax</p>
                           <p class="subtotallite">14000</p>
                         </div>
@@ -531,47 +544,62 @@ s<!DOCTYPE html>
                           <p class="subtotalbold">Total</p>
                           <p class="subtotallite">14000</p>
                         </div>
-                      <div class="form_1_btns common_btns">
-                        <button class="shipping btn_next" onclick="navtopage();">Continue to Delivery info</button>
-                      </div>
-                      <div style="display: flex; justify-content: center;">
+                        <div class="form_1_btns common_btns">
+                          <button class="shippingg btn_next" onclick="navtopage();">Continue to Delivery info</button>
+                        </div>
+                        <div class="icons_payment">
                 
-                        <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
-                        <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
-                        <img class="paymentIcons" src="assets/Payment Icons/UPI.png" alt="">
-                       
-                        <img class="paymentIcons" src="assets/Payment Icons/phonpe.png" alt="">
-                        
+                          <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
+                          <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
+                          <img class="paymentIcons" src="assets/Payment Icons/UPI.png" alt="">
+                         
+                          <img class="paymentIcons" src="assets/Payment Icons/phonpe.png" alt="">
+                          
+                        </div>
                       </div>
-                      </div>
+                    
                       
                   </div>
         
+
+                <div  class="mobile_continueBtn">
+                  <div class="form_1_btns common_btns">
+                    <button class="shipping btn_next" onclick="navtopage();">Continue to Delivery info</button>
+                  </div>
+                  <div style="display: flex; justify-content: center;">
+            
+                    <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
+                    <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
+                    <img class="paymentIcons" src="assets/Payment Icons/UPI.png" alt="">
+                   
+                    <img class="paymentIcons" src="assets/Payment Icons/phonpe.png" alt="">
+                    
+                  </div>
+                </div>
+
+
+
         <script>
           function navtopage(){
             window.location.href = "CheckOut.html"
           }       
           </script>
         <!-- coupen -->
-        <div class="ProductDetailsCard_2">
-          <div style="padding: 16px;">
-            <p class="SummeryHead">Coupon Code</p>
-            
-            <div style="position: relative;">
-              <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code" readonly>
-              <!-- <button class="applybtn" style=" position: absolute;
-  right: 5px;
-  color: red;
-  margin-left: 5px;
-  top: 0;
-  font-size: 13px;
-  height: 100%;">Apply</button> -->
-            </div>
-            
+     <div class="coupon_div">
+      <div class="ProductDetailsCard_2">
+        <div style="padding: 16px;">
+          <p class="SummeryHead">Coupon Code</p>
+          
+          <div style="position: relative;">
+            <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code" readonly>
             
           </div>
-        
+          
+          
         </div>
+      
+      </div>
+     </div>
         
         
                 </div>
