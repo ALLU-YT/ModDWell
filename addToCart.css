@@ -530,6 +530,23 @@ button[type="submit"]:hover {
   display: block;
 }
 
+.mobile_c {
+  display: none;
+}
+.mobile_conformation_page {
+  display: none;
+}
+.ProductDetailsCard_PaymentDetails {
+  margin-top: 40px;
+  border-color: 1px solid blue;
+
+  /* height: 400px; */
+  background: rgb(255, 255, 255);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
 @media only screen and (max-width: 600px) {
   .cartBars {
     display: none;
@@ -571,9 +588,7 @@ button[type="submit"]:hover {
   .ProductDetailsCard_PaymentDetails {
     margin-top: 40px;
     border-color: 1px solid blue;
-
-    /* height: 400px; */
-    background: rgb(255, 255, 255);
+    background-color: #1d1d1d;
     border-radius: 10px;
     margin-bottom: 40px;
   }
@@ -592,7 +607,7 @@ button[type="submit"]:hover {
     margin-top: 40px;
     border-color: 1px solid blue;
     height: 110px;
-    background: rgb(255, 255, 255);
+    background: rgb(0 0 0 / 0%);
     border-radius: 10px;
     margin-bottom: 18px;
   }
@@ -666,5 +681,26 @@ button[type="submit"]:hover {
   }
   .payment_details {
     display: none;
+  }
+  .mobile_conformation_page {
+    display: block;
+  }
+  .hide_container {
+    display: none;
+  }
+  .subtotalbold {
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+  .subtotallite {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .SummeryHead {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
   }
 }
