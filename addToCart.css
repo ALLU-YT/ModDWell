@@ -606,6 +606,10 @@ button[type="submit"]:hover {
   .addAddress {
     display: flex;
     justify-content: center;
+    bottom: 63px;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
   .address-form-container {
     background: white;
@@ -618,7 +622,7 @@ button[type="submit"]:hover {
     animation: slideIn 0.3s;
   }
   .scrollable-content_address {
-    height: 74%;
+    height: 85%;
     overflow-y: auto;
     margin-top: 25px;
     /* border: 1px solid #ccc; */
