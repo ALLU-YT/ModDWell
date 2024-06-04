@@ -291,6 +291,10 @@ body {
 
 .OpenAddressFormBtn {
   background-color: #18578c;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 AddressPopUp .OpenAddressFormBtn {
@@ -606,10 +610,11 @@ button[type="submit"]:hover {
   .addAddress {
     display: flex;
     justify-content: center;
-    bottom: 63px;
+    /* bottom: 63px; */
     position: absolute;
-    left: 0;
-    right: 0;
+    /* left: 0px; */
+    right: 14px;
+    top: 115px;
   }
   .address-form-container {
     background: white;
@@ -628,5 +633,13 @@ button[type="submit"]:hover {
     /* border: 1px solid #ccc; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .OpenAddressFormBtn {
+    border: 1px solid white;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 11px;
+    background-color: #000;
   }
 }
