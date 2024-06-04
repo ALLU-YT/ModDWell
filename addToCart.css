@@ -703,4 +703,16 @@ button[type="submit"]:hover {
     font-weight: 600;
     color: rgb(255, 255, 255);
   }
+  .ProductDetailsCard_confirm {
+    background: white;
+    width: 100%;
+    margin-top: 40px;
+    border-color: 1px solid blue;
+    color: rgb(255, 255, 255);
+
+    /* height: 400px; */
+    background: #1d1d1d;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
 }
