@@ -366,7 +366,7 @@
        
             <div class="col-lg-8">
               <p>Shopping Cart</p>
-              <div style="display: flex; align-items: center; margin-left: 10px;">
+              <div class="cartBars">
                 <span style="font-size: 14px; font-weight: bold;"><span style="color: #4CAF50;">✔ </span>Cart 
               </span>
               <hr width="50px;" style="margin: 5px;">
@@ -374,8 +374,18 @@
             
             
               </div>
-
+              <div class="cartBars_mobile"">
+                <span style="font-size: 11px; font-weight: bold;display: flex;"><span style="color: #4CAF50;display: flex;">✔</span>&nbsp;Cart 
+              </span>
+              <hr width="50px;" style="margin: 5px;">
+              <span style="font-size: 11px;">Address</span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 11px;">Payment</span>
+               <hr width="50px;" style="margin: 5px;"><span style="font-size: 11px;">Confirmation</span>
             
+            
+              </div>
+            
+             <div>
+              <div class="mobile_cart_details">
               <div class="scrollable-content">
                 <div>
                   <div style="display: flex;justify-content: space-between;">
@@ -400,18 +410,7 @@
                     </div>
 
 
-                    <!-- <div style="display: flex;flex-direction: column;justify-content: space-between;">
-                 
-                      <div style="width: 100px; color: white; align-items: center; text-align: center;">
-                        <i class="bi bi-trash"></i>
-                      </div>
-                        <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
-                          <div>-</div>
-                          <div>1</div>
-                          <div>+</div>
-                        </div>
-                      
-                    </div> -->
+         
                   </div>   
                 <hr style="color: white; margin-top: 0;">
          
@@ -439,19 +438,6 @@
                    
                   </div>
 
-
-                  <!-- <div style="display: flex;flex-direction: column;justify-content: space-between;">
-                 
-                    <div style="width: 100px; color: white; align-items: center; text-align: center;">
-                      <i class="bi bi-trash"></i>
-                    </div>
-                      <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
-                        <div>-</div>
-                        <div>1</div>
-                        <div>+</div>
-                      </div>
-                    
-                  </div> -->
                 </div>
 
                
@@ -480,20 +466,6 @@
                   </div>
                  
                 </div>
-
-
-                <!-- <div style="display: flex;flex-direction: column;justify-content: space-between;">
-                 
-                  <div style="width: 100px; color: white; align-items: center; text-align: center;">
-                    <i class="bi bi-trash"></i>
-                  </div>
-                    <div style="display: flex;justify-content: space-between; width: 100px; color: white; align-items: end; text-align: start;">
-                      <div>-</div>
-                      <div>1</div>
-                      <div>+</div>
-                    </div>
-                  
-                </div> -->
               </div>
 
              
@@ -501,7 +473,7 @@
             <hr style="color: white; margin-top: 0;">
      
           </div>
-              <div>
+         
                 <div style="display: flex; align-items: start;padding-top: 32px;">
                 <img class="productimg" src="https://moddwell.com/public/uploads/all/7bQU1u91buP7qLLn0TqMzZvDUsjZmmAVdDyuyWIK.png" alt="">
                 <div style="display: flex;flex-direction: column;padding-left: 10px;">
@@ -519,12 +491,14 @@
               </div>
               <hr style="color: white; margin-top: 0;">
                
-            </div>
+         
               </div>
+              </div>
+             </div>
             </div>
                 <!-- </div> -->
                 <div class="col-lg-4">
-                  <div class="ProductDetailsCard">
+                  <div class="ProductDetailsCard_PaymentDetails">
                       <div style="padding: 20px;">
                         <p class="SummeryHead">Order Summary</p>
                         <div style="display: flex; justify-content: space-between;">
@@ -537,6 +511,10 @@
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Tax</p>
+                          <p class="subtotallite">14000</p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                          <p class="subtotalbold">Coupon</p>
                           <p class="subtotallite">14000</p>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
@@ -566,6 +544,7 @@ function navToPage(){
         </script>
         
         <!-- coupen -->
+       <div class="payment_details">
         <div class="ProductDetailsCard_2">
           <div style="padding: 16px;">
             <p class="SummeryHead">Coupon code</p>
@@ -579,6 +558,7 @@ function navToPage(){
           </div>
         
         </div>
+       </div>
         
         
                 </div>

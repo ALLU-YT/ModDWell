@@ -50,7 +50,6 @@ body {
 /* customScrollBAr */
 
 .scrollable-content {
-  height: 500px;
   overflow-y: auto;
   padding: 10px;
   margin-top: 25px;
@@ -523,7 +522,13 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: end;
 }
+.mobile_continue_btn {
+  display: none;
+}
 /* tabBar Css */
+.mobile_cart_details {
+  display: block;
+}
 
 @media only screen and (max-width: 600px) {
   .cartBars {
@@ -562,6 +567,17 @@ button[type="submit"]:hover {
     border-radius: 10px;
     margin-bottom: 40px;
   }
+
+  .ProductDetailsCard_PaymentDetails {
+    margin-top: 40px;
+    border-color: 1px solid blue;
+
+    /* height: 400px; */
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+
   .ProductDetailsCard_shipping {
     display: none;
     margin-top: 40px;
@@ -641,5 +657,14 @@ button[type="submit"]:hover {
     border-radius: 5px;
     font-size: 11px;
     background-color: #000;
+  }
+  .mobile_continue_btn {
+    display: block;
+  }
+  .mobile_cart_details {
+    display: none;
+  }
+  .payment_details {
+    display: none;
   }
 }

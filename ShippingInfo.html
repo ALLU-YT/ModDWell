@@ -1,4 +1,4 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -562,12 +562,6 @@ s<!DOCTYPE html>
 
 
 
-
-        <script>
-          function navtopage(){
-            window.location.href = "CheckOut.html"
-          }       
-          </script>
         <!-- coupen -->
      <div class="coupon_div">
       <div class="ProductDetailsCard_2">
@@ -603,7 +597,7 @@ s<!DOCTYPE html>
 </div>
 
 
-<div style="position: fixed;bottom: 0;left: 0;right: 0;">
+<div style="position: fixed;bottom: 0;left: 0;right: 0;" class="mobile_continue_btn">
   
 
       <button class="shipping btn_next" style="width: 100%;" onclick="navtopage();">Continue to Delivery info</button>
@@ -706,6 +700,10 @@ s<!DOCTYPE html>
       </footer>
   </div>
     <script>
+ function navtopage(){
+            window.location.href = "CheckOut.html"
+          }  
+
  document.addEventListener("DOMContentLoaded", function () {
         var openAddressFormBtn = document.querySelector(".OpenAddressFormBtn");
         var addressPopup = document.getElementById("addressPopup");
