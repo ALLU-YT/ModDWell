@@ -233,7 +233,7 @@ header {
 
 .new-slide img {
   width: 100%;
-  height: 500px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -1712,7 +1712,7 @@ body.dark .search-field i {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 10px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -1730,8 +1730,8 @@ body.dark .search-field i {
   width: 290px;
   background: #18578c;
   margin: 5px;
-  padding: 5px;
-  font-size: 12px;
+  padding: 8px;
+  font-size: 11px;
   border-radius: 5px;
 }
 #cartSlider {
@@ -1746,13 +1746,11 @@ body.dark .search-field i {
   z-index: 1000;
 }
 .cart-content {
-  height: 70%;
+  height: 63%;
   overflow-y: auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
-.set {
-  margin-bottom: 20px;
-}
+
 .set img {
   width: 130px;
   padding: 10px;
@@ -1769,6 +1767,10 @@ body.dark .search-field i {
 .set .quantity-controls {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 105px;
   align-items: center;
+  margin-left: 12px;
+}
+.set p {
+  font-size: 14px;
 }
