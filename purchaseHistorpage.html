@@ -50,6 +50,7 @@
 
     <link rel="stylesheet" href="details.css" />
     <link rel="stylesheet" href="addToCart.css" />
+    <link rel="stylesheet" href="profileSlider.css">
   </head>
   <body>
     <div style="background: black">
@@ -814,7 +815,7 @@ function navToPage(){
         <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
        </div>
        <div style="display: block;">
-        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;   openProfile();">
         </ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
    
@@ -822,6 +823,44 @@ function navToPage(){
        
     </div>
 </div>
+<!-- profile -->
+<link rel="stylesheet" href="profile.css">
+
+<div id="slider" class="slider">
+  
+    <div class="profileHead">
+      <div class="profileimageanaData">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <h3>Ameen</h3>
+        <p>ameeofficial33@gmail.com</p>
+      </div>
+    </div>
+    <div class="menuu">
+      <div class="menuItemm " onclick="Dashboard();">
+        <i class="bi bi-house"></i>
+        <p>Dashboard</p>
+      </div>
+      <div class="menuItemm active">
+        <i class="bi bi-file-earmark-text"></i>
+        <p>Purchase History</p>
+      </div>
+      <div class="menuItemm" onclick="wishListPage();">
+        <i class="bi bi-heart"></i>
+        <p>Wishlist</p>
+      </div>
+      <div class="menuItemm" onclick="supportTicketPage();">
+        <i class="bi bi-life-preserver"></i>
+        <p>Support Ticket</p>
+      </div>
+      <div class="menuItemm" onclick="">
+        <i class="bi bi-person"></i>
+        <p>Manage Profile</p>
+      </div>
+    </div>
+
+</div>
+
+
     <script>
 
 
@@ -905,5 +944,6 @@ document.addEventListener("DOMContentLoaded", function() {
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- <script src="details.js"></script> -->
     <script src="addToCard.js"></script>
+    <script src="profileSlider.js"></script>
   </body>
 </html>

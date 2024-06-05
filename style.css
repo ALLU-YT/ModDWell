@@ -1274,6 +1274,12 @@ body.dark .search-field i {
 /* systemcategory */
 
 @media only screen and (max-width: 600px) {
+  .close_the div {
+    display: none;
+  }
+  #closeButton {
+    display: none;
+  }
   .outline-button {
     display: inline-block;
     padding: 10px 20px;

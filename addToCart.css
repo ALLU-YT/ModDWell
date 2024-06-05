@@ -564,7 +564,7 @@ button[type="submit"]:hover {
 .order-table td {
   text-align: left;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
 }
 .order-table th {
   background-color: #f8f8f8;
@@ -587,59 +587,58 @@ button[type="submit"]:hover {
   color: #ff9800;
 }
 /* Style the tab bar container */
-                .tab-bar-container {
-                  overflow: hidden;
-                }
-          
-                /* Style the tab bar */
-                .tab-bar {
-                  display: flex;
-                  transition: transform 0.3s ease; /* Apply transition effect to transform property */
-                }
-          
-                /* Style the tab buttons */
-                .tab-bar button {
-                  background-color: #0000005b;
-                  border: none;
-                  outline: none;
-                  cursor: pointer;
-                  padding: 10px 20px;
-                  flex: 1; /* Equal width for all tab buttons */
-                  transition: background-color 0.3s ease; /* Apply transition effect to background-color property */
-                }
-          
-                /* Change background color of buttons on hover */
-                .tab-bar button:hover {
-                  background-color: #ddd;
-                }
-          
-                /* Create an active/current tab button */
-                .tab-bar button.active {
-                  background-color: #000000; /* Change the background color to black for active tab */
-                  color: #fff; /* Change the text color to white for better visibility */
-                }
-          
-                /* Style the tab content */
-               
-          
-                /* Show the active tab content */
-                .tab-content.active {
-                  display: block;
-                }
+.tab-bar-container {
+  overflow: hidden;
+}
+
+/* Style the tab bar */
+.tab-bar {
+  display: flex;
+  transition: transform 0.3s ease; /* Apply transition effect to transform property */
+}
+
+/* Style the tab buttons */
+.tab-bar button {
+  background-color: #0000005b;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  flex: 1; /* Equal width for all tab buttons */
+  transition: background-color 0.3s ease; /* Apply transition effect to background-color property */
+}
+
+/* Change background color of buttons on hover */
+.tab-bar button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tab button */
+.tab-bar button.active {
+  background-color: #000000; /* Change the background color to black for active tab */
+  color: #fff; /* Change the text color to white for better visibility */
+}
+
+/* Style the tab content */
+
+/* Show the active tab content */
+.tab-content.active {
+  display: block;
+}
 
 @media only screen and (max-width: 600px) {
   /* Style the tab content */
-                .tab-content {
-                  display: none;
-                  /* padding: 20px; */
-                }
-          
-                /* Show the active tab content */
-                .tab-content.active {
-                  display: block;
-                }
+  .tab-content {
+    display: none;
+    /* padding: 20px; */
+  }
 
- .order-container {
+  /* Show the active tab content */
+  .tab-content.active {
+    display: block;
+  }
+
+  .order-container {
     width: 100%;
     background: #1d1d1d;
     color: black;
@@ -658,7 +657,7 @@ button[type="submit"]:hover {
   .order-table td {
     text-align: left;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
   }
   .order-table th {
     color: white;

@@ -1,0 +1,50 @@
+.menuu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.menuItemm {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  border-radius: 4px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.menuItemm i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menuItemm p {
+  margin: 0;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+}
+
+.menuItemm:hover {
+  background: #a7a3a3;
+}
+
+.menuItemm.active {
+  background: #e0e0e0;
+}
+
+.slider {
+  position: fixed;
+  left: -300px;
+  color: black;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+.slider.open {
+  left: 0;
+}
