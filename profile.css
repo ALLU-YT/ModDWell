@@ -292,3 +292,46 @@
   font-weight: 600;
   padding: 4px;
 }
+@media only screen and (max-width: 600px) {
+  .form-group input[type="text"],
+  .form-group textarea {
+    /* flex-basis: 126%; */
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .ProfileDashBoard {
+    display: none;
+    width: 280px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  /* purchasehistoryContainer */
+  .purchasehistoryContainer {
+    height: 100%;
+    background: white;
+    color: black;
+    height: 556px;
+    border-radius: 8px;
+    overflow-y: auto;
+  }
+  .purchasehistoryContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .form-container {
+    /* padding: 20px; */
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  .addressContainer {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid blue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+      /* Slight shadow */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for 3D effect */
+  }
+}

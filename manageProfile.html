@@ -517,6 +517,27 @@
             .custom-button:hover {
                 background-color: #45a049;
             }
+
+
+            @media only screen and (max-width: 600px) {
+              .form-group {
+                display: flex;
+                justify-content: space-between;
+                /* margin-bottom: 30px; */
+                align-items: center;
+            }
+            button[type="submit"] {
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+            }
+
+
+   
         </style>
     </div>
     
@@ -774,7 +795,41 @@
 
 </div>
 
-
+  <!-- div.mobileFooter  -->
+  <div class="custom_btn_phone">
+    <div class="bottom-bar">
+      <div style="display: block;">
+        <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+        <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
+    </div>
+    
+    <div style="display: block;">
+      <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+      <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
+  </div>
+       <div style="display: block;">
+        <ion-icon name="home-outline" class="icon_new " onclick="change(this);  homePage();">
+         
+        </ion-icon>
+    
+        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
+       </div>
+       <div style="display: block;">
+        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this);">
+         
+        </ion-icon>
+    
+        <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
+       </div>
+       <div style="display: block;">
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
+        </ion-icon>
+        <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
+   
+       </div>
+       
+    </div>
+</div>
     <!-- footer -->
      <div class="system_footer">
                         <footer class="bg-black text-center text-white">
