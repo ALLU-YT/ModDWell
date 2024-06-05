@@ -1,99 +1,147 @@
-<div class="row">
-  <div class="tab-bar">
-    <button class="tab" onclick="openTab(event, 'tab1')" id="defaultOpen">
-      Details
-    </button>
-    <button class="tab" onclick="openTab(event, 'tab2')">Description</button>
-    <button class="tab" onclick="openTab(event, 'tab3')">Review</button>
-    <button class="tab" onclick="openTab(event, 'tab4')">
-      Similar products
-    </button>
-    <button class="tab" onclick="openTab(event, 'tab5')">FAQ</button>
-  </div>
-  <div id="tab1" class="tab-content active">
-    <!-- Add 'active' class to display by default -->
-    <!-- Content for tab 1 -->
-    Details Content
-  </div>
-  <div id="tab2" class="tab-content">
-    <!-- Content for tab 2 -->
-    Description Content
-  </div>
-  <div id="tab3" class="tab-content">
-    <!-- Content for tab 3 -->
-    Review Content
-  </div>
-  <div id="tab4" class="tab-content">
-    <!-- Content for tab 4 -->
-    Similar Products Content
-  </div>
-  <div id="tab5" class="tab-content">
-    <!-- Content for tab 5 -->
-    FAQ Content
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollable Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      #cartSlider {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: width 0.3s;
+        z-index: 1000;
+      }
+      .cart-content {
+        height: 100%;
+        overflow-y: auto;
+        padding: 20px;
+      }
+      .set {
+        margin-bottom: 20px;
+      }
+      .set img {
+        width: 130px;
+        padding: 10px;
+      }
+      .set .item-details {
+        display: flex;
+        flex-direction: column;
+      }
+      .set .item-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .set .quantity-controls {
+        display: flex;
+        justify-content: space-between;
+        width: 120px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="change(this); openCartSlider();">Open Cart</button>
 
-<style>
-  .tab-bar {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    height: 35px;
-    justify-content: center;
-    background-color: #333333;
-    border-bottom: 1px solid white;
-    border-radius: 10px 10px 0 0; /* top-left and top-right */
-  }
+    <div id="cartSlider">
+      <div class="cart-content">
+        <div class="set">
+          <div style="display: flex">
+            <img src="assets/Banner/Bathroom 1.jpg" alt="" />
+            <div class="item-details">
+              <p>Absolute 18*18 / Handware / Natural White</p>
+              <p>Rs 50,000</p>
+            </div>
+          </div>
+          <div class="item-controls">
+            <div class="quantity-controls">
+              <div>-</div>
+              <div>1</div>
+              <div>+</div>
+            </div>
+            <i class="bi bi-trash" style="margin-right: 10px"></i>
+          </div>
+          <hr />
+        </div>
+        <div class="set">
+          <div style="display: flex">
+            <img src="assets/Banner/Bathroom 1.jpg" alt="" />
+            <div class="item-details">
+              <p>Absolute 18*18 / Handware / Natural White</p>
+              <p>Rs 50,000</p>
+            </div>
+          </div>
+          <div class="item-controls">
+            <div class="quantity-controls">
+              <div>-</div>
+              <div>1</div>
+              <div>+</div>
+            </div>
+            <i class="bi bi-trash" style="margin-right: 10px"></i>
+          </div>
+          <hr />
+        </div>
+        <!-- Add more items here as needed -->
+      </div>
+    </div>
+    <div class="cart-content">
+      <div class="set">
+        <div style="display: flex">
+          <img src="assets/Banner/Bathroom 1.jpg" alt="" />
+          <div class="item-details">
+            <p>Absolute 18*18 / Handware / Natural White</p>
+            <p>Rs 50,000</p>
+          </div>
+        </div>
+        <div class="item-controls">
+          <div class="quantity-controls">
+            <div>-</div>
+            <div>1</div>
+            <div>+</div>
+          </div>
+          <i class="bi bi-trash" style="margin-right: 10px"></i>
+        </div>
+        <hr />
+      </div>
+      <div class="set">
+        <div style="display: flex">
+          <img src="assets/Banner/Bathroom 1.jpg" alt="" />
+          <div class="item-details">
+            <p>Absolute 18*18 / Handware / Natural White</p>
+            <p>Rs 50,000</p>
+          </div>
+        </div>
+        <div class="item-controls">
+          <div class="quantity-controls">
+            <div>-</div>
+            <div>1</div>
+            <div>+</div>
+          </div>
+          <i class="bi bi-trash" style="margin-right: 10px"></i>
+        </div>
+        <hr />
+      </div>
+      <!-- Add more items here as needed -->
+    </div>
 
-  .tab {
-    background-color: #333333;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    color: white;
-    float: left;
-    border-color: rgb(255, 145, 2);
-    transition: background-color 0.3s;
-  }
+    <script>
+      function openCartSlider() {
+        document.getElementById("cartSlider").style.width = "300px";
+      }
 
-  .tab:hover {
-    background-color: #f0f0f054;
-  }
-
-  .tab-content {
-    display: none;
-  }
-
-  .tab-content.active {
-    display: block;
-  }
-
-  .tab.active {
-    background-color: white;
-    color: #333333; /* Change text color for better visibility */
-  }
-</style>
-
-<script>
-  document.getElementById("defaultOpen").click(); // Simulate click on the default tab on page load
-
-  function openTab(evt, tabName) {
-    var i, tabContent, tabLinks;
-    tabContent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabContent.length; i++) {
-      tabContent[i].style.display = "none";
-    }
-    document.getElementById(tabName).style.display = "block";
-
-    // Remove 'active' class from all tabs
-    var tabLinks = document.getElementsByClassName("tab");
-    for (i = 0; i < tabLinks.length; i++) {
-      tabLinks[i].classList.remove("active");
-      tabLinks[i].style.backgroundColor = "#333333"; // Set background color of all tabs to default
-    }
-    // Add 'active' class to the clicked tab
-    evt.currentTarget.classList.add("active");
-    evt.currentTarget.style.backgroundColor = "white"; // Set background color of selected tab to white
-  }
-</script>
+      function change(element) {
+        console.log("change called with element:", element);
+        // Your code for the change function
+      }
+    </script>
+  </body>
+</html>
