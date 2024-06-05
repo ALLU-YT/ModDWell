@@ -1747,7 +1747,7 @@ body.dark .search-field i {
   z-index: 1000;
 }
 .cart-content {
-  height: 63%;
+  height: 65%;
   overflow-y: auto;
   /* padding: 20px; */
 }
