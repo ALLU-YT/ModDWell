@@ -534,6 +534,23 @@
         width: 100%;
         transition: background-color 0.3s ease;
       }
+      .form-group input[type="text"],
+            .form-group textarea {
+                flex-basis: 65%;
+                height: 38px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .custom-input {
+                width: 65%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 14px;
+            }
             }
 
 
@@ -766,6 +783,23 @@
         background: #616263d5;
         border-radius: 50%;
       }
+
+
+      @media only screen and (max-width: 600px) {
+        .address-form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 335px;
+        position: relative;
+        animation: slideIn 0.3s;
+      }
+      }
+
+
+    
   </style>
       <script>
           function openCity(evt, cityName) {

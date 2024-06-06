@@ -3,148 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Wishlist Cards</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <title>Purchase History</title>
+    <!-- Add any other head elements here -->
     <style>
-      .card {
-        transition: transform 0.2s;
-      }
-      .card:hover {
-        transform: scale(1.05);
+      .menuItemm {
+        cursor: pointer; /* Ensure cursor indicates it's clickable */
       }
     </style>
- 
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 1"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 1</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 2"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 2</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 3"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 3</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 4"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 4</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 5"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 5</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 6"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 6</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 7"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 7</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 8"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 8</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 9"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 9</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200"
-              class="card-img-top"
-              alt="Product Image 10"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Title 10</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+  </head>
+  <body>
+    <div class="menuItemm" onclick="purchaseHistoryPages();">
+      <i class="bi bi-file-earmark-text"></i>
+      <p>Purchase History</p>
     </div>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      function purchaseHistoryPages() {
+        window.location.href = "purchaseHistorpage.html";
+      }
+    </script>
   </body>
 </html>

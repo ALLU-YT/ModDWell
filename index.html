@@ -1735,11 +1735,8 @@ function categoryPage(){
         <i class="bi bi-heart"></i>
         <p>Wishlist</p>
       </div>
-      <div class="menuItemm" onclick="supportTicketPage();">
-        <i class="bi bi-life-preserver"></i>
-        <p>Support Ticket</p>
-      </div>
-      <div class="menuItemm" onclick="">
+
+      <div class="menuItemm" onclick="manageProfileScreen();">
         <i class="bi bi-person"></i>
         <p>Manage Profile</p>
       </div>
@@ -1752,7 +1749,7 @@ function categoryPage(){
 <div id="mySidenavSignUp" class="sidenav">
 <div class="mobilelogin">
   <div style="display: flex; justify-content: space-between;">
-    <P style="padding-left: 15px;">LOGIN</P>
+    <P>LOGIN</P>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNavSignup()">&times;</a>
    </div>
   <hr style="margin: 0;">
@@ -1771,12 +1768,15 @@ function categoryPage(){
 <img class="img_facebook" src="assets/5365678_fb_facebook_facebook logo_icon.png" alt="" >
 <img class="img_facebook" src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"  alt="">
 </div>
-  <button onclick="displysignUpForm()"><p style="text-decoration: underline; margin-top: 20px;"  id="CreateyourAccount">New customer? Create your account</p></button>
+  <button onclick="displysignUpForm()"><p style="text-decoration: underline;
+    margin-top: 20px;
+    margin-left: 39px;
+    font-size: 12px;"  id="CreateyourAccount">New customer? Create your account</p></button>
 </div>
 
 <div class="mobileSignup">
   <div style="display: flex; justify-content: space-between;">
-    <P style="padding-left: 15px;">Signup</P>
+    <P>Signup</P>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNavSignup()">&times;</a>
    </div>
   <hr style="margin: 0;">
@@ -1794,11 +1794,14 @@ function categoryPage(){
    color: #ffffff7a;
    padding-top: 19px;
 ">Or join with </p>
-  <div style="display: flex; justify-content: center; margin-top: 20px;">
+  <!-- <div style="display: flex; justify-content: center; margin-top: 20px;">
 <img class="img_facebook" src="assets/5365678_fb_facebook_facebook logo_icon.png" alt="" >
 <img class="img_facebook" src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"  alt="">
-</div>
-<button onclick="displyLoginUpForm()"><p style="text-decoration: underline; margin-top: 20px;">Already have an account? Login heree</p></button>
+</div> -->
+<button onclick="displyLoginUpForm()"><p style="text-decoration: underline;
+ 
+  margin-left: 39px;
+  font-size: 12px;">Already have an account? Login heree</p></button>
 </div>
 </div>
 
@@ -1908,8 +1911,15 @@ margin-top: 11px; margin-left: 13px;">Subtotal : <span style="font-size: 16px;">
 
 
 <script>
+
+  function wishListPage(){
+    window.location.href = "mobileWishListPage.html";
+  }
 function purchaseHistoryPages(){
   window.location.href = "purchaseHistorpage.html";
+}
+function manageProfileScreen(){
+  window.location.href = "manageProfile.html";
 }
 
   function change(item) {

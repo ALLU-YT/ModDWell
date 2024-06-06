@@ -48,3 +48,11 @@
 .slider.open {
   left: 0;
 }
+
+.menuItemm:hover {
+  background: #a7a3a3;
+}
+
+.menuItemm.active {
+  background: #e0e0e0;
+}
