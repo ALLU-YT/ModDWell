@@ -625,8 +625,13 @@ button[type="submit"]:hover {
 .tab-content.active {
   display: block;
 }
-
+.header_for_cart{
+  display: none;
+}
 @media only screen and (max-width: 600px) {
+  .header_for_cart{
+    display: block;
+  }
   /* Style the tab content */
   .tab-content {
     display: none;
@@ -793,7 +798,7 @@ button[type="submit"]:hover {
   .scrollable-content_address {
     height: 85%;
     overflow-y: auto;
-    margin-top: 25px;
+    margin-top: 53px;
     /* border: 1px solid #ccc; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
