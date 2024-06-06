@@ -43,196 +43,205 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
     />
-
+    
     <link rel="stylesheet" href="details.css" />
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="profileSlider.css">
+  
 </head>
 <body>
-  
-  <header style="width: 100%; background: rgb(0, 0, 0);">
+  <header style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
     <div style="display: flex; justify-content: center; align-items: center; padding: 10px;">
         <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i>
         <p style="padding-left: 10px; color: white; margin: 0;">Wishlist</p>
     </div>
 </header>
+
 <style>
-  .card {
-    transition: transform 0.2s;
+  .WishList_p{
+    font-size: 13px;
   }
-  .card:hover {
-    transform: scale(1.05);
-  }
-  .card img{
-    height: 150px;
-  }
-  .card-body{
-    color: black;
+  .addToCartBtn{
+    background: blueviolet;
+    padding: 5px;
+    border-radius: 5px;
     font-size: 12px;
-    font-weight: 600;
-    padding: 4px;
+    color: white;
+    border: none;
+  }
+  .container {
+    padding-top: 60px; /* Add padding to the top to avoid overlap with the fixed header */
+  }
+  .item {
+    display: flex; 
+    padding-top: 10px; 
+    position: relative;
+  }
+  .item img {
+    width: 150px; 
+    height: 140px;
+  }
+  .item .details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .item .actions {
+    position: absolute;
+    right: 10px;
+  }
+  .item .info {
+    display: flex;
+    justify-content: space-between;
   }
 </style>
 
-<div class="container my-5">
+<div class="container">
   <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="assets/Banner/Bathroom 1.jpg"
-          class="card-img-top"
-          alt="Product Image 1"
-        />
-        <div class="card-body">
-          <p>Double door mirror cabinet(24*24)</p>
+    <div class="col-12 col-md-6">
+      <div class="item">
+        <div class="actions">
+          <i class="bi bi-heart-fill"></i>
+          <i class="bi bi-trash"></i>
+        </div>
+        <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1206" alt="">
+        <div class="details">
+          <h6>Mirror</h6>
+          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <div class="info">
+            <strong>5000</strong>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
         </div>
       </div>
+      <hr>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 2"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 2</h5>
+    <!-- Repeat similar structure for other items -->
+    <div class="col-12 col-md-6">
+      <div class="item">
+        <div class="actions">
+          <i class="bi bi-heart-fill"></i>
+          <i class="bi bi-trash"></i>
+        </div>
+        <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1206" alt="">
+        <div class="details">
+          <h6>Mirror</h6>
+          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <div class="info">
+            <strong>5000</strong>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
         </div>
       </div>
+      <hr>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 3"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 3</h5>
+    <div class="col-12 col-md-6">
+      <div class="item">
+        <div class="actions">
+          <i class="bi bi-heart-fill"></i>
+          <i class="bi bi-trash"></i>
+        </div>
+        <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1206" alt="">
+        <div class="details">
+          <h6>Mirror</h6>
+          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <div class="info">
+            <strong>5000</strong>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
         </div>
       </div>
+      <hr>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 4"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 4</h5>
+    <div class="col-12 col-md-6">
+      <div class="item">
+        <div class="actions">
+          <i class="bi bi-heart-fill"></i>
+          <i class="bi bi-trash"></i>
+        </div>
+        <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1206" alt="">
+        <div class="details">
+          <h6>Mirror</h6>
+          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <div class="info">
+            <strong>5000</strong>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
         </div>
       </div>
+      <hr>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 5"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 5</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 6"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 6</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 7"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 7</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 8"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 8</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 9"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 9</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/300x200"
-          class="card-img-top"
-          alt="Product Image 10"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product Title 10</h5>
-        </div>
-      </div>
-    </div>
+    <!-- Repeat similar structure for other items -->
   </div>
 </div>
-
-    <!-- div.mobileFooter  -->
-    <div class="custom_btn_phone">
-      <div class="bottom-bar">
-        <div style="display: block;">
-          <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
-          <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
-      </div>
-      
+  <!-- div.mobileFooter  -->
+  <div class="custom_btn_phone">
+    <div class="bottom-bar">
       <div style="display: block;">
-        <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
+        <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+        <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
     </div>
-         <div style="display: block;">
-          <ion-icon name="home-outline" class="icon_new " onclick="change(this);  homePage();">
-           
-          </ion-icon>
-      
-          <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
-         </div>
-         <div style="display: block;">
-          <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this);">
-           
-          </ion-icon>
-      
-          <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
-         </div>
-         <div style="display: block;">
-          <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
-          </ion-icon>
-          <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
-     
-         </div>
-         
-      </div>
+    
+    <div style="display: block;">
+      <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+      <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
   </div>
-</body>
+       <div style="display: block;">
+        <ion-icon name="home-outline" class="icon_new " onclick="change(this);  homePage();">
+         
+        </ion-icon>
+    
+        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
+       </div>
+       <div style="display: block;">
+        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this);">
+         
+        </ion-icon>
+    
+        <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
+       </div>
+       <div style="display: block;">
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
+        </ion-icon>
+        <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
+   
+       </div>
+       
+    </div>
+</div>
+
+
+<div id="slider" class="slider">
+  
+    <div class="profileHead">
+      <div class="profileimageanaData">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <h3>Ameen</h3>
+        <p>ameeofficial33@gmail.com</p>
+      </div>
+    </div>
+    <div class="menuu">
+      <div class="menuItemm active" onclick="Dashboard();">
+        <i class="bi bi-house"></i>
+        <p>Dashboard</p>
+      </div>
+      <div class="menuItemm " onclick="purchaseHistoryPages();">
+        <i class="bi bi-file-earmark-text"></i>
+        <p>Purchase History</p>
+      </div>
+      <div class="menuItemm" onclick="wishListPage();">
+        <i class="bi bi-heart"></i>
+        <p>Wishlist</p>
+      </div>
+
+      <div class="menuItemm" onclick="manageProfileScreen();">
+        <i class="bi bi-person"></i>
+        <p>Manage Profile</p>
+      </div>
+    </div>
+
+</div>
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
@@ -264,4 +273,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="details.js"></script>
+<script src="profileSlider.js"></script>
+</body>
+
 </html>

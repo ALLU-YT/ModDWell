@@ -3,24 +3,480 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Purchase History</title>
-    <!-- Add any other head elements here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Roboto_font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Swiper CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <p id="newPopup">hai</p>
+
     <style>
-      .menuItemm {
-        cursor: pointer; /* Ensure cursor indicates it's clickable */
+      /* loginPopUpp */
+      #popUpBg {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        color: black;
+        background-color: #3333330e; /* Dark background color */
+        background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
+        background-size: cover;
+      }
+
+      #popUpC {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 855px;
+        height: 580px;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        /* padding: 20px; */
+        display: flex; /* Display children side by side */
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
+      }
+
+      #popupimg {
+        /* Occupy 50% width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      #popuploginForm {
+        flex: 1; /* Occupy 50% width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #closeBtnsPopup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        border: none;
+        font-size: 13px;
+      }
+      #signUpPOPUP {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .POpUPHEad {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .popupMa {
+        border: none;
+
+        outline: none; /* Remove outline on focus */
+      }
+      .popupMa {
+        border-bottom: 1px solid rgb(0, 0, 0);
+        padding: 0px;
+        padding-top: 20px;
+        /* padding-top: 58px; */
+      }
+      .popUpfobox {
+        display: flex;
+        justify-content: end;
+        margin-top: 5px;
+        padding: 0px;
+      }
+      .popUpfobox p {
+        font-size: 12px;
+        color: rgb(0, 0, 0);
+      }
+      .popupLOgInsd {
+        background: #18578c;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+      }
+      .img_facebook {
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        margin-right: 10px;
+      }
+      /* head */
+      /* Styling for the button icon (assuming Bootstrap icons are used) */
+      .bi-person {
+        font-size: 24px; /* Adjust as needed */
+      }
+
+      /* SignUpPopUp */
+
+      #popUPSignUp {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        color: black;
+        background-color: #3333330e; /* Dark background color */
+        background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
+        background-size: cover;
+        z-index: 9999; /* Ensure the popup is on top of other elements */
+      }
+
+      #popUPSignUp_ui {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 855px;
+        height: 580px;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        /* padding: 20px; */
+        display: flex; /* Display children side by side */
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
+      }
+
+      #imagecpopup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      #popuploginfom {
+        flex: 1; /* Occupy 50% width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #signUpPOPUP {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      .POpUPHEad {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .popupMa {
+        border: none;
+
+        outline: none; /* Remove outline on focus */
+      }
+      .popupMa {
+        border-bottom: 1px solid rgb(0, 0, 0);
+        padding: 0px;
+        padding-top: 20px;
+        /* padding-top: 58px; */
+      }
+      .popUpfobox {
+        display: flex;
+        justify-content: end;
+        margin-top: 5px;
+        padding: 0px;
+      }
+      .popUpfobox p {
+        font-size: 12px;
+        color: rgb(0, 0, 0);
+      }
+      .popupLOgInsd {
+        background: #18578c;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+      }
+      .img_facebook {
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        margin-right: 10px;
+      }
+      /* head */
+      /* Styling for the button icon (assuming Bootstrap icons are used) */
+      .bi-person {
+        font-size: 24px; /* Adjust as needed */
+      }
+      /* Styles for the modal background */
+      .modal_m {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+        z-index: 9999; /* Ensure the popup is on top of other elements */
+      }
+
+      /* Modal content */
+      .modal-content_m {
+        background-color: #fefefe;
+
+        width: 100%; /* Could be more or less, depending on screen size */
+      }
+
+      /* Close button */
+      .close_m {
+        color: #aaa;
+        float: right;
+        font-size: 18px;
+        color: black;
+      }
+
+      .close_m:hover,
+      .close_m:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Class to hide overflow on body */
+      .modal-open_m {
+        overflow: hidden;
       }
     </style>
-  </head>
-  <body>
-    <div class="menuItemm" onclick="purchaseHistoryPages();">
-      <i class="bi bi-file-earmark-text"></i>
-      <p>Purchase History</p>
+    <div id="myModal_m" class="modal_m" style="color: black; display: block">
+      <!-- Modal content -->
+      <div class="modal-content_m">
+        <div id="popUpBg">
+          <div id="popUpC">
+            <button id="closeBtnsPopup" class="close_m">Close</button>
+            <div id="popupimg">
+              <img
+                src="assets\Banner\LED Mirror.jpg"
+                alt="Image"
+                style="
+                  padding: 8px;
+                  max-width: 100%;
+                  border-radius: 20px;
+                  max-height: 100%;
+                "
+              />
+            </div>
+            <div id="popuploginForm">
+              <div class="container" style="padding: 98px; padding-top: 202px">
+                <div class="row">
+                  <h3 class="POpUPHEad">Login to your account.</h3>
+
+                  <input type="text" class="popupMa" placeholder="Email" />
+                  <input type="text" class="popupMa" placeholder="Password" />
+                  <div class="popUpfobox">
+                    <!-- <input type="checkbox" name="" id="">
+            <p>Remember Me</p> -->
+                    <p>Forgot password?</p>
+                  </div>
+                  <button class="popupLOgInsd">Login in</button>
+                  <div style="display: flex; justify-content: center">
+                    <div
+                      style="
+                        background: rgba(0, 0, 0, 0.276);
+                        border: solid 1px #1d1d1d2b;
+                        width: 30px;
+                        margin-top: 25px;
+                      "
+                    ></div>
+                  </div>
+                  <p style="font-size: 14px; padding-top: 35px">
+                    Or Login With
+                  </p>
+
+                  <div style="display: flex; justify-content: center">
+                    <img
+                      class="img_facebook"
+                      src="assets/5365678_fb_facebook_facebook logo_icon.png"
+                      alt=""
+                    />
+                    <img
+                      class="img_facebook"
+                      src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"
+                      alt=""
+                    />
+                  </div>
+                  <button style="border: none; background: white">
+                    <p style="font-size: 14px; padding-top: 35px; border: none">
+                      <br />
+
+                      <span
+                        style="color: blue; font-size: 13px; font-weight: 600"
+                        id="signupPopupbtn"
+                        >New customer? Create your account grey color</span
+                      >
+                    </p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="popUPSignUp">
+          <div id="popUPSignUp_ui">
+            <button id="closeBtnsPopup" class="close_signUp">Close</button>
+            <div id="imagecpopup">
+              <img
+                src="assets\Banner\LED Mirror.jpg"
+                alt="Image"
+                style="
+                  padding: 8px;
+                  max-width: 100%;
+                  border-radius: 20px;
+                  max-height: 100%;
+                "
+              />
+            </div>
+            <div id="popuploginfom">
+              <div class="container" style="padding: 98px; padding-top: 202px">
+                <div class="row">
+                  <h3 class="POpUPHEad">Create an account..</h3>
+
+                  <input
+                    type="text"
+                    class="popupMa"
+                    style="margin-top: 20px"
+                    placeholder="Full Name"
+                  />
+                  <input type="text" class="popupMa" placeholder="Email" />
+                  <input type="text" class="popupMa" placeholder="Password" />
+                  <input
+                    type="text"
+                    class="popupMa"
+                    placeholder="Confirm Password"
+                  />
+
+                  <button class="popupLOgInsd" style="margin-top: 20px">
+                    Create Account
+                  </button>
+                  <div style="display: flex; justify-content: center">
+                    <div
+                      style="
+                        background: rgba(0, 0, 0, 0.276);
+                        border: solid 1px #1d1d1d2b;
+                        width: 30px;
+                        margin-top: 25px;
+                      "
+                    ></div>
+                  </div>
+                  <p style="font-size: 14px; padding-top: 35px">Or join With</p>
+
+                  <div style="display: flex; justify-content: center">
+                    <img
+                      class="img_facebook"
+                      src="assets/5365678_fb_facebook_facebook logo_icon.png"
+                      alt=""
+                    />
+                    <img
+                      class="img_facebook"
+                      src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"
+                      alt=""
+                    />
+                  </div>
+                  <p style="font-size: 14px; padding-top: 5px">
+                    <br />
+
+                    <span
+                      style="
+                        color: blue;
+                        font-size: 13px;
+                        font-weight: 600;
+                        cursor: pointer;
+                      "
+                      id="signinPopupbtn"
+                      >Already have an account? Login here</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script>
-      function purchaseHistoryPages() {
-        window.location.href = "purchaseHistorpage.html";
-      }
-    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

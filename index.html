@@ -150,6 +150,7 @@
               top: 10px;
               right: 10px;
               cursor: pointer;
+              font-size: 13px;
             }
             #closeBtn_signup {
               position: absolute;
@@ -464,8 +465,6 @@
 <!-- //LoginPage -->
 
     <script>
-      // Get the modal
-      
 document
   .getElementById("signupPopupbtn")
   .addEventListener("click", function () {
@@ -1679,12 +1678,12 @@ function categoryPage(){
   <div class="custom_btn_phone">
     <div class="bottom-bar">
       <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+        <ion-icon name="cart-outline" class="icon_new" onclick="change(this); openOrderPage();"></ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
     </div>
     
     <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+      <ion-icon name="heart-outline" class="icon_new" onclick="change(this); openWishListPage();"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
   </div>
        <div style="display: block;">
@@ -1911,7 +1910,13 @@ margin-top: 11px; margin-left: 13px;">Subtotal : <span style="font-size: 16px;">
 
 
 <script>
+function openOrderPage  () {
+  window.location.href = "purchaseHistorpage.html";
+}
 
+function openWishListPage(){
+  window.location.href = "mobileWishListPage.html";
+}
   function wishListPage(){
     window.location.href = "mobileWishListPage.html";
   }
