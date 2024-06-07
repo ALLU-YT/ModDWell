@@ -634,10 +634,6 @@ button[type="submit"]:hover {
 }
 
 
-/* orderSummery Mobile Ui */
-.Order_maindiv{
-      background: rgb(0 0 0 / 27%);
-}
 
 
 @media only screen and (max-width: 600px) {

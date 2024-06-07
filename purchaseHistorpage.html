@@ -578,10 +578,72 @@
                     </div>
                   </div>
 
-<div>
-  <div class="Order_maindiv">
-    <p>Order date</p>
-  </div>
+<style>
+        /* Order Summary Mobile UI */
+        .order-main-div {
+            background: rgba(0, 0, 0, 0.27);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+    
+            font-family: Arial, sans-serif;
+            margin-top: 16px;
+        }
+
+        .order-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 5px 0; */
+            /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-date {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .order-date-detail {
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+
+    <div class="order-main-div">
+        <div class="order-details">
+            <div class="order-item">
+                <p class="order-date">Order Date:</p>
+                <p class="order-date-detail">22 Jun 2023</p>
+            </div>
+            <div class="order-item">
+                <p class="order-date">Order Id:</p>
+                <p class="order-date-detail">ORD123456</p>
+            </div>
+            <div class="order-item">
+                <p class="order-date">Order Volume:</p>
+                <p class="order-date-detail">5 Items</p>
+            </div>
+            <div class="order-item">
+                <p class="order-date">Order Amount:</p>
+                <p class="order-date-detail">$150.00</p>
+            </div>
+            <div class="order-item">
+                <p class="order-date">Order Status:</p>
+                <p class="order-date-detail">Shipped</p>
+            </div>
+        </div>
+    </div>
   
 </div>
 
