@@ -1003,7 +1003,7 @@ button {
 
 body {
   height: 100vh;
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
 }
 
 body.dark {
@@ -1214,7 +1214,7 @@ body.dark .search-field i {
 .bottom-bar {
   position: fixed;
   bottom: 0;
-  background-color: #1d1d1d;
+  background-color: #000000;
   text-align: center;
   text-align: center;
   width: 100%;
@@ -1336,7 +1336,7 @@ body.dark .search-field i {
   .bottom-bar {
     position: fixed;
     bottom: 0;
-    background-color: #1d1d1d;
+    background-color: #000000;
     text-align: center;
     text-align: center;
     width: 100%;
