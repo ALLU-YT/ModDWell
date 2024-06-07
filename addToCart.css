@@ -899,14 +899,6 @@ button[type="submit"]:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  .priceamount {
-    font-size: 13px;
-    display: none;
-    line-height: 0;
-    color: rgb(255, 255, 255);
-    margin: 0;
-  }
-  .spanPrice {
-    display: none;
-  }
+  
+
 }
