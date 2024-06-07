@@ -632,6 +632,14 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: space-between;
 }
+
+
+/* orderSummery Mobile Ui */
+.Order_maindiv{
+      background: rgb(0 0 0 / 27%);
+}
+
+
 @media only screen and (max-width: 600px) {
   #Order_summery {
     display: none;
