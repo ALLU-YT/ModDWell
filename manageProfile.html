@@ -813,23 +813,121 @@
   </div>
    </div>
 
+<style>
+  .custom-container {
+        width: 100%;
+        max-width: 400px;
+            padding: 0px 5px 0px 5px;
+      color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-sizing: border-box;
+        margin-bottom: 44px;
+      }
 
+      .custom-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .custom-form h2 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .custom-form label {
+        margin-bottom: 5px;
+        font-size: 13px;
+        color: #ffffff;
+      }
+
+      .custom-form input[type="text"],
+      .custom-form input[type="tel"],
+      .custom-form input[type="password"],
+      .custom-form input[type="file"] {
+           margin-bottom: 15px;
+    padding: 7px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    background: #ffffff0d;
+    box-sizing: border-box;
+     padding-left: 9px;
+    font-size: 14px;
+    width: 100%;
+      }
+
+      .formbtn {
+        position: fixed;
+      bottom: 0;
+        padding: 10px;
+        font-size: 1em;
+        color: #fff;
+        background-color:#18578c;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .custom-form button:hover {
+        background-color:#18578c;
+      }
+</style>
 
 <!-- MobileUI -->
 <div>
-  <div  class="Profile_container">
-    <div style="display: flex; align-items: center;">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&s" alt="">
-    <p>Change Profile</p>
+  <div  class="Profile_container" style="margin-top: 15px;">
+    <div style="display: flex; align-items: center; justify-content: center;">
+     <div style="display: flex; flex-direction: column;">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&s" alt="">
+    <p style="padding: 5px;">Change Profile</p>
+     </div>
     </div>
   </div>
+  
+ <div class="custom-container">
+      <form class="custom-form">
+        <label for="custom-name">Name</label>
+        <input type="text" id="custom-name" name="name" required  placeholder="Name"/>
+
+        <label for="custom-phone">Phone Number</label>
+        <input type="tel" id="custom-phone" name="phone" required placeholder="Number" />
+
+        <label for="custom-photo">Photo</label>
+        <input
+          type="file"
+          id="custom-photo"
+          name="photo"
+          accept="image/*"
+          required
+        />
+
+        <label for="custom-current-password">Current Password</label>
+       <input type="text" name="" id="" placeholder="Current Password">
+
+        <label for="custom-new-password">New Password</label>
+        <input
+          type="text" name="" id=""
+        
+          placeholder="New Password"
+          required
+        />
+
+       
+      </form>
+    </div>
+    
 </div>
   
 </div>
 
 </div>
 </div>
-
+ <button type="submit" class="formbtn">Update Password</button>
     <!-- footer -->
      <div class="system_footer">
                         <footer class="bg-black text-center text-white">
