@@ -149,3 +149,10 @@ function viewcoupon() {
 }
 
 // scroll
+function change(item) {
+  const buttons = document.querySelectorAll("ion-icon");
+  buttons.forEach(function (obj) {
+    obj.classList.remove("activee");
+  });
+  item.classList.add("activee");
+}

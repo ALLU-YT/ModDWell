@@ -53,138 +53,230 @@
   <header style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
     <div style="display: flex; justify-content: center; align-items: center; padding: 10px;">
        <a href="index.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
-        <p style="padding-left: 10px; color: white; margin: 0;">Wishlist</p>
+        <p style="padding-left: 10px; color: white; margin: 0;">Order</p>
     </div>
 </header>
-
 <style>
-  .WishList_p{
+  .WishList_p {
     font-size: 13px;
   }
-  .addToCartBtn{
+  .addToCartBtn {
     background: blueviolet;
-    padding: 5px;
+    /* padding: 5px; */
+    padding: 3px 10px 3px 10px;
     border-radius: 5px;
+    display: flex;
     font-size: 12px;
     color: white;
     border: none;
+    margin-left: auto;
   }
   .container {
     padding-top: 60px; /* Add padding to the top to avoid overlap with the fixed header */
   }
   .item {
-    display: flex; 
-    padding-top: 10px; 
+    display: flex;
+    padding: 11px 10px 10px 10px;
+    margin: 5px;
     position: relative;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 16px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
   }
+
+  .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+                0 32px 64px rgba(0, 0, 0, 0.2);
+  }
+
   .item img {
-    width: 150px; 
-    height: 140px;
+    width: 110px; 
+    height: 110px;
   }
   .item .details {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
     margin-left: 10px;
+    flex-grow: 1;
   }
   .item .actions {
     position: absolute;
+    top: 10px;
     right: 10px;
+    color: white;
   }
   .item .info {
-    display: flex;
+    /* display: flex; 
     justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1; */
   }
-</style>
+  .order-p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.425);
+    display: flex;
+    /* align-items: center; */
+  }
+  .order-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.order-container .bi-clock {
+    margin-right: 5px;
+}
+
+.order-container .order-p {
+    margin: 0;
+    padding-right: 10px;
+}
+
+</style>
+</head>
+<body>
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
       <div class="item">
         <div class="actions">
-          <i class="bi bi-heart-fill"></i>
-         
+          &#8377 5000
         </div>
-        <img src="https://www.glazonoid.com/cdn/shop/files/Artboard4_2.webp?v=1710856535&width=1206" alt="">
+        <div>
+          <img src="https://www.glazonoid.com/cdn/shop/files/Artboard4_2.webp?v=1710856535&width=1206" alt="">
+        </div>
         <div class="details">
           <h6>Mirror</h6>
-          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <p class="WishList_p">10 Dec 2021, 8:30 am </p>
           <div class="info">
-            <strong>5000</strong>
-            <button class="addToCartBtn">Add To Cart</button>
+            <div class="order-p">
+            ID #210254
+            </div>
+            <div class="order-container">
+              <i class="bi bi-clock order-p"></i>
+              <p class="order-p">Order pending</p>
+              <button class="addToCartBtn">View</button>
+          </div>
+          
           </div>
         </div>
       </div>
-      <hr>
-    </div>
-    <!-- Repeat similar structure for other items -->
-    <div class="col-12 col-md-6">
-      <div class="item">
-        <div class="actions">
-          <i class="bi bi-heart-fill"></i>
-         
-        </div>
-        <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1206" alt="">
-        <div class="details">
-          <h6>Mirror</h6>
-          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
-          <div class="info">
-            <strong>5000</strong>
-            <button class="addToCartBtn">Add To Cart</button>
-          </div>
-        </div>
-      </div>
-      <hr>
     </div>
     <div class="col-12 col-md-6">
       <div class="item">
         <div class="actions">
-          <i class="bi bi-heart-fill"></i>
-         
+          &#8377 5000
         </div>
-        <img src="https://www.glazonoid.com/cdn/shop/files/Artboard4_2.webp?v=1710856535&width=1206" alt="">
+        <div>
+          <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=713" alt="">
+        </div>
         <div class="details">
           <h6>Mirror</h6>
-          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <p class="WishList_p">10 Dec 2021, 8:30 am </p>
           <div class="info">
-            <strong>5000</strong>
-            <button class="addToCartBtn">Add To Cart</button>
+            <div class="order-p">
+            ID #210254
+            </div>
+            <div class="order-container">
+              <i class="bi bi-clock order-p"></i>
+              <p class="order-p">Order pending</p>
+              <button class="addToCartBtn">View</button>
+          </div>
+          
           </div>
         </div>
       </div>
-      <hr>
     </div>
     <div class="col-12 col-md-6">
       <div class="item">
         <div class="actions">
-          <i class="bi bi-heart-fill"></i>
-         
+          &#8377 5000
         </div>
-        <img src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1206" alt="">
+        <div>
+          <img src="https://www.glazonoid.com/cdn/shop/products/Metal-Images.006_1.webp?v=1708597185&width=713" alt="">
+        </div>
         <div class="details">
           <h6>Mirror</h6>
-          <p class="WishList_p">Depth - Dual Lines Mirror With Lights</p>
+          <p class="WishList_p">10 Dec 2021, 8:30 am </p>
           <div class="info">
-            <strong>5000</strong>
-            <button class="addToCartBtn">Add To Cart</button>
+            <div class="order-p">
+            ID #210254
+            </div>
+            <div class="order-container">
+              <i class="bi bi-clock order-p"></i>
+              <p class="order-p">Order pending</p>
+              <button class="addToCartBtn">View</button>
+          </div>
+          
           </div>
         </div>
       </div>
-      <hr>
     </div>
-    <!-- Repeat similar structure for other items -->
+    <div class="col-12 col-md-6">
+      <div class="item">
+        <div class="actions">
+          &#8377 5000
+        </div>
+        <div>
+          <img src="https://www.glazonoid.com/cdn/shop/files/Artboard4_2.webp?v=1710856535&width=1206" alt="">
+        </div>
+        <div class="details">
+          <h6>Mirror</h6>
+          <p class="WishList_p">10 Dec 2021, 8:30 am </p>
+          <div class="info">
+            <div class="order-p">
+            ID #210254
+            </div>
+            <div class="order-container">
+              <i class="bi bi-clock order-p"></i>
+              <p class="order-p">Order pending</p>
+              <button class="addToCartBtn">View</button>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="item">
+        <div class="actions">
+          &#8377 5000
+        </div>
+        <div>
+          <img src="https://www.glazonoid.com/cdn/shop/files/Artboard4_2.webp?v=1710856535&width=1206" alt="">
+        </div>
+        <div class="details">
+          <h6>Mirror</h6>
+          <p class="WishList_p">10 Dec 2021, 8:30 am </p>
+          <div class="info">
+            <div class="order-p">
+            ID #210254
+            </div>
+            <div class="order-container">
+              <i class="bi bi-clock order-p"></i>
+              <p class="order-p">Order pending</p>
+              <button class="addToCartBtn">View</button>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
   <!-- div.mobileFooter  -->
   <div class="custom_btn_phone">
     <div class="bottom-bar">
       <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this)"></ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
     </div>
     
     <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new activee" onclick="change(this)"></ion-icon>
+      <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
   </div>
        <div style="display: block;">
@@ -202,7 +294,7 @@
         <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
        </div>
        <div style="display: block;">
-        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;      openProfile();">
         </ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
    
@@ -242,6 +334,21 @@
     </div>
 
 </div>
+<script>
+  function openProfile() {
+  const slider = document.getElementById("slider");
+  slider.classList.add("open");
+
+  // Add event listener for touch to close the slider
+  document.addEventListener("touchstart", closeProfile, { once: true });
+}
+
+function closeProfile() {
+  const slider = document.getElementById("slider");
+  slider.classList.remove("open");
+}
+
+</script>
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script

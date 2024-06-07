@@ -625,11 +625,40 @@ button[type="submit"]:hover {
 .tab-content.active {
   display: block;
 }
-.header_for_cart{
+.header_for_cart {
   display: none;
 }
+.purchaseOrdersHistory {
+  display: flex;
+  justify-content: space-between;
+}
 @media only screen and (max-width: 600px) {
-  .header_for_cart{
+  .purchaseOrdersHistory {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 10px 10px 10px;
+
+    position: relative;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+  }
+
+  .tab-bar button {
+    contain-intrinsic-height: AUTO 100px;
+    background-color: #0000005b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 28px;
+    padding: 10px 20px;
+    flex: 1;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+  }
+  .header_for_cart {
     display: block;
   }
   /* Style the tab content */
@@ -705,6 +734,7 @@ button[type="submit"]:hover {
   }
   .productimg {
     width: 81px;
+    height: 76px;
   }
   .ProductDemo {
     font-size: 12px;
