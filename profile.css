@@ -285,14 +285,37 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
     /* Slight shadow */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for 3D effect */
 }
-
+.header_for_cart {
+  display: none;
+}
 .address_p p {
   font-size: 12px;
   line-height: 0;
   font-weight: 600;
   padding: 4px;
 }
+/* profile ui for mobile */
+.Profile_container img {
+  width: 130px;
+  border-radius: 50%;
+}
+
 @media only screen and (max-width: 600px) {
+  .header_for_cart {
+    display: block;
+  }
+  .system_tabs {
+    display: none;
+  }
+  #pur {
+    display: none;
+  }
+  .tabcontent {
+    display: none;
+  }
+  .System_tab {
+    display: none;
+  }
   .form-group label {
     flex-basis: 30%;
     align-self: center;

@@ -48,6 +48,12 @@
     <link rel="stylesheet" href="profile.css">
   </head>
   <body>
+
+    hai   
+
+
+
+
     <div style="background: black">
       <header class="header_conatiner" style="background: black">
         <!-- Left side logo image -->
@@ -268,9 +274,13 @@
            <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
     <div style="display: flex; align-items: center; padding: 10px;">
        <a href="addToCartPage.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
-        <p style="padding-left: 10px; color: white; margin: 0;">Order</p>
+        <p style="padding-left: 10px; color: white; margin: 0;">Edit Profile</p>
     </div>
 </header>
+
+
+
+
 
       <hr class="hr_tag" />
 
@@ -313,7 +323,7 @@
       <hr />
     </div>
    
-
+  
 <div class="container-fluid" style="padding-bottom: 20px;">
 <div class="row">
   <div class="col-lg-3">
@@ -354,8 +364,10 @@
   
   </div>
   <div class="col-lg-8">
+
+   <div class="system_tabs">
     <p style="font-weight: 600;">Manage Profile</p>
-    <div class="purchasehistoryContainer" style="display: flex; flex-direction: column;">
+    <div class="purchasehistoryContainer" style="display: flex; flex-direction: column;" >
       <style>
           .tab {
               display: flex;
@@ -398,12 +410,16 @@
           }
       </style>
   
+
+
+     <div class="system_tabs">
       <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'London')">Basic Info</button>
-          <button class="tablinks" onclick="openCity(event, 'Paris')">Address</button>
-        
-      </div>
-  
+        <button class="tablinks" onclick="openCity(event, 'London')">Basic Info</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Address</button>
+      
+
+
+     </div>
       <div id="London" class="tabcontent">
         <div class="form-container">
             <form>
@@ -622,7 +638,7 @@
           </form>
         </div>
       </div>
-  
+ 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           var openAddressFormBtn = document.querySelector(".OpenAddressFormBtn");
@@ -795,46 +811,25 @@
   
    
   </div>
+   </div>
+
+
+
+<!-- MobileUI -->
+<div>
+  <div  class="Profile_container">
+    <div style="display: flex; align-items: center;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWomPds9w5emH_C6RY8xF7KRCJe6I5zwVsuw&s" alt="">
+    <p>Change Profile</p>
+    </div>
+  </div>
+</div>
   
 </div>
 
 </div>
-
-  <!-- div.mobileFooter  -->
-  <div class="custom_btn_phone">
-    <div class="bottom-bar">
-      <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
-    </div>
-    
-    <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
-      <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
-  </div>
-       <div style="display: block;">
-        <ion-icon name="home-outline" class="icon_new " onclick="change(this);  homePage();">
-         
-        </ion-icon>
-    
-        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
-       </div>
-       <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this);">
-         
-        </ion-icon>
-    
-        <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
-       </div>
-       <div style="display: block;">
-        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
-        </ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
-   
-       </div>
-       
-    </div>
 </div>
+
     <!-- footer -->
      <div class="system_footer">
                         <footer class="bg-black text-center text-white">
@@ -921,6 +916,10 @@
                             <!-- Copyright -->
                         </footer>
                     </div>
+
+
+
+              
     <script>
 function wishListPage(){
   window.location.href = "wishListPage.html"
