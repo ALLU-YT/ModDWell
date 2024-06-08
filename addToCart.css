@@ -631,6 +631,7 @@ button[type="submit"]:hover {
 .purchaseOrdersHistory {
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 
 

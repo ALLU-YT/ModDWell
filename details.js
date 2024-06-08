@@ -156,3 +156,18 @@ function change(item) {
   });
   item.classList.add("activee");
 }
+
+
+function homePage() {
+    window.location.href = "index.html";
+}
+function ordePage() {
+   window.location.href = "MobilePurchaseHistory.html";
+}
+function mobileWishList() {
+  window.location.href = "mobileWishListPage.html";
+}
+
+function orders() {
+    window.location.href = "addToCartPage.html";
+}

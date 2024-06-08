@@ -154,7 +154,7 @@
             <div class="order-container">
               <i class="bi bi-clock order-p"></i>
               <p class="order-p">Order pending</p>
-              <button class="addToCartBtn">View</button>
+              <button class="addToCartBtn" onclick="ViewOrderPage();">View</button>
           </div>
           
           </div>
@@ -271,7 +271,7 @@
     </div>
     
     <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+      <ion-icon name="heart-outline" class="icon_new" onclick="change(this); MobileWishLIstr();"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
   </div>
        <div style="display: block;">
@@ -282,7 +282,8 @@
         <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
        </div>
        <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new " onclick="change(this);">
+        <ion-icon name="cart-outline" class="icon_new " onclick="change(this); cartPage();
+        ">
          
         </ion-icon>
     
@@ -330,6 +331,17 @@
 
 </div>
 <script>
+
+  function ViewOrderPage(){
+    window.location.href = "purchaseHistorpage.html";
+  }
+  function MobileWishLIstr(){
+    window.location.href = "mobileWishListPage.html";
+  }
+ 
+  function cartPage(){
+     window.location.href = "addToCartPage.html";
+  }
   function openProfile() {
   const slider = document.getElementById("slider");
   slider.classList.add("open");

@@ -303,7 +303,7 @@
           />
         </div>
       </div>
- <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
+ <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1; padding-top: 2px;">
     <div style="display: flex; align-items: center; padding: 10px;">
        <a href="index.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
         <p style="padding-left: 10px; color: white; margin: 0;">Cart</p>
@@ -708,23 +708,23 @@ function navToPage(){
                <div class="custom_btn_phone">
                 <div class="bottom-bar">
                   <div style="display: block;">
-                    <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+                    <ion-icon name="cart-outline" class="icon_new" onclick="change(this); OrderPage();"></ion-icon>
                     <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
                 </div>
                 
                 <div style="display: block;">
-                  <ion-icon name="heart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+                  <ion-icon name="heart-outline" class="icon_new" onclick="change(this); WishlistPage();"></ion-icon>
                   <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
               </div>
                    <div style="display: block;">
-                    <ion-icon name="home-outline" class="icon_new activee" onclick="change(this)">
+                    <ion-icon name="home-outline" class="icon_new " onclick="change(this); openhomepage();">
                      
                     </ion-icon>
                 
                     <p class="bottom_bar_p" style="line-height: 0px;">Welcome</p>
                    </div>
                    <div style="display: block;">
-                    <ion-icon name="cart-outline" class="icon_new " onclick="change(this)">
+                    <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this)">
                      
                     </ion-icon>
                 
@@ -766,10 +766,10 @@ function navToPage(){
             </div>
             
             <div class="mobileSignup">
-              <div style="display: flex; justify-content: space-between;">
-                <P style="padding-left: 15px;">Signup</P>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavSignup()">&times;</a>
-               </div>
+           <div style="display: flex; justify-content: space-between;">
+    <P>Signup</P>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNavSignup()">&times;</a>
+   </div>
               <hr style="margin: 0;">
               
               <input type="text" name="" id="" class="mobileLoginbox" placeholder="Full Name">
@@ -889,7 +889,15 @@ function navToPage(){
   </div>
 
   <script>
-
+function openhomepage(){
+  window.location.href = "index.html";
+}
+function WishlistPage(){
+    window.location.href = "mobileWishListPage.html";
+}
+function OrderPage(){
+   window.location.href = "MobilePurchaseHistory.html";
+}
 function toggleList(listId) {
   var list = document.getElementById(listId);
   if (list.style.display === "none" || list.style.display === "") {

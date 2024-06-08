@@ -179,12 +179,12 @@
   <div class="custom_btn_phone">
     <div class="bottom-bar">
       <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new" onclick="change(this)"></ion-icon>
+        <ion-icon name="cart-outline" class="icon_new" onclick="change(this); ordePage();"></ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
     </div>
     
     <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new activee" onclick="change(this)"></ion-icon>
+      <ion-icon name="heart-outline" class="icon_new activee" onclick="change(this); mobileWishList();"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
   </div>
        <div style="display: block;">
@@ -195,7 +195,7 @@
         <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
        </div>
        <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new " onclick="change(this);">
+        <ion-icon name="cart-outline" class="icon_new " onclick="change(this); cart();">
          
         </ion-icon>
     
@@ -242,6 +242,8 @@
     </div>
 
 </div>
+
+
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
