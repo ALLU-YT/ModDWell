@@ -633,11 +633,26 @@ button[type="submit"]:hover {
   justify-content: space-between;
   padding: 5px;
 }
+.AddToCartPageContainer{
+display: flex; justify-content: space-between;background: #151515;
+    padding: 10px;
+    border-radius: 11px;
+    height: 167px;
 
-
-
+}
 
 @media only screen and (max-width: 600px) {
+  .AddToCartPageContainer{
+display: flex; justify-content: space-between;background: #151515;
+    padding: 10px;
+    border-radius: 11px;
+    height: 138px;
+
+}
+#ProductDetails{
+  background-color: #151515;
+}
+
   #Order_summery {
     display: none;
   }
