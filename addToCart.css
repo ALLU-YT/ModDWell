@@ -641,7 +641,59 @@ display: flex; justify-content: space-between;background: #151515;
 
 }
 
+.coupen_card{
+ display: none;
+}
+
 @media only screen and (max-width: 600px) {
+.coupen_card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    margin: 3px;
+  }
+  .coupen_card div {
+    display: flex;
+    align-items: center;
+  }
+  .bi-tag {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .coupon_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .coupon_info p,
+  .coupon_info span {
+    margin: 0;
+  }
+  .coupon_info p {
+    font-weight: bold;
+  }
+  .coupon_info span {
+    color: #888;
+  }
+  .btnremovebtn {
+          background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        /* padding: 5px 10px; */
+        font-size: 13px;
+        cursor: pointer;
+  }
+  .btnremovebtn:hover {
+    background-color: #d32f2f;
+  }
+
+
+
+
+
   .AddToCartPageContainer{
 display: flex; justify-content: space-between;background: #151515;
     padding: 10px;
