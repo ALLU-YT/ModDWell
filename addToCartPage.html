@@ -711,24 +711,13 @@ function navToPage(){
     padding-right: 30px;
     padding-left: 5px;
     font-size: 11px;">Apply Coupon & Save extra</p>
-              <button style="background: #1b1c1c00;padding: 8px; border-radius: 5px; font-size: 11px;" onclick="viewcoupon();">View Coupon</button>
+              <button style="background: #1b1c1c00;padding: 8px; border-radius: 5px; font-size: 11px;" onclick="OpenAddToCartPage();">View Coupon</button>
             </div>
             
          
-            
-            <div class="NoActiveCoupons" style="padding-top: 10px;  color: rgb(255, 255, 255); font-size: 14px; font-weight: bold;display: none;">
-              
-              <div style="display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #18578c36;
-    padding: 10px;
-    border-radius: 8px;">
-                  <h5>BRHSKL4</h5><button style="padding: 8px;
-    color: #ff0000b0;
-    font-size: 12px;">Apply</button>
               </div>
-             
+           
+            
             </div>
 
           </div>
@@ -965,6 +954,9 @@ function navToPage(){
   </div>
 
   <script>
+    function OpenAddToCartPage(){
+    window.location.href = "mobileCouponPage.html";
+    }
 function openhomepage(){
   window.location.href = "index.html";
 }

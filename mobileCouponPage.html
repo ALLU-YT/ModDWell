@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Roboto_font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <linkF
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
+    />
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+
+    <link rel="stylesheet" href="details.css" />
+    <link rel="stylesheet" href="addToCart.css" />
+  </head>
+  <body>
+    <div >
+      <header class="header_conatiner" style="background: black">
+        <!-- Left side logo image -->
+        <img
+          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+          style="padding-left: 20px; width: 200px"
+          alt="Logo"
+        />
+
+        <!-- Centered search input and icon -->
+        <div class="d-flex align-items-center">
+          <div class="search-container">
+            <input
+              type="text"
+              class="timme-input"
+              placeholder="I am shopping for..."
+            />
+            <i class="fas fa-search search-icon fa-.5x"></i>
+          </div>
+        </div>
+
+        <!-- Right side buttons -->
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          "
+        >
+          <p style="font-size: 11px; margin-right: 6px; padding-top: 10px">
+            Sign Up Now
+          </p>
+          <button id="popupBtn"><i class="bi bi-person headicon"></i></button>
+          <!-- poppup container -->
+          <div id="popupBackground">
+            <div id="popupContent">
+              <button id="closeBtn">Close</button>
+              <div id="imageContainer">
+                <img
+                  src="assets\Banner\LED Mirror.jpg"
+                  alt="Image"
+                  style="
+                    padding: 8px;
+                    max-width: 100%;
+                    border-radius: 20px;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div id="loginFormContainer">
+                <div
+                  class="container"
+                  style="padding: 98px; padding-top: 202px"
+                >
+                  <div class="row">
+                    <h3 class="login_head">Login to your account.</h3>
+
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Password"
+                    />
+                    <div class="forgot_box">
+            
+                      <p>Forgot password?</p>
+                    </div>
+                    <button class="loginbutton">Login in</button>
+                    <div style="display: flex; justify-content: center">
+                      <div
+                        style="
+                          background: rgba(0, 0, 0, 0.276);
+                          border: solid 1px #1d1d1d2b;
+                          width: 30px;
+                          margin-top: 25px;
+                        "
+                      ></div>
+                    </div>
+                    <p style="font-size: 14px; padding-top: 35px">
+                      Or Login With
+                    </p>
+
+                    <div style="display: flex; justify-content: center">
+                      <img
+                        class="img_facebook"
+                        src="assets/5365678_fb_facebook_facebook logo_icon.png"
+                        alt=""
+                      />
+                      <img
+                        class="img_facebook"
+                        src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"
+                        alt=""
+                      />
+                    </div>
+                    <button>
+                      <p style="font-size: 14px; padding-top: 35px">
+                        <br />
+
+                        <span
+                          style="color: blue; font-size: 13px; font-weight: 600"
+                          id="signupPopupbtn"
+                        >
+                          Sign Up</span
+                        >
+                      </p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- signupPopUpButton -->
+          <div id="popupBackground_signup">
+            <div id="popupBackground_signup_ui">
+              <button id="closeBtn_signup">Close</button>
+              <div id="imageContainer_signup">
+                <img
+                  src="assets\Banner\LED Mirror.jpg"
+                  alt="Image"
+                  style="
+                    padding: 8px;
+                    max-width: 100%;
+                    border-radius: 20px;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div id="loginFormContainer_signup">
+                <div
+                  class="container"
+                  style="padding: 98px; padding-top: 202px"
+                >
+                  <div class="row">
+                    <h3 class="login_head">Create an account..</h3>
+
+                    <input
+                      type="text"
+                      class="border-line"
+                      style="margin-top: 20px"
+                      placeholder="Full Name"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Password"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Confirm Password"
+                    />
+
+                    <button class="loginbutton" style="margin-top: 20px">
+                      Create Account
+                    </button>
+                    <div style="display: flex; justify-content: center">
+                      <div
+                        style="
+                          background: rgba(0, 0, 0, 0.276);
+                          border: solid 1px #1d1d1d2b;
+                          width: 30px;
+                          margin-top: 25px;
+                        "
+                      ></div>
+                    </div>
+                    <p style="font-size: 14px; padding-top: 35px">
+                      Or join With
+                    </p>
+
+                    <div style="display: flex; justify-content: center">
+                      <img
+                        class="img_facebook"
+                        src="assets/5365678_fb_facebook_facebook logo_icon.png"
+                        alt=""
+                      />
+                      <img
+                        class="img_facebook"
+                        src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"
+                        alt=""
+                      />
+                    </div>
+                    <p style="font-size: 14px; padding-top: 5px">
+                      <br />
+
+                      <span
+                        style="color: blue; font-size: 13px; font-weight: 600"
+                        id="signinPopupbtn_ui"
+                      >
+                        Sign in</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bootstrap Wishlist button -->
+          <button><i class="bi bi-heart headicon"></i></button>
+          <!-- Bootstrap Cart button -->
+          <button><i class="bi bi-cart headicon"></i></button>
+        </div>
+      </header>
+
+      <!-- mobile header -->
+      <!-- mobilehead -->
+      <div class="mobilehead" style="display: none;">
+        <div></div>
+        <a href="index.html"
+          ><img
+            src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+            style="padding-left: 20px; width: 200px"
+            alt="Logo"
+        /></a>
+
+        <span
+          style="font-size: 30px; cursor: pointer; padding-right: 20px"
+          onclick="openNav()"
+          ><i class="bi bi-search search-iconn fs-3"></i
+        ></span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <input
+            type="text"
+            name=""
+            placeholder="search..."
+            id=""
+            style="
+              background: transparent;
+              border-color: #f3f3f35c;
+              padding-left: 5px;
+              position: relative;
+              margin-top: 40px;
+              margin-left: 6%;
+              width: 90%; /* left: 0px; */ /* right: 0px; */
+            "
+          />
+        </div>
+      </div>
+ <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
+    <div style="display: flex; align-items: center; padding: 10px;">
+       <a href="addToCartPage.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
+        <p style="padding-left: 10px; color: white; margin: 0;">Coupon</p>
+    </div>
+</header>
+      <hr class="hr_tag" />
+
+<div style="margin-top: 70px; position: relative;">
+<input type="text" name="" id="" style="width: 95%; margin: 10px 10px 10px 10px; background-color: #151515;" placeholder="Coupon">
+<button style="       position: absolute;
+    top: 0;
+    border-radius: 5px;
+    right: 0px;
+    z-index: 6;
+    border: none;
+    top: 15px;
+    height: 30px;
+    right: 22px;
+    cursor: pointer;
+    color: #18578c;
+    /* background-color: #1e90ff; */
+    transform: translateX(2px); ">Apply</button>
+</div>
+<div style="margin: 14px 10px 10px 10px; background-color: #151515; border-radius: 8px;">
+             <div style="width: 100%; color: #fffcfc;padding: 10px 10px 3px 10px">
+<div style="display: flex; justify-content: space-between;">
+<h5>MEBUSD1</h5>
+<button style="color: #18578c;">Apply</button>
+</div>
+<div style="background-color: rgba(255, 255, 255, 0.357);height: 1px;"></div>
+<p style="font-size: 14px;">🎉 Limited Time Offer! <br>
+Save 20% on your next purchase with code SAVE20.
+Hurry, offer ends soon!
+</p>
+ </div>
+</div>
+ 
+<div style="margin: 14px 10px 10px 10px; background-color: #151515; border-radius: 8px;">
+             <div style="width: 100%; color: #fffcfc;padding: 10px 10px 3px 10px">
+<div style="display: flex; justify-content: space-between;">
+<h5>MEBUSD1</h5>
+<button style="color: #18578c;">Apply</button>
+</div>
+<div style="background-color: rgba(255, 255, 255, 0.357);height: 1px;"></div>
+<p style="font-size: 14px;">🎉 Limited Time Offer! <br>
+Save 20% on your next purchase with code SAVE20.
+Hurry, offer ends soon!
+</p>
+ </div>
+</div>
+<div style="margin: 14px 10px 10px 10px; background-color: #151515; border-radius: 8px;">
+             <div style="width: 100%; color: #fffcfc;padding: 10px 10px 3px 10px">
+<div style="display: flex; justify-content: space-between;">
+<h5>MEBUSD1</h5>
+<button style="color: #18578c;">Apply</button>
+</div>
+<div style="background-color: rgba(255, 255, 255, 0.357);height: 1px;"></div>
+<p style="font-size: 14px;">🎉 Limited Time Offer! <br>
+Save 20% on your next purchase with code SAVE20.
+Hurry, offer ends soon!
+</p>
+ </div>
+</div>
+    <div class="system_footer">
+      <footer class="bg-black text-center text-white">
+          <!-- Grid container -->
+          <div class="container p-4">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                  <!-- Google -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                  <!-- Instagram -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                  <!-- Linkedin -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                  <!-- Github -->
+
+              </section>
+
+
+              <!-- Section: Links -->
+              <section class="mb-4">
+                  <!--Grid row-->
+                  <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase"></h5>
+                              <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
+                              <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase">Links</h5>
+                              <ul class="list-unstyled mb-0">
+                                  <p class="tooter_p">Terms $ Conditions</p>
+                                  <p class="tooter_p">Return Policy</p>
+                                  <p class="tooter_p">About</p>
+                                  <p class="tooter_p">Privacy Policy</li>
+                              </ul>
+                          </div>
+                      </div>
+                    
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase">MY ACCOUNT</h5>
+                              <ul class="list-unstyled mb-0">
+                                  <p class="tooter_p">Login</p>
+                                  <p class="tooter_p">Order History</p>
+                                  <p class="tooter_p">My Wishlist</p>
+                                  <p class="tooter_p">Track Order</p>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer_h">
+                            <h5 class="text-uppercase">CONTACT INFO</h5>
+                            <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
+                            <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
+                            <p class="tooter_p">+91 72003 92758</p>
+                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
+                            <p class="tooter_p">moddwell@tprsenterprises.in/p>
+                        </div>
+                    </div>
+                      <!--Grid column-->
+
+                      <!-- Repeat the above grid column structure for additional link sections -->
+
+                  </div>
+                  <!--Grid row-->
+              </section>
+              <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: #37363a; font-size: 14px; text-align: center;margin-bottom: 5px; padding: 0px; height: 35px; line-height: 0px;">
+            <div style="margin-bottom: 10px;">
+                <p class="text-center">
+                    Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+                    <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+                </p>
+            </div>
+        </div>
+        
+        
+          <!-- Copyright -->
+      </footer>
+  </div>
+    <script>
+ function navtopage(){
+            window.location.href = "checkOut.html"
+          }  
+
+ document.addEventListener("DOMContentLoaded", function () {
+        var openAddressFormBtn = document.querySelector(".OpenAddressFormBtn");
+        var addressPopup = document.getElementById("addressPopup");
+        var closeAddressBtn = document.getElementById("closeAddressBtn");
+
+        openAddressFormBtn.addEventListener("click", function () {
+          addressPopup.style.display = "flex";
+        });
+
+        closeAddressBtn.addEventListener("click", function () {
+          addressPopup.style.display = "none";
+        });
+
+        window.addEventListener("click", function (event) {
+          if (event.target == addressPopup) {
+            addressPopup.style.display = "none";
+          }
+        });
+      });
+
+
+
+
+      function change(item) {
+        const buttons = document.querySelectorAll("ion-icon");
+        buttons.forEach(function (obj) {
+          obj.classList.remove("activee");
+        });
+        item.classList.add("activee");
+      }
+
+      function displysignUpForm() {
+        // Assuming there's only one element with each class
+        document.getElementsByClassName("mobileSignup")[0].style.display =
+          "block";
+        document.getElementsByClassName("mobilelogin")[0].style.display =
+          "none";
+      }
+      function displyLoginUpForm() {
+        // Assuming there's only one element with each class
+        document.getElementsByClassName("mobileSignup")[0].style.display =
+          "none";
+        document.getElementsByClassName("mobilelogin")[0].style.display =
+          "block";
+      }
+    </script>
+
+    <!-- CustomHeight -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="details.js"></script>
+    <script src="addToCard.js"></script>
+  </body>
+</html>
