@@ -1593,10 +1593,10 @@ body.dark .search-field i {
     text-align: center;
   }
   .buttons {
-    font-size: 14px;
+    font-size: 13px;
     background-color: black;
     color: white;
-    padding: 1px 11px;
+    padding: 8px 11px;
     border: none;
     cursor: pointer;
     border-radius: 5px;

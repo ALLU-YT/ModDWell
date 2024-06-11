@@ -633,20 +633,21 @@ button[type="submit"]:hover {
   justify-content: space-between;
   padding: 5px;
 }
-.AddToCartPageContainer{
-display: flex; justify-content: space-between;background: #151515;
-    padding: 10px;
-    border-radius: 11px;
-    height: 167px;
-
+.AddToCartPageContainer {
+  display: flex;
+  justify-content: space-between;
+  background: #151515;
+  padding: 10px;
+  border-radius: 11px;
+  height: 167px;
 }
 
-.coupen_card{
- display: none;
+.coupen_card {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-.coupen_card {
+  .coupen_card {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -658,7 +659,7 @@ display: flex; justify-content: space-between;background: #151515;
     align-items: center;
   }
   .bi-tag {
-          margin-right: -34px;
+    margin-right: -34px;
   }
   .coupon_info {
     flex: 1;
@@ -670,39 +671,37 @@ display: flex; justify-content: space-between;background: #151515;
     margin: 0;
   }
   .coupon_info p {
-    font-weight: bold;
+    font-weight: 600;
   }
   .coupon_info span {
     color: #888;
+    font-size: 13px;
   }
   .btnremovebtn {
-          background-color: #f44336;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 5px;
-        /* padding: 5px 10px; */
-        font-size: 13px;
-        cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    /* padding: 5px 10px; */
+    font-size: 13px;
+    cursor: pointer;
   }
   .btnremovebtn:hover {
     background-color: #d32f2f;
   }
 
-
-
-
-
-  .AddToCartPageContainer{
-display: flex; justify-content: space-between;background: #151515;
+  .AddToCartPageContainer {
+    display: flex;
+    justify-content: space-between;
+    background: #151515;
     padding: 10px;
     border-radius: 11px;
     height: 138px;
-
-}
-#ProductDetails{
-  background-color: #151515;
-}
+  }
+  #ProductDetails {
+    background-color: #151515;
+  }
 
   #Order_summery {
     display: none;
@@ -966,6 +965,4 @@ display: flex; justify-content: space-between;background: #151515;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
-
 }
