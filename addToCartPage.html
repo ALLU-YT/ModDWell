@@ -451,8 +451,8 @@
                    <div style="display: flex;justify-content: space-between;width: 100%;">
                           <div style="display: flex;justify-content: space-around; align-items: center;">
                             <button class="closeBtnAddtoCartt">-</button>
-                        <div>1</div>
-                        <button class="closeBtnAddtoCartt">+</button>
+                        <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
                           </div>
                           <button style="font-size: 12px; padding-right: 10px;">Remove</button>
                          </div>
@@ -495,8 +495,8 @@
                       </div>
                       <div class="container_add">
                         <button class="closeBtnAddtoCartt">-</button>
-                        <div>1</div>
-                        <button class="closeBtnAddtoCartt">+</button>
+                      <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
                       </div>
                       
                     </div>
@@ -516,8 +516,8 @@
                    <div style="display: flex;justify-content: space-between;width: 100%;">
                           <div style="display: flex;justify-content: space-around; align-items: center;">
                             <button class="closeBtnAddtoCartt">-</button>
-                        <div>1</div>
-                        <button class="closeBtnAddtoCartt">+</button>
+                        <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
                           </div>
                           <button style="font-size: 12px; padding-right: 10px;">Remove</button>
                          </div>
@@ -625,8 +625,8 @@
                       </div>
                       <div class="container_add">
                         <button class="closeBtnAddtoCartt">-</button>
-                        <div>1</div>
-                        <button class="closeBtnAddtoCartt">+</button>
+                       <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
                       </div>
                       
                     </div>
@@ -646,8 +646,8 @@
                    <div style="display: flex;justify-content: space-between;width: 100%;">
                           <div style="display: flex;justify-content: space-around; align-items: center;">
                             <button class="closeBtnAddtoCartt">-</button>
-                        <div>1</div>
-                        <button class="closeBtnAddtoCartt">+</button>
+                        <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
                           </div>
                           <button style="font-size: 12px; padding-right: 10px;">Remove</button>
                          </div>
@@ -702,18 +702,17 @@ function navToPage(){
         </script>
         
         <!-- coupen -->
-        <div class="ProductDetailsCard_2">
-          <div style="padding: 16px;">
+        <div class="ProductDetailsCard_2" >
+          <div style="padding: 10px;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-              <p class="SummeryHead" style="color: white;">Have a Coupon</p>
-              <button style="background: #18578c;padding: 8px; border-radius: 5px; font-size: 12px;" onclick="viewcoupon();">View Coupon</button>
+              <img src="assets/Banner/Icons 2_Digital Frame.png" style="width: 50px;" alt="">
+              <p class="SummeryHead" style="    color: white;
+    padding-top: 13px;
+    padding-right: 30px;">Have a Coupon</p>
+              <button style="background: #1b1c1c00;padding: 8px; border-radius: 5px; font-size: 12px;" onclick="viewcoupon();">View Coupon</button>
             </div>
             
-            <div style="position: relative;">
-              <input class="coupon_input" type="text" name="" id="" placeholder="Coupon code">
-              <button class="applybtn" style="padding-bottom: 5px; padding-right: 5px ; "  onmouseover="this.style.color='blue'"
-              onmouseout="this.style.color=''">Apply</button>
-            </div>
+         
             
             <p class="NoActiveCoupons" style="padding-top: 10px;  color: black; font-size: 14px; font-weight: bold;display: none;">No Active Coupons</p>
 
@@ -723,19 +722,18 @@ function navToPage(){
         
         
 <!-- Mobile coupon Code -->
-<div class="coupon_subTotal" style="margin-bottom: 50px; padding: 0px 15px 0px 15px">
+<div class="coupon_subTotal" style="margin-bottom: 50px; padding: 15px 15px 0px 15px; border-radius: 8px;">
+  <h6 style="padding-bottom: 10px;">Order Details</h6>
 <div style="display: flex; justify-content: space-between;">
-<h6>Subtotal :</h6> <p class="amount_coupon">RS 120000</p>
+<p>Subtotal :</p> <p class="amount_coupon">RS 120000</p>
 </div>
 <div style="display: flex; justify-content: space-between;">
-  <h6>Coupon :</h6> <p class="amount_coupon">- RS 2000</p>
+  <p>Coupon :</p> <p class="amount_coupon">- RS 2000</p>
   </div>
   <div style="display: flex; justify-content: space-between;">
-    <h6>Total :</h6> <p class="amount_coupon">RS 10000</p>
+    <p>Total :</p> <p class="amount_coupon">RS 10000</p>
     </div>
-    <div class="form_1_btns common_btns">
-      <button class="shipping btn_next" onclick="navToPage();">Continue to Shipping</button>
-    </div>
+  
 </div>
 
 
@@ -757,43 +755,22 @@ function navToPage(){
 
 <hr>
 <!-- mobile footer -->
-
+<div style="position: fixed; bottom: 0px;background-color: black; width: 100%; display: flex;">
+<div style="width: 40%;">
+<p style="    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 58%;
+    top: 7px;">₹ 1000</p>
+</div>
+<div style="width: 60%;">
+<button style="background-color:#18578c ;height: 100%;width: 100%;padding: 8px; font-size: 13px;">Continue to Shipping</button>
+</div>
+</div>
 
                <!-- div.mobileFooter  -->
-               <div class="custom_btn_phone">
-                <div class="bottom-bar">
-                  <div style="display: block;">
-                    <ion-icon name="cart-outline" class="icon_new" onclick="change(this); OrderPage();"></ion-icon>
-                    <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
-                </div>
-                
-                <div style="display: block;">
-                  <ion-icon name="heart-outline" class="icon_new" onclick="change(this); WishlistPage();"></ion-icon>
-                  <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
-              </div>
-                   <div style="display: block;">
-                    <ion-icon name="home-outline" class="icon_new " onclick="change(this); openhomepage();">
-                     
-                    </ion-icon>
-                
-                    <p class="bottom_bar_p" style="line-height: 0px;">Welcome</p>
-                   </div>
-                   <div style="display: block;">
-                    <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this)">
-                     
-                    </ion-icon>
-                
-                    <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
-                   </div>
-                   <div style="display: block;">
-                    <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
-                    </ion-icon>
-                    <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
-               
-                   </div>
-                   
-                </div>
-            </div>
+            
             <!-- MobileLogin -->
             <div id="mySidenavSignUp" class="sidenav">
             <div class="mobilelogin">
