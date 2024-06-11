@@ -385,7 +385,7 @@
                 <span style="font-size: 13px; font-weight: bold;">Cart 
               </span>
               <hr width="50px;" style="margin: 5px;">
-              <span style="font-size: 11px;">Address</span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 11px;">Payment</span>
+              <span style="font-size: 11px;"></span><span style="font-size: 11px;">Payment</span>
                <hr width="50px;" style="margin: 5px;"><span style="font-size: 11px;">Confirmation</span>
             
             
@@ -656,7 +656,7 @@
               </div>
             </div>
                 <!-- </div> -->
-                <div class="col-lg-4" id="ProductDetails">
+                <div class="col-lg-4" id="ProductDetails" style="margin-top: -41px;">
                   <div class="ProductDetailsCard" >
                       <div style="padding: 20px;">
                         <p class="SummeryHead" style="color: white;">Order Summary</p>
@@ -705,16 +705,31 @@ function navToPage(){
         <div class="ProductDetailsCard_2" >
           <div style="padding: 10px;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-              <img src="assets/Banner/Icons 2_Digital Frame.png" style="width: 50px;" alt="">
-              <p class="SummeryHead" style="    color: white;
+              <img src="assets\png\discount white.png" style="width: 35px; color: white;" alt="">
+              <p class="SummeryHead" style="   color: white;
     padding-top: 13px;
-    padding-right: 30px;">Have a Coupon</p>
-              <button style="background: #1b1c1c00;padding: 8px; border-radius: 5px; font-size: 12px;" onclick="viewcoupon();">View Coupon</button>
+    padding-right: 30px;
+    padding-left: 5px;
+    font-size: 11px;">Apply Coupon & Save extra</p>
+              <button style="background: #1b1c1c00;padding: 8px; border-radius: 5px; font-size: 11px;" onclick="viewcoupon();">View Coupon</button>
             </div>
             
          
             
-            <p class="NoActiveCoupons" style="padding-top: 10px;  color: rgb(255, 255, 255); font-size: 14px; font-weight: bold;display: none;">No Active Coupons</p>
+            <div class="NoActiveCoupons" style="padding-top: 10px;  color: rgb(255, 255, 255); font-size: 14px; font-weight: bold;display: none;">
+              
+              <div style="display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #18578c36;
+    padding: 10px;
+    border-radius: 8px;">
+                  <h5>BRHSKL4</h5><button style="padding: 8px;
+    color: #ff0000b0;
+    font-size: 12px;">Apply</button>
+              </div>
+             
+            </div>
 
           </div>
         
@@ -726,15 +741,15 @@ function navToPage(){
   
 </div>
 <div class="coupon_subTotal" style="margin-bottom: 50px; padding: 15px 15px 0px 15px; border-radius: 8px;">
-  <h6 style="padding-bottom: 10px;">Order Details</h6>
+  <h6 style="padding-bottom: 10px;">Price Summary</h6>
 <div style="display: flex; justify-content: space-between;">
-<p>Subtotal :</p> <p class="amount_coupon">RS 120000</p>
+<p>Cart Total </p> <p class="amount_coupon">₹ 12,000,0</p>
 </div>
 <div style="display: flex; justify-content: space-between;">
-  <p>Coupon :</p> <p class="amount_coupon">- RS 2000</p>
+  <p>Coupon </p> <p class="amount_coupon">- ₹ 2000</p>
   </div>
   <div style="display: flex; justify-content: space-between;">
-    <p>Total :</p> <p class="amount_coupon">RS 10000</p>
+    <p>Tota payable amount </p> <p class="amount_coupon">₹ 1000,0</p>
     </div>
   
 </div>
@@ -758,7 +773,7 @@ function navToPage(){
 
 <hr>
 <!-- mobile footer -->
-<div style="position: fixed; bottom:49px;background-color: rgb(255, 255, 255); width: 100%;color: black;height: 30px;" class="cartformob">
+<div style="position: fixed; bottom:45px;background-color: rgb(255, 255, 255); width: 100%;color: black;height: 30px;" class="cartformob">
 <div style="display: flex;
     justify-content: center;
     text-align: center;
@@ -770,14 +785,24 @@ function navToPage(){
 
 <div class="cartformob">
   <div style="position: fixed; bottom: 0px;background-color: black; width: 100%; display: flex;" class="">
-<div style="width: 40%;">
-<p style="    text-align: center;
+<div style="width: 40%; display: flex;flex-direction: column;">
+<p style="   text-align: center;
     align-items: center;
     position: absolute;
-    left: 0;
-    right: 61%;
-    top: 29%;">₹ 1000</p>
+    left: 10px;
+    /* right: 61%; */
+    top:20%;">₹ 1000</p>
+   
+   <p style=" text-align: center;
+    align-items: center;
+    position: absolute;
+    font-size: 12px;
+    left: 10px;
+    /* right: 61%; */
+    top:60%;"">Grand Total</p>
 </div>
+
+    
 <div style="width: 60%;">
 <button style= "   background-color: #18578c;
     height: 100%;
