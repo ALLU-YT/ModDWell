@@ -162,10 +162,12 @@ body {
 }
 
 header {
-  padding-top: 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+     padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding-bottom: 22px;
 }
 
 /* category */
@@ -341,13 +343,28 @@ button {
   overflow: hidden;
   /* To ensure the image doesn't overflow its container */
 }
+.Trending_p{
+      font-size: 14px;
+    /* font-weight: 600; */
+    line-height: 0px;
+    padding-top: 15px;
+}
 
 .image_text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
+      position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    bottom: -6px;
+    text-align: start;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+    /* background-color: #4b494987; */
+    width: 100%;
+    padding: 5px;
+    background: rgb(24, 87, 140);
+    background: linear-gradient(90deg, rgba(24, 87, 140, 0.9064967051273635) 20%, rgba(24, 87, 140, 0) 58%);
+
+  
 }
 
 .image_text strong {

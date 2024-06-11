@@ -645,8 +645,31 @@ button[type="submit"]:hover {
 .coupen_card {
   display: none;
 }
-
+.addandRemove{
+   width: 100%;background-color: #151515;
+}
 @media only screen and (max-width: 600px) {
+  .system_price{
+    display: none;
+  }
+
+
+  .mobile_price{
+    padding-left: 5px;
+  }
+  .mobile_price p{
+font-size: 12px;
+font-weight: 400;
+padding-left: 5px;
+  }
+  .container_add {
+  display: none;
+  justify-content: space-between;
+  width: 100px;
+  align-items: center;
+  text-align: start;
+}
+
   .coupen_card {
     border: 1px solid #ccc;
     padding: 10px;
@@ -696,8 +719,9 @@ button[type="submit"]:hover {
     justify-content: space-between;
     background: #151515;
     padding: 10px;
-    border-radius: 11px;
-    height: 138px;
+ border-radius: 1px;
+
+    height: 94px;
   }
   #ProductDetails {
     background-color: #151515;
