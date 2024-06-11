@@ -648,13 +648,21 @@ button[type="submit"]:hover {
   display: none;
 }
 .addandRemove{
-   width: 100%;background-color: #151515;
+   width: 100%;background-color: #13121267;
     border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+
         display: none;
 }
  #cartformob{
     display: none;
+  }
+  .btn-add{
+    width: 30px;
+    border-radius: 50%;
+  }
+  .btn-add:hover{
+background-color: #545556;
   }
 @media only screen and (max-width: 600px) {
   .scrollable-content {
