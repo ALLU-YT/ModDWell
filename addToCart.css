@@ -257,8 +257,8 @@ align-items: center;
 .custom-checkbox-container label::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+     left: 5px;
+    top: 5px;
   width: 20px;
   height: 20px;
   border: 1px solid #000;
@@ -663,6 +663,9 @@ button[type="submit"]:hover {
   }
   .btn-add:hover{
 background-color: #545556;
+  }
+  .coupen_card{
+    display: none;
   }
 @media only screen and (max-width: 600px) {
   .scrollable-content {

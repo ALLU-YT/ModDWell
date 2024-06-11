@@ -349,7 +349,7 @@
                 <span style="font-size: 11px; font-weight: bold;display: flex;"><span style="color: #4CAF50;display: flex;">✔</span>&nbsp;Cart 
               </span>
               <hr width="50px;" style="margin: 5px;">
-              <span style="font-size: 11px; font-weight: bold;display: flex;"><span style="color: #4CAF50;">✔ </span>&nbsp;Address</span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 11px;">Payment</span>
+              <span style="font-size: 11px; font-weight: bold;display: flex;"><span style="font-size: 11px;">Payment</span>
                <hr width="50px;" style="margin: 5px;"><span style="font-size: 11px;">Confirmation</span>
             
             
@@ -470,7 +470,17 @@
                 <!-- </div> -->
                 <div class="col-lg-4">
                   <div class="ProductDetailsCard_PaymentDetails">
-     
+     <div style="width: 100%;background-color: #151515; border-radius: 8px; margin-bottom: 17px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5px 1px 10px;">
+       <i class="bi bi-house"></i>
+       <div style="display: flex; flex-direction: column;padding-left: 16px;">
+ <h6>Home Delivery</h6>
+        <p style="font-size: 11px;">Order will be delivered to the address provided by you</p>
+       </div>
+        <button style="    font-size: 12px;
+    width: 41%; color: #18578c;">View Address</button>
+      </div>
+     </div>
 
 <div class="coupen_card">
   <div>
@@ -506,18 +516,18 @@
                           <p class="subtotalbold">Total</p>
                           <p class="subtotallite">14000</p>
                         </div>
-                      <div class="form_1_btns common_btns">
+                      <!-- <div class="form_1_btns common_btns">
                         <button class="shipping btn_next" onclick="navToPage();">Complete Order</button>
-                      </div>
+                      </div> -->
               
-                      <div class="custom-checkbox-container">
+                      <!-- <div class="custom-checkbox-container">
                         <input type="checkbox" id="myCustomCheckbox">
                         <label for="myCustomCheckbox">
                             By proceeding, I accept that I have read and understood the Gokwik's 
                             <a href="https://www.example.com/privacy-policy" style="text-decoration: underline;" target="_blank">Privacy & Policy</a> 
                             and T&C
                         </label>
-                    </div>
+                    </div> -->
                       </div>
                       
                   </div>
@@ -563,8 +573,55 @@ function navToPage(){
 </div>
 
 
+<div style="position: fixed; bottom:90px;background-color: rgb(255, 255, 255); width: 100%;color: black;height: 30px;" class="cartformob">
+<div style="display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;">
+  🎉&nbsp <p style="font-weight:500; font-size: 12px;"> Cheers! &nbsp </p> <span style="font-size: 12px;font-weight: bold; "> You saved ₹1,200</span>
+</div>
+</div>
 
+<div class="cartformob">
+  <div style="position: fixed; bottom: 50px;background-color: black; width: 100%; display: flex;" class="">
+<div style="width: 40%; display: flex;flex-direction: column;">
+<p style="   text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    /* right: 61%; */
+    top:20%;">₹ 1000</p>
+   
+   <p style=" text-align: center;
+    align-items: center;
+    position: absolute;
+    font-size: 12px;
+    left: 10px;
+    /* right: 61%; */
+    top:60%;"">Grand Total</p>
+    
+</div>
 
+    
+<div style="width: 60%;">
+<button style= "   background-color: #18578c;
+    height: 100%;
+    width: 100%;
+    padding: 13px;
+    font-size: 14px;" onclick="ShippingPage();">Continue to Shipping</button>
+</div>
+
+<div style="position: fixed; bottom: 0px;background-color: black; width: 100%; display: flex;" class=""">
+   <div class="custom-checkbox-container">
+                        <input type="checkbox" id="myCustomCheckbox">
+                        <label for="myCustomCheckbox">
+                            By proceeding, I accept that I have read and understood the Gokwik's 
+                            <a href="https://www.example.com/privacy-policy" style="text-decoration: underline;" target="_blank">Privacy & Policy</a> 
+                            and T&C
+                        </label>
+                    </div>
+</div>
    
     <!-- footer -->
     <div class="system_footer">
