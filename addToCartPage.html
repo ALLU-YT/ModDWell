@@ -714,7 +714,7 @@ function navToPage(){
             
          
             
-            <p class="NoActiveCoupons" style="padding-top: 10px;  color: black; font-size: 14px; font-weight: bold;display: none;">No Active Coupons</p>
+            <p class="NoActiveCoupons" style="padding-top: 10px;  color: rgb(255, 255, 255); font-size: 14px; font-weight: bold;display: none;">No Active Coupons</p>
 
           </div>
         
@@ -770,7 +770,7 @@ function navToPage(){
     height: 100%;
     width: 100%;
     padding: 20px;
-    font-size: 14px;">Continue to Shipping</button>
+    font-size: 14px;" onclick="ShippingPage();">Continue to Shipping</button>
 </div>
 </div>
 
@@ -999,6 +999,9 @@ function toggleList(listId) {
     });
   </script>
     <script>
+      function ShippingPage(){
+        window.location.href = "ShippingInfo.html";
+      }
       function change(item) {
         const buttons = document.querySelectorAll("ion-icon");
         buttons.forEach(function (obj) {
