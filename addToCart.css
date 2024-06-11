@@ -638,7 +638,7 @@ button[type="submit"]:hover {
   justify-content: space-between;
   background: #151515;
   padding: 10px;
-  border-radius: 11px;
+  /* border-radius: 11px; */
   height: 167px;
 }
 
@@ -647,8 +647,20 @@ button[type="submit"]:hover {
 }
 .addandRemove{
    width: 100%;background-color: #151515;
+    border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        display: none;
 }
 @media only screen and (max-width: 600px) {
+  .closeBtnAddtoCart{
+    display: none;
+  }
+  .addandRemove{
+   width: 100%;background-color: #151515;
+    border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        display: block;
+}
   .system_price{
     display: none;
   }
@@ -719,7 +731,8 @@ padding-left: 5px;
     justify-content: space-between;
     background: #151515;
     padding: 10px;
- border-radius: 1px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
 
     height: 94px;
   }
