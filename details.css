@@ -1022,13 +1022,20 @@ input[type="checkbox"] {
 }
 /* Style for list items */
 .list-item {
-  margin: 0px;
-  text-align: start;
-  padding-left: 13px;
-  font-size: 13px;
-  padding-top: 5px;
-  color: #fbfbfbb8;
-  /* padding: 5px; */
+    margin: 0px;
+    text-align: start;
+    padding-left: 13px;
+    font-size: 13px;
+    padding-top: 5px;
+    color: #fbfbfbb8;
+    /* height: 15px; */
+    /* padding: 5px; */
+    padding: 17px 0px 0px 16px;
+}
+
+
+.list-item ::before {
+background-color: #ffffff;
 }
 /* Animation keyframes */
 @keyframes fadeIn {
