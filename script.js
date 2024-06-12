@@ -135,6 +135,18 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+
+function openNav() {
+  document.getElementById("mySidenavv").style.width = "300px";
+}
+
+function closeNavv() {
+  document.getElementById("mySidenavv").style.width = "0";
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get reference to the close button
   var closeButton = document.getElementById("closeButton");

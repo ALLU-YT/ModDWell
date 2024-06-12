@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="profileSlider.css">
+  <link rel="stylesheet" href="details.css">
 
     <title>Document</title>
 </head>
@@ -57,9 +58,75 @@
 
         <!-- mobilehead -->
         <div class="mobilehead">
-            <div></div>
-           <a href="details.html"> <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="padding-left: 20px;
+         <span style="font-size: 30px; cursor: pointer;" onclick="openNav()"
+  ><i class="bi bi-list" style="padding-left: 5px;"></i></span
+>
+           <a href="details.html"> <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="
             width: 200px;" alt="Logo"></a>
+
+
+<!-- Mobile Slider Menu -->
+
+   <div id="mySidenavv" class="sidenavv" >
+             <div style="display: block;">
+                  <p style="padding-left: 10px;">Menu</p>
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNavv()">&times;</a>
+             </div>
+             <hr>
+
+
+
+ <div style="display: flex;flex-direction: column; background: black;">
+
+                                <!-- Button 1 to toggle the first list -->
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Profile<i class="bi bi-caret-down"></i> <!-- Down arrow icon --></button>
+                              <div style="width: 100%;height:15px;"></div>
+                                <!-- List 1 to be displayed -->
+                                <ul class="list" id="myList1" style="background-color: black;">
+                                    <li class="list-item">Home</li>
+                                    <li class="list-item">Led Mirror</li>
+                                    <li class="list-item">Mirror cabinet</li>
+                                    <li class="list-item">Corner SHelf</li>
+                                    <li class="list-item">Magnetic board</li>
+                                    <li class="list-item">Glass frames</li>
+                                </ul>
+
+                                <!-- Button 2 to toggle the second list -->
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Products<i class="bi bi-caret-down"></i></button>
+                                <div style="width: 100%;height:15px;"></div>
+                                <!-- List 2 to be displayed -->
+                                <ul class="list" id="myList2" style="background-color: black;">
+                                    <li class="list-item">Manage Profile</li>
+                                    <li class="list-item">Login out</li>
+                                    
+                                </ul>
+
+                                <!-- Button 3 to toggle the third list -->
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">Products</span></button>
+                                <div style="width: 100%;height:15px;"></div>
+                                <!-- List 3 to be displayed -->
+                                <!-- <ul class="list" id="myList3">
+                                    <li class="list-item">Login</li>
+                                    <li class="list-item">Order History</li>
+                                    <li class="list-item">My Wishlist
+                                        <li class="list-item">Track Order
+                                        </li>
+                                </ul> -->
+                               
+                               <div style="width: 100%;height:15px;"></div>
+                            </div>
+
+
+ 
+                                      </div>
+
+
+
+
+
+
+
+
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
@@ -1081,16 +1148,140 @@ function categoryPage(){
 
 
                          <!-- The Modal -->
+
+                         <!-- Add To Cart PopUp -->
     <div id="myModal_1" class="modal_1" style="color: black">
+          <span class="closemodal_1">&times;</span>
       <!-- Modal content -->
       <div class="modal-content_1">
+        <img style="width: 100%;" src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1946" alt="">
         <div style="display: flex; justify-content: space-between">
-          <p style="font-weight: 400px">Create a Ticket</p>
-          <span class="closemodal_1">&times;</span>
-        </div>
+          <p class="sizehead">Capsule Shaped LED Mirror with Backlit | 5-Year Warranty, Premium Quality, Customizable LED Lighting</p>
       
+       
+         
+        </div>
+       <div style="display: flex; flex-direction: column; align-items: start;padding-left: 5px;">
+             <h6>Add On</h6>
+         
+             <div style="height: 1px;background-color: white;width: 100%;"></div>
+               <div class="AddOnContainer" style="padding-top: 10px; ">
+           
+            <div class="AddOnContainerBox" id="addonContainer1" >
+              <div style="display: flex; align-items: center;">
+                  <form class="buttons">
+                      <label>
+                          <input type="checkbox" name="check" id="check_ed">
+                          <span class="label-text"></span>
+                      </label>
+                  </form>
+                  <div style="padding: 14px 5px 0px 8px;" id="check_ed_wrapper">
+                      <p class="warranty_p">Warranty and AMC (Optional)</p>
+                      <div style="display: flex; align-items: center;">
+                          <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+                          <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    
+
+<div class="AddOnContainerBox" id="addonContainer1">
+  <div style="display: flex; align-items: center;">
+      <form class="buttons">
+          <label>
+              <input type="checkbox" name="check"  id="check_ed_1">
+              <span class="label-text"></span>
+          </label>
+      </form>
+      <div style="padding: 14px 5px 0px 8px;"  id="check_ed_wrapper_1">
+          <p class="warranty_p">Defogger</p>
+          <div style="display: flex; align-items: center;">
+              <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+              <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+          </div>
+<div class="AddOnContainerBox" id="addonContainer1" style="margin-top: 10px; margin-bottom: 10px;">
+  <div style="display: flex; align-items: center;">
+      <form class="buttons">
+          <label>
+              <input type="checkbox" name="check" id="check_ed_2">
+              <span class="label-text"></span>
+          </label>
+      </form>
+      <div style="padding: 14px 5px 0px 8px;"  id="check_ed_wrapper_2">
+          <p class="warranty_p">Additional Light colour</p>
+          <div style="display: flex; align-items: center;">
+              <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+              <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+          </div>
+      </div>
+  </div>
+</div>
+<h6>Size</h6>
+         
+             <div style="height: 1px;background-color: white;width: 100%;"></div>
+<!-- size container -->
+ <div class="SizeContainer" style="margin-top: 10px; margin-bottom: 10px;" >
+            <div class="SizeBox" style="height:30px;" for="sizeboxContainer1"  for="sizeboxContainer1" onclick="document.getElementById('sizeboxContainer1').click()" >
+              <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
+              <label class="size_text"  style="font-size: 11px;">600mm x 450mm</label>
             </div>
-          </form>
+
+            <div class="SizeBox" style="height:30px;" for="sizeboxContainer2" onclick="document.getElementById('sizeboxContainer2').click()" >
+              <input type="radio" name="size" id="sizeboxContainer2" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer2" class="size_text"  style="font-size: 11px;">600mm x 450mm</label>
+            </div>
+
+            
+
+          </div>
+           <div class="SizeBox" style="height:30px;" for="sizeboxContainer3" onclick="document.getElementById('sizeboxContainer3').click()" >
+              <input type="radio" name="size" id="sizeboxContainer3" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer3" class="size_text"  style="font-size: 11px;">600mm x 450mm</label>
+            </div>
+<!-- Size Mobile Container Div -->
+
+         <div class="mobile_size_container" style="margin-top: 10px; margin-bottom: 10px;" >
+          <div class="SizeContainer_mobile" >
+            <div class="SizeBox_mobile"  onclick="document.getElementById('sizeboxContainer11').click()">
+              <input type="radio" name="size" id="sizeboxContainer11" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer11" class="size_text_mobile">600 x 450</label>
+            </div>
+
+            <div class="SizeBox_mobile" onclick="document.getElementById('sizeboxContainer12').click()">
+              <input type="radio" name="size" id="sizeboxContainer12" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer12" class="size_text_mobile">600 x 450</label>
+            </div>
+
+           
+
+          </div>
+          <div class="SizeBox_mobile" onclick="document.getElementById('sizeboxContainer13').click()">
+            <input type="radio" name="size" id="sizeboxContainer13" style="margin: 0px 0px 0px 5px;">
+            <label for="sizeboxContainer13" class="size_text_mobile">600 x 450</label>
+          </div>
+
+
+         </div>
+
+<div style="height: 1px;background-color: white;width: 100%;margin-top: 10px; margin-bottom: 10px;" ></div>
+
+
+<div style="display: flex;">
+  <Strike style="font-size: 13px;">₹ 6000</Strike> <p  style="font-size: 13px;">₹ 5000</p>
+</div>
+
+
+<button class="AddToCartPopUp" >Add To Cart</button>
+
+          </div>
+            </div>
+          
         </div>
 
 
@@ -1635,10 +1826,10 @@ function categoryPage(){
                             <div style="display: flex;flex-direction: column;">
 
                                 <!-- Button 1 to toggle the first list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Menu<i class="bi bi-plus"></i> <!-- Down arrow icon --></button>
-                                <hr>
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList11')">Menu<i class="bi bi-plus"></i> <!-- Down arrow icon --></button>
+                               <div style="width: 100%;height:15px;"></div>
                                 <!-- List 1 to be displayed -->
-                                <ul class="list" id="myList1">
+                                <ul class="list" id="myList11" style="  background: #1d1d1d;">
                                     <li class="list-item">Home</li>
                                     <li class="list-item">Led Mirror</li>
                                     <li class="list-item">Mirror cabinet</li>
@@ -1648,10 +1839,10 @@ function categoryPage(){
                                 </ul>
 
                                 <!-- Button 2 to toggle the second list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Show List 2 <i class="bi bi-plus"></i></button>
-                                <hr>
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList22')">Show List 2 <i class="bi bi-plus"></i></button>
+                              <div style="width: 100%;height:15px;"></div>
                                 <!-- List 2 to be displayed -->
-                                <ul class="list" id="myList2">
+                                <ul class="list" id="myList22"  style="  background: #1d1d1d;">
                                     <li class="list-item">Terms & conditons</li>
                                     <li class="list-item">Retrun Policy</li>
                                     <li class="list-item">Privacy policy</li>
@@ -1659,10 +1850,10 @@ function categoryPage(){
                                 </ul>
 
                                 <!-- Button 3 to toggle the third list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">My Account<i class="bi bi-plus"></i></span></button>
-                                <hr>
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList33')">My Account<i class="bi bi-plus"></i></span></button>
+                         <div style="width: 100%;height:15px;"></div>
                                 <!-- List 3 to be displayed -->
-                                <ul class="list" id="myList3">
+                                <ul class="list" id="myList33"  style="  background: #1d1d1d;">
                                     <li class="list-item">Login</li>
                                     <li class="list-item">Order History</li>
                                     <li class="list-item">My Wishlist

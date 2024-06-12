@@ -1289,6 +1289,7 @@ body.dark .search-field i {
  /* popUpSizeContainer */
 
    /* Styles for the modal background */
+   /* Size head */
       .modal_1 {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -1297,18 +1298,21 @@ body.dark .search-field i {
         top: 0;
         width: 100%; /* Full width */
         height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
+       
         background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
       }
 
       /* Modal content */
       .modal-content_1 {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 30%; /* Could be more or less, depending on screen size */
-        text-align: center;
+      background-color: rgb(21, 21, 21);
+    margin: 6% auto;
+    /* padding: 16px; */
+    width: 400px;
+    text-align: center;
+    color: white;
+    overflow-y: auto;
+    height: 500px;
+    overflow-x: hidden;
       }
 
       /* Close button */
@@ -1330,8 +1334,44 @@ body.dark .search-field i {
       .modal-openmodal_1 {
         overflow: hidden;
       }
+      .sizehead{
+     font-size: 13px;
+    font-weight: 400;
+    text-align: start;
+    padding-top: 12px;
+    padding-left: 5px;
+      }
+      .AddToCartPopUp{
+           width: 99%;
+    background: #18578c;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-bottom: 10px;
+      }
 
 
+      /* The scroll bar container */
+.modal-content_1::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* The track (background) of the scrollbar */
+.modal-content_1::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;  /* Rounded corners for the track */
+}
+
+/* The scrollbar handle (thumb) */
+.modal-content_1::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* The scrollbar handle on hover */
+.modal-content_1::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
 
 /* MediaQuery............................................ */
 /* systemcategory */
@@ -1657,7 +1697,7 @@ body.dark .search-field i {
   }
   .buttons {
     font-size: 13px;
-    background-color: black;
+    /* background-color: black; */
     color: white;
     padding: 8px 11px;
     border: none;
@@ -1799,6 +1839,65 @@ body.dark .search-field i {
     font-size: 18px;
   }
 }
+
+
+
+
+
+.sidenavv {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* width: 300px; */
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 23px;
+}
+
+.sidenavv a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavv a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavv .closebtn {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenavv {
+    padding-top: 15px;
+  }
+  .sidenavv a {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .sliderCartButton {
   width: 280px;
