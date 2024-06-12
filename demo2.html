@@ -3,53 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image with Text and Div Below</title>
-    <style>
-      .image_with_text {
-        position: relative;
-        z-index: 0;
-        text-align: center; /* Center the text horizontally */
-        margin-bottom: 10px; /* Add margin to space between image and div */
-      }
-
-      .image_with_text img {
-        width: 100%; /* Ensure the image is responsive */
-      }
-
-      .image_text {
-        position: absolute;
-        bottom: 10px; /* Position text at the bottom of the image */
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Optional: add background to the text */
-        padding: 5px; /* Optional: add padding around the text */
-      }
-
-      .bottom_div {
-        background: #1d1d1d;
-        color: white; /* Optional: change text color for better contrast */
-        padding: 10px; /* Optional: add padding inside the div */
-        text-align: center; /* Center the text inside the div */
-      }
-    </style>
+    <title>Document</title>
   </head>
   <body>
-    <div class="image_with_text">
-      <img
-        src="assets/Website Images/Corner shelf.jpg"
-        class="img-fluid"
-        alt="Reading Table"
-      />
-      <span class="image_text">
-        <strong>Corner shelf</strong> <br />Under $50
-      </span>
+    <style>
+      /* Styles for the modal background */
+      .modal_1 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+      }
+
+      /* Modal content */
+      .modal-content_1 {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30%; /* Could be more or less, depending on screen size */
+        text-align: center;
+      }
+
+      /* Close button */
+      .closemodal_1 {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .closemodal_1:hover,
+      .closemodal_1:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Class to hide overflow on body */
+      .modal-openmodal_1 {
+        overflow: hidden;
+      }
+    </style>
+    <div class="AddTicketContainerrrr" id="addTicketBtn_1">
+      <button class="addTicket">
+        <i class="bi bi-plus-lg" style="width: 10px; padding: 10px"></i>
+      </button>
+      <p style="color: blue; padding-top: 10px">Create a Ticket</p>
     </div>
-    <div class="bottom_div">This is a bottom div content.</div>
+
+    <!-- The Modal -->
+    <div id="myModal_1" class="modal_1" style="color: black">
+      <!-- Modal content -->
+      <div class="modal-content_1">
+        <div style="display: flex; justify-content: space-between">
+          <p style="font-weight: 400px">Create a Ticket</p>
+          <span class="closemodal_1">&times;</span>
+        </div>
+      
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal_1");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("addTicketBtn_1");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("closemodal_1")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+        document.body.classList.add("modal-openmodal_1");
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-openmodal_1");
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove("modal-openmodal_1");
+        }
+      };
+    </script>
   </body>
 </html>
