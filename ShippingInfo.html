@@ -305,7 +305,7 @@
       </div>
  <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
     <div style="display: flex; align-items: center; padding: 10px;">
-       <a href="addToCartPage.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
+       <a href="checkOut.html.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
         <p style="padding-left: 10px; color: white; margin: 0;">Address</p>
     </div>
 </header>
@@ -391,15 +391,7 @@
           
           
             </div>
-            <div class="cartBars_mobile"">
-              <span style="font-size: 11px; font-weight: bold;display: flex;"><span style="color: #4CAF50;display: flex;">✔</span>&nbsp;Cart 
-            </span>
-            <hr width="50px;" style="margin: 5px;">
-            <span style="font-size: 11px;">Address</span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 11px;">Payment</span>
-             <hr width="50px;" style="margin: 5px;"><span style="font-size: 11px;">Confirmation</span>
-          
-          
-            </div>
+        
 
 
 <!-- AddressContainer -->
@@ -409,7 +401,7 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-lg-6">
-                        <div class="addressContainer" onclick="selectRadio('addressRadio1')">
+                        <div class="addressContainer" onclick="selectRadio('addressRadio1'); gotToCheckOutPage();">
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <input type="radio" name="address" id="addressRadio1">
                                 <div style="display: flex; align-items: flex-start; flex-direction: column; margin-left: 10px; margin-top: 15px;">
@@ -602,12 +594,12 @@
 </div>
 
 
-<div style="position: fixed;bottom: 0;left: 0;right: 0;" class="mobile_continue_btn">
+<!-- <div style="position: fixed;bottom: 0;left: 0;right: 0;" class="mobile_continue_btn">
   
 
       <button class="shipping btn_next" style="width: 100%;" onclick="navtopage();">Continue to Delivery info</button>
    
-  </div>
+  </div> -->
 </div>
 
    
@@ -705,6 +697,11 @@
       </footer>
   </div>
     <script>
+
+function gotToCheckOutPage(){
+  window.location.href = 'checkOut.html';
+}
+
  function navtopage(){
             window.location.href = "checkOut.html"
           }  

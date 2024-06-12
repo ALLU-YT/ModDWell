@@ -470,7 +470,8 @@
                 <!-- </div> -->
                 <div class="col-lg-4">
                   <div class="ProductDetailsCard_PaymentDetails">
-     <div style="width: 100%;background-color: #151515; border-radius: 8px; margin-bottom: 17px;">
+   <div class="Home_div">
+      <div style="width: 100%;background-color: #151515; border-radius: 8px; margin-bottom: 17px;" onclick="goToAddressPage();">
       <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5px 1px 10px;">
        <i class="bi bi-house"></i>
        <div style="display: flex; flex-direction: column;padding-left: 16px;">
@@ -478,9 +479,10 @@
         <p style="font-size: 11px;">Order will be delivered to the address provided by you</p>
        </div>
         <button style="    font-size: 12px;
-    width: 41%; color: #18578c;">View Address</button>
+    width: 41%; color: #0e7ad2;">Change Address</button>
       </div>
      </div>
+   </div>
 
 <div class="coupen_card">
   <div>
@@ -492,29 +494,27 @@
     <button class="btnremovebtn">remove</button>
   </div>
 </div>
-                      <div style="    padding: 20px;
-    margin-top: 25px;
-    background: #151515;">
+                      <div class="order_su">
                         <p class="SummeryHead">Order Summary</p>
                         <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Subtotal</p>
-                          <p class="subtotallite">14000</p>
+                          <p class="subtotallite">₹ 14000</p>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Total Shipping</p>
-                          <p class="subtotallite">14000</p>
+                          <p class="subtotallite">₹ 14000</p>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Tax</p>
-                          <p class="subtotallite">14000</p>
+                          <p class="subtotallite">₹ 14000</p>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Coupon</p>
-                          <p class="subtotallite">14000</p>
+                          <p class="subtotallite">₹ 14000</p>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <p class="subtotalbold">Total</p>
-                          <p class="subtotallite">14000</p>
+                          <p class="subtotallite">₹ 14000</p>
                         </div>
                       <!-- <div class="form_1_btns common_btns">
                         <button class="shipping btn_next" onclick="navToPage();">Complete Order</button>
@@ -609,7 +609,7 @@ function navToPage(){
     height: 100%;
     width: 100%;
     padding: 13px;
-    font-size: 14px;" onclick="ShippingPage();">Continue to Shipping</button>
+    font-size: 14px;" onclick="ShippingPage();">Proceed to Payment</button>
 </div>
 
 <div style="position: fixed; bottom: 0px;background-color: black; width: 100%; display: flex;" class=""">
@@ -718,6 +718,13 @@ function navToPage(){
   </div>
 
   <script>
+function goToAddressPage(){
+    window.location.href = 'ShippingInfo.html';
+}
+function ShippingPage(){
+   window.location.href = 'Confirmation.html';
+}
+
     document.addEventListener("DOMContentLoaded", function() {
       const container = document.querySelector('.scrollable-content');
       let lastScrollTop = 0;
