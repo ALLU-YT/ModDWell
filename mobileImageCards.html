@@ -680,7 +680,28 @@
     cursor: pointer;
     z-index: 1;
       }
-
+      
+@media only screen and (max-width: 600px) {
+    .AddOnContainerBox {
+        width: 96%;
+        margin-top: 10px;
+    }
+    .SizeBox_mobile {
+    margin: 3px;
+    background: #18578c;
+    border: 2px solid #18578c;
+    cursor: pointer;
+    display: flex;
+    width: 142px;
+    font-size: 12px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+}
+  .bi-eye-bold {
+            font-weight: bold; /* This might not always work as expected */
+        }
      </style>
 
       
@@ -711,7 +732,7 @@
                   </li>
                    <li>
                     <button data-tip="Add to Wishlist" id="addTicketBtn_1">
-                      <i class="fas fa-heart"></i>
+                        <i class="bi bi-eye-fill"></i>
                     </button>
                   </li>
                 </ul>
@@ -732,7 +753,7 @@
                 </div>
 
                 <div class="price">$79.90</div>
-                <div class="add-to-cart" href="#">add to cart</div>
+                
               </div>
             </div>
           </div>
@@ -775,7 +796,7 @@
                 </div>
 
                 <div class="price">$79.90</div>
-                <div class="add-to-cart" href="#">add to cart</div>
+                <!-- <div class="add-to-cart" href="#">add to cart</div> -->
               </div>
             </div>
           </div>
@@ -818,7 +839,7 @@
                 </div>
 
                 <div class="price">$79.90</div>
-                <div class="add-to-cart" href="#">add to cart</div>
+                <!-- <div class="add-to-cart" href="#">add to cart</div> -->
               </div>
             </div>
           </div>
@@ -861,7 +882,7 @@
                 </div>
 
                 <div class="price">$79.90</div>
-                <div class="add-to-cart" href="#">add to cart</div>
+                <!-- <div class="add-to-cart" href="#">add to cart</div> -->
               </div>
             </div>
           </div>
@@ -977,10 +998,7 @@
             
 
           </div>
-           <div class="SizeBox" style="height:30px;" for="sizeboxContainer3" onclick="document.getElementById('sizeboxContainer3').click()" >
-              <input type="radio" name="size" id="sizeboxContainer3" style="margin: 0px 0px 0px 5px;">
-              <label for="sizeboxContainer3" class="size_text"  style="font-size: 11px;">600mm x 450mm</label>
-            </div>
+         
 <!-- Size Mobile Container Div -->
 
          <div class="mobile_size_container" style="margin-top: 10px; margin-bottom: 10px;" >

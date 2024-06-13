@@ -145,6 +145,13 @@ function closeNavv() {
   document.getElementById("mySidenavv").style.width = "0";
 }
 
+function openNavi() {
+  document.getElementById("mySidenavi").style.width = "300px";
+}
+function closeNavi() {
+  document.getElementById("mySidenavi").style.width = "0";
+}
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
