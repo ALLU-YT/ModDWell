@@ -59,10 +59,11 @@
         <!-- mobilehead -->
         <div class="mobilehead">
          <span style="font-size: 30px; cursor: pointer;" onclick="openNav()"
-  ><i class="bi bi-list" style="padding-left: 5px;"></i></span
+  ><i class="bi bi-list fs-3" style="padding-left: 5px;"></i></span
 >
            <a href="details.html"> <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="
-            width: 200px;" alt="Logo"></a>
+              width: 186px;
+    margin-left: 35px;" alt="Logo"></a>
 
 
 <!-- Mobile Slider Menu -->
@@ -115,9 +116,6 @@
                                
                                <div style="width: 100%;height:15px;"></div>
                             </div>
-
-
- 
                                       </div>
 
 
@@ -127,16 +125,18 @@
 
 
 
-
-            <div id="mySidenavi" class="sidenav">
+    <div id="mySidenavi" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()">&times;</a
   >
   <input type="text" name="" placeholder="search..." id="" style="background: transparent;border-color: #f3f3f35c;padding-left: 5px; position: relative;margin-top: 40px;margin-left: 6%;width: 90%;/* left: 0px; *//* right: 0px; */">
 </div>
 
-<span style="font-size: 30px; cursor: pointer;padding-right: 20px;" onclick="openNavi()"
-  ><i class="bi bi-search search-iconn fs-3"></i></span
->
+
+<span style="font-size: 30px; cursor: pointer;" onclick="openNavi()"
+  ><i class="bi bi-search search-iconn fs-6"></i></span>
+<span  style="font-size: 30px; cursor: pointer;padding-right: 20px;" onclick="openProfile()"
+  ><i class="bi bi-person fs-4"></i></i></span>
+
     </div>
 
 
@@ -1893,12 +1893,12 @@ function goTomobileImageCardshtml(){
         <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
     </div>
     
-    <div style="display: block;">
+    <!-- <div style="display: block;">
       <ion-icon name="heart-outline" class="icon_new" onclick="change(this); openWishListPage();"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
-  </div>
+  </div> -->
        <div style="display: block;">
-        <ion-icon name="home-outline" class="icon_new activee" onclick="change(this); openProfile();">
+        <ion-icon name="home-outline" class="icon_new activee" onclick="change(this);">
          
         </ion-icon>
     
@@ -1911,48 +1911,75 @@ function goTomobileImageCardshtml(){
     
         <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
        </div>
-       <div style="display: block;">
+       <div style="display: block;padding-right: 8px;">
         <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
         </ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
+        <p class="bottom_bar_p" style="line-height: 0px;">Best Seller</p>
    
        </div>
        
     </div>
 </div>
 <!-- profile -->
-<!-- <link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="profile.css">
 
 <div id="slider" class="slider">
   
     <div class="profileHead">
       <div class="profileimageanaData">
         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        <h3>Ameen</h3>
-        <p>ameeofficial33@gmail.com</p>
+    <div style="    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 8px;">
+         <h6>Ameen</h6>
+       <p style="font-size: 11px;">9995598212</p>
+       <p style="font-size: 11px;">ameen@gmail.com</p>
+    </div>
       </div>
     </div>
     <div class="menuu">
       <div class="menuItemm active" onclick="Dashboard();">
-        <i class="bi bi-house"></i>
-        <p>Dashboard</p>
+       
+        <p>Edit profile</p>
       </div>
       <div class="menuItemm " onclick="purchaseHistoryPages();">
-        <i class="bi bi-file-earmark-text"></i>
-        <p>Purchase History</p>
+     
+        <p>Address</p>
       </div>
-      <div class="menuItemm" onclick="wishListPage();">
-        <i class="bi bi-heart"></i>
-        <p>Wishlist</p>
-      </div>
+    
 
       <div class="menuItemm" onclick="manageProfileScreen();">
-        <i class="bi bi-person"></i>
-        <p>Manage Profile</p>
+       
+        <p>Support</p>
+      </div>
+       <div class="menuItemm" onclick="manageProfileScreen();">
+       
+        <p>Who we are</p>
+      </div>
+       <div class="menuItemm" onclick="manageProfileScreen();">
+       
+        <p>Terms and condition</p>
+      </div>
+       <div class="menuItemm" onclick="manageProfileScreen();">
+       
+        <p>Privacy policy</p>
+      </div>
+       <div class="menuItemm" onclick="manageProfileScreen();">
+       
+        <p>Refund policy</p>
+      </div>
+       <div class="menuItemm" onclick="manageProfileScreen();">
+       
+        <p>Logout</p>
+      </div>
+        <div class="menuItemm" onclick="wishListPage();">
+    
+        <p>Faq</p>
       </div>
     </div>
 
-</div> -->
+</div>
 
 
 <!-- MobileLogin -->

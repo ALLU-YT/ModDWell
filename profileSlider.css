@@ -1,14 +1,15 @@
 .menuu {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
+  background: #151515;
 }
 
 .menuItemm {
   display: flex;
   align-items: center;
   padding: 10px;
-  color: #333;
+  color: #ffffff;
   border-radius: 4px;
   transition: background 0.3s;
   cursor: pointer;
@@ -22,7 +23,7 @@
 .menuItemm p {
   margin: 0;
   font-size: 13px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .menuItemm:hover {
@@ -30,24 +31,24 @@
 }
 
 .menuItemm.active {
-  background: #e0e0e0;
+  background: #151515;
 }
 
 .slider {
   position: fixed;
-  left: -300px;
+  right: -300px;
   z-index: 1000;
   color: black;
   top: 0;
   width: 300px;
   height: 100%;
-  background: #f4f4f4;
+  background: #151515;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
-  transition: left 0.3s ease;
+  transition: right 0.5s ease;
 }
 .slider.open {
-  left: 0;
+  right: 0;
 }
 
 .menuItemm:hover {
@@ -55,5 +56,5 @@
 }
 
 .menuItemm.active {
-  background: #e0e0e0;
+  background: #151515;
 }
