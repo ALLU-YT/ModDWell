@@ -3,66 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dropdown Menu</title>
     <style>
-      /* Basic styling for the dropdown menu */
-      .dropdown {
+      .container {
         position: relative;
         display: inline-block;
       }
 
-      .dropdown-content {
-        display: none;
+      .container img {
+        width: 100%;
+        display: block;
+      }
+
+      .closemodal_1 {
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
         z-index: 1;
-      }
-
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
-
-      .show {
-        display: block;
       }
     </style>
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="toggleDropdown()">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
-      </div>
+    <div class="container">
+      <img
+        src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1946"
+        alt=""
+      />
+      <span class="closemodal_1">&times;</span>
     </div>
-
-    <script>
-      function toggleDropdown() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropdown button")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-    </script>
   </body>
 </html>
