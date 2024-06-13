@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Roboto_font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
+    />
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+
+    <link rel="stylesheet" href="details.css" />
+    <link rel="stylesheet" href="addToCart.css" />
+  </head>
+  <body>
+    <div style="background: black">
+      <header class="header_conatiner" style="background: black">
+        <!-- Left side logo image -->
+        <img
+          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+          style="padding-left: 20px; width: 200px"
+          alt="Logo"
+        />
+
+        <!-- Centered search input and icon -->
+        <div class="d-flex align-items-center">
+          <div class="search-container">
+            <input
+              type="text"
+              class="timme-input"
+              placeholder="I am shopping for..."
+            />
+            <i class="fas fa-search search-icon fa-.5x"></i>
+          </div>
+        </div>
+
+        <!-- Right side buttons -->
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          "
+        >
+          <p style="font-size: 11px; margin-right: 6px; padding-top: 10px">
+            Sign Up Now
+          </p>
+          <button id="popupBtn"><i class="bi bi-person headicon"></i></button>
+          <!-- poppup container -->
+          <div id="popupBackground">
+            <div id="popupContent">
+              <button id="closeBtn">Close</button>
+              <div id="imageContainer">
+                <img
+                  src="assets\Banner\LED Mirror.jpg"
+                  alt="Image"
+                  style="
+                    padding: 8px;
+                    max-width: 100%;
+                    border-radius: 20px;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div id="loginFormContainer">
+                <div
+                  class="container"
+                  style="padding: 98px; padding-top: 202px"
+                >
+                  <div class="row">
+                    <h3 class="login_head">Login to your account.</h3>
+
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Password"
+                    />
+                    <div class="forgot_box">
+            
+                      <p>Forgot password?</p>
+                    </div>
+                    <button class="loginbutton">Login in</button>
+                    <div style="display: flex; justify-content: center">
+                      <div
+                        style="
+                          background: rgba(0, 0, 0, 0.276);
+                          border: solid 1px #1d1d1d2b;
+                          width: 30px;
+                          margin-top: 25px;
+                        "
+                      ></div>
+                    </div>
+                    <p style="font-size: 14px; padding-top: 35px">
+                      Or Login With
+                    </p>
+
+                    <div style="display: flex; justify-content: center">
+                      <img
+                        class="img_facebook"
+                        src="assets/5365678_fb_facebook_facebook logo_icon.png"
+                        alt=""
+                      />
+                      <img
+                        class="img_facebook"
+                        src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"
+                        alt=""
+                      />
+                    </div>
+                    <button>
+                      <p style="font-size: 14px; padding-top: 35px">
+                        <br />
+
+                        <span
+                          style="color: blue; font-size: 13px; font-weight: 600"
+                          id="signupPopupbtn"
+                        >
+                          Sign Up</span
+                        >
+                      </p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- signupPopUpButton -->
+          <div id="popupBackground_signup">
+            <div id="popupBackground_signup_ui">
+              <button id="closeBtn_signup">Close</button>
+              <div id="imageContainer_signup">
+                <img
+                  src="assets\Banner\LED Mirror.jpg"
+                  alt="Image"
+                  style="
+                    padding: 8px;
+                    max-width: 100%;
+                    border-radius: 20px;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div id="loginFormContainer_signup">
+                <div
+                  class="container"
+                  style="padding: 98px; padding-top: 202px"
+                >
+                  <div class="row">
+                    <h3 class="login_head">Create an account..</h3>
+
+                    <input
+                      type="text"
+                      class="border-line"
+                      style="margin-top: 20px"
+                      placeholder="Full Name"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Password"
+                    />
+                    <input
+                      type="text"
+                      class="border-line"
+                      placeholder="Confirm Password"
+                    />
+
+                    <button class="loginbutton" style="margin-top: 20px">
+                      Create Account
+                    </button>
+                    <div style="display: flex; justify-content: center">
+                      <div
+                        style="
+                          background: rgba(0, 0, 0, 0.276);
+                          border: solid 1px #1d1d1d2b;
+                          width: 30px;
+                          margin-top: 25px;
+                        "
+                      ></div>
+                    </div>
+                    <p style="font-size: 14px; padding-top: 35px">
+                      Or join With
+                    </p>
+
+                    <div style="display: flex; justify-content: center">
+                      <img
+                        class="img_facebook"
+                        src="assets/5365678_fb_facebook_facebook logo_icon.png"
+                        alt=""
+                      />
+                      <img
+                        class="img_facebook"
+                        src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"
+                        alt=""
+                      />
+                    </div>
+                    <p style="font-size: 14px; padding-top: 5px">
+                      <br />
+
+                      <span
+                        style="color: blue; font-size: 13px; font-weight: 600"
+                        id="signinPopupbtn_ui"
+                      >
+                        Sign in</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bootstrap Wishlist button -->
+          <button><i class="bi bi-heart headicon"></i></button>
+          <!-- Bootstrap Cart button -->
+          <button><i class="bi bi-cart headicon"></i></button>
+        </div>
+      </header>
+
+      <!-- mobile header -->
+      <!-- mobilehead -->
+      <div class="mobilehead" style="display: none;">
+        <div></div>
+        <a href="index.html"
+          ><img
+            src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+            style="padding-left: 20px; width: 200px"
+            alt="Logo"
+        /></a>
+
+        <span
+          style="font-size: 30px; cursor: pointer; padding-right: 20px"
+          onclick="openNav()"
+          ><i class="bi bi-search search-iconn fs-3"></i
+        ></span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <input
+            type="text"
+            name=""
+            placeholder="search..."
+            id=""
+            style="
+              background: transparent;
+              border-color: #f3f3f35c;
+              padding-left: 5px;
+              position: relative;
+              margin-top: 40px;
+              margin-left: 6%;
+              width: 90%; /* left: 0px; */ /* right: 0px; */
+            "
+          />
+        </div>
+      </div>
+ <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1; padding-top: 2px;">
+    <div style="display: flex; align-items: center; padding: 10px;">
+       <a href="index.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
+        <p style="padding-left: 10px; color: white; margin: 0;">Order Details</p>
+    </div>
+</header>
+      <hr class="hr_tag" />
+
+      <!-- secondHeader -->
+      <div class="navi">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="container">
+            <!-- Navbar links -->
+            <div
+              class="collapse navbar-collapse justify-content-md-center"
+              id="collapsibleNavbar"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="details.html">Trending</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Led Mirror</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Mirror cabinet</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Corner SHelf</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Magnetic board</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Glass frames</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <hr />
+    </div>
+
+<div class="container" >
+<div class="row" style="margin-left: 15px;">
+
+  
+<!-- <p style="font-size: 13px;color: rgba(255, 255, 255, 0.308); ">This is the cart from the item you wish to purchase.</p> -->
+</div>
+</div>
+<!-- orderHeadIcons -->
+<!-- full Order Details -->
+<div class="container" style="margin-bottom: 25px;">
+  <div class="row">
+
+      <!-- productCartContainer -->
+
+     <div class="container">
+      <div class="row">
+    
+       
+       
+            <div class="col-lg-8">
+              <p>Shopping Cart</p>
+              <div class="cartBars">
+                <span style="font-size: 14px; font-weight: bold;">1. Cart 
+              </span>
+              <hr width="50px;" style="margin: 5px;">
+              <span style="font-size: 12px;">2. Shipping info </span><hr width="50px;" style="margin: 5px;"> <span style="font-size: 12px;">
+                 3. Payment</span> <hr width="50px;" style="margin: 5px;"><span style="font-size: 12px;"> 4. Confirmation</span>
+            
+            
+              </div>
+
+             
+
+             
+              <div class="scrollable-content">
+                <div style="margin-bottom: 15px;">
+                  <div class="AddToCartPageContainer">
+
+                    <div style="display: flex; align-items: start;">
+                      <div style="    display: flex;flex-direction: column; height: 119px;">
+                         <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
+                         <div class="system_price">
+                            <p style="margin: 0;"><span class="spanPrice">Price:</span> 
+                         <span class="priceamount"
+                         class="priceamount">2000</span> </p>
+                         <p><span class="spanPrice">Total:</span> 
+                          <span class="priceamount"
+                          class="priceamount">2000</span> </p>
+                         </div>
+                       
+                      </div>
+
+                      
+                      <div style="display: flex;flex-direction: column;padding-left: 10px;">
+                       <div style="display: flex;justify-content: space-between;">
+                        <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
+                       </div>
+                        <p class="ProductDemo">Demo1,Demo2</p>
+                      
+                   
+                      </div>
+                       
+                    </div>
+
+
+                  <div style="        position: absolute;
+    top: 148px;
+    left: 80%;">
+                    <p style="font-size: 13px;">Qty-1</p>
+                  </div>
+                   
+                  </div>   
+               
+         
+              
+            
+              </div>
+                <div style="margin-bottom: 15px;">
+                  <div class="AddToCartPageContainer">
+
+                    <div style="display: flex; align-items: start;">
+                      <div style="    display: flex;flex-direction: column; height: 119px;">
+                         <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
+                         <div class="system_price">
+                            <p style="margin: 0;"><span class="spanPrice">Price:</span> 
+                         <span class="priceamount"
+                         class="priceamount">2000</span> </p>
+                         <p><span class="spanPrice">Total:</span> 
+                          <span class="priceamount"
+                          class="priceamount">2000</span> </p>
+                         </div>
+                       
+                      </div>
+
+                      
+                      <div style="display: flex;flex-direction: column;padding-left: 10px;">
+                       <div style="display: flex;justify-content: space-between;">
+                        <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
+                       </div>
+                        <p class="ProductDemo">Demo1,Demo2</p>
+                      
+            
+                      </div>
+                     
+                    </div>
+
+
+                    <div style="display: flex;flex-direction: column;justify-content: space-between;">
+                 
+                      <div style="width: 100px; color: white; align-items: center; text-align: end;">
+                        <button class="closeBtnAddtoCart"><i class="bi bi-x"></i></button>
+                      </div>
+                      <div class="container_add">
+                        <button class="closeBtnAddtoCartt">-</button>
+                      <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
+                      </div>
+                      
+                    </div>
+                   
+                  </div>   
+               
+         
+              
+             
+              </div>
+         <div style="margin-bottom: 15px;">
+                  <div class="AddToCartPageContainer">
+
+                    <div style="display: flex; align-items: start;">
+                      <div style="    display: flex;flex-direction: column; height: 119px;">
+                         <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
+                         <div class="system_price">
+                            <p style="margin: 0;"><span class="spanPrice">Price:</span> 
+                         <span class="priceamount"
+                         class="priceamount">2000</span> </p>
+                         <p><span class="spanPrice">Total:</span> 
+                          <span class="priceamount"
+                          class="priceamount">2000</span> </p>
+                         </div>
+                       
+                      </div>
+
+                      
+                      <div style="display: flex;flex-direction: column;padding-left: 10px;">
+                       <div style="display: flex;justify-content: space-between;">
+                        <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
+                       </div>
+                        <p class="ProductDemo">Demo1,Demo2</p>
+                      
+            
+                      </div>
+                     
+                    </div>
+
+
+                    <div style="display: flex;flex-direction: column;justify-content: space-between;">
+                 
+                      <div style="width: 100px; color: white; align-items: center; text-align: end;">
+                        <button class="closeBtnAddtoCart"><i class="bi bi-x"></i></button>
+                      </div>
+                      <div class="container_add">
+                        <button class="closeBtnAddtoCartt">-</button>
+                        <div>1</div>
+                        <button class="closeBtnAddtoCartt">+</button>
+                      </div>
+                      
+                    </div>
+                   
+                  </div>   
+               
+         
+              
+            
+              </div>
+               <div style="margin-bottom: 15px;">
+                  <div class="AddToCartPageContainer">
+
+                    <div style="display: flex; align-items: start;">
+                      <div style="    display: flex;flex-direction: column; height: 119px;">
+                         <img class="productimg" src="https://moddwell.com/public/uploads/all/eVUlJuXzHAFjn8Y8kFQELdP9mU1kyfuKUGOF9tGV.jpg" alt="">
+                         <div class="system_price">
+                            <p style="margin: 0;"><span class="spanPrice">Price:</span> 
+                         <span class="priceamount"
+                         class="priceamount">2000</span> </p>
+                         <p><span class="spanPrice">Total:</span> 
+                          <span class="priceamount"
+                          class="priceamount">2000</span> </p>
+                         </div>
+                       
+                      </div>
+
+                      
+                      <div style="display: flex;flex-direction: column;padding-left: 10px;">
+                       <div style="display: flex;justify-content: space-between;">
+                        <p class="ProductTitle">Woven with Love - Small - (600mm x 450mm)</p>
+                       </div>
+                        <p class="ProductDemo">Demo1,Demo2</p>
+                      
+            
+                      </div>
+                     
+                    </div>
+
+
+                    <div style="display: flex;flex-direction: column;justify-content: space-between;">
+                 
+                      <div style="width: 100px; color: white; align-items: center; text-align: end;">
+                        <button class="closeBtnAddtoCart"><i class="bi bi-x"></i></button>
+                      </div>
+                      <div class="container_add">
+                        <button class="closeBtnAddtoCartt">-</button>
+                       <div style="padding-left: 26px;">1</div>
+                        <button class="closeBtnAddtoCartt" style="padding-left: 50px;">+</button>
+                      </div>
+                      
+                    </div>
+                   
+                  </div>   
+               
+         
+              
+           
+              </div>
+              </div>
+            </div>
+                <!-- </div> -->
+                <div class="col-lg-4" id="ProductDetails" style="margin-top: -41px;">
+                  <div class="ProductDetailsCard" >
+                      <div style="padding: 20px;">
+                        <p class="SummeryHead" style="color: white;">Order Summary</p>
+                        <hr>
+                        <div style="display: flex; justify-content: space-between;">
+                          <p class="subtotalbold">Subtotal</p>
+                          <p class="subtotallite">14000</p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                          <p class="subtotalbold">Total Shipping</p>
+                          <p class="subtotallite">14000</p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                          <p class="subtotalbold">Tax</p>
+                          <p class="subtotallite">14000</p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                          <p class="subtotalbold">Total</p>
+                          <p class="subtotallite">14000</p>
+                        </div>
+                      <div class="form_1_btns common_btns">
+                        <button class="shipping btn_next" onclick="navToPage();">Continue to Shipping</button>
+                      </div>
+                      <!-- payment Icons -->
+                      <div style="display: flex; justify-content: center;" >
+                
+                        <img class="paymentIcons" src="assets/Payment Icons/Mastercard.png" alt="">
+                        <img class="paymentIcons" src="assets/Payment Icons/Rupay.png" alt="">
+                        <img class="paymentIcons" src="assets/Payment Icons/UPI.png" alt="">
+                       
+                        <img class="paymentIcons" src="assets/Payment Icons/phonpe.png" alt="">
+                        
+                      </div>
+                     
+                      </div>
+                      
+                  </div>
+        <script>
+function navToPage(){
+    window.location.href = "ShippingInfo.html";
+}
+
+        </script>
+        
+        <!-- coupen -->
+        <div class="ProductDetailsCard_2" >
+          <div style="padding: 10px;">
+ <style>
+      .progress-container {
+display: flex;
+    align-items: center;
+    padding: 9px;
+    /* color: white; */
+    /* background-color: #fff; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .progress-line {
+        position: relative;
+        width: 4px;
+        height: 300px;
+        background-color: #e0e0e0;
+        margin-right: 20px;
+        border-radius: 2px;
+      }
+
+      .progress-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 16px;
+        background-color: #e0e0e0;
+        border-radius: 50%;
+        transition: background-color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+          
+      }
+
+      .progress-dot.completed {
+        background-color: #4caf50;
+        transform: translateX(-50%) scale(1.2);
+      }
+
+      .stage {
+        display: flex;
+        align-items: center;
+        margin-bottom: 48px;
+        position: relative;
+      }
+
+      .stage-label {
+        margin-left: 10px;
+        font-size: 14px;
+        color: #ffffff;
+        white-space: nowrap;
+      }
+
+      .stage:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+ 
+    <div class="progress-container">
+      <div class="progress-line">
+        <div class="progress-dot" style="top: 0%" id="dot1"></div>
+        <div class="progress-dot" style="top: 23%" id="dot2"></div>
+        <div class="progress-dot" style="top: 49%" id="dot3"></div>
+        <div class="progress-dot" style="top: 73%" id="dot4"></div>
+        <div class="progress-dot" style="top:95%" id="dot5"></div>
+      </div>
+      <div>
+        <div class="stage" id="stage1">
+          <div class="stage-label">Order Placed</div>
+        </div>
+        <div class="stage" id="stage2">
+          <div class="stage-label">Processing</div>
+        </div>
+        <div class="stage" id="stage3">
+          <div class="stage-label"  style="margin-top: 10px;">Shipped</div>
+        </div>
+        <div class="stage" id="stage4">
+          <div class="stage-label">Out for Delivery</div>
+        </div>
+        <div class="stage" id="stage5">
+          <div class="stage-label">Delivered</div>
+        </div>
+      </div>
+    </div>
+
+         <div >
+            <div style="display: flex; justify-content: space-between;margin: 25px 0px 10px 0px;">
+                <div style="display: flex; flex-direction: column; line-height: 0;">
+                    <p style="font-size: 12px;">Couriers</p>
+                    <p style="font-size: 14px;">ZORESSBESS</p>
+                </div>
+                <div style="display: flex; flex-direction: column;line-height: 0;">
+                    <p style="font-size: 12px;">Tracking ID</p>
+                    <p style="font-size: 14px;"> 123456789 copy</p>
+                </div>
+            </div>
+            <button style="width: 100%; font-size: 13px; border: 1px solid white;padding: 8px;border-radius: 8px;">Cancel Product</button>
+         </div>
+              </div>
+           
+            
+            </div>
+
+          </div>
+        
+        </div>
+        
+        
+<!-- Mobile coupon Code -->
+
+  <script>
+      // Function to set the progress
+      function setProgress(stage) {
+        const dots = document.querySelectorAll(".progress-dot");
+
+        // Ensure the stage is between 1 and 5
+        stage = Math.min(5, Math.max(1, stage));
+
+        // Update the dot classes
+        dots.forEach((dot, index) => {
+          if (index < stage) {
+            dot.classList.add("completed");
+          } else {
+            dot.classList.remove("completed");
+          }
+        });
+      }
+
+      // Example usage: Set the progress to stage 3 (Shipped)
+      setProgress(3);
+    </script>
+
+
+<div>
+  
+</div>
+
+
+
+
+
+   <div class="Home_div">
+      <div style="width: 100%;background-color: #151515; border-radius: 8px; margin-bottom: 17px;" onclick="goToAddressPage();">
+      <div style="display: flex;     align-items: self-start; padding: 10px 5px 1px 10px;">
+       <i class="bi bi-house"></i>
+       <div style="display: flex; flex-direction: column;padding-left: 16px;">
+ <h6>Delivery Address</h6>
+        <p style="font-size: 11px;">2436 Naples Avenue, Panama City FL 32405</p>
+       </div>
+       
+      </div>
+     </div>
+   </div>
+
+
+
+
+
+
+
+
+<div class="coupon_subTotal" style="margin-bottom: 50px; padding: 15px 15px 0px 15px; border-radius: 8px;">
+  <h6 style="padding-bottom: 10px;">Order Payment Details</h6>
+<div style="display: flex; justify-content: space-between;">
+<p>Order Amount</p> <p class="amount_coupon">₹ 12,000,0</p>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <p>Order Savings</p> <p class="amount_coupon">- ₹ 2000</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;">
+    <p>Coupon savings</p> <p class="amount_coupon">₹ 1000,0</p>
+    </div>
+     <div style="display: flex; justify-content: space-between;">
+    <p>Convenience Fee</p> <p class="amount_coupon">₹ 1000,0</p>
+    </div> <div style="display: flex; justify-content: space-between;">
+    <p>Order Total</p> <p class="amount_coupon">₹ 1000,0</p>
+    </div>
+  
+</div>
+
+
+                </div>
+       
+      
+    
+        
+      </div>
+     </div>
+
+
+    
+ 
+  </div>
+
+  </div>
+</div>
+
+<hr>
+<!-- mobile footer -->
+<!-- <div style="position: fixed; bottom:45px;background-color: rgb(255, 255, 255); width: 100%;color: black;height: 30px;" class="cartformob">
+<div style="display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;">
+  🎉&nbsp <p style="font-weight:500; font-size: 12px;"> Cheers! &nbsp </p> <span style="font-size: 12px;font-weight: bold; "> You saved ₹1,200</span>
+</div>
+</div>
+
+<div class="cartformob">
+  <div style="position: fixed; bottom: 0px;background-color: black; width: 100%; display: flex;" class="">
+<div style="width: 40%; display: flex;flex-direction: column;">
+<p style="   text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    /* right: 61%; */
+    top:20%;">₹ 1000</p>
+   
+   <p style=" text-align: center;
+    align-items: center;
+    position: absolute;
+    font-size: 12px;
+    left: 10px;
+    /* right: 61%; */
+    top:60%;"">Grand Total</p>
+</div>
+
+    
+<div style="width: 60%;">
+<button style= "   background-color: #18578c;
+    height: 100%;
+    width: 100%;
+    padding: 13px;
+    font-size: 14px;" onclick="ShippingPage();">Continue to Shipping</button>
+</div>
+</div>
+
+</div> -->
+               <!-- div.mobileFooter  -->
+            
+            <!-- MobileLogin -->
+            <div id="mySidenavSignUp" class="sidenav">
+            <div class="mobilelogin">
+              <div style="display: flex; justify-content: space-between;">
+                <P style="padding-left: 15px;">LOGIN</P>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavSignup()">&times;</a>
+               </div>
+              <hr style="margin: 0;">
+              
+              <input type="text" name="" id="" class="mobileLoginbox" placeholder="Email">
+              <input type="text" name="" id="" class="mobileLoginbox" placeholder="Password" style="margin-top: 20px;">
+              <p style="text-decoration: underline; margin-top: 10px;">Forgot password?</p>
+              
+              <button class="mobile_signinbtn">Sign in</button>
+              <p style="text-align: center;
+              font-size: 13px;
+              color: #ffffff7a;
+              padding-top: 19px;
+            ">Or join with </p>
+             <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <img class="img_facebook" src="assets/5365678_fb_facebook_facebook logo_icon.png" alt="" >
+            <img class="img_facebook" src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"  alt="">
+            </div>
+              <button onclick="displysignUpForm()"><p style="text-decoration: underline; margin-top: 20px;"  id="CreateyourAccount">New customer? Create your account</p></button>
+            </div>
+            
+            <div class="mobileSignup">
+           <div style="display: flex; justify-content: space-between;">
+    <P>Signup</P>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNavSignup()">&times;</a>
+   </div>
+              <hr style="margin: 0;">
+              
+              <input type="text" name="" id="" class="mobileLoginbox" placeholder="Full Name">
+              <input type="text" name="" id="" class="mobileLoginbox" placeholder="Email" style="margin-top: 20px;">
+              <input type="text" name="" id="" class="mobileLoginbox" placeholder="Password" style="margin-top: 20px;">
+              <input type="text" name="" id="" class="mobileLoginbox" placeholder="Confirm Password" style="margin-top: 20px;">
+              
+            
+              
+              <button class="mobile_signinbtn" style="margin-top: 20px;">Create account</button>
+               <p style="text-align: center;
+               font-size: 13px;
+               color: #ffffff7a;
+               padding-top: 19px;
+            ">Or join with </p>
+              <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <img class="img_facebook" src="assets/5365678_fb_facebook_facebook logo_icon.png" alt="" >
+            <img class="img_facebook" src="assets/Banner/1298745_google_brand_branding_logo_network_icon.png"  alt="">
+            </div>
+            <button onclick="displyLoginUpForm()"><p style="text-decoration: underline; margin-top: 20px;">Already have an account? Login heree</p></button>
+            </div>
+            </div>
+
+   
+    <!-- footer -->
+    <div class="system_footer">
+      <footer class="bg-black text-center text-white">
+          <!-- Grid container -->
+          <div class="container p-4">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                  <!-- Google -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                  <!-- Instagram -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                  <!-- Linkedin -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                  <!-- Github -->
+
+              </section>
+
+
+              <!-- Section: Links -->
+              <section class="mb-4">
+                  <!--Grid row-->
+                  <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase"></h5>
+                              <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 100%;" alt="">
+                              <p style="padding-top: 20px;">THE INTERIOR IS A CHOICE OF FREEDOM <br> FOR A HEALTHY AND HAPPY LIFE!!</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase">Links</h5>
+                              <ul class="list-unstyled mb-0">
+                                  <p class="tooter_p">Terms $ Conditions</p>
+                                  <p class="tooter_p">Return Policy</p>
+                                  <p class="tooter_p">About</p>
+                                  <p class="tooter_p">Privacy Policy</li>
+                              </ul>
+                          </div>
+                      </div>
+                    
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                          <div class="footer_h">
+                              <h5 class="text-uppercase">MY ACCOUNT</h5>
+                              <ul class="list-unstyled mb-0">
+                                  <p class="tooter_p">Login</p>
+                                  <p class="tooter_p">Order History</p>
+                                  <p class="tooter_p">My Wishlist</p>
+                                  <p class="tooter_p">Track Order</p>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer_h">
+                            <h5 class="text-uppercase">CONTACT INFO</h5>
+                            <p style="font-size: 14px; color: #ffffff8c; margin: 0px;">Address :</p>
+                            <p class="tooter_p">R.S.No: 139, Manapet Road, Kanniakoil Bahour Commune, Village, Manapet, Puducherry 607402</p>
+                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Phone :</p>
+                            <p class="tooter_p">+91 72003 92758</p>
+                            <p style="font-size: 14px;  color: #ffffff8c; margin: 0px;">Email:</p>
+                            <p class="tooter_p">moddwell@tprsenterprises.in/p>
+                        </div>
+                    </div>
+                      <!--Grid column-->
+
+                      <!-- Repeat the above grid column structure for additional link sections -->
+
+                  </div>
+                  <!--Grid row-->
+              </section>
+              <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: #37363a; font-size: 14px; text-align: center;margin-bottom: 5px; padding: 0px; height: 35px; line-height: 0px;">
+            <div style="margin-bottom: 10px;">
+                <p class="text-center">
+                    Copyright@ 2022 Moddwell. All Rights Reserved Powered by
+                    <a style="color: rgb(255, 255, 255);" href="https://Moddwell.com/">Zeekoi Enterprise Solutions.</a>
+                </p>
+            </div>
+        </div>
+        
+        
+          <!-- Copyright -->
+      </footer>
+  </div>
+
+  <script>
+    function OpenAddToCartPage(){
+    window.location.href = "mobileCouponPage.html";
+    }
+function openhomepage(){
+  window.location.href = "index.html";
+}
+function WishlistPage(){
+    window.location.href = "mobileWishListPage.html";
+}
+function OrderPage(){
+   window.location.href = "MobilePurchaseHistory.html";
+}
+function toggleList(listId) {
+  var list = document.getElementById(listId);
+  if (list.style.display === "none" || list.style.display === "") {
+    // Check for both 'none' and '' (initial)
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
+}
+
+    function change(item) {
+  
+        const buttons = document.querySelectorAll("ion-icon");
+        buttons.forEach(function(obj) {
+            obj.classList.remove("activee");
+        });
+        item.classList.add("activee");
+    }
+  
+    function displysignUpForm() {
+    // Assuming there's only one element with each class
+    document.getElementsByClassName("mobileSignup")[0].style.display = "block";
+    document.getElementsByClassName("mobilelogin")[0].style.display = "none";
+  }
+  function displyLoginUpForm() {
+    // Assuming there's only one element with each class
+    document.getElementsByClassName("mobileSignup")[0].style.display = "none";
+    document.getElementsByClassName("mobilelogin")[0].style.display = "block";
+  }
+  
+  function openNavSignup() {
+    document.getElementById("mySidenavSignUp").style.width = "300px";
+  }
+  
+  function closeNavSignup() {
+    document.getElementById("mySidenavSignUp").style.width = "0";
+  }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector('.scrollable-content');
+      let lastScrollTop = 0;
+  
+      container.addEventListener('scroll', function() {
+        const st = container.scrollTop;
+        if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+          // Scrolling down and at the bottom of the container
+          window.scrollBy({
+            top: 100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        } else if (st < lastScrollTop && container.scrollTop === 0) {
+          // Scrolling up and at the top of the container
+          window.scrollBy({
+            top: -100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        }
+        lastScrollTop = st;
+      });
+    });
+  </script>
+    <script>
+      function ShippingPage(){
+        window.location.href = "checkOut.html";
+      }
+      function change(item) {
+        const buttons = document.querySelectorAll("ion-icon");
+        buttons.forEach(function (obj) {
+          obj.classList.remove("activee");
+        });
+        item.classList.add("activee");
+      }
+
+      function displysignUpForm() {
+        // Assuming there's only one element with each class
+        document.getElementsByClassName("mobileSignup")[0].style.display =
+          "block";
+        document.getElementsByClassName("mobilelogin")[0].style.display =
+          "none";
+      }
+      function displyLoginUpForm() {
+        // Assuming there's only one element with each class
+        document.getElementsByClassName("mobileSignup")[0].style.display =
+          "none";
+        document.getElementsByClassName("mobilelogin")[0].style.display =
+          "block";
+      }
+    </script>
+
+    <!-- CustomHeight -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="details.js"></script>
+    <script src="addToCard.js"></script>
+  </body>
+</html>

@@ -171,3 +171,5 @@ function mobileWishList() {
 function orders() {
     window.location.href = "addToCartPage.html";
 }
+
+

@@ -4,36 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      .container {
+      .progress-container {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .progress-line {
         position: relative;
-        display: inline-block;
+        width: 4px;
+        height: 300px;
+        background-color: #e0e0e0;
+        margin-right: 20px;
+        border-radius: 2px;
       }
 
-      .container img {
-        width: 100%;
-        display: block;
-      }
-
-      .closemodal_1 {
+      .progress-dot {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        background-color: rgba(255, 255, 255, 0.7);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 16px;
+        background-color: #e0e0e0;
         border-radius: 50%;
-        padding: 5px;
-        cursor: pointer;
-        z-index: 1;
+        transition: background-color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+      }
+
+      .progress-dot.completed {
+        background-color: #4caf50;
+        transform: translateX(-50%) scale(1.2);
+      }
+
+      .stage {
+        display: flex;
+        align-items: center;
+        height: 25%;
+        margin-bottom: 40px;
+      }
+
+      .stage:last-child {
+        margin-bottom: 0;
+      }
+
+      .stage-label {
+        margin-left: 16px;
+        font-size: 14px;
+        color: #000;
+        white-space: nowrap;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <img
-        src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1946"
-        alt=""
-      />
-      <span class="closemodal_1">&times;</span>
+    <div class="progress-container">
+      <div class="progress-line">
+        <div class="progress-dot" style="top: 0%" id="dot1"></div>
+        <div class="progress-dot" style="top: 24%" id="dot2"></div>
+        <div class="progress-dot" style="top: 50%" id="dot3"></div>
+        <div class="progress-dot" style="top: 75%" id="dot4"></div>
+        <div class="progress-dot" style="top: 100%" id="dot5"></div>
+      </div>
+      <div>
+        <div class="stage" id="stage1">
+          <div class="stage-label">Order Placed</div>
+        </div>
+        <div class="stage" id="stage2">
+          <div class="stage-label">Processing</div>
+        </div>
+        <div class="stage" id="stage3">
+          <div class="stage-label">Shipped</div>
+        </div>
+        <div class="stage" id="stage4">
+          <div class="stage-label">Out for Delivery</div>
+        </div>
+        <div class="stage" id="stage5">
+          <div class="stage-label">Delivered</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -1007,7 +1007,7 @@ input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  border-bottom: 1px solid white; /* 4 pixels */
+border-bottom: 1px solid #ffffff3b;
 }
 /* Style for the list */
 .list {

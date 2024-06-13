@@ -377,7 +377,10 @@
             <h4 class="product_Price_strike"><strike>5012.00</strike></h4>
             <h4 class="product_Price_strike" style="color: yellow;">(75% OFF)</h4>
           </div>
-
+          <p style="    line-height: 0px;
+    font-size: 13px;
+    padding-top: 4px;
+    color: #ffffff8c;">🥰 Save ₹5000</p>
            <!-- Social Media Icon -->
 
            <div class="socialMediaIcon">
@@ -1427,8 +1430,8 @@ document.body.classList.remove("modal-open_m");
     </div>
 
     <!-- Mobile TabBar -->
-    <div class="container" id="mobileTabBar">
-      <div class="row">
+    <div  id="mobileTabBar" style="width: 100%;">
+      <div >
 
 
           <div style="display: flex;flex-direction: column;">
@@ -1440,52 +1443,77 @@ document.body.classList.remove("modal-open_m");
               <ul class="list" id="myList1">
                    <!-- DetailsBox -->
             <div class="DetailsOuterBox">
-              <!-- <h3 class="details_head">Details</h3> -->
-                <div class="inerBox">
-                 <div class="inner_flex_content">
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Name</Div>
-                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Size</Div>
-                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Thickness</Div>
-                    <Div class="innerDetails_head_content">40mm</Div>
-                  </div>
-                 </div>
-                 <div class="inner_flex_content">
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Name</Div>
-                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Size</Div>
-                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Thickness</Div>
-                    <Div class="innerDetails_head_content">40mm</Div>
-                  </div>
-                 </div>
-                 <div class="inner_flex_content">
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Name</Div>
-                    <Div class="innerDetails_head_content">Heart Over Hearts - Large - (914mm x 610mm)</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Size</Div>
-                    <Div class="innerDetails_head_content">914mm Width x 610mm Height</Div>
-                  </div>
-                  <div class="innerDetails">
-                    <Div class="innerDetails_head">Thickness</Div>
-                    <Div class="innerDetails_head_content">40mm</Div>
-                  </div>
-                 </div>
-                
-                </div>
+            
+                <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+    font-weight: normal;
+    font-size: 13px;
+    color: #ffffffba;
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+</style>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Corner Shelf Plain - (230mm x 230mm)</th>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>230mm x 230mm</td>
+   
+  </tr>
+  <tr>
+    <td>Thickness</td>
+    <td>8 mm</td>
+   
+  </tr>
+  <tr>
+    <td>Shape</td>
+    <td>Diamond</td>
+   
+  </tr>
+  <tr>
+    <td>Frame Type</td>
+    <td>Not applicable</td>
+   
+  </tr>
+  <tr>
+    <td>Mounting Type</td>
+    <td>Wall Fittings</td>
+  
+  </tr>
+  <tr>
+    <td>Light Color</td>
+    <td>Not applicable</td>
+   
+  </tr>
+   <tr>
+    <td>Control Mechanism</td>
+    <td>Not applicable</td>
+   
+  </tr>
+   <tr>
+    <td>Defogger</td>
+    <td>Not applicable</td>
+   
+  </tr>
+</table>
+
+
                <div style="line-height: 0px;">&nbsp;</div>
             </div>
               </ul>
@@ -1534,116 +1562,926 @@ padding-top: 12px;">
   <div class="row" id="mobile_similar_products">
     
   
+ <div class="Add_on"><p>Add On</p></div>
+    <hr />
+
+
+
+ <style>
+      .gallery-wrapper {
+        overflow: hidden;
+        margin: auto;
+        border-radius: 10px;
+        max-width: 100%;
+        width: 713px;
+      }
+
+      .gallery {
+        display: flex;
+        height: 140px;
+        cursor: grab;
+        user-select: none;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .gallery::-webkit-scrollbar {
+        display: none;
+      }
+
+      .gallery:active {
+        cursor: grabbing;
+      }
+
+      .gallery-item {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        object-fit: cover;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .gallery-item img {
+        /* border-radius: 50%; */
+        width: 100px;
+        height: 100px;
+        background-color: #ffffff21;
+      }
+
+      .gallery-label {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+     
+    </style>
+
+    <div class="container">
+      <div class="row">
+        <div class="gallery-wrapper">
+          <div class="gallery">
+            <div class="gallery-item" onclick="goTomobileImageCardshtml();">
+              <img
+                src="https://www.glazonoid.com/cdn/shop/collections/Sophire-1.jpg?v=1708596893&width=600"
+                alt="Placeholder 1"
+              />
+              <div class="gallery-label">Corner shelf</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Digital Frame.png"
+                alt="Placeholder 2"
+              />
+              <div class="gallery-label">Digital frame</div>
+            </div>
+            <!-- Add more gallery items with images and labels -->
+            <div class="gallery-item">
+              <img src="assets/png/Icons_LED Mirror.png" alt="Placeholder 3" />
+              <div class="gallery-label">LED mirror</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Mirror Cabinet.png"
+                alt="Placeholder 4"
+              />
+              <div class="gallery-label">Mirror cabinet</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Magnetic Board.png"
+                alt="Placeholder 5"
+              />
+              <div class="gallery-label">Magnetic board</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Magnetic Board.png"
+                alt="Placeholder 5"
+              />
+              <div class="gallery-label">Magnetic board</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Magnetic Board.png"
+                alt="Placeholder 5"
+              />
+              <div class="gallery-label">Magnetic board</div>
+            </div>
+            <div class="gallery-item" onclick="categoryPage();">
+              <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
+              <div class="gallery-label">View More</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function categoryPage() {
+        window.location.href = "categorypage.html";
+      }
+      function goTomobileImageCardshtml() {
+        window.location.href = "mobileImageCards.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const gallery = document.querySelector(".gallery");
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        gallery.addEventListener("mousedown", (e) => {
+          isDown = true;
+          gallery.classList.add("active");
+          startX = e.pageX - gallery.offsetLeft;
+          scrollLeft = gallery.scrollLeft;
+          e.preventDefault();
+        });
+
+        gallery.addEventListener("mouseleave", () => {
+          isDown = false;
+          gallery.classList.remove("active");
+        });
+
+        gallery.addEventListener("mouseup", () => {
+          isDown = false;
+          gallery.classList.remove("active");
+        });
+
+        gallery.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - gallery.offsetLeft;
+          const walk = (x - startX) * 2; // Adjust scroll speed
+          gallery.scrollLeft = scrollLeft - walk;
+        });
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="Add_on"><p>Add On</p></div>
     <hr />
-    <div class="col-md-3 col-sm-6">
-      <div class="product-grid">
-        <div class="product-image">
-            <a href="#" class="image">
-                <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
-            </a>
-            <span class="product-discount-label">-33%</span>
-                                    <ul class="product-links">
-                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
+ <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-6">
+            <div class="product-gridd">
+              <div class="product-imagee">
+                <a href="#" class="imagee">
+                  <img
+                    class="pic-1"
+                    src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946"
+                  />
+                </a>
+                <span class="product-discount-labell">-33%</span>
+                <ul class="product-linkss">
+                  <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                   <li>
+                    <button data-tip="Add to Wishlist" id="addTicketBtn_1">
+                        <i class="bi bi-eye-fill"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-contentt">
+                <h2 style="font-size: 13px;">LED Mirror</h2>
+                <div
+                  style="
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1; /* Number of lines to display */
+                    overflow: hidden;
+                  "
+                >
+                  <h3 class="title">
+                    Pebble-Shaped Mirror With Lights | 5-Year y
+                  </h3>
+                </div>
 
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <h2>LED Mirror</h2>
-                                    <div style="display: -webkit-box;
-                                -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 1; /* Number of lines to display */
-                                overflow: hidden;">
-                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year y</h3>
-                                    </div>
+                <div class="price">$79.90</div>
+                
+              </div>
+            </div>
+          </div>
+      <div class="col-md-3 col-sm-6 col-6">
+            <div class="product-gridd">
+              <div class="product-imagee">
+                <a href="#" class="imagee">
+                  <img
+                    class="pic-1"
+                    src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946"
+                  />
+                </a>
+                <span class="product-discount-labell">-33%</span>
+                <ul class="product-linkss">
+                  <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                   <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-contentt">
+                <h2 style="font-size: 13px;">LED Mirror</h2>
+                <div
+                  style="
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1; /* Number of lines to display */
+                    overflow: hidden;
+                  "
+                >
+                  <h3 class="title">
+                    Pebble-Shaped Mirror With Lights | 5-Year y
+                  </h3>
+                </div>
+
+                <div class="price">$79.90</div>
+                <!-- <div class="add-to-cart" href="#">add to cart</div> -->
+              </div>
+            </div>
+          </div>
+       <div class="col-md-3 col-sm-6 col-6">
+            <div class="product-gridd">
+              <div class="product-imagee">
+                <a href="#" class="imagee">
+                  <img
+                    class="pic-1"
+                    src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946"
+                  />
+                </a>
+                <span class="product-discount-labell">-33%</span>
+                <ul class="product-linkss">
+                  <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                   <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-contentt">
+                <h2 style="font-size: 13px;">LED Mirror</h2>
+                <div
+                  style="
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1; /* Number of lines to display */
+                    overflow: hidden;
+                  "
+                >
+                  <h3 class="title">
+                    Pebble-Shaped Mirror With Lights | 5-Year y
+                  </h3>
+                </div>
+
+                <div class="price">$79.90</div>
+                <!-- <div class="add-to-cart" href="#">add to cart</div> -->
+              </div>
+            </div>
+          </div>
+<div class="col-md-3 col-sm-6 col-6">
+            <div class="product-gridd">
+              <div class="product-imagee">
+                <a href="#" class="imagee">
+                  <img
+                    class="pic-1"
+                    src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946"
+                  />
+                </a>
+                <span class="product-discount-labell">-33%</span>
+                <ul class="product-linkss">
+                  <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                   <li>
+                    <button data-tip="Add to Wishlist">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-contentt">
+                <h2 style="font-size: 13px;">LED Mirror</h2>
+                <div
+                  style="
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1; /* Number of lines to display */
+                    overflow: hidden;
+                  "
+                >
+                  <h3 class="title">
+                    Pebble-Shaped Mirror With Lights | 5-Year y
+                  </h3>
+                </div>
+
+                <div class="price">$79.90</div>
+                <!-- <div class="add-to-cart" href="#">add to cart</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+ <style>
+        /* product card */
+
+.product-imagee {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-imagee img {
+  transition: transform 0.3s ease;
+}
+
+.product-imagee:hover img {
+  transform: scale(1.1);
+  /* Adjust the scale factor for desired zoom level */
+}
+
+.product-gridd {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.product-gridd:hover {
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-gridd .product-imagee {
+  position: relative;
+}
+
+.product-gridd .product-imagee a.imagee {
+  display: block;
+}
+
+.product-gridd .product-imagee img {
+  width: 100%;
+  height: auto;
+}
+
+.product-gridd .product-discount-labell {
+  color: #fff;
+  background: #18578c;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+.product-gridd .product-linkss {
+        width: 145px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 26%;
+    right: -175px;
+    transition: all 0.4s ease 0s;
+}
+
+.product-gridd .product-linkss {
+  opacity: 1;
+}
+
+.product-gridd .product-linkss li {
+  display: block;
+  margin: 0 2px;
+}
+
+.product-gridd .product-linkss li button {
+    color: #18578c;
+    background: #fff;
+    font-size: 14px;
+        line-height: 31px;
+
+    width: 31px;
+    height: 29px;
+    border-radius: 50px;
+    display: block;
+    position: relative;
+    transition: all 0.4s ease-out 0s;
+    margin-bottom: 5px;
+}
+
+.product-gridd .product-linkss li button:hover {
+  color: #fff;
+  background: #78a206;
+  box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product-gridd .product-linkss li button:before,
+.product-gridd .product-linkss li buttom:after {
+  content: attr(data-tip);
+  color: #fff;
+  background-color: #555;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  display: none;
+  transform: translateX(-10%);
+  position: absolute;
+  left: -100px;
+  /* Adjusted to position the tooltip to the left */
+  top: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.product-gridd .product-linkss li button:after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  transform: translateX(-50%) rotate(45deg);
+  top: 20px;
+  left: -15px;
+  z-index: 1px;
+} */
+
+ .product-gridd .product-linkss li button:hover:before,
+.product-gridd .product-linkss li buttom:hover:after {
+  display: block;
+} 
+
+.product-contentt {
+  text-align: start;
+}
 
 
-                                    <div class="price">$79.90</div>
-                                    <div class="add-to-cart" href="#">add to cart</div>
-                                </div>
-                            </div>
+
+.product-gridd .product-contentt {
+  padding: 12px 12px 15px;
+  position: relative;
+}
+
+.product-gridd .rating {
+  padding: 0;
+  margin: 0 0 8px;
+  list-style: none;
+}
+
+.product-gridd .rating li {
+  color: #78a206;
+  font-size: 14px;
+}
+
+.product-gridd .rating .far {
+  color: #808080;
+}
+
+.product-gridd .title {
+  font-size: 11px;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  margin: 0 0 15px;
+}
+
+.product-gridd .title a {
+  color: #2c2c2c;
+  transition: all 0.3s ease 0s;
+}
+
+.product-gridd .title a:hover {
+  color: #78a206;
+}
+
+.product-gridd .price {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  padding-top: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.product-gridd .price span {
+  color: #999;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.product-gridd:hover .price {
+  opacity: 0;
+}
+
+.product-gridd .add-to-cart {
+    color: #fff;
+    background: #18578c;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 31px;
+    width: 90%;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transition: all 0.4s ease-out;
+}
+
+/* .product-grid .add-to-cart:hover {
+  background-color: #ffffff;
+  color: #18578c;
+} */
+
+.product-gridd .add-to-cart {
+  opacity: 1;
+  bottom: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .product-gridd {
+    margin: 0 0 30px;
+  }
+}
+.product-gridd.title {
+  font-size: 15px;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  margin: 0 0 15px;
+}
+ /* popUpSizeContainer */
+
+   /* Styles for the modal background */
+   /* Size head */
+      .modal_1 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+       
+        background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+      }
+
+      /* Modal content */
+      .modal-content_1 {
+   background-color: rgb(21, 21, 21);
+    /* margin: 8% auto; */
+    padding: 2px;
+    width: 332px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    height: 532px;
+    overflow-x: hidden;
+      }
+
+      /* Close button */
+      .closemodal_1 {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .closemodal_1:hover,
+      .closemodal_1:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Class to hide overflow on body */
+      .modal-openmodal_1 {
+        overflow: hidden;
+      }
+      .sizehead{
+     font-size: 13px;
+    font-weight: 400;
+    text-align: start;
+    padding-top: 12px;
+    padding-left: 5px;
+      }
+      .AddToCartPopUp{
+           width: 99%;
+    background: #18578c;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-bottom: 10px;
+      }
 
 
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product-grid">
-                                <div class="product-image">
-                                    <a href="#" class="image">
-                                        <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
-                                    </a>
-                                    <span class="product-discount-label">-33%</span>
-                                    <ul class="product-links">
-                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <h2>LED Mirror</h2>
-                                    <div style="display: -webkit-box;
-                                -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 1; /* Number of lines to display */
-                                overflow: hidden;">
-                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
-                                    </div>
+      /* The scroll bar container */
+.modal-content_1::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
 
-                                    <div class="price">$79.90</div>
-                                    <div class="add-to-cart" href="#">add to cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product-grid">
-                                <div class="product-image">
-                                    <a href="#" class="image">
-                                        <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
-                                    </a>
-                                    <span class="product-discount-label">-33%</span>
-                                    <ul class="product-links">
-                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <h2>LED Mirror</h2>
-                                    <div style="display: -webkit-box;
-                                -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 1; /* Number of lines to display */
-                                overflow: hidden;">
-                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
-                                    </div>
+/* The track (background) of the scrollbar */
+.modal-content_1::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px;  /* Rounded corners for the track */
+}
 
-                                    <div class="price">$79.90</div>
-                                    <div class="add-to-cart" href="#">add to cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product-grid">
-                                <div class="product-image">
-                                    <a href="#" class="image">
-                                        <img class="pic-1" src="https://www.glazonoid.com/cdn/shop/files/Artboard1_7_7e488d27-db1f-4c20-ac23-06f5d277bc4d.webp?v=1712361025&width=713">
-                                    </a>
-                                    <span class="product-discount-label">-33%</span>
-                                    <ul class="product-links">
-                                        <li><button data-tip="Add to Wishlist"><i class="fas fa-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <h2>LED Mirror</h2>
-                                    <div style="display: -webkit-box;
-                                -webkit-box-orient: vertical;
-                                -webkit-line-clamp: 1; /* Number of lines to display */
-                                overflow: hidden;">
-                                        <h3 class="title">Pebble-Shaped Mirror With Lights | 5-Year Warrdddddddddddddddddddddanty</h3>
-                                    </div>
+/* The scrollbar handle (thumb) */
+.modal-content_1::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
 
-                                    <div class="price">$79.90</div>
-                                    <div class="add-to-cart" href="#">add to cart</div>
-                                </div>
-                            </div>
-                        </div>
+/* The scrollbar handle on hover */
+.modal-content_1::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+.closemodal_1 {
+       position: absolute;
+    top: 4px;
+    right: 6px;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+    width: 27px;
+    /* height: 50px; */
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+      }
+      
+@media only screen and (max-width: 600px) {
+    .AddOnContainerBox {
+        width: 96%;
+        margin-top: 10px;
+    }
+    .SizeBox_mobile {
+    margin: 3px;
+    background: #18578c;
+    border: 2px solid #18578c;
+    cursor: pointer;
+    display: flex;
+    width: 142px;
+    font-size: 12px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+}
+  .bi-eye-bold {
+            font-weight: bold; /* This might not always work as expected */
+        }
+     </style>
+
+  <div id="myModal_1" class="modal_1" style="color: black">
+       
+      <!-- Modal content -->
+     <div class="container">
+        <div class="row">
+             <div class="modal-content_1">
+      <div class=" position: relative;
+        display: inline-block;">
+          <img style="width: 100%;" src="https://www.glazonoid.com/cdn/shop/products/Extended-frame.jpg?v=1709814876&width=1946" alt="">
+               <span class="closemodal_1" >&times;</span>
+      </div>
+
+        <div style="display: flex; justify-content: space-between">
+          <p class="sizehead">Capsule Shaped LED Mirror with Backlit | 5-Year Warranty, Premium Quality, Customizable LED Lighting</p>
+      
+       
+         
+        </div>
+       <div style="display: flex; flex-direction: column; align-items: start;padding-left: 5px;">
+             <h6>Add On</h6>
+         
+             <div style="height: 1px;background-color: white;width: 100%;"></div>
+               <div class="AddOnContainer" style="padding-top: 10px; ">
+           
+            <div class="AddOnContainerBox" id="addonContainer1" >
+              <div style="display: flex; align-items: center;">
+                  <form class="buttons">
+                      <label>
+                          <input type="checkbox" name="check" id="check_ed">
+                          <span class="label-text"></span>
+                      </label>
+                  </form>
+                  <div style="padding: 14px 5px 0px 8px;" id="check_ed_wrapper">
+                      <p class="warranty_p">Warranty and AMC (Optional)</p>
+                      <div style="display: flex; align-items: center;">
+                          <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+                          <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    
+
+<div class="AddOnContainerBox" id="addonContainer1">
+  <div style="display: flex; align-items: center;">
+      <form class="buttons">
+          <label>
+              <input type="checkbox" name="check"  id="check_ed_1">
+              <span class="label-text"></span>
+          </label>
+      </form>
+      <div style="padding: 14px 5px 0px 8px;"  id="check_ed_wrapper_1">
+          <p class="warranty_p">Defogger</p>
+          <div style="display: flex; align-items: center;">
+              <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+              <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+          </div>
+      </div>
   </div>
 </div>
 
+          </div>
+<div class="AddOnContainerBox" id="addonContainer1" style="margin-top: 10px; margin-bottom: 10px;">
+  <div style="display: flex; align-items: center;">
+      <form class="buttons">
+          <label>
+              <input type="checkbox" name="check" id="check_ed_2">
+              <span class="label-text"></span>
+          </label>
+      </form>
+      <div style="padding: 14px 5px 0px 8px;"  id="check_ed_wrapper_2">
+          <p class="warranty_p">Additional Light colour</p>
+          <div style="display: flex; align-items: center;">
+              <p class="warranty_amount"><i style="font-size:11px;line-height: 0px;" class="fa">&#xf156;</i></p>
+              <p class="warranty_amount_rs" style="margin-left: 5px;">200</p>
+          </div>
+      </div>
+  </div>
+</div>
+<h6>Size</h6>
+         
+             <div style="height: 1px;background-color: white;width: 100%;"></div>
+<!-- size container -->
+ <div class="SizeContainer" style="margin-top: 10px; margin-bottom: 10px;" >
+            <div class="SizeBox" style="height:30px;" for="sizeboxContainer1"  for="sizeboxContainer1" onclick="document.getElementById('sizeboxContainer1').click()" >
+              <input type="radio" name="size" id="sizeboxContainer1" style="margin: 0px 0px 0px 5px;">
+              <label class="size_text"  style="font-size: 11px;">600mm x 450mm</label>
+            </div>
 
+            <div class="SizeBox" style="height:30px;" for="sizeboxContainer2" onclick="document.getElementById('sizeboxContainer2').click()" >
+              <input type="radio" name="size" id="sizeboxContainer2" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer2" class="size_text"  style="font-size: 11px;">600mm x 450mm</label>
+            </div>
+
+            
+
+          </div>
+         
+<!-- Size Mobile Container Div -->
+
+         <div class="mobile_size_container" style="margin-top: 10px; margin-bottom: 10px;" >
+          <div class="SizeContainer_mobile" >
+            <div class="SizeBox_mobile"  onclick="document.getElementById('sizeboxContainer11').click()">
+              <input type="radio" name="size" id="sizeboxContainer11" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer11" class="size_text_mobile">600 x 450</label>
+            </div>
+
+            <div class="SizeBox_mobile" onclick="document.getElementById('sizeboxContainer12').click()">
+              <input type="radio" name="size" id="sizeboxContainer12" style="margin: 0px 0px 0px 5px;">
+              <label for="sizeboxContainer12" class="size_text_mobile">600 x 450</label>
+            </div>
+
+           
+
+          </div>
+          <div class="SizeBox_mobile" onclick="document.getElementById('sizeboxContainer13').click()">
+            <input type="radio" name="size" id="sizeboxContainer13" style="margin: 0px 0px 0px 5px;">
+            <label for="sizeboxContainer13" class="size_text_mobile">600 x 450</label>
+          </div>
+
+
+         </div>
+
+<div style="height: 1px;background-color: white;width: 100%;margin-top: 10px; margin-bottom: 10px;" ></div>
+
+
+<div style="display: flex;">
+  <Strike style="font-size: 13px;">₹ 6000</Strike> <p  style="font-size: 13px;">₹ 5000</p>
+</div>
+
+
+<button class="AddToCartPopUp" >Add To Cart</button>
+
+          </div>
+            </div>
+          
+        </div>
+     </div>
+        </div>
+
+      
+<script>
+    
+      // Get the modal
+      var modal = document.getElementById("myModal_1");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("addTicketBtn_1");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("closemodal_1")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+        document.body.classList.add("modal-openmodal_1");
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-openmodal_1");
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove("modal-openmodal_1");
+        }
+      };
+
+</script>
   <!-- div.mobileFooter  -->
   <div class="custom_btn_phone">
     <div class="bottom-bar">
