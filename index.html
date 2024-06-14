@@ -985,7 +985,7 @@ document
                     <img src="assets/png/Icons 2_Mirror Cabinet copy.png" alt="Placeholder 1" />
                     <div class="gallery-label">Corner shelf</div>
                   </div>
-                  <div class="gallery-item">
+                  <div class="gallery-item" onclick=" openNavSignup();">
                     <img src="assets/png/Icons_Digital Frame.png" alt="Placeholder 2" />
                     <div class="gallery-label">Digital frame</div>
                   </div>
@@ -1017,7 +1017,7 @@ function categoryPage(){
   window.location.href = "categorypage.html";
 }
 function goTomobileImageCardshtml(){
-  window.location.href = "mobileImageCards.html";
+  window.location.href = "bestSellerProucts.html";
 }
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -1371,7 +1371,7 @@ function goTomobileImageCardshtml(){
 
 
                 <div style="display: flex;justify-content: center;">
-                    <button id="showButton" class="outline-button">View More</button>
+                    <button id="showButton" class="outline-button" style="background-color: #18578c;">View More</button>
 
                 </div>
 
@@ -1589,7 +1589,7 @@ function goTomobileImageCardshtml(){
                 <div class="container" style="padding-top: 30px;">
                     <div class="row">
 
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-md-3 col-sm-6 col-6">
                             <div class="services_container">
                                 <div class="icon_container">
                                     <img src="assets/easy returns (2).png" alt="">
@@ -1601,7 +1601,7 @@ function goTomobileImageCardshtml(){
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-md-3 col-sm-6 col-6">
                             <div class="services_container">
                                 <div class="icon_container">
                                     <img src="assets/secure (2).png" alt="">
@@ -1613,7 +1613,7 @@ function goTomobileImageCardshtml(){
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-md-3 col-sm-12 col-6">
                             <div class="services_container">
                                 <div class="icon_container">
                                     <img src="assets/happy customers (2).png" alt="">
@@ -1625,7 +1625,7 @@ function goTomobileImageCardshtml(){
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-md-3 col-sm-12 col-6">
                             <div class="services_container">
                                 <div class="icon_container">
                                     <img src="assets/fast delivery (2).png" alt="">
@@ -1912,7 +1912,7 @@ function goTomobileImageCardshtml(){
         <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
        </div>
        <div style="display: block;padding-right: 8px;">
-        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;     openNavSignup();">
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ; goToSellerPage();   ">
         </ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Best Seller</p>
    
@@ -2148,6 +2148,11 @@ margin-top: 11px; margin-left: 13px;">Subtotal : <span style="font-size: 16px;">
 
 
 <script>
+
+function goToSellerPage(){
+  window.location.href = "bestSellerProucts.html";
+}
+
   function CartPage(){
       window.location.href = "addToCartPage.html";
   }

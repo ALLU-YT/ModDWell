@@ -136,6 +136,9 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
+document.addEventListener('touchstart', function(event) {
+  closeNav();
+});
 
 function openNav() {
   document.getElementById("mySidenavv").style.width = "300px";
@@ -144,6 +147,21 @@ function openNav() {
 function closeNavv() {
   document.getElementById("mySidenavv").style.width = "0";
 }
+
+// Add event listener to close sidenav on touch
+document.addEventListener('touchstart', function(event) {
+  closeNavv();
+});
+  // Add event listener for touch to close the slider
+// document.addEventListener("touchstart", closeNavv, { once: true });
+  
+// function closeNavv() {
+//   const slider = document.getElementById("mySidenavv");
+//   slider.classList.remove("open");
+// }
+
+
+
 
 function openNavi() {
   document.getElementById("mySidenavi").style.width = "300px";
