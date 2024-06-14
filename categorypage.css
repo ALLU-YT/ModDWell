@@ -1,5 +1,12 @@
+.systemCategories{
+  display: block;
+}
 
-
+@media only screen and (max-width: 600px) {
+  .systemCategories{
+  display: none;
+}
+}
   /* CategoryHead */
 
   .category_head {
