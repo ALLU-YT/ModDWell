@@ -1,7 +1,16 @@
 .systemCategories{
   display: block;
 }
+.category_img{
+align-items: center;
+}
 
+.category_img img{
+border-radius: 8px;
+}
+.category_img p{
+font-size: 15px;
+}
 @media only screen and (max-width: 600px) {
   .systemCategories{
   display: none;
