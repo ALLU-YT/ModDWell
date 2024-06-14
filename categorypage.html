@@ -939,282 +939,35 @@
 </header>
 
 
-
-       <style>
-          .gallery-wrapperr {
-            overflow: hidden;
-            margin: auto;
-            border-radius: 10px;
-            max-width: 100%;
-            width: 713px;
-          }
-        
-          .galleryr {
-            display: flex;
-            height: 140px;
-            cursor: grab;
-            user-select: none;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-          }
-        
-          .galleryr::-webkit-scrollbar {
-            display: none;
-          }
-        
-          .galleryr:active {
-            cursor: grabbing;
-          }
-        
-          .gallery-itemr {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            object-fit: cover;
-            flex-shrink: 0;
-            position: relative;
-          }
-        
-          .gallery-itemr img {
-            /* border-radius: 50%; */
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff21;
-          }
-        
-          .gallery-labelr {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -30px;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-        
-          @media (max-width: 767px) {
-            .galleryr {
-              height: 120px;
-            }
-        
-            .gallery-itemr {
-              width: 80px;
-              height: 80px;
-            }
-        
-            .gallery-itemr img {
-              width: 80px;
-              height: 80px;
-            }
-        
-            .gallery-labelr {
-              font-size: 12px;
-              bottom: -25px;
-            }
-          }
-        
-          @media (max-width: 575px) {
-            .galleryr {
-              height: 100px;
-            }
-        
-            .gallery-itemr {
-              width: 92px;
-              height: 60px;
-            }
-        
-            .gallery-itemr img {
-              width: 60px;
-              height: 60px;
-            }
-        
-            .gallery-labelr {
-              font-size: 10px;
-              bottom: -20px;
-            }
-          }
-        
-          @media (max-width: 599px) {
-            .gallery-wrapperr {
-              height: auto;
-            }
-        
-            .galleryr {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 10px;
-              overflow-x: hidden;
-              height: auto;
-            }
-        
-            .gallery-itemr {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: center;
-              align-items: center;
-              /* width: 100%; */
-              height: auto;
-              border-radius: 50%;
-              /* margin: 10px 0; */
-            }
-        
-            .gallery-itemr img {
-              width: 80%;
-              height: auto;
-              /* border-radius: 50%; */
-            }
-        
-            .gallery-labelr {
-              position: static;
-              transform: none;
-              margin-top: 5px;
-              font-size: 13px;
-              /* padding-right: 10px; */
-             
-              text-align: center;
-        
-            }
-          }
-        
-          @media (min-width: 600px) {
-            .galleryr {
-              justify-content: space-between;
-            }
-        
-            .gallery-itemr{
-              margin: 10px;
-            }
-            .gallery-labelr {
-              position: static;
-              transform: none;
-              margin-top: 5px;
-              font-size: 12px;
-              padding-right: 10px;
-             
-              text-align: center;
-        
-            }
-          }
-        </style>
-    
-        <div class="container" style="margin-top: 70px;">
-          <div class="row">
-            <div class="col-12">
-              <div class="gallery-wrapperr">
-                <div class="galleryr">
-                  <div class="gallery-itemr" onclick="goTomobileImageCardshtml();">
-                    <img src="assets/Images Category/Corner Shelf 2.jpg" alt="Placeholder 1" />
-                    <div class="gallery-labelr">Corner shelf</div>
-                  </div>
-                  <div class="gallery-itemr" onclick=" openNavSignup();">
-                    <img src="assets/Images Category/Digital Board.jpg" alt="Placeholder 2" />
-                    <div class="gallery-labelr">Digital frame</div>
-                  </div>
-                  <!-- Add more gallery items with images and labels -->
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/LED Mirror2.jpg" alt="Placeholder 3" />
-                    <div class="gallery-labelr">LED mirror</div>
-                  </div>
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/Mirror Cabinet.jpg" alt="Placeholder 4" />
-                    <div class="gallery-labelr">Mirror cabinet</div>
-                  </div>
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/Magnetic Board.jpg" alt="Placeholder 5" />
-                    <div class="gallery-labelr">Magnetic board</div>
-                  </div>
-                  <div class="gallery-itemr" onclick="categoryPage();">
-                    <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
-                    <div class="gallery-labelr">View More</div>
-                  </div>
-                    <div class="gallery-itemr">
-                    <img src="assets/Images Category/LED Mirror2.jpg" alt="Placeholder 3" />
-                    <div class="gallery-labelr">LED mirror</div>
-                  </div>
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/Mirror Cabinet.jpg" alt="Placeholder 4" />
-                    <div class="gallery-labelr">Mirror cabinet</div>
-                  </div>
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/Magnetic Board.jpg" alt="Placeholder 5" />
-                    <div class="gallery-labelr">Magnetic board</div>
-                  </div>
-                  <div class="gallery-itemr" onclick="categoryPage();">
-                    <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
-                    <div class="gallery-labelr">View More</div>
-                  </div>
-                    <div class="gallery-itemr">
-                    <img src="assets/Images Category/LED Mirror2.jpg" alt="Placeholder 3" />
-                    <div class="gallery-labelr">LED mirror</div>
-                  </div>
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/Mirror Cabinet.jpg" alt="Placeholder 4" />
-                    <div class="gallery-labelr">Mirror cabinet</div>
-                  </div>
-                  <div class="gallery-itemr">
-                    <img src="assets/Images Category/Magnetic Board.jpg" alt="Placeholder 5" />
-                    <div class="gallery-labelr">Magnetic board</div>
-                  </div>
-                  <div class="gallery-itemr" onclick="categoryPage();">
-                    <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
-                    <div class="gallery-labelr">View More</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-       
-          <script>
-function categoryPage(){
-  window.location.href = "categorypage.html";
-}
-function goTomobileImageCardshtml(){
-  window.location.href = "bestSellerProucts.html";
-}
-
-            document.addEventListener("DOMContentLoaded", function () {
-              const gallery = document.querySelector(".gallery");
-              let isDown = false;
-              let startX;
-              let scrollLeft;
+<div class="container" style="margin-top: 65px;">
+<div class="row">
+  <div class="col-4">
+    <div class="categoty_img">
+      <div style="display: flex;flex-direction: column;">
+        <img src="assets/Images Category/Corner Shelf 2.jpg" alt="">
+        <p>Corner Shelf</p>
+      </div>
+    </div>
+  </div>
+   <div class="col-4">
+    <div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="assets/Images Category/Corner Shelf 2.jpg" alt="">
+        <p>Corner Shelf</p>
+      </div>
+    </div>
+  </div>
+   <div class="col-4">
+    <div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="assets/Images Category/Corner Shelf 2.jpg" alt="">
+        <p>Corner Shelf</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
       
-              gallery.addEventListener("mousedown", (e) => {
-                isDown = true;
-                gallery.classList.add("active");
-                startX = e.pageX - gallery.offsetLeft;
-                scrollLeft = gallery.scrollLeft;
-                e.preventDefault();
-              });
-      
-              gallery.addEventListener("mouseleave", () => {
-                isDown = false;
-                gallery.classList.remove("active");
-              });
-      
-              gallery.addEventListener("mouseup", () => {
-                isDown = false;
-                gallery.classList.remove("active");
-              });
-      
-              gallery.addEventListener("mousemove", (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - gallery.offsetLeft;
-                const walk = (x - startX) * 2; // Adjust scroll speed
-                gallery.scrollLeft = scrollLeft - walk;
-              });
-            });
-          </script>
 </div>
 
 
