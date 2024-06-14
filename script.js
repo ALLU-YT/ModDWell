@@ -136,9 +136,9 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-document.addEventListener('touchstart', function(event) {
-  closeNav();
-});
+// document.addEventListener('touchstart', function(event) {
+//   closeNav();
+// });
 
 function openNav() {
   document.getElementById("mySidenavv").style.width = "300px";
@@ -149,9 +149,9 @@ function closeNavv() {
 }
 
 // Add event listener to close sidenav on touch
-document.addEventListener('touchstart', function(event) {
-  closeNavv();
-});
+// document.addEventListener('touchstart', function(event) {
+//   closeNavv();
+// });
   // Add event listener for touch to close the slider
 // document.addEventListener("touchstart", closeNavv, { once: true });
   
