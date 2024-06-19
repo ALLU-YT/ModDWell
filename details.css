@@ -44,6 +44,11 @@ header {
   /* Adjust the size as needed */
 }
 
+.SHOPPING_btn{
+  display: none;
+}
+
+
 .search-icon {
   position: absolute;
   top: 50%;
@@ -1348,6 +1353,10 @@ background-color: #ffffff;
 /* fullmediaQuery after 600px */
 /* CSS for screens wider than 600px */
 @media only screen and (max-width: 600px) {
+  .SHOPPING_btn{
+    display: block;
+  }
+  
    .product-content h2 {
     background-color: #18578c;
     width: 21%;
