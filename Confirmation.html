@@ -592,13 +592,16 @@
                               <h4 style="margin-top: 15px;">We appreciate your business and hope you enjoy your purchase</h4>
                               <div style="display: flex; justify-content: space-around ;margin-top: 15px; margin-bottom: 15px;">
                                 <button class="vieworder" onclick="ProfilePage();" style="margin-bottom: 15px;">VIEW ORDER</button>
-                                <button class="CONTINUESHOPPING">CONTINUE SHOPPING</button>
+                                <button onclick="CONTINUE();" class="CONTINUESHOPPING">CONTINUE SHOPPING</button>
                               </div>
                             </div>
                   </div>
 
                   
               <script>
+                function CONTINUE(){
+                  window.location.href = 'index.html';
+                }
               function ProfilePage(){
               window.location.href = 'purchaseHistorpage.html';
               }

@@ -1,59 +1,63 @@
-.systemCategories{
+.systemCategories {
   display: block;
 }
-.category_img{
-align-items: center;
+.category_img {
+  align-items: center;
 }
 
-.category_img img{
-border-radius: 8px;
+.category_img img {
+  border-radius: 8px;
 }
-.category_img p{
-font-size: 15px;
+.category_img p {
+  font-size: 15px;
 }
-@media only screen and (max-width: 600px) {
-  .systemCategories{
+.mobileCategory_2 {
   display: none;
 }
+@media only screen and (max-width: 600px) {
+  .mobileCategory_2 {
+    display: block;
+  }
+  .systemCategories {
+    display: none;
+  }
 }
-  /* CategoryHead */
+/* CategoryHead */
 
-  .category_head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
-  }
+.category_head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
 
-  .category_head h2 {
-    padding: 20px 10px 10px 10px;
-    font-size: 28px;
-    line-height: 32px;
-    text-transform: capitalize;
-    text-decoration: none;
-    /* Remove underline from text */
-    position: relative;
-    /* Required for positioning the pseudo-element */
-  }
+.category_head h2 {
+  padding: 20px 10px 10px 10px;
+  font-size: 28px;
+  line-height: 32px;
+  text-transform: capitalize;
+  text-decoration: none;
+  /* Remove underline from text */
+  position: relative;
+  /* Required for positioning the pseudo-element */
+}
 
-  .category_head h2::after {
-    content: "";
-    /* Create a pseudo-element */
-    position: absolute;
-    /* Position relative to the h2 element */
-    left: 50%;
-    /* Align with the center of the h2 element */
-    transform: translateX(-50%);
-    /* Center the pseudo-element horizontally */
-    bottom: -5px;
-    /* Adjust this value to control the space underneath */
-    width: 50%;
-    /* Extend the line across the width of the h2 element */
-    border-bottom: 2px solid;
-    /* Add a solid underline */
-  }
-
-
+.category_head h2::after {
+  content: "";
+  /* Create a pseudo-element */
+  position: absolute;
+  /* Position relative to the h2 element */
+  left: 50%;
+  /* Align with the center of the h2 element */
+  transform: translateX(-50%);
+  /* Center the pseudo-element horizontally */
+  bottom: -5px;
+  /* Adjust this value to control the space underneath */
+  width: 50%;
+  /* Extend the line across the width of the h2 element */
+  border-bottom: 2px solid;
+  /* Add a solid underline */
+}
 
 .footer_h {
   text-align: start;

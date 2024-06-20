@@ -263,41 +263,62 @@
     </div>
   </div>
   <!-- div.mobileFooter  -->
+ 
+<!-- mobile footer -->
+
+
+               <!-- div.mobileFooter  -->
   <div class="custom_btn_phone">
     <div class="bottom-bar">
-      <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this)"></ion-icon>
+      <div style="display: block; margin-left: 12px;" >
+        <ion-icon name="cart-outline" class="icon_new activee" onclick="change(this); ViewOrderPage();"></ion-icon>
         <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
     </div>
     
-    <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new" onclick="change(this); MobileWishLIstr();"></ion-icon>
+    <!-- <div style="display: block;">
+      <ion-icon name="heart-outline" class="icon_new" onclick="change(this); openWishListPage();"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
-  </div>
+  </div> -->
        <div style="display: block;">
-        <ion-icon name="home-outline" class="icon_new " onclick="change(this);  homePage();">
+        <ion-icon name="home-outline" class="icon_new " onclick="change(this); homepage();">
          
         </ion-icon>
     
         <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
        </div>
        <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new " onclick="change(this); cartPage();
-        ">
+        <ion-icon name="cart-outline" class="icon_new " onclick="change(this); cartPage();">
          
         </ion-icon>
     
         <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
        </div>
-       <div style="display: block;">
-        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ;      openProfile();">
+       <div style="display: block;padding-right: 12px;">
+        <ion-icon name="person-outline" class="icon_new" onclick="change(this) ; bestSeller();   ">
         </ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Profile</p>
+        <p class="bottom_bar_p" style="line-height: 0px;">Best Seller</p>
    
        </div>
        
     </div>
 </div>
+<script>
+  function homepage(){
+  window.location.href = "index.html";
+}
+  function ViewOrderPage(){
+    window.location.href = "MobileOrderDetails.html";
+  }
+  function bestSeller(){
+    window.location.href = "bestSellerProucts.html";
+  }
+ 
+  function cartPage(){
+     window.location.href = "addToCartPage.html";
+  }
+
+</script>
+
 
 
 <div id="slider" class="slider">
@@ -332,16 +353,9 @@
 </div>
 <script>
 
-  function ViewOrderPage(){
-    window.location.href = "MobileOrderDetails.html";
-  }
-  function MobileWishLIstr(){
-    window.location.href = "mobileWishListPage.html";
-  }
- 
-  function cartPage(){
-     window.location.href = "addToCartPage.html";
-  }
+
+
+
   function openProfile() {
   const slider = document.getElementById("slider");
   slider.classList.add("open");

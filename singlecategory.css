@@ -1,7 +1,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-    margin-top: -29px;
+  margin-top: 0;
 }
 
 .pagination .page-link {
@@ -23,4 +23,12 @@
 .pagination .page-link:hover {
   background-color: #f5f5f5;
   color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: -29px;
+  }
 }

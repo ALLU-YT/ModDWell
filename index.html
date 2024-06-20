@@ -80,7 +80,7 @@
  <div style="display: flex;flex-direction: column; background: black;">
 
                                 <!-- Button 1 to toggle the first list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Profile<i class="bi bi-caret-down"></i> <!-- Down arrow icon --></button>
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Products<i class="bi bi-caret-down"></i> <!-- Down arrow icon --></button>
                               <div style="width: 100%;height:10px;"></div>
                                 <!-- List 1 to be displayed -->
                                 <ul class="list" id="myList1" style="background-color: black;">
@@ -93,10 +93,11 @@
                                 </ul>
 
                                 <!-- Button 2 to toggle the second list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Products<i class="bi bi-caret-down"></i></button>
+                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Profile<i class="bi bi-caret-down"></i></button>
                                 <div style="width: 100%;height:10px;"></div>
                                 <!-- List 2 to be displayed -->
                                 <ul class="list" id="myList2" style="background-color: black;">
+                            <li class="list-item" onclick="wishllistPage();">Wishlist</li>
                                     <li class="list-item">Manage Profile</li>
                                     <li class="list-item">Login out</li>
                                     
@@ -165,8 +166,8 @@
             <p style="font-size: 11px;
             margin-right: 6px;
             padding-top: 10px;">Sign Up Now</p>
-          <button id="addTicketBtn">  <i class="bi bi-person headicon"></i></button>
-
+          <button id="">  <i class="bi bi-person headicon"></i></button>
+          <!-- addTicketBtn -->
 
           <style>
   
@@ -1021,7 +1022,7 @@ function categoryPage(){
   window.location.href = "categorypage.html";
 }
 function goTomobileImageCardshtml(){
-  window.location.href = "bestSellerProucts.html";
+  window.location.href = "categorypage.html";
 }
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -1126,7 +1127,7 @@ function goTomobileImageCardshtml(){
     <div class="col-md-3 col-sm-6" >
       <div class="product-grid">
         <div class="product-image">
-            <a  class="image">
+            <a  class="image" href="details.html">
                 <img class="pic-1" src="https://glazonoid.com/cdn/shop/products/Ovid-1.jpg?v=1703566479&width=1946">
             </a>
             <span class="product-discount-label">-33%</span>
@@ -1906,7 +1907,7 @@ function goTomobileImageCardshtml(){
          
         </ion-icon>
     
-        <p class="bottom_bar_p" style="line-height: 0px;">Welcome</p>
+        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
        </div>
        <div style="display: block;">
         <ion-icon name="cart-outline" class="icon_new " onclick="change(this); openCartSlider();">
@@ -2170,6 +2171,11 @@ function openOrderPage  () {
 function openWishListPage(){
   window.location.href = "mobileWishListPage.html";
 }
+function wishllistPage(){
+  window.location.href = "mobileWishListPage.html";
+
+}
+
   function wishListPage(){
     window.location.href = "mobileWishListPage.html";
   }
