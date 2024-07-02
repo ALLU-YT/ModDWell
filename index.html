@@ -657,84 +657,6 @@ document
         </div>
 
 
-        <div class="container" style="margin-top: 10px;">
-          <div class="row">
-            <div class="col-4">
-              <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;" onclick="BestSellerProducts();">
-                  <img  src="assets/Images Category/Corner Shelf 2.jpg" alt="">
-                  <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-             <div class="col-4">
-          <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/Digital Board.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-             <div class="col-4">
-           <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/LED Mirror2.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-           <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/Mirror Cabinet.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-              
-            </div>
-             <div class="col-4">
-              <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/Corner Shelf 2.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-             <div class="col-4">
-          <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/Digital Board.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-             <div class="col-4">
-           <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/LED Mirror2.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-           <div class="category_img">
-                <div style="display: flex;flex-direction: column; align-items: center;">
-                  <img src="assets/Images Category/Mirror Cabinet.jpg" alt="">
-            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="category_img">
-                   <div style="display: flex;flex-direction: column; align-items: center;">
-                     <img src="assets/Images Category/Mirror Cabinet.jpg" alt="">
-               <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
-                   </div>
-                 </div>
-               </div>
-          </div>
-          </div>
-
 
 
 
@@ -893,248 +815,65 @@ document
             <h2>Most Popular Categories</h2>
         </div>
       
-        <style>
-          .gallery-wrapper {
-            overflow: hidden;
-            margin: auto;
-            border-radius: 10px;
-            max-width: 100%;
-            width: 713px;
-          }
-        
-          .gallery {
-            display: flex;
-            height: 140px;
-            cursor: grab;
-            user-select: none;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-          }
-        
-          .gallery::-webkit-scrollbar {
-            display: none;
-          }
-        
-          .gallery:active {
-            cursor: grabbing;
-          }
-        
-          .gallery-item {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            object-fit: cover;
-            flex-shrink: 0;
-            position: relative;
-          }
-        
-          .gallery-item img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff21;
-          }
-        
-          .gallery-label {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -30px;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-        
-          @media (max-width: 767px) {
-            .gallery {
-              height: 120px;
-            }
-        
-            .gallery-item {
-              width: 80px;
-              height: 80px;
-            }
-        
-            .gallery-item img {
-              width: 80px;
-              height: 80px;
-            }
-        
-            .gallery-label {
-              font-size: 12px;
-              bottom: -25px;
-            }
-          }
-        
-          @media (max-width: 575px) {
-            .gallery {
-              height: 100px;
-            }
-        
-            .gallery-item {
-              width: 60px;
-              height: 60px;
-            }
-        
-            .gallery-item img {
-              width: 60px;
-              height: 60px;
-            }
-        
-            .gallery-label {
-              font-size: 10px;
-              bottom: -20px;
-            }
-          }
-        
-          @media (max-width: 599px) {
-            .gallery-wrapper {
-              height: auto;
-            }
-        
-            .gallery {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 10px;
-              overflow-x: hidden;
-              height: auto;
-            }
-        
-            .gallery-item {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: center;
-              align-items: center;
-              width: 100%;
-              height: auto;
-              border-radius: 50%;
-              /* margin: 10px 0; */
-            }
-        
-            .gallery-item img {
-              width: 80%;
-              height: auto;
-              border-radius: 50%;
-            }
-        
-            .gallery-label {
-              position: static;
-              transform: none;
-              margin-top: 5px;
-              font-size: 13px;
-              /* padding-right: 10px; */
-             
-              text-align: center;
-        
-            }
-          }
-        
-          @media (min-width: 600px) {
-            .gallery {
-              justify-content: space-between;
-            }
-        
-            .gallery-item {
-              margin: 10px;
-            }
-            .gallery-label {
-              position: static;
-              transform: none;
-              margin-top: 5px;
-              font-size: 12px;
-              padding-right: 10px;
-             
-              text-align: center;
-        
-            }
-          }
-        </style>
     
-        <div class="container">
+    
+        <div class="container" style="margin-top: 10px;">
           <div class="row">
-            <div class="col-12">
-              <div class="gallery-wrapper">
-                <div class="gallery">
-                  <div class="gallery-item" onclick="goTomobileImageCardshtml();">
-                    <img src="assets/png/Icons 2_Mirror Cabinet copy.png" alt="Placeholder 1" />
-                    <div class="gallery-label">Corner shelf</div>
-                  </div>
-                  <div class="gallery-item" onclick=" openNavSignup();">
-                    <img src="assets/png/Icons_Digital Frame.png" alt="Placeholder 2" />
-                    <div class="gallery-label">Digital frame</div>
-                  </div>
-                  <!-- Add more gallery items with images and labels -->
-                  <div class="gallery-item">
-                    <img src="assets/png/Icons_LED Mirror.png" alt="Placeholder 3" />
-                    <div class="gallery-label">LED mirror</div>
-                  </div>
-                  <div class="gallery-item">
-                    <img src="assets/png/Icons_Mirror Cabinet.png" alt="Placeholder 4" />
-                    <div class="gallery-label">Mirror cabinet</div>
-                  </div>
-                  <div class="gallery-item">
-                    <img src="assets/png/Icons_Magnetic Board.png" alt="Placeholder 5" />
-                    <div class="gallery-label">Magnetic board</div>
-                  </div>
-                  <div class="gallery-item" onclick="categoryPage();">
-                    <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
-                    <div class="gallery-label">View More</div>
-                  </div>
+            <div class="col-4">
+              <div class="category_img">
+                <div style="display: flex;flex-direction: column; align-items: center;" onclick="BestSellerProducts();">
+                  <img  src="assets/Images Category/Corner Shelf 2.jpg" alt="">
+                  <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
                 </div>
               </div>
             </div>
+             <div class="col-4">
+          <div class="category_img">
+                <div style="display: flex;flex-direction: column; align-items: center;">
+                  <img src="assets/Images Category/Digital Board.jpg" alt="">
+            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
+                </div>
+              </div>
+            </div>
+             <div class="col-4">
+           <div class="category_img">
+                <div style="display: flex;flex-direction: column; align-items: center;">
+                  <img src="assets/Images Category/LED Mirror2.jpg" alt="">
+            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+           <div class="category_img">
+                <div style="display: flex;flex-direction: column; align-items: center;">
+                  <img src="assets/Images Category/Mirror Cabinet.jpg" alt="">
+            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
+                </div>
+              </div>
+              
+            </div>
+             <div class="col-4">
+              <div class="category_img">
+                <div style="display: flex;flex-direction: column; align-items: center;">
+                  <img src="assets/Images Category/Corner Shelf 2.jpg" alt="">
+            <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
+                </div>
+              </div>
+            </div>
+             <div class="col-4">
+          <div class="category_img">
+                <div style="display: flex;flex-direction: column; align-items: center;">
+                  <img src="assets/Images Category/Digital Board.jpg" alt="">
+            <p style="font-size: 12px; margin-top: 2px;">View More</p>
+                </div>
+              </div>
+            </div>
+            
+           
           </div>
-        </div>
-       
-          <script>
-function categoryPage(){
-  window.location.href = "categorypage.html";
-}
-function goTomobileImageCardshtml(){
-  window.location.href = "categorypage.html";
-}
+          </div>
 
-            document.addEventListener("DOMContentLoaded", function () {
-              const gallery = document.querySelector(".gallery");
-              let isDown = false;
-              let startX;
-              let scrollLeft;
-      
-              gallery.addEventListener("mousedown", (e) => {
-                isDown = true;
-                gallery.classList.add("active");
-                startX = e.pageX - gallery.offsetLeft;
-                scrollLeft = gallery.scrollLeft;
-                e.preventDefault();
-              });
-      
-              gallery.addEventListener("mouseleave", () => {
-                isDown = false;
-                gallery.classList.remove("active");
-              });
-      
-              gallery.addEventListener("mouseup", () => {
-                isDown = false;
-                gallery.classList.remove("active");
-              });
-      
-              gallery.addEventListener("mousemove", (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - gallery.offsetLeft;
-                const walk = (x - startX) * 2; // Adjust scroll speed
-                gallery.scrollLeft = scrollLeft - walk;
-              });
-            });
-          </script>
+         
 
         <!-- trending products -->
         <div class="category_head" style="padding-bottom: 30px">
