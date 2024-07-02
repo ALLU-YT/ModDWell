@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidenav Example</title>
+    <style>
+      .sidenavv {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidenavv a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidenavv a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidenavv .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body style="align-items: end; display: flex; flex-direction: column">
+    <div id="mySidenavv" class="sidenavv">
+      <div style="display: block">
+        <p style="padding-left: 10px">Menu</p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+      </div>
+      <hr />
+      <div style="display: flex; flex-direction: column; background: black">
+        <button
+          class="buttons"
+          style="margin: 0px"
+          onclick="toggleList('myList1')"
+        >
+          Products<i class="bi bi-caret-down"></i>
+        </button>
+        <div style="width: 100%; height: 10px"></div>
+        <ul class="list" id="myList1" style="background-color: black">
+          <li class="list-item" style="padding-top: 1px">Home</li>
+          <li class="list-item">Led Mirror</li>
+          <li class="list-item">Mirror cabinet</li>
+          <li class="list-item">Corner Shelf</li>
+          <li class="list-item">Magnetic board</li>
+          <li class="list-item">Glass frames</li>
+        </ul>
+        <button
+          class="buttons"
+          style="margin: 0px"
+          onclick="toggleList('myList2')"
+        >
+          Profile<i class="bi bi-caret-down"></i>
+        </button>
+        <div style="width: 100%; height: 10px"></div>
+        <ul class="list" id="myList2" style="background-color: black">
+          <li class="list-item" onclick="wishlistPage();">Wishlist</li>
+          <li class="list-item">Manage Profile</li>
+          <li class="list-item">Logout</li>
+        </ul>
+        <button
+          class="buttons"
+          style="margin: 0px"
+          onclick="toggleList('myList3')"
+        >
+          Products
+        </button>
+        <div style="width: 100%; height: 10px"></div>
+        <div style="width: 100%; height: 15px"></div>
+      </div>
+      <div style="bottom: 0; position: absolute; left: 25%; right: 0">
+        <img
+          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
+          style="width: 150px"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <button onclick="openNav()">Open Sidenav</button>
+    <br />
+    <div>
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+
+      gallery <br />
+      gallery <br />
+
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+      gallery <br />
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenavv").style.width = "300px";
+        document.body.style.overflow = "hidden"; // Disable scrolling
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenavv").style.width = "0";
+        document.body.style.overflow = ""; // Enable scrolling
+      }
+
+      function toggleList(listId) {
+        var list = document.getElementById(listId);
+        if (list.style.display === "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+
+      function wishlistPage() {
+        // Function to handle wishlist page redirection
+        alert("Redirect to wishlist page");
+      }
+    </script>
+  </body>
+</html>

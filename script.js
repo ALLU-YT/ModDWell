@@ -128,13 +128,17 @@ function toggleList(listId) {
   }
 }
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-}
+// function openNav() {
+//   console.log("Opening sidenav");
+//   document.getElementById("mySidenavv").style.width = "300px";
+//   document.body.style.overflow = "hidden"; // Disable scrolling
+// }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+// function closeNav() {
+//   console.log("Closing sidenav");
+//   document.getElementById("mySidenavv").style.width = "0";
+//   document.body.style.overflow = ""; // Enable scrolling
+// }
 
 // document.addEventListener('touchstart', function(event) {
 //   closeNav();
@@ -152,16 +156,13 @@ function closeNavv() {
 // document.addEventListener('touchstart', function(event) {
 //   closeNavv();
 // });
-  // Add event listener for touch to close the slider
+// Add event listener for touch to close the slider
 // document.addEventListener("touchstart", closeNavv, { once: true });
-  
+
 // function closeNavv() {
 //   const slider = document.getElementById("mySidenavv");
 //   slider.classList.remove("open");
 // }
-
-
-
 
 function openNavi() {
   document.getElementById("mySidenavi").style.width = "300px";
@@ -169,8 +170,6 @@ function openNavi() {
 function closeNavi() {
   document.getElementById("mySidenavi").style.width = "0";
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get reference to the close button
@@ -187,32 +186,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Get the modal
+var modal = document.getElementById("myModal_1");
 
-      // Get the modal
-      var modal = document.getElementById("myModal_1");
+// Get the button that opens the modal
+var btn = document.getElementById("addTicketBtn_1");
 
-      // Get the button that opens the modal
-      var btn = document.getElementById("addTicketBtn_1");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closemodal_1")[0];
 
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("closemodal_1")[0];
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+  document.body.classList.add("modal-openmodal_1");
+};
 
-      // When the user clicks the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = "block";
-        document.body.classList.add("modal-openmodal_1");
-      };
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-openmodal_1");
+};
 
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-        document.body.classList.remove("modal-openmodal_1");
-      };
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-          document.body.classList.remove("modal-openmodal_1");
-        }
-      };
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-openmodal_1");
+  }
+};

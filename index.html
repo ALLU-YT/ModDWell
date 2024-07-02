@@ -58,7 +58,7 @@
 
         <!-- mobilehead -->
         <div class="mobilehead">
-         <span style="font-size: 30px; cursor: pointer;" onclick="openNav()"
+         <span style="font-size: 30px; cursor: pointer;" onclick="openNavv()"
   ><i class="bi bi-list fs-3" style="padding-left: 5px;"></i></span
 >
            <a href="details.html"> <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="
@@ -67,67 +67,114 @@
 
 
 <!-- Mobile Slider Menu -->
+<style>
+  .sidenavv {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+  }
 
-   <div id="mySidenavv" class="sidenavv" >
-             <div style="display: block;">
-                  <p style="padding-left: 10px;">Menu</p>
-                 <a href="javascript:void(0)" class="closebtn" onclick="closeNavv()">&times;</a>
-             </div>
-             <hr>
+  .sidenavv a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenavv a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenavv .closebtn {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+</style>
+
+<div id="mySidenavv" class="sidenavv">
+  <div style="display: block;">
+    <p style="padding-left: 10px;">Menu</p>
+    <a href="" class="closebtn" onclick="closeNavv()">&times;</a>
+  </div>
+  <hr>
+  <div style="display: flex; flex-direction: column; background: black;">
+    <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Products<i class="bi bi-caret-down"></i></button>
+    <div style="width: 100%; height:10px;"></div>
+    <ul class="list" id="myList1" style="background-color: black;">
+      <li class="list-item" style="padding-top: 1px;">Home</li>
+      <li class="list-item">Led Mirror</li>
+      <li class="list-item">Mirror cabinet</li>
+      <li class="list-item">Corner Shelf</li>
+      <li class="list-item">Magnetic board</li>
+      <li class="list-item">Glass frames</li>
+    </ul>
+    <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Profile<i class="bi bi-caret-down"></i></button>
+    <div style="width: 100%; height:10px;"></div>
+    <ul class="list" id="myList2" style="background-color: black;">
+      <li class="list-item" onclick="wishlistPage();"  style="padding-top: 1px;">Wishlist</li>
+      <li class="list-item">Manage Profile</li>
+      <li class="list-item">Logout</li>
+    </ul>
+    <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">Products</button>
+    <div style="width: 100%; height:10px;"></div>
+    <div style="width: 100%; height:15px;"></div>
+  </div>
+  <div style="bottom: 0; position: absolute; left: 25%; right: 0;">
+    <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 150px;" alt="">
+  </div>
+</div>
+
+<!-- <button onclick="openNav()">Open Sidenav</button> -->
+
+<script>
+  function openNavv() {
+    document.getElementById("mySidenavv").style.width = "300px";
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+  }
+
+  function closeNavv() {
+  console.log("Closing sidenav"); // Debugging log
+  var sidenav = document.getElementById("mySidenavv");
+  if (sidenav) {
+    sidenav.style.width = "0";
+    // Optionally, you can add a transition duration here
+    sidenav.style.transition = "width 0.5s ease"; // Adjust timing as needed
+  }
+  document.body.style.overflow = ''; // Enable scrolling
+}
 
 
+    // function toggleList(listId) {
+    //   var list = document.getElementById(listId);
+    //   if (list.style.display === "none") {
+    //     list.style.display = "block";
+    //   } else {
+    //     list.style.display = "none";
+    //   }
+    // }
 
- <div style="display: flex;flex-direction: column; background: black;">
+    function wishlistPage() {
+      // Function to handle wishlist page redirection
+      alert("Redirect to wishlist page");
+    }
 
-                                <!-- Button 1 to toggle the first list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Products<i class="bi bi-caret-down"></i> <!-- Down arrow icon --></button>
-                              <div style="width: 100%;height:10px;"></div>
-                                <!-- List 1 to be displayed -->
-                                <ul class="list" id="myList1" style="background-color: black;">
-                                    <li class="list-item" style="padding-top: 1px;">Home</li>
-                                    <li class="list-item">Led Mirror</li>
-                                    <li class="list-item">Mirror cabinet</li>
-                                    <li class="list-item" >Corner SHelf</li>
-                                    <li class="list-item">Magnetic board</li>
-                                    <li class="list-item">Glass frames</li>
-                                </ul>
-
-                                <!-- Button 2 to toggle the second list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Profile<i class="bi bi-caret-down"></i></button>
-                                <div style="width: 100%;height:10px;"></div>
-                                <!-- List 2 to be displayed -->
-                                <ul class="list" id="myList2" style="background-color: black;">
-                            <li class="list-item" onclick="wishllistPage();">Wishlist</li>
-                                    <li class="list-item">Manage Profile</li>
-                                    <li class="list-item">Login out</li>
-                                    
-                                </ul>
-
-                                <!-- Button 3 to toggle the third list -->
-                                <button class="buttons" style="margin: 0px;" onclick="toggleList('myList3')">Products</span></button>
-                                <div style="width: 100%;height:10px;"></div>
-                                <!-- List 3 to be displayed -->
-                                <!-- <ul class="list" id="myList3">
-                                    <li class="list-item">Login</li>
-                                    <li class="list-item">Order History</li>
-                                    <li class="list-item">My Wishlist
-                                        <li class="list-item">Track Order
-                                        </li>
-                                </ul> -->
-                               
-                               <div style="width: 100%;height:15px;"></div>
-                            </div>
-
-                            <div style="bottom: 0; position: absolute;left: 25%;right: 0;">
-                              <img src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png" style="width: 150px;" alt="">
-                            </div>
-                                      </div>
-
-
-
-
-
-
+  function wishlistPage() {
+    // Function to handle wishlist page redirection
+    alert("Redirect to wishlist page");
+  }
+</script>
 
 
     <div id="mySidenavi" class="sidenav">
@@ -139,7 +186,7 @@
 
 <span style="font-size: 30px; cursor: pointer;" onclick="openNavi()"
   ><i class="bi bi-search search-iconn fs-6"></i></span>
-<span  style="font-size: 30px; cursor: pointer;padding-right: 20px;" onclick="openProfile()"
+<span  style="font-size: 30px; cursor: pointer;padding-right: 20px;" onclick="openProfile(); closeNavv();"
   ><i class="bi bi-person fs-4"></i></i></span>
 
     </div>
@@ -819,8 +866,8 @@ document
     
         <div class="container" style="margin-top: 10px;">
           <div class="row">
-            <div class="col-4">
-              <div class="category_img">
+            <div class="col-4"> 
+              <div class="category_img" onclick="categoryPage();">
                 <div style="display: flex;flex-direction: column; align-items: center;" onclick="BestSellerProducts();">
                   <img  src="assets/Images Category/Corner Shelf 2.jpg" alt="">
                   <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
@@ -828,7 +875,7 @@ document
               </div>
             </div>
              <div class="col-4">
-          <div class="category_img">
+          <div class="category_img" onclick="openNavSignup();">
                 <div style="display: flex;flex-direction: column; align-items: center;">
                   <img src="assets/Images Category/Digital Board.jpg" alt="">
             <p style="font-size: 12px; margin-top: 2px;">Corner Shelf</p>
@@ -876,10 +923,10 @@ document
          
 
         <!-- trending products -->
-        <div class="category_head" style="padding-bottom: 30px">
+        <!-- <div class="category_head" style="padding-bottom: 30px">
             <h2>Trending products</h2>
         </div>
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <div class="col-md-4">
                     <div class="product_img">
@@ -909,7 +956,7 @@ document
              <p class="Trending_p">Corner shelf</p> 
             <br />
             <!-- <button class="button">Click Me!</button> -->
-          </span>
+          <!-- </span>
                         </div>
 
                         <div class="col-md-4">
@@ -931,8 +978,8 @@ document
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> --> 
     <!-- //new products -->
     <div class="category_head" style="padding-bottom: 30px">
       <h2>New products</h2>
@@ -2000,6 +2047,9 @@ function purchaseHistoryPages(){
 }
 function manageProfileScreen(){
   window.location.href = "manageProfile.html";
+}
+function categoryPage(){
+  window.location.href = "categorypage.html";
 }
 
   function change(item) {
