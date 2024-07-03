@@ -1786,6 +1786,7 @@ document
 <style>
   /* Styling for the bottom sheet */
   .bottom-sheet {
+
     position: fixed;
       bottom: 0;
       left: 0;
@@ -1911,13 +1912,17 @@ document
 
 <!-- JavaScript function to toggle bottom sheet -->
 <script>
-  function toggleBottomSheet() {
-    var bottomSheet = document.getElementById("bottomSheet");
-    bottomSheet.style.transform =
-      bottomSheet.style.transform === "translateY(0%)"
-        ? "translateY(100%)"
-        : "translateY(0%)";
-  }
+   function toggleBottomSheet() {
+      var bottomSheet = document.getElementById("bottomSheet");
+      var body = document.body;
+      if (bottomSheet.style.transform === "translateY(0%)") {
+        bottomSheet.style.transform = "translateY(100%)";
+        body.style.overflow = "auto";
+      } else {
+        bottomSheet.style.transform = "translateY(0%)";
+        body.style.overflow = "hidden";
+      }
+    }
 </script>
 
 
