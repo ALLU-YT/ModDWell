@@ -58,3 +58,23 @@
 .menuItemm.active {
   background: #151515;
 }
+
+#slider {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logout-wrapper {
+  margin-top: auto;
+}
+
+.logout-btn {
+  background-color: #18578c;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
