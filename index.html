@@ -106,7 +106,7 @@
 <div id="mySidenavv" class="sidenavv">
   <div style="display: block;">
     <p style="padding-left: 10px;">Menu</p>
-    <a href="" class="closebtn" onclick="closeNavv()">&times;</a>
+    <a href="" class="closebtn" onclick="closeNavvv()">&times;</a>
   </div>
   <hr>
   <div style="display: flex; flex-direction: column; background: black;">
@@ -158,41 +158,24 @@
 
 <script>
   function openNavv() {
-    document.getElementById("mySidenavv").style.width = "300px";
-    document.body.style.overflow = 'hidden'; // Disable scrolling
+    const slider = document.getElementById("mySidenavv");
+    slider.style.width = "300px";
+    slider.classList.add("open"); // Add class to show it's open
+    document.addEventListener("touchstart", closeProfilew, { once: true });
+    // document.body.style.overflow = 'hidden'; // Disable scrolling
   }
 
-  function closeNavv() {
-  console.log("Closing sidenav"); // Debugging log
-  var sidenav = document.getElementById("mySidenavv");
-  if (sidenav) {
-    sidenav.style.width = "0";
-    // Optionally, you can add a transition duration here
-    sidenav.style.transition = "width 0.5s ease"; // Adjust timing as needed
+  function closeNavvv() {
+    const slider = document.getElementById("mySidenavv");
+    slider.style.width = "0";
+    slider.classList.remove("open"); // Remove class to show it's closed
   }
-  document.body.style.overflow = ''; // Enable scrolling
-}
 
-
-    // function toggleList(listId) {
-    //   var list = document.getElementById(listId);
-    //   if (list.style.display === "none") {
-    //     list.style.display = "block";
-    //   } else {
-    //     list.style.display = "none";
-    //   }
-    // }
-
-    function wishlistPage() {
-      // Function to handle wishlist page redirection
-      alert("Redirect to wishlist page");
-    }
-
-  function wishlistPage() {
-    // Function to handle wishlist page redirection
-    alert("Redirect to wishlist page");
+  function closeProfilew() {
+    closeNavvv();
   }
 </script>
+
 
 
     <div id="mySidenavi" class="sidenav">
