@@ -66,7 +66,6 @@
     margin-left: 35px;" alt="Logo"></a>
 
 
-<!-- Mobile Slider Menu -->
 <style>
   .sidenavv {
     height: 100%;
@@ -110,7 +109,6 @@
   </div>
   <hr>
   <div style="display: flex; flex-direction: column; background: black;">
-    
     <div style="display: flex;align-items: center;  margin-left: 5px; margin-top: -12px; margin-bottom: -12px;" onclick="openNavSignup(); closeNavv();">
       <i style="font-size: 37px;" class="bi bi-gift" ></i>
       <div style="display: flex;flex-direction: column; line-height: 0; margin-left: 8px; margin-top: 8px;">
@@ -119,7 +117,6 @@
       </div>
     </div>
     <hr>
-    
     <div style="display: flex;align-items: center;  margin-left: 5px; margin-top: -12px; margin-bottom: -12px;" onclick="window.location.href='categorypage.html'; closeNavv();">
       <i style="font-size: 37px;" class="bi bi-bag" ></i>
       <div style="display: flex;flex-direction: column; line-height: 0; margin-left: 8px; margin-top: 8px;">
@@ -154,27 +151,28 @@
   </div>
 </div>
 
-<!-- <button onclick="openNav()">Open Sidenav</button> -->
+<!-- <button onclick="openNavv()">Open Sidenav</button> -->
 
 <script>
   function openNavv() {
     const slider = document.getElementById("mySidenavv");
     slider.style.width = "300px";
     slider.classList.add("open"); // Add class to show it's open
-    document.addEventListener("touchstart", closeProfilew, { once: true });
-    // document.body.style.overflow = 'hidden'; // Disable scrolling
+    document.addEventListener("click", closeNavvv, true); // Listen for clicks
   }
 
-  function closeNavvv() {
+  function closeNavvv(event) {
     const slider = document.getElementById("mySidenavv");
-    slider.style.width = "0";
-    slider.classList.remove("open"); // Remove class to show it's closed
-  }
-
-  function closeProfilew() {
-    closeNavvv();
+    if (!slider.contains(event.target)) {
+      slider.style.width = "0";
+      slider.classList.remove("open"); // Remove class to show it's closed
+      document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
+    }
   }
 </script>
+
+
+
 
 
 
