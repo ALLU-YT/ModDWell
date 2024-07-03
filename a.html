@@ -3,199 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile UI Example</title>
     <style>
-      .sidenavv {
-        height: 100%;
-        width: 0;
+      /* Styling for the bottom sheet */
+      .bottom-sheet {
         position: fixed;
-        z-index: 1;
-        top: 0;
+        bottom: 0;
         left: 0;
-        background-color: black;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 20px;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(100%);
+        transition: transform 0.3s ease-out;
+        z-index: 1000;
+        padding: 20px;
+        box-sizing: border-box;
       }
 
-      .sidenavv a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
+      /* Styling for the icon button */
+      .bottom-sheet-toggle {
+        position: fixed;
+        bottom: 70px;
+        right: 5px;
+        background-color: #000000;
+        text-align: center;
+        border-radius: 20px 20px 0 0;
+        z-index: 1000;
+      }
+
+      /* Icon style */
+      .bottom-sheet-toggle i {
         color: white;
-        display: block;
-        transition: 0.3s;
+        padding: 8px;
+        font-size: 20px;
       }
 
-      .sidenavv a:hover {
-        color: #f1f1f1;
-      }
-
-      .sidenavv .closebtn {
-        position: absolute;
-        top: 0;
-        right: 3px;
-        font-size: 36px;
-        margin-left: 50px;
+      /* Text style */
+      .bottom-sheet-toggle p {
+        margin: 5px 0;
+        font-size: 10px;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <div class="mobilehead">
-      <span style="font-size: 30px; cursor: pointer" onclick="openNavv()">
-        <i class="bi bi-list fs-3" style="padding-left: 5px"></i>
-      </span>
-      <a href="details.html">
-        <img
-          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
-          style="width: 186px; margin-left: 35px"
-          alt="Logo"
-        />
-      </a>
-    </div>
-
-    <div id="mySidenavv" class="sidenavv" onclick="event.stopPropagation();">
-      <div style="display: block">
-        <p style="padding-left: 10px">Menu</p>
-        <a href="" class="closebtn" onclick="closeNavvv()">&times;</a>
-      </div>
-      <hr />
-      <div style="display: flex; flex-direction: column; background: black">
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            margin-left: 5px;
-            margin-top: -12px;
-            margin-bottom: -12px;
-          "
-          onclick="openNavSignup(); closeNavv();"
-        >
-          <i style="font-size: 37px" class="bi bi-gift"></i>
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              line-height: 0;
-              margin-left: 8px;
-              margin-top: 8px;
-            "
-          >
-            <p style="font-size: 15px; line-height: 1">
-              Sign Up Now <i class="bi bi-arrow-right"></i>
-            </p>
-            <p style="color: red">Get Credits worth INR 10,000</p>
-          </div>
-        </div>
-        <hr />
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            margin-left: 5px;
-            margin-top: -12px;
-            margin-bottom: -12px;
-          "
-          onclick="window.location.href='categorypage.html'; closeNavv();"
-        >
-          <i style="font-size: 37px" class="bi bi-bag"></i>
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              line-height: 0;
-              margin-left: 8px;
-              margin-top: 8px;
-            "
-          >
-            <p style="font-size: 15px; line-height: 1">
-              Browse All Categories <i class="bi bi-arrow-right"></i>
-            </p>
-            <p style="color: red">Get Credits worth INR 10,000</p>
-          </div>
-        </div>
-        <hr />
-        <button
-          class="buttons"
-          style="margin: 0px"
-          onclick="toggleList('myList1')"
-        >
-          Products <i class="bi bi-caret-down"></i>
-        </button>
-        <div style="width: 100%; height: 10px"></div>
-        <ul class="list" id="myList1" style="background-color: black">
-          <li class="list-item" style="padding-top: 1px">Home</li>
-          <li class="list-item">Led Mirror</li>
-          <li class="list-item">Mirror Cabinet</li>
-          <li class="list-item">Corner Shelf</li>
-          <li class="list-item">Magnetic Board</li>
-          <li class="list-item">Glass Frames</li>
-        </ul>
-        <button
-          class="buttons"
-          style="margin: 0px"
-          onclick="toggleList('myList2')"
-        >
-          Profile <i class="bi bi-caret-down"></i>
-        </button>
-        <div style="width: 100%; height: 10px"></div>
-        <ul class="list" id="myList2" style="background-color: black">
-          <li
-            class="list-item"
-            onclick="wishlistPage();"
-            style="padding-top: 1px"
-          >
-            Wishlist
-          </li>
-          <li class="list-item">Manage Profile</li>
-          <li class="list-item">Logout</li>
-        </ul>
-      </div>
-      <div style="bottom: 0; position: absolute; left: 25%; right: 0">
-        <img
-          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
-          style="width: 150px"
-          alt=""
-        />
+    <!-- Icon for triggering bottom sheet -->
+    <div class="bottom-sheet-toggle" onclick="toggleBottomSheet();">
+      <div>
+        <i class="bi bi-person"></i>
+        <p>Get Expert</p>
       </div>
     </div>
 
+    <!-- Bottom sheet content -->
+    <div class="bottom-sheet" id="bottomSheet">
+      <button onclick="toggleBottomSheet();">Close</button>
+      <!-- Add additional content here if needed -->
+    </div>
+
+    <!-- JavaScript function to toggle bottom sheet -->
     <script>
-      function openNavv() {
-        const slider = document.getElementById("mySidenavv");
-        slider.style.width = "300px";
-        slider.classList.add("open"); // Add class to show it's open
-        document.addEventListener("click", closeProfilew, { once: true });
-        // document.body.style.overflow = 'hidden'; // Disable scrolling
+      function toggleBottomSheet() {
+        var bottomSheet = document.getElementById("bottomSheet");
+        bottomSheet.style.transform =
+          bottomSheet.style.transform === "translateY(0%)"
+            ? "translateY(100%)"
+            : "translateY(0%)";
       }
-
-      function closeNavvv() {
-        const slider = document.getElementById("mySidenavv");
-        slider.style.width = "0";
-        slider.classList.remove("open"); // Remove class to show it's closed
-      }
-
-      function closeProfilew(event) {
-        const slider = document.getElementById("mySidenavv");
-        if (!slider.contains(event.target)) {
-          closeNavvv();
-        } else {
-          document.addEventListener("click", closeProfilew, { once: true });
-        }
-      }
-
-      function toggleList(id) {
-        const list = document.getElementById(id);
-        if (list.style.display === "none" || list.style.display === "") {
-          list.style.display = "block";
-        } else {
-          list.style.display = "none";
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const sidenav = document.getElementById("mySidenavv");
-        sidenav.addEventListener("click", (event) => event.stopPropagation());
-      });
     </script>
   </body>
 </html>

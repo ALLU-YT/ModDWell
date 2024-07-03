@@ -37,6 +37,11 @@
 
 
     <body>
+
+
+
+     
+
         <div style="width: 100%; background-color:#18578c;  position: relative; z-index: 1; " class="close_the div">
             <div class="carousel" data-flickity='{ "autoPlay": true, "prevNextButtons": false, "pageDots": false }'>
                 <div class="carousel-cell" style="height: 10px;">
@@ -69,7 +74,7 @@
 <style>
   .sidenavv {
     height: 100%;
-    width: 0;
+    width: 0px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -103,25 +108,25 @@
 </style>
 
 <div id="mySidenavv" class="sidenavv">
-  <div style="display: block;">
+  <div style="display: block;" onclick="closeSlider();">
     <p style="padding-left: 10px;">Menu</p>
-    <a href="" class="closebtn" onclick="closeNavvv()">&times;</a>
+    <div  class="closebtn">&times;</div>
   </div>
   <hr>
   <div style="display: flex; flex-direction: column; background: black;">
-    <div style="display: flex;align-items: center;  margin-left: 5px; margin-top: -12px; margin-bottom: -12px;" onclick="openNavSignup(); closeNavv();">
-      <i style="font-size: 37px;" class="bi bi-gift" ></i>
+    <div style="display: flex;align-items: center;  margin-left: 8px; margin-top: -12px; margin-bottom: -12px;" onclick="openNavSignup(); closeNavv();">
+      <i style="font-size: 30px;" class="bi bi-gift" ></i>
       <div style="display: flex;flex-direction: column; line-height: 0; margin-left: 8px; margin-top: 8px;">
-          <p style="font-size: 15px; line-height: 1;">Sign Up Now <i class="bi bi-arrow-right"></i></p>  
-           <p style="color: red; ">Get Credits worth INR 10,000</p>
+          <p style="font-size: 13px; line-height: 1;">Sign Up Now <i class="bi bi-arrow-right"></i></p>  
+           <p style="color:#18578c; font-size: 13px; ">Get Credits worth INR 10,000</p>
       </div>
     </div>
     <hr>
     <div style="display: flex;align-items: center;  margin-left: 5px; margin-top: -12px; margin-bottom: -12px;" onclick="window.location.href='categorypage.html'; closeNavv();">
-      <i style="font-size: 37px;" class="bi bi-bag" ></i>
+      <i style="font-size: 30px;" class="bi bi-bag" ></i>
       <div style="display: flex;flex-direction: column; line-height: 0; margin-left: 8px; margin-top: 8px;">
-          <p style="font-size: 15px; line-height: 1;">Browser All Categories <i class="bi bi-arrow-right"></i></p>  
-           <p style="color: red; ">Get Credits worth INR 10,000</p>
+          <p style="font-size: 13px; line-height: 1;">Browser All Categories <i class="bi bi-arrow-right"></i></p>  
+           <p style="color:#18578c; font-size: 13px; ">Led Mirror, Corner Shelf, Glass frames, ... </p>
       </div>
     </div>
     <hr>
@@ -154,23 +159,40 @@
 <!-- <button onclick="openNavv()">Open Sidenav</button> -->
 
 <script>
-  function openNavv() {
-    const slider = document.getElementById("mySidenavv");
-    slider.style.width = "300px";
-    slider.classList.add("open"); // Add class to show it's open
-    document.addEventListener("click", closeNavvv, true); // Listen for clicks
-  }
+ function openNavv() {
+  const slider = document.getElementById("mySidenavv");
+  slider.style.width = "300px";
+  slider.classList.add("open"); // Add class to show it's open
+  document.addEventListener("click", closeNavvv, true); // Listen for clicks
+}
 
-  function closeNavvv(event) {
-    const slider = document.getElementById("mySidenavv");
-    if (!slider.contains(event.target)) {
-      slider.style.width = "0";
-      slider.classList.remove("open"); // Remove class to show it's closed
-      document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
-    }
+function closeNavvv(event) {
+  const slider = document.getElementById("mySidenavv");
+  if (!slider.contains(event.target)) {
+    slider.style.transition = "width 0.5s ease"; // Smooth transition effect
+    slider.style.width = "0";
+    setTimeout(() => {
+      slider.classList.remove("open"); // Remove class after transition
+    }, 500); // Delay should match transition duration
+    document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
   }
+}
+
+// Function to close the slider when a close button is clicked
+function closeSlider() {
+  const slider = document.getElementById("mySidenavv");
+  slider.style.transition = "width 0.5s ease"; // Smooth transition effect
+  slider.style.width = "0";
+  setTimeout(() => {
+    slider.classList.remove("open"); // Remove class after transition
+  }, 500); // Delay should match transition duration
+  document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
+}
+
+// Example of adding a click event to a close button (assuming a button with id="closeButton")
+document.getElementById("closeButton").addEventListener("click", closeSlider);
+
 </script>
-
 
 
 
@@ -581,6 +603,12 @@
         
     </header>
 
+<!-- Right Side One Menu -->
+
+
+  
+    
+
 <!-- //LoginPage -->
 <div style="background-color: rgba(255, 255, 255, 0.457);height: 1px;"></div> 
     <script>
@@ -920,7 +948,6 @@ document
           </div>
 
          
-
         <!-- trending products -->
         <!-- <div class="category_head" style="padding-bottom: 30px">
             <h2>Trending products</h2>
@@ -1668,6 +1695,7 @@ document
                 </div>
 
 
+
                 <div class="mobile_footer">
                     <section class="mb-4">
                         <!-- Facebook -->
@@ -1754,7 +1782,101 @@ document
 <!-- mobile footer -->
 
 
+
+<style>
+  /* Styling for the bottom sheet */
+  .bottom-sheet {
+    position: fixed;
+    bottom: 500px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: #000000;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+    z-index: 1000;
+    /* padding: 20px; */
+    box-sizing: border-box;
+  }
+
+  /* Styling for the icon button */
+  .bottom-sheet-toggle {
+    position: fixed;
+    bottom: 70px;
+    right: 5px;
+    background-color: #000000;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    z-index: 1000;
+  }
+
+  /* Icon style */
+  .bottom-sheet-toggle i {
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+  }
+
+  /* Text style */
+  .bottom-sheet-toggle p {
+    margin: 5px 0;
+    font-size: 10px;
+    color: white;
+  }
+  .closeTogleBtn{
+    width: 100%;
+    background-color:#18578c;
+    /* border: solid 1px black; */
+  }
+  .chatnow_container{
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+  }
+</style>
+
+<!-- Icon for triggering bottom sheet -->
+<div class="bottom-sheet-toggle" onclick="toggleBottomSheet();">
+  <div>
+    <i class="bi bi-person"></i>
+    <p>Get Expert</p>
+  </div>
+</div>
+
+<!-- Bottom sheet content -->
+<div class="bottom-sheet" id="bottomSheet">
+  <button class="closeTogleBtn" onclick="toggleBottomSheet();"><i style="color: rgb(255, 255, 255);" class="bi bi-caret-down"></i></button>
+  <!-- Add additional content here if needed -->
+   <div class="chatnow_container">
+      <div style="display: flex;justify-content: center;flex-direction: column;">
+        <p>B Expert Online Now to Assist You</p>
+        <p>Talk To A Furniture Expert Now</p>
+        <p>9995598212</p>
+        <p>OR</p>
+        <button>Chat Now</button>
+      </div>
+   </div>
+</div>
+
+<!-- JavaScript function to toggle bottom sheet -->
+<script>
+  function toggleBottomSheet() {
+    var bottomSheet = document.getElementById("bottomSheet");
+    bottomSheet.style.transform =
+      bottomSheet.style.transform === "translateY(0%)"
+        ? "translateY(100%)"
+        : "translateY(0%)";
+  }
+</script>
+
+
+
                <!-- div.mobileFooter  -->
+
+
+
+
   <div class="custom_btn_phone">
     <div class="bottom-bar">
       <div style="display: block;" >
