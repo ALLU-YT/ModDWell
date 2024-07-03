@@ -3,250 +3,216 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidenav Example</title>
+    <title>Scrollable Gallery with Indicators</title>
     <style>
-      .sidenavv {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: black;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
+      .gallery-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        border-radius: 10px;
+        max-width: 100%;
+        width: 713px;
       }
 
-      .sidenavv a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
-        display: block;
-        transition: 0.3s;
+      .gallery {
+        display: flex;
+        height: 140px;
+        cursor: grab;
+        user-select: none;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
       }
 
-      .sidenavv a:hover {
-        color: #f1f1f1;
+      .gallery::-webkit-scrollbar {
+        display: none;
       }
 
-      .sidenavv .closebtn {
+      .gallery:active {
+        cursor: grabbing;
+      }
+
+      .gallery-item {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        object-fit: cover;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .gallery-item img {
+        width: 100px;
+        height: 100px;
+        background-color: #ffffff21;
+      }
+
+      .gallery-label {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
         position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .indicator-wrapper {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .indicator {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .indicator.active {
+        background-color: #333;
       }
     </style>
   </head>
-  <body style="align-items: end; display: flex; flex-direction: column">
-    <div id="mySidenavv" class="sidenavv">
-      <div style="display: block">
-        <p style="padding-left: 10px">Menu</p>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a
-        >
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="gallery-wrapper">
+          <div class="gallery" id="gallery">
+            <div class="gallery-item" onclick="goTomobileImageCardshtml();">
+              <img
+                src="assets/sliderimgs/LED Mirror2.jpg"
+                alt="Placeholder 1"
+              />
+              <div class="gallery-label">Corner shelf</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/sliderimgs/LED Mirror2.jpg"
+                alt="Placeholder 1"
+              />
+              <div class="gallery-label">Digital frame</div>
+            </div>
+            <!-- Add more gallery items with images and labels -->
+            <div class="gallery-item">
+              <img src="assets/png/Icons_LED Mirror.png" alt="Placeholder 3" />
+              <div class="gallery-label">LED mirror</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Mirror Cabinet.png"
+                alt="Placeholder 4"
+              />
+              <div class="gallery-label">Mirror cabinet</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Magnetic Board.png"
+                alt="Placeholder 5"
+              />
+              <div class="gallery-label">Magnetic board</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Magnetic Board.png"
+                alt="Placeholder 5"
+              />
+              <div class="gallery-label">Magnetic board</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/png/Icons_Magnetic Board.png"
+                alt="Placeholder 5"
+              />
+              <div class="gallery-label">Magnetic board</div>
+            </div>
+            <div class="gallery-item" onclick="categoryPage();">
+              <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
+              <div class="gallery-label">View More</div>
+            </div>
+          </div>
+          <div class="indicator-wrapper" id="indicator-wrapper"></div>
+        </div>
       </div>
-      <hr />
-      <div style="display: flex; flex-direction: column; background: black">
-        <button
-          class="buttons"
-          style="margin: 0px"
-          onclick="toggleList('myList1')"
-        >
-          Products<i class="bi bi-caret-down"></i>
-        </button>
-        <div style="width: 100%; height: 10px"></div>
-        <ul class="list" id="myList1" style="background-color: black">
-          <li class="list-item" style="padding-top: 1px">Home</li>
-          <li class="list-item">Led Mirror</li>
-          <li class="list-item">Mirror cabinet</li>
-          <li class="list-item">Corner Shelf</li>
-          <li class="list-item">Magnetic board</li>
-          <li class="list-item">Glass frames</li>
-        </ul>
-        <button
-          class="buttons"
-          style="margin: 0px"
-          onclick="toggleList('myList2')"
-        >
-          Profile<i class="bi bi-caret-down"></i>
-        </button>
-        <div style="width: 100%; height: 10px"></div>
-        <ul class="list" id="myList2" style="background-color: black">
-          <li class="list-item" onclick="wishlistPage();">Wishlist</li>
-          <li class="list-item">Manage Profile</li>
-          <li class="list-item">Logout</li>
-        </ul>
-        <button
-          class="buttons"
-          style="margin: 0px"
-          onclick="toggleList('myList3')"
-        >
-          Products
-        </button>
-        <div style="width: 100%; height: 10px"></div>
-        <div style="width: 100%; height: 15px"></div>
-      </div>
-      <div style="bottom: 0; position: absolute; left: 25%; right: 0">
-        <img
-          src="assets/XKG9RfcWlcdplux6f0JPlQTZfKcYeoMrUv75ZID9.png"
-          style="width: 150px"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <button onclick="openNav()">Open Sidenav</button>
-    <br />
-    <div>
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-
-      gallery <br />
-      gallery <br />
-
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
-      gallery <br />
     </div>
     <script>
-      function openNav() {
-        document.getElementById("mySidenavv").style.width = "300px";
-        document.body.style.overflow = "hidden"; // Disable scrolling
+      function categoryPage() {
+        window.location.href = "categorypage.html";
       }
 
-      function closeNav() {
-        document.getElementById("mySidenavv").style.width = "0";
-        document.body.style.overflow = ""; // Enable scrolling
+      function goTomobileImageCardshtml() {
+        window.location.href = "mobileImageCards.html";
       }
 
-      function toggleList(listId) {
-        var list = document.getElementById(listId);
-        if (list.style.display === "none") {
-          list.style.display = "block";
-        } else {
-          list.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function () {
+        const gallery = document.getElementById("gallery");
+        const indicatorWrapper = document.getElementById("indicator-wrapper");
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        gallery.addEventListener("mousedown", (e) => {
+          isDown = true;
+          gallery.classList.add("active");
+          startX = e.pageX - gallery.offsetLeft;
+          scrollLeft = gallery.scrollLeft;
+          e.preventDefault();
+        });
+
+        gallery.addEventListener("mouseleave", () => {
+          isDown = false;
+          gallery.classList.remove("active");
+        });
+
+        gallery.addEventListener("mouseup", () => {
+          isDown = false;
+          gallery.classList.remove("active");
+        });
+
+        gallery.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - gallery.offsetLeft;
+          const walk = (x - startX) * 2; // Adjust scroll speed
+          gallery.scrollLeft = scrollLeft - walk;
+          updateIndicators();
+        });
+
+        gallery.addEventListener("scroll", updateIndicators);
+
+        function updateIndicators() {
+          const totalWidth = gallery.scrollWidth;
+          const visibleWidth = gallery.clientWidth;
+          const currentScroll = gallery.scrollLeft;
+          const numIndicators = Math.ceil(totalWidth / visibleWidth);
+
+          indicatorWrapper.innerHTML = "";
+
+          for (let i = 0; i < numIndicators; i++) {
+            const indicator = document.createElement("div");
+            indicator.classList.add("indicator");
+            if (
+              currentScroll >= i * visibleWidth &&
+              currentScroll < (i + 1) * visibleWidth
+            ) {
+              indicator.classList.add("active");
+            }
+            indicatorWrapper.appendChild(indicator);
+          }
         }
-      }
 
-      function wishlistPage() {
-        // Function to handle wishlist page redirection
-        alert("Redirect to wishlist page");
-      }
+        updateIndicators();
+      });
     </script>
   </body>
 </html>
