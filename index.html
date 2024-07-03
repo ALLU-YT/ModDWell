@@ -1787,17 +1787,17 @@ document
   /* Styling for the bottom sheet */
   .bottom-sheet {
     position: fixed;
-    bottom: 500px;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background-color: #000000;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(100%);
-    transition: transform 0.3s ease-out;
-    z-index: 1000;
-    /* padding: 20px; */
-    box-sizing: border-box;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 83%;
+      background-color: #000000;
+      box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(100%);
+      transition: transform 0.3s ease-out;
+      z-index: 1000;
+      /* padding: 20px; */
+      box-sizing: border-box;
   }
 
   /* Styling for the icon button */
@@ -1809,6 +1809,7 @@ document
     text-align: center;
     border-radius: 20px 20px 0 0;
     z-index: 1000;
+    padding: 5px;
   }
 
   /* Icon style */
@@ -1830,9 +1831,36 @@ document
     /* border: solid 1px black; */
   }
   .chatnow_container{
-    background-color: gray;
-    width: 100%;
+    background-color: rgb(27, 25, 25);
+    width: 95%;
+    margin: 10px;
     height: 200px;
+  
+  }
+  .chatnow_container_1{
+    /* background-color: rgb(27, 25, 25); */
+    width: 95%;
+    margin: 10px;
+    height: 200px;
+  }
+  .wtb_btn{
+    background: green;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .wtb_btn_1{
+    background: rgb(214, 7, 7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 8px;
+  }
+  .chatnow_container_1_inp{
+    background-color: transparent;
+    border: .5px solid white;
+    border-width: 1px;
+    padding: 5px 0px 5px 10px;
+    width: 100%;
+    margin: 5px;
   }
 </style>
 
@@ -1849,14 +1877,34 @@ document
   <button class="closeTogleBtn" onclick="toggleBottomSheet();"><i style="color: rgb(255, 255, 255);" class="bi bi-caret-down"></i></button>
   <!-- Add additional content here if needed -->
    <div class="chatnow_container">
-      <div style="display: flex;justify-content: center;flex-direction: column;">
-        <p>B Expert Online Now to Assist You</p>
-        <p>Talk To A Furniture Expert Now</p>
-        <p>9995598212</p>
-        <p>OR</p>
-        <button>Chat Now</button>
+      <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+        <p style="font-size:11px;margin-top: 10px;">B Expert Online Now to Assist You</p>
+        <p style="font-size:14px;font-weight: 400;">Talk To A Furniture Expert Now</p>
+        <p><i class="bi bi-telephone"></i> 9995598212</p>
+        <div style="display: flex; align-items: center;">
+          <div style="flex-grow: 1; height: 1px; background: rgb(255, 255, 255);"></div>
+          <p style="margin: 0 10px;">OR</p>
+          <div style="flex-grow: 1; height: 1px; background: rgb(255, 255, 255);"></div>
+      </div>
+    
+      
+        <button class="wtb_btn">Chat Now</button>
       </div>
    </div>
+
+   <div class="chatnow_container_1">
+    <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+      <p style="font-size:14px;font-weight: 400;">Get A Callback From Us</p>
+      <p style="font-size:11px;margin-top: 10px;">Our Nearest Store Will Contact You</p>
+
+      <input type="text" class="chatnow_container_1_inp" placeholder="Full Name">
+      <input type="text" class="chatnow_container_1_inp" placeholder="Full Name">
+      <input type="text" class="chatnow_container_1_inp" placeholder="Full Name">
+      <button class="wtb_btn_1">SUBMIT</button>
+    </div>
+   
+   </div> 
+
 </div>
 
 <!-- JavaScript function to toggle bottom sheet -->
