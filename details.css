@@ -492,7 +492,7 @@ img {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 400;
   top: 0;
   right: 0;
   background-color: #000000;
@@ -1549,6 +1549,7 @@ input[type="checkbox"] {
   .bottom-bar {
     position: fixed;
     bottom: 0;
+    z-index: 200;
     background-color: #000000;
     text-align: center;
     text-align: center;
@@ -1634,4 +1635,57 @@ input[type="checkbox"] {
 .img_icn_smg {
   width: 25px;
   height: 25px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  /* color: white; */
+  /* background-color: #fff; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-line {
+  position: relative;
+  width: 4px;
+  height: 300px;
+  background-color: #e0e0e0;
+  margin-right: 20px;
+  border-radius: 2px;
+}
+
+.progress-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.progress-dot.completed {
+  background-color: #4caf50;
+  transform: translateX(-50%) scale(1.2);
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.stage-label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.stage:last-child {
+  margin-bottom: 0;
 }
