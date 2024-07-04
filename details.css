@@ -1689,3 +1689,11 @@ input[type="checkbox"] {
 .stage:last-child {
   margin-bottom: 0;
 }
+
+.buttons_OrderDetails {
+  background-color: #18578c;
+  width: 100%;
+  margin-top: 50px;
+  padding: 5px;
+  /* margin-top: 30px; */
+}
