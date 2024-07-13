@@ -1,214 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="gallery-wrapper">
-          <div class="gallery">
-            <div class="gallery-item" onclick="goTomobileImageCardshtml();">
-              <img
-                src="assets/sliderimgs/LED Mirror2.jpg"
-                alt="Placeholder 1"
-              />
-              <div class="gallery-label">Corner shelf</div>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="assets/sliderimgs/LED Mirror2.jpg"
-                alt="Placeholder 1"
-              />
-              <div class="gallery-label">Digital frame</div>
-            </div>
-            <!-- Add more gallery items with images and labels -->
-            <div class="gallery-item">
-              <img src="assets/png/Icons_LED Mirror.png" alt="Placeholder 3" />
-              <div class="gallery-label">LED mirror</div>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="assets/png/Icons_Mirror Cabinet.png"
-                alt="Placeholder 4"
-              />
-              <div class="gallery-label">Mirror cabinet</div>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="assets/png/Icons_Magnetic Board.png"
-                alt="Placeholder 5"
-              />
-              <div class="gallery-label">Magnetic board</div>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="assets/png/Icons_Magnetic Board.png"
-                alt="Placeholder 5"
-              />
-              <div class="gallery-label">Magnetic board</div>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="assets/png/Icons_Magnetic Board.png"
-                alt="Placeholder 5"
-              />
-              <div class="gallery-label">Magnetic board</div>
-            </div>
-            <div class="gallery-item" onclick="categoryPage();">
-              <img src="assets/png/Icons_More.png" alt="Placeholder 6" />
-              <div class="gallery-label">View More</div>
-            </div>
-          </div>
-        </div>
-        <div class="dots-container"></div>
-      </div>
-    </div>
-    <style>
-      .gallery-wrapper {
-        overflow: hidden;
-        margin: auto;
-        border-radius: 10px;
-        max-width: 100%;
-        width: 713px;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Menu</title>
+  <style>
+    .dropdown-button {
+      margin: 0px;
+      cursor: pointer;
+    }
+    .dropdown-list {
+      background-color: black;
+      display: none; /* Hidden by default */
+      list-style-type: none;
+      padding: 0;
+    }
+    .dropdown-item {
+      padding-top: 1px;
+      color: white;
+      padding: 5px 10px;
+    }
+    .dropdown-item:hover {
+      background-color: grey;
+    }
+  </style>
+  <script>
+    function toggleDropdown(id) {
+      var list = document.getElementById(id);
+      if (list.style.display === "none" || list.style.display === "") {
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
       }
-
-      .gallery {
-        display: flex;
-        height: 140px;
-        cursor: grab;
-        user-select: none;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-      }
-
-      .gallery::-webkit-scrollbar {
-        display: none;
-      }
-
-      .gallery:active {
-        cursor: grabbing;
-      }
-
-      .gallery-item {
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        object-fit: cover;
-        flex-shrink: 0;
-        position: relative;
-      }
-
-      .gallery-item img {
-        /* border-radius: 50%; */
-        width: 100px;
-        height: 100px;
-        background-color: #ffffff21;
-      }
-
-      .gallery-label {
-        text-align: center;
-        font-size: 14px;
-        margin-top: 5px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -30px;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .dots-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-      }
-
-      .dot {
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-      }
-
-      .dot.active {
-        background-color: #717171;
-      }
-    </style>
-    <script>
-      function categoryPage() {
-        window.location.href = "categorypage.html";
-      }
-      function goTomobileImageCardshtml() {
-        window.location.href = "mobileImageCards.html";
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const gallery = document.querySelector(".gallery");
-        const galleryItems = document.querySelectorAll(".gallery-item");
-        const dotsContainer = document.querySelector(".dots-container");
-
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        galleryItems.forEach(() => {
-          const dot = document.createElement("div");
-          dot.classList.add("dot");
-          dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll(".dot");
-        dots[0].classList.add("active");
-
-        gallery.addEventListener("mousedown", (e) => {
-          isDown = true;
-          gallery.classList.add("active");
-          startX = e.pageX - gallery.offsetLeft;
-          scrollLeft = gallery.scrollLeft;
-          e.preventDefault();
-        });
-
-        gallery.addEventListener("mouseleave", () => {
-          isDown = false;
-          gallery.classList.remove("active");
-        });
-
-        gallery.addEventListener("mouseup", () => {
-          isDown = false;
-          gallery.classList.remove("active");
-        });
-
-        gallery.addEventListener("mousemove", (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-          const x = e.pageX - gallery.offsetLeft;
-          const walk = (x - startX) * 2; // Adjust scroll speed
-          gallery.scrollLeft = scrollLeft - walk;
-        });
-
-        gallery.addEventListener("scroll", () => {
-          const scrollPosition = gallery.scrollLeft + gallery.clientWidth / 8;
-          const itemWidth =
-            galleryItems[0].clientWidth +
-            parseInt(window.getComputedStyle(galleryItems[8]).marginRight);
-          const index = Math.floor(scrollPosition / itemWidth);
-
-          dots.forEach((dot) => dot.classList.remove("active"));
-          if (dots[index]) {
-            dots[index].classList.add("active");
-          }
-        });
-      });
-    </script>
-  </body>
+    }
+  </script>
+</head>
+<body>
+  <button class="dropdown-button" onclick="toggleDropdown('dropdownList1')">Products<i class="bi bi-caret-down"></i></button>
+  <div style="width: 100%; height:10px;"></div>
+  <ul class="dropdown-list" id="dropdownList1">
+    <li class="dropdown-item">Home</li>
+    <li class="dropdown-item">Led Mirror</li>
+    <li class="dropdown-item">Mirror cabinet</li>
+    <li class="dropdown-item">Corner Shelf</li>
+    <li class="dropdown-item">Magnetic board</li>
+    <li class="dropdown-item">Glass frames</li>
+  </ul>
+</body>
 </html>

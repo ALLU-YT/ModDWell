@@ -104,6 +104,25 @@
     font-size: 36px;
     margin-left: 50px;
   }
+  .listt {
+    display: none;
+    /* Initially hide the list */
+    list-style-type: none;
+    padding: 0;
+    animation: fadeIn 0.5s ease;
+    /* Add animation */
+    border-radius: 5px;
+  }
+  /* Style for list items */
+  .listt-item {
+    margin: 0px;
+    text-align: start;
+    padding-left: 13px;
+    font-size: 13px;
+    padding-top: 5px;
+    color: #fbfbfbb8;
+    /* padding: 5px; */
+  }
 </style>
 
 <div id="mySidenavv" class="sidenavv">
@@ -129,15 +148,15 @@
       </div>
     </div>
     <hr>
-    <button class="buttons" style="margin: 0px;" onclick="toggleList('myList1')">Products<i class="bi bi-caret-down"></i></button>
+    <button class="buttons" style="margin: 0px;" onclick="toggleListt_1('myList101')">Produ<i class="bi bi-caret-down"></i></button>
     <div style="width: 100%; height:10px;"></div>
-    <ul class="list" id="myList1" style="background-color: black;">
-      <li class="list-item" style="padding-top: 1px;">Home</li>
-      <li class="list-item">Led Mirror</li>
-      <li class="list-item">Mirror cabinet</li>
-      <li class="list-item">Corner Shelf</li>
-      <li class="list-item">Magnetic board</li>
-      <li class="list-item">Glass frames</li>
+    <ul class="listt" id="myList101" style="background-color: black;">
+      <li class="listt-item" style="padding-top: 1px;">Home</li>
+      <li class="listt-item">Led Mirror</li>
+      <li class="listt-item">Mirror cabinet</li>
+      <li class="listt-item">Corner Shelf</li>
+      <li class="listt-item">Magnetic board</li>
+      <li class="listt-item">Glass frames</li>
     </ul>
     <button class="buttons" style="margin: 0px;" onclick="toggleList('myList2')">Profile<i class="bi bi-caret-down"></i></button>
     <div style="width: 100%; height:10px;"></div>
@@ -158,6 +177,16 @@
 <!-- <button onclick="openNavv()">Open Sidenav</button> -->
 
 <script>
+  function toggleListt_1(listId) {
+    console.log("hso");
+  var list = document.getElementById(listId);
+  if (list.style.display === "none" || list.style.display === "") {
+    // Check for both 'none' and '' (initial)
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
+}
  function openNavv() {
   const slider = document.getElementById("mySidenavv");
   slider.style.width = "300px";

@@ -1179,52 +1179,41 @@
       <!-- mobile footer -->
 
       <!-- div.mobileFooter  -->
-      <div class="custom_btn_phone">
-        <div class="bottom-bar">
-          <div style="display: block; margin-left: 12px">
-            <ion-icon
-              name="cart-outline"
-              class="icon_new"
-              onclick="change(this); ViewOrderPage();"
-            ></ion-icon>
-            <p class="bottom_bar_p" style="line-height: 0px">Orders</p>
-          </div>
-
-          <!-- <div style="display: block;">
+     
+  <div class="custom_btn_phone">
+    <div class="bottom-bar">
+      <div style="display: block;" >
+        <ion-icon name="cart-outline" class="icon_new" onclick="change(this); openOrderPage();"></ion-icon>
+        <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
+    </div>
+    
+    <div style="display: block;">
       <ion-icon name="heart-outline" class="icon_new" onclick="change(this); openWishListPage();"></ion-icon>
       <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
-  </div> -->
-          <div style="display: block">
-            <ion-icon
-              name="home-outline"
-              class="icon_new"
-              onclick="change(this); homepage();"
-            >
-            </ion-icon>
-
-            <p class="bottom_bar_p" style="line-height: 0px">Home</p>
-          </div>
-          <div style="display: block">
-            <ion-icon
-              name="cart-outline"
-              class="icon_new"
-              onclick="change(this); cartPage();"
-            >
-            </ion-icon>
-
-            <p class="bottom_bar_p" style="line-height: 0px">Cart</p>
-          </div>
-          <div style="display: block; padding-right: 12px">
-            <ion-icon
-              name="person-outline"
-              class="icon_new activee"
-              onclick="change(this) ; bestSeller();   "
-            >
-            </ion-icon>
-            <p class="bottom_bar_p" style="line-height: 0px">Best Seller</p>
-          </div>
-        </div>
-      </div>
+  </div>
+       <div style="display: block;">
+        <ion-icon name="home-outline" class="icon_new " onclick="change(this);">
+         
+        </ion-icon>
+    
+        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
+       </div>
+       <div style="display: block;">
+        <ion-icon name="cart-outline" class="icon_new " onclick="change(this); openCartSlider();">
+         
+        </ion-icon>
+    
+        <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
+       </div>
+       <div style="display: block;">
+        <ion-icon name="person-outline" class="icon_new activee" onclick="change(this) ; goToSellerPage();   ">
+        </ion-icon>
+        <p class="bottom_bar_p" style="line-height: 0px;">Best Seller</p>
+   
+       </div>
+       
+    </div>
+</div>
       <script>
         function homepage() {
           window.location.href = "index.html";
