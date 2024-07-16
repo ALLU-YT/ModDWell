@@ -1984,7 +1984,7 @@ body.dark .search-field i {
   position: absolute;
   left: -9999px;
 }
-.checkbox:checked + label,
+/* .checkbox:checked + label,
 .checkbox:not(:checked) + label {
   position: relative;
   cursor: pointer;
@@ -2154,4 +2154,4 @@ ul li:nth-child(4) {
   ul li {
     height: 150px;
   }
-}
+} */

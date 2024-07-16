@@ -177,16 +177,11 @@
 <!-- <button onclick="openNavv()">Open Sidenav</button> -->
 
 <script>
-  function toggleListt_1(listId) {
-    console.log("hso");
-  var list = document.getElementById(listId);
-  if (list.style.display === "none" || list.style.display === "") {
-    // Check for both 'none' and '' (initial)
-    list.style.display = "block";
-  } else {
-    list.style.display = "none";
-  }
+function toggleListt_1(listId) {
+    console.log("clicked");
+    $('#' + listId).toggle();
 }
+
  function openNavv() {
   const slider = document.getElementById("mySidenavv");
   slider.style.width = "300px";
@@ -1037,15 +1032,15 @@ document
 
 <!-- SLide Banners -->
 
-<div class="category_head" style="padding-bottom: 30px">
+<!-- <div class="category_head" style="padding-bottom: 30px">
   <h2>New products</h2>
-</div>
+</div> -->
 <!-- over-hide px-4 px-sm-0 -->
-<a href="https://front.codes/" class="logo hover-target" target="_blank">
+<!-- <a href="https://front.codes/" class="logo hover-target" target="_blank">
   <img src="https://assets.codepen.io/1462889/fcb.png" alt="" />
-</a>
+</a> -->
 
-<div class="section full-height ">
+<!-- <div class="section full-height ">
   <div class="container">
     <div class="row full-height justify-content-center">
       <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
@@ -1089,7 +1084,7 @@ document
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
