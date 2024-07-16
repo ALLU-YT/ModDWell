@@ -1979,12 +1979,12 @@ body.dark .search-field i {
 /* .padding-tb {
   padding: 100px 0;
 } */
-[type="radio"]:checked,
+/* [type="radio"]:checked,
 [type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-/* .checkbox:checked + label,
+.checkbox:checked + label,
 .checkbox:not(:checked) + label {
   position: relative;
   cursor: pointer;
@@ -2120,7 +2120,7 @@ ul li:nth-child(4) {
   opacity: 1;
   pointer-events: auto;
   border-radius: 16px;
-}
+} */
 
 .logo {
   position: absolute;
@@ -2154,4 +2154,405 @@ ul li:nth-child(4) {
   ul li {
     height: 150px;
   }
-} */
+}
+.sidenavv {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenavv a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavv a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavv .closebtn {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.listt {
+  display: none;
+  /* Initially hide the list */
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 0.5s ease;
+  /* Add animation */
+  border-radius: 5px;
+}
+/* Style for list items */
+.listt-item {
+  margin: 0px;
+  text-align: start;
+  padding-left: 13px;
+  font-size: 13px;
+  padding-top: 5px;
+  color: #fbfbfbb8;
+  /* padding: 5px; */
+}
+#popupBackground {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: #3333330e; /* Dark background color */
+  background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
+  background-size: cover;
+}
+
+#popupContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 855px;
+  height: 580px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  /* padding: 20px; */
+  display: flex; /* Display children side by side */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
+}
+
+#imageContainer {
+  /* Occupy 50% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#loginFormContainer {
+  flex: 1; /* Occupy 50% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+#closeBtn_signup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.login_head {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.border-line {
+  border: none;
+
+  outline: none; /* Remove outline on focus */
+}
+.border-line {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding: 0px;
+  padding-top: 20px;
+  /* padding-top: 58px; */
+}
+.forgot_box {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  padding: 0px;
+}
+.forgot_box p {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.loginbutton {
+  background: #18578c;
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+}
+.img_facebook {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 10px;
+}
+/* head */
+/* Styling for the button icon (assuming Bootstrap icons are used) */
+.bi-person {
+  font-size: 24px; /* Adjust as needed */
+}
+
+/* SignUpPopUp */
+
+#popupBackground_signup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: #3333330e; /* Dark background color */
+  background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
+  background-size: cover;
+  z-index: 9999; /* Ensure the popup is on top of other elements */
+}
+
+#popupBackground_signup_ui {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 855px;
+  height: 580px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  /* padding: 20px; */
+  display: flex; /* Display children side by side */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
+}
+
+#imageContainer_signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#loginFormContainer_signup {
+  flex: 1; /* Occupy 50% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeBtn_signup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.login_head {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.border-line {
+  border: none;
+
+  outline: none; /* Remove outline on focus */
+}
+.border-line {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding: 0px;
+  padding-top: 20px;
+  /* padding-top: 58px; */
+}
+.forgot_box {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  padding: 0px;
+}
+.forgot_box p {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.loginbutton {
+  background: #18578c;
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+}
+.img_facebook {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 10px;
+}
+/* head */
+/* Styling for the button icon (assuming Bootstrap icons are used) */
+.bi-person {
+  font-size: 24px; /* Adjust as needed */
+}
+/* Styles for the modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  z-index: 9999; /* Ensure the popup is on top of other elements */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 18px;
+  color: black;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Class to hide overflow on body */
+.modal-open {
+  overflow: hidden;
+}
+
+.Subscribe-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  background-color: #425a8b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.timmee-input {
+  padding-right: 200px;
+  /* Adjust according to button width and padding */
+}
+/* Styling for the bottom sheet */
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 527px;
+  /* height: 83%; */
+  background-color: #000000;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+  /* padding: 20px; */
+  box-sizing: border-box;
+}
+
+/* Styling for the icon button */
+.bottom-sheet-toggle {
+  position: fixed;
+  bottom: 70px;
+  right: 5px;
+  background-color: #18578c;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  z-index: 250;
+  padding: 5px;
+}
+
+/* Icon style */
+.bottom-sheet-toggle i {
+  color: white;
+  padding: 8px;
+  font-size: 20px;
+}
+
+/* Text style */
+.bottom-sheet-toggle p {
+  margin: 5px 0;
+  font-size: 10px;
+  color: white;
+}
+.closeTogleBtn {
+  width: 100%;
+  background-color: #18578c;
+  /* border: solid 1px black; */
+}
+.chatnow_container {
+  background-color: rgb(27, 25, 25);
+  width: 95%;
+  margin: 10px;
+  height: 200px;
+}
+.chatnow_container_1 {
+  /* background-color: rgb(27, 25, 25); */
+  width: 95%;
+  margin: 10px;
+  height: 200px;
+}
+.wtb_btn {
+  background: green;
+  padding: 10px;
+  border-radius: 5px;
+}
+.wtb_btn_1 {
+  background: rgb(214, 7, 7);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-bottom: 100px;
+}
+.chatnow_container_1_inp {
+  background-color: transparent;
+  border: 0.5px solid white;
+  border-width: 1px;
+  padding: 5px 0px 5px 10px;
+  width: 100%;
+  margin: 5px;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the container */
+}

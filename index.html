@@ -70,60 +70,6 @@
     margin-left: 35px;" alt="Logo"></a>
 
 
-<style>
-  .sidenavv {
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    z-index: 2001;
-    top: 0;
-    left: 0;
-    background-color: black;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 20px;
-  }
-
-  .sidenavv a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .sidenavv a:hover {
-    color: #f1f1f1;
-  }
-
-  .sidenavv .closebtn {
-    position: absolute;
-    top: 0;
-    right: 3px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  .listt {
-    display: none;
-    /* Initially hide the list */
-    list-style-type: none;
-    padding: 0;
-    animation: fadeIn 0.5s ease;
-    /* Add animation */
-    border-radius: 5px;
-  }
-  /* Style for list items */
-  .listt-item {
-    margin: 0px;
-    text-align: start;
-    padding-left: 13px;
-    font-size: 13px;
-    padding-top: 5px;
-    color: #fbfbfbb8;
-    /* padding: 5px; */
-  }
-</style>
 
 <div id="mySidenavv" class="sidenavv">
   <div style="display: block;" onclick="closeSlider();">
@@ -176,46 +122,6 @@
 
 <!-- <button onclick="openNavv()">Open Sidenav</button> -->
 
-<script>
-function toggleListt_1(listId) {
-    console.log("clicked");
-    $('#' + listId).toggle();
-}
-
- function openNavv() {
-  const slider = document.getElementById("mySidenavv");
-  slider.style.width = "300px";
-  slider.classList.add("open"); // Add class to show it's open
-  document.addEventListener("click", closeNavvv, true); // Listen for clicks
-}
-
-function closeNavvv(event) {
-  const slider = document.getElementById("mySidenavv");
-  if (!slider.contains(event.target)) {
-    slider.style.transition = "width 0.5s ease"; // Smooth transition effect
-    slider.style.width = "0";
-    setTimeout(() => {
-      slider.classList.remove("open"); // Remove class after transition
-    }, 500); // Delay should match transition duration
-    document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
-  }
-}
-
-// Function to close the slider when a close button is clicked
-function closeSlider() {
-  const slider = document.getElementById("mySidenavv");
-  slider.style.transition = "width 0.5s ease"; // Smooth transition effect
-  slider.style.width = "0";
-  setTimeout(() => {
-    slider.classList.remove("open"); // Remove class after transition
-  }, 500); // Delay should match transition duration
-  document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
-}
-
-// Example of adding a click event to a close button (assuming a button with id="closeButton")
-document.getElementById("closeButton").addEventListener("click", closeSlider);
-
-</script>
 
 
 
@@ -260,251 +166,7 @@ document.getElementById("closeButton").addEventListener("click", closeSlider);
           <button id="">  <i class="bi bi-person headicon"></i></button>
           <!-- addTicketBtn -->
 
-          <style>
-  
-            /* loginPopUpp */
-            #popupBackground {
-              display: block;
-              position: fixed;
-              top: 0;
-              left: 0;
-              border-radius: 10px;
-              width: 100%;
-              height: 100%;
-              color: black;
-              background-color: #3333330e; /* Dark background color */
-              background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
-              background-size: cover;
-            
-            }
-            
-            #popupContent {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              width: 855px;
-              height: 580px;
-              transform: translate(-50%, -50%);
-              background-color: #ffffff;
-              /* padding: 20px; */
-              display: flex; /* Display children side by side */
-              border-radius: 20px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
-            }
-            
-            #imageContainer {
-              /* Occupy 50% width */
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 10px;
-            }
-            
-            #loginFormContainer {
-              flex: 1; /* Occupy 50% width */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-            }
-            
-            #closeBtn {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              cursor: pointer;
-              font-size: 13px;
-            }
-            #closeBtn_signup {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              cursor: pointer;
-            }
-            .login_head {
-              font-size: 20px;
-              font-weight: 600;
-            }
-            
-            .border-line {
-              border: none;
-            
-              outline: none; /* Remove outline on focus */
-            }
-            .border-line {
-              border-bottom: 1px solid rgb(0, 0, 0);
-              padding: 0px;
-              padding-top: 20px;
-              /* padding-top: 58px; */
-            }
-            .forgot_box {
-              display: flex;
-              justify-content: end;
-              margin-top: 5px;
-              padding: 0px;
-            }
-            .forgot_box p {
-              font-size: 12px;
-              color: rgb(0, 0, 0);
-            }
-            .loginbutton {
-              background: #18578c;
-              color: white;
-              padding: 10px;
-              border-radius: 30px;
-            }
-            .img_facebook {
-              width: 30px;
-              height: 30px;
-              padding: 2px;
-              margin-right: 10px;
-            }
-            /* head */
-            /* Styling for the button icon (assuming Bootstrap icons are used) */
-            .bi-person {
-              font-size: 24px; /* Adjust as needed */
-            }
-            
-            /* SignUpPopUp */
-            
-            #popupBackground_signup {
-              display: none;
-              position: fixed;
-              top: 0;
-              left: 0;
-              border-radius: 10px;
-              width: 100%;
-              height: 100%;
-              color: black;
-              background-color: #3333330e; /* Dark background color */
-              background-image: url("your-pattern.png"); /* Replace 'your-pattern.png' with your own pattern */
-              background-size: cover;
-              z-index: 9999; /* Ensure the popup is on top of other elements */
-            }
-            
-            #popupBackground_signup_ui {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              width: 855px;
-              height: 580px;
-              transform: translate(-50%, -50%);
-              background-color: #ffffff;
-              /* padding: 20px; */
-              display: flex; /* Display children side by side */
-              border-radius: 20px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visualization */
-            }
-            
-            #imageContainer_signup {
-
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 10px;
-            }
-            
-            #loginFormContainer_signup {
-              flex: 1; /* Occupy 50% width */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-            }
-            
-            #closeBtn_signup {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              cursor: pointer;
-            }
-            
-            .login_head {
-              font-size: 20px;
-              font-weight: 600;
-            }
-            
-            .border-line {
-              border: none;
-            
-              outline: none; /* Remove outline on focus */
-            }
-            .border-line {
-              border-bottom: 1px solid rgb(0, 0, 0);
-              padding: 0px;
-              padding-top: 20px;
-              /* padding-top: 58px; */
-            }
-            .forgot_box {
-              display: flex;
-              justify-content: end;
-              margin-top: 5px;
-              padding: 0px;
-            }
-            .forgot_box p {
-              font-size: 12px;
-              color: rgb(0, 0, 0);
-            }
-            .loginbutton {
-              background: #18578c;
-              color: white;
-              padding: 10px;
-              border-radius: 30px;
-            }
-            .img_facebook {
-              width: 30px;
-              height: 30px;
-              padding: 2px;
-              margin-right: 10px;
-            }
-            /* head */
-            /* Styling for the button icon (assuming Bootstrap icons are used) */
-            .bi-person {
-              font-size: 24px; /* Adjust as needed */
-            }
-              /* Styles for the modal background */
-              .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                left: 0;
-                top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
-                z-index: 9999; /* Ensure the popup is on top of other elements */
-              }
-            
-              /* Modal content */
-              .modal-content {
-                background-color: #fefefe;
-              
-              
-                width: 100%; /* Could be more or less, depending on screen size */
-             
-              }
-            
-              /* Close button */
-              .close {
-                color: #aaa;
-                float: right;
-                font-size: 18px;
-               color: black;
-              }
-            
-              .close:hover,
-              .close:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-              }
-            
-              /* Class to hide overflow on body */
-              .modal-open {
-                overflow: hidden;
-              }
-            </style>
+        
             
             <div id="myModal" class="modal" style="color: black">
               <!-- Modal content -->
@@ -634,75 +296,7 @@ document.getElementById("closeButton").addEventListener("click", closeSlider);
 
 <!-- //LoginPage -->
 <div style="background-color: rgba(255, 255, 255, 0.457);height: 1px;"></div> 
-    <script>
-document
-  .getElementById("signupPopupbtn")
-  .addEventListener("click", function () {
-    document.getElementById("popupBackground").style.display = "none";
-  });
-
-// SignUpPopup button
-document
-  .getElementById("signupPopupbtn")
-  .addEventListener("click", function () {
-    document.getElementById("popupBackground_signup").style.display = "block";
-  });
-  document
-  .getElementById("signinPopupbtn")
-  .addEventListener("click", function () {
-    document.getElementById("popupBackground_signup").style.display = "none";
-  });
-
-// SignUpPopup button
-document
-  .getElementById("signupPopupbtn")
-  .addEventListener("click", function () {
-    document.getElementById("popupBackground").style.display = "block";
-  });
-
-
-
-
-
-
-
-
-      var modal = document.getElementById("myModal");
-
-      // Get the button that opens the modal
-      var btn = document.getElementById("addTicketBtn");
-
-  
-      var span = document.getElementsByClassName("close")[0];
-       var span_2 = document.getElementsByClassName("close_signUp")[0];
-
-      // When the user clicks the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = "block";
-        document.body.classList.add("modal-open");
-      };
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open");
-      };
-
-       // When the user clicks on <span> (x), close the modal
-        span_2.onclick = function () {
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open");
-      };
-
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-          document.body.classList.remove("modal-open");
-        }
-      };
-    </script>
+   
 
 
 
@@ -1086,6 +680,48 @@ document
   </div>
 </div> -->
 
+<!-- Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <img src="https://www.glazonoid.com/cdn/shop/files/Artboard4.webp?v=1710508145&width=1000" style="object-fit: cover; width: 100%;" alt="">
+    </div>
+  </div>
+ </div>
+
+
+<!-- Discover HD+ Mirrors -->
+<div class="category_head" style="padding-bottom: 0px">
+  <h2>Discover HD+ Mirror</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col col-6">
+      <div style="position: relative;">
+        <video width="100%" height="360" loop controls autoplay>
+          <source src="assets\quinn_zw49uix7u2iu1z9t54yrbeg8.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); color: white; padding: 10px;height: 70px;">
+          <p style="font-size: 13px;">ProductName...</p>
+          <p style="line-height: 0;font-size: 14px;">Price 500</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col-6">
+      <div style="position: relative;">
+        <video width="100%" height="360" loop controls autoplay>
+          <source src="assets\quinn_zw49uix7u2iu1z9t54yrbeg8.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); color: white; padding: 10px;height: 70px;">
+          <p style="font-size: 13px;">ProductName...</p>
+          <p style="line-height: 0;font-size: 14px;">Price 500</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -1659,25 +1295,7 @@ document
                         </div>
                     </div>
                 </div>
-                <style>
-                    .Subscribe-btn {
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        padding: 5px 10px;
-                        background-color: #425A8B;
-                        color: #fff;
-                        border: none;
-                        cursor: pointer;
-                        border-radius: 5px;
-                    }
-                    
-                    .timmee-input {
-                        padding-right: 200px
-                        /* Adjust according to button width and padding */
-                    }
-                </style>
+             
 
 
 
@@ -1866,94 +1484,12 @@ document
 
 
 
-<style>
-  /* Styling for the bottom sheet */
-  .bottom-sheet {
 
-    position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 527px;
-      /* height: 83%; */
-      background-color: #000000;
-      box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
-      transform: translateY(100%);
-      transition: transform 0.3s ease-out;
-      z-index: 1000;
-      /* padding: 20px; */
-      box-sizing: border-box;
-  }
-
-  /* Styling for the icon button */
-  .bottom-sheet-toggle {
-    position: fixed;
-    bottom: 70px;
-    right: 5px;
-    background-color: #18578c;
-    text-align: center;
-    border-radius: 20px 20px 0 0;
-    z-index: 250;
-    padding: 5px;
-  }
-
-  /* Icon style */
-  .bottom-sheet-toggle i {
-    color: white;
-    padding: 8px;
-    font-size: 20px;
-  }
-
-  /* Text style */
-  .bottom-sheet-toggle p {
-    margin: 5px 0;
-    font-size: 10px;
-    color: white;
-  }
-  .closeTogleBtn{
-    width: 100%;
-    background-color:#18578c;
-    /* border: solid 1px black; */
-  }
-  .chatnow_container{
-    background-color: rgb(27, 25, 25);
-    width: 95%;
-    margin: 10px;
-    height: 200px;
-  
-  }
-  .chatnow_container_1{
-    /* background-color: rgb(27, 25, 25); */
-    width: 95%;
-    margin: 10px;
-    height: 200px;
-  }
-  .wtb_btn{
-    background: green;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .wtb_btn_1{
-    background: rgb(214, 7, 7);
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 8px;
-    margin-bottom: 100px;
-  }
-  .chatnow_container_1_inp{
-    background-color: transparent;
-    border: .5px solid white;
-    border-width: 1px;
-    padding: 5px 0px 5px 10px;
-    width: 100%;
-    margin: 5px;
-  }
-</style>
 
 <!-- Icon for triggering bottom sheet -->
 <div class="bottom-sheet-toggle" onclick="toggleBottomSheet();">
   <div>
-    <i class="bi bi-person"></i>
+    <img style="width: 40px; display: flex;align-items: center; margin-left: 9px;" src="https://ii1.pepperfry.com/assets/w24-Get-Expert-Help.gif" alt="">
     <p>Get Expert</p>
   </div>
 </div>
@@ -1994,19 +1530,7 @@ document
 </div>
 
 <!-- JavaScript function to toggle bottom sheet -->
-<script>
-   function toggleBottomSheet() {
-      var bottomSheet = document.getElementById("bottomSheet");
-      var body = document.body;
-      if (bottomSheet.style.transform === "translateY(0%)") {
-        bottomSheet.style.transform = "translateY(100%)";
-        body.style.overflow = "auto";
-      } else {
-        bottomSheet.style.transform = "translateY(0%)";
-        body.style.overflow = "hidden";
-      }
-    }
-</script>
+
 
 
 
@@ -2273,84 +1797,7 @@ margin-top: 11px; margin-left: 13px;">Subtotal : <span style="font-size: 16px;">
 
 
 
-<script>
 
-function goToSellerPage(){
-  window.location.href = "bestSellerProucts.html";
-}
-
-  function CartPage(){
-      window.location.href = "addToCartPage.html";
-  }
-  function checkOut(){
-     window.location.href = "checkOut.html";
-  }
-function openOrderPage  () {
-  window.location.href = "MobilePurchaseHistory.html";
-}
-
-function openWishListPage(){
-  window.location.href = "mobileWishListPage.html";
-}
-function wishllistPage(){
-  window.location.href = "mobileWishListPage.html";
-
-}
-
-  function wishListPage(){
-    window.location.href = "mobileWishListPage.html";
-  }
-function purchaseHistoryPages(){
-  window.location.href = "purchaseHistorpage.html";
-}
-function manageProfileScreen(){
-  window.location.href = "manageProfile.html";
-}
-function categoryPage(){
-  window.location.href = "categorypage.html";
-}
-
-  function change(item) {
-
-      const buttons = document.querySelectorAll("ion-icon");
-      buttons.forEach(function(obj) {
-          obj.classList.remove("activee");
-      });
-      item.classList.add("activee");
-  }
-
-  function displysignUpForm() {
-  // Assuming there's only one element with each class
-  document.getElementsByClassName("mobileSignup")[0].style.display = "block";
-  document.getElementsByClassName("mobilelogin")[0].style.display = "none";
-}
-function displyLoginUpForm() {
-  // Assuming there's only one element with each class
-  document.getElementsByClassName("mobileSignup")[0].style.display = "none";
-  document.getElementsByClassName("mobilelogin")[0].style.display = "block";
-}
-
-function openNavSignup() {
-  document.getElementById("mySidenavSignUp").style.width = "300px";
-}
-
-function closeNavSignup() {
-  document.getElementById("mySidenavSignUp").style.width = "0";
-}
-
-//Cart Slider
-function openCartSlider() {
- 
-    document.getElementById("mycartslider").style.width = "300px";
-}
-function closeNavSignupp() {
-  document.getElementById("mycartslider").style.width = "0";
-}
-function manageProfile_edit(){
-  window.location.href = "manageProfile.html";
-}
-
-</script>
 
 <script src="profileSlider.js"></script>
 

@@ -214,3 +214,183 @@ window.onclick = function (event) {
     document.body.classList.remove("modal-openmodal_1");
   }
 };
+
+function toggleListt_1(listId) {
+  console.log("clicked");
+  $("#" + listId).toggle();
+}
+
+function openNavv() {
+  const slider = document.getElementById("mySidenavv");
+  slider.style.width = "300px";
+  slider.classList.add("open"); // Add class to show it's open
+  document.addEventListener("click", closeNavvv, true); // Listen for clicks
+}
+
+function closeNavvv(event) {
+  const slider = document.getElementById("mySidenavv");
+  if (!slider.contains(event.target)) {
+    slider.style.transition = "width 0.5s ease"; // Smooth transition effect
+    slider.style.width = "0";
+    setTimeout(() => {
+      slider.classList.remove("open"); // Remove class after transition
+    }, 500); // Delay should match transition duration
+    document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
+  }
+}
+
+// Function to close the slider when a close button is clicked
+function closeSlider() {
+  const slider = document.getElementById("mySidenavv");
+  slider.style.transition = "width 0.5s ease"; // Smooth transition effect
+  slider.style.width = "0";
+  setTimeout(() => {
+    slider.classList.remove("open"); // Remove class after transition
+  }, 500); // Delay should match transition duration
+  document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
+}
+
+// Example of adding a click event to a close button (assuming a button with id="closeButton")
+document.getElementById("closeButton").addEventListener("click", closeSlider);
+
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground").style.display = "none";
+  });
+
+// SignUpPopup button
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground_signup").style.display = "block";
+  });
+document
+  .getElementById("signinPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground_signup").style.display = "none";
+  });
+
+// SignUpPopup button
+document
+  .getElementById("signupPopupbtn")
+  .addEventListener("click", function () {
+    document.getElementById("popupBackground").style.display = "block";
+  });
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("addTicketBtn");
+
+var span = document.getElementsByClassName("close")[0];
+var span_2 = document.getElementsByClassName("close_signUp")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+  document.body.classList.add("modal-open");
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+};
+
+// When the user clicks on <span> (x), close the modal
+span_2.onclick = function () {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+};
+function toggleBottomSheet() {
+  var bottomSheet = document.getElementById("bottomSheet");
+  var body = document.body;
+  if (bottomSheet.style.transform === "translateY(0%)") {
+    bottomSheet.style.transform = "translateY(100%)";
+    body.style.overflow = "auto";
+  } else {
+    bottomSheet.style.transform = "translateY(0%)";
+    body.style.overflow = "hidden";
+  }
+}
+
+function goToSellerPage() {
+  window.location.href = "bestSellerProucts.html";
+}
+
+function CartPage() {
+  window.location.href = "addToCartPage.html";
+}
+function checkOut() {
+  window.location.href = "checkOut.html";
+}
+function openOrderPage() {
+  window.location.href = "MobilePurchaseHistory.html";
+}
+
+function openWishListPage() {
+  window.location.href = "mobileWishListPage.html";
+}
+function wishllistPage() {
+  window.location.href = "mobileWishListPage.html";
+}
+
+function wishListPage() {
+  window.location.href = "mobileWishListPage.html";
+}
+function purchaseHistoryPages() {
+  window.location.href = "purchaseHistorpage.html";
+}
+function manageProfileScreen() {
+  window.location.href = "manageProfile.html";
+}
+function categoryPage() {
+  window.location.href = "categorypage.html";
+}
+
+function change(item) {
+  const buttons = document.querySelectorAll("ion-icon");
+  buttons.forEach(function (obj) {
+    obj.classList.remove("activee");
+  });
+  item.classList.add("activee");
+}
+
+function displysignUpForm() {
+  // Assuming there's only one element with each class
+  document.getElementsByClassName("mobileSignup")[0].style.display = "block";
+  document.getElementsByClassName("mobilelogin")[0].style.display = "none";
+}
+function displyLoginUpForm() {
+  // Assuming there's only one element with each class
+  document.getElementsByClassName("mobileSignup")[0].style.display = "none";
+  document.getElementsByClassName("mobilelogin")[0].style.display = "block";
+}
+
+function openNavSignup() {
+  document.getElementById("mySidenavSignUp").style.width = "300px";
+}
+
+function closeNavSignup() {
+  document.getElementById("mySidenavSignUp").style.width = "0";
+}
+
+//Cart Slider
+function openCartSlider() {
+  document.getElementById("mycartslider").style.width = "300px";
+}
+function closeNavSignupp() {
+  document.getElementById("mycartslider").style.width = "0";
+}
+function manageProfile_edit() {
+  window.location.href = "manageProfile.html";
+}
