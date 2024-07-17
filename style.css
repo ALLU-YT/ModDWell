@@ -2141,7 +2141,8 @@ ul li:nth-child(4) {
     padding-top: 240px;
   }
   ul li {
-    height: 200px;
+    /* height: 200px; */
+    height: 0px;
     font-size: 13px;
     letter-spacing: 1px;
   }
@@ -2152,7 +2153,8 @@ ul li:nth-child(4) {
     padding-top: 140px;
   }
   ul li {
-    height: 150px;
+    height: 25px;
+    /* height: 150px; */
   }
 }
 .sidenavv {

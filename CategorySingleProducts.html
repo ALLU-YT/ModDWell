@@ -87,6 +87,8 @@
      "
           alt=""
         />
+        
+        
         <div
           style="
             position: absolute;
@@ -545,32 +547,31 @@
               <h2>LED MIRRORS</h2>
             </div>
             <!-- Category BAnner -->
-            <div style="position: relative">
-              <img
-                style="height: 350px"
-                src="https://www.glazonoid.com/cdn/shop/files/led_Mirror_M.001.webp?v=1675778767&width=750
-             "
-                alt=""
-              />
-              <div
-                style="
-                  position: absolute;
-                  bottom: 0px;
-                  left: 0;
-                  right: 0;
-                  background-color: rgba(0, 0, 0, 0.5);
-                  color: white;
-                  padding: 10px;
-                  height: 70px;
-                "
-              >
-                <h3>Mirrors With Lights</h3>
-                <p style="font-size: 12px">PRICE STARTS FROM ₹4945</p>
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="position: relative;">
+                  <img class="d-block w-100" src="https://www.glazonoid.com/cdn/shop/files/led_Mirror_M.001.webp?v=1675778767&width=750" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+            
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://www.glazonoid.com/cdn/shop/files/led_Mirror_M.001.webp?v=1675778767&width=750" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Mirrors With Lights</h3>
+                    <p>PRICE STARTS FROM ₹4945</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://www.glazonoid.com/cdn/shop/files/led_Mirror_M.001.webp?v=1675778767&width=750" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Mirrors With Lights</h3>
+                    <p>PRICE STARTS FROM ₹4945</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+             
 
       <!-- Features -->
       <div class="container" id="features_p">
@@ -674,115 +675,117 @@
               <p>LED Backlit Front Lit</p>
             </div>
           </div>
-        
-          </div>
         </div>
       </div>
-
-      <!-- dropDownFeatures -->
-      <div class="container-fluid"
-       style="color: white;">
-        <div class="row">
-          <div class="btn_container" onclick="toggleListt_1('myList101')">
-            FEATURES <i class="bi bi-caret-down"></i>
-          </div>
-          <div style="width: 100%; height: 10px"></div>
-          <div class="listt" style="margin: 0px;">
-            <table class="table">
-              <tbody id="myList101" style="background-color: black ; color: white;">
-                <tr>
-                  <th class="col-xs-6">CUSTOMIZATION</th>
-                  <td class="col-xs-6">Available</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">LIGHTCOLOUR</th>
-                  <td class="col-xs-6">Warm white</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">THICKNESS</th>
-                  <td class="col-xs-6">35mm</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">CONTROLMECHANISM</th>
-                  <td class="col-xs-6">Touch sensor, Plug and Play system</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">FRAMETYPE</th>
-                  <td class="col-xs-6">Aluminium</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">MOUNTINGTYPE</th>
-                  <td class="col-xs-6">Wall mounted</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">DE-FOGGER</th>
-                  <td class="col-xs-6">Optional</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">SHAPESAVAILABLE</th>
-                  <td class="col-xs-6">Rectangle, Circle</td>
-                </tr>
-                <tr>
-                  <th class="col-xs-6">DIMENSION</th>
-                  <td class="col-xs-6">600mm x 450mm, 710mm x 430mm, 914mm x 610mm</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      
-      <div style="display: flex; align-items: flex-start;">
-        <img style="width: 50px; margin-right: 10px;" src="assets/insurance.png" alt="Insurance Icon">
-        <p style="font-size: 13px; margin: 0;">5 years warranty - 2 years with full coverage and 3 years with minimal service charge + Free replacement of parts.</p>
     </div>
-    
-     
+
+<!-- dropDownFeatures -->
+<div class="container-fluid" style="color: white;">
+  <div class="row">
+    <div class="btn_container" onclick="toggleList('myList101')">
+      FEATURES <i class="bi bi-caret-down"></i>
+    </div>
+    <div style="width: 100%; height: 10px;"></div>
+    <div id="myList101" class="listt" style="margin: 0px; display: none;">
+      <table class="table">
+        <tbody style="background-color: black; color: white;">
+          <tr>
+            <th class="col-xs-6">CUSTOMIZATION</th>
+            <td class="col-xs-6">Available</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">LIGHTCOLOUR</th>
+            <td class="col-xs-6">Warm white</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">THICKNESS</th>
+            <td class="col-xs-6">35mm</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">CONTROLMECHANISM</th>
+            <td class="col-xs-6">Touch sensor, Plug and Play system</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">FRAMETYPE</th>
+            <td class="col-xs-6">Aluminium</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">MOUNTINGTYPE</th>
+            <td class="col-xs-6">Wall mounted</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">DE-FOGGER</th>
+            <td class="col-xs-6">Optional</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">SHAPESAVAILABLE</th>
+            <td class="col-xs-6">Rectangle, Circle</td>
+          </tr>
+          <tr>
+            <th class="col-xs-6">DIMENSION</th>
+            <td class="col-xs-6">
+              600mm x 450mm, 710mm x 430mm, 914mm x 610mm
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<style>
+  .btn_container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.103);
+    padding: 8px;
+    cursor: pointer;
+  }
+  .listt {
+    display: none; /* Ensure the list is initially hidden */
+    list-style-type: none;
+    padding: 0;
+    animation: fadeIn 0.5s ease;
+    border-radius: 5px;
+  }
+  .listt-item {
+    margin: 0px;
+    text-align: start;
+    padding-left: 13px;
+    color: #ffffff;
+  }
+</style>
+
+<script>
+  function toggleList(listId) {
+    var myList = document.getElementById(listId);
+    if (myList.style.display === "none") {
+      myList.style.display = "block";
+    } else {
+      myList.style.display = "none";
+    }
+  }
+</script>
+
+<div class="container">
+  <div class="row">
+    <div style="display: flex; color: rgb(255, 255, 255);">
+      <h3 style="margin: 0;">5</h3><p style="margin: 0;padding-left: 8px; font-size: 15px;"> years warranty</p>
+    </div>
+    <div style="display: flex; color: rgb(255, 255, 255);">
+      <h3 style="margin: 0;"> 2</h3><p style="margin: 0;padding-left: 8px;font-size: 15px;">  years with full coverage</p>
+    </div>
+    <div style="display: flex; color: rgb(255, 255, 255);">
+      <h3 style="margin: 0;"> 3</h3><p style="margin: 0;padding-left: 8px;font-size: 15px;"> years with minimal service charge + Free replacement of parts.</p>
+    </div>
+  </div>
+</div>
+
+
 
       <div style="height: 15px"></div>
-      <style>
-        .btn_container {
-          display: flex;
-          justify-content: space-between;
-          /* margin-top: 16px; */
-          background-color: rgba(255, 255, 255, 0.103);
-          padding: 8px;
-
-          /* border: 1px solid white; */
-        }
-        /* Style for the list */
-        .listt {
-          display: none;
-          /* Initially hide the list */
-          list-style-type: none;
-          padding: 0;
-          animation: fadeIn 0.5s ease;
-          /* Add animation */
-          border-radius: 5px;
-        }
-        /* Style for list items */
-        .listt-item {
-          margin: 0px;
-          text-align: start;
-          padding-left: 13px;
-          /* font-size: 13px; */
-          /* padding-top: 5px; */
-          color: #ffffff;
-          /* padding: 5px; */
-        }
-      </style>
+ 
       <script>
-        function toggleListt_1(listId) {
-          console.log("clicked");
-          $("#" + listId).toggle();
-        }
-        function categoryPage() {
-          window.location.href = "categorypage.html";
-        }
-        function goTomobileImageCardshtml() {
-          window.location.href = "mobileImageCards.html";
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
           const gallery = document.querySelector(".gallery");
           let isDown = false;
@@ -1101,7 +1104,6 @@
 
       <!-- div.mobileFooter  -->
 
-   
       <script>
         function homepage() {
           window.location.href = "index.html";

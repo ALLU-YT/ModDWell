@@ -1034,7 +1034,7 @@ input[type="checkbox"] {
   color: #fbfbfbb8;
   /* height: 15px; */
   /* padding: 5px; */
-  padding: 17px 0px 0px 16px;
+  /* padding: 17px 0px 0px 16px; */
 }
 
 .list-item ::before {
