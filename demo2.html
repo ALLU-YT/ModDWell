@@ -3,98 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horizontal Image Slider</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </head>
-  <body>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
-      .image-slider {
-        width: 80%;
-        overflow: hidden;
-        border: 1px solid #ccc;
-        position: relative;
-      }
-
-      .slider-wrapper {
+      .warranty-item {
         display: flex;
-        transition: transform 0.5s ease-in-out;
+        align-items: center;
+        color: #fff;
       }
-
-      .slider-item {
-        min-width: 100%;
-        box-sizing: border-box;
+      .warranty-item h3 {
+        margin: 0;
       }
-
-      .slider-item img {
-        width: 100%;
-        display: block;
-      }
-
-      .navigation-buttons {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-      }
-
-      .prev,
-      .next {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
+      .warranty-item p {
+        margin: 0;
+        padding-left: 8px;
+        font-size: 15px;
       }
     </style>
-    <div class="image-slider">
-      <div class="slider-wrapper">
-        <div class="slider-item">
-          <img
-            src="https://ii1.pepperfry.com/assets/6950a5b2-e6b7-49d9-ab43-4ebb524cd238.jpg"
-            alt="Image 1"
-          />
+    <title>Warranty Information</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 warranty-item">
+          <h3>5</h3>
+          <p>years warranty</p>
         </div>
-        <div class="slider-item">
-          <img
-            src="https://ii1.pepperfry.com/assets/6950a5b2-e6b7-49d9-ab43-4ebb524cd238.jpg"
-            alt="Image 2"
-          />
+        <div class="col-md-3 warranty-item">
+          <h3>2</h3>
+          <p>years with full coverage</p>
         </div>
-        <div class="slider-item">
-          <img
-            src="https://ii1.pepperfry.com/assets/6950a5b2-e6b7-49d9-ab43-4ebb524cd238.jpg"
-            alt="Image 3"
-          />
+        <div class="col-md-3 warranty-item">
+          <h3>3</h3>
+          <p>years with minimal service charge</p>
         </div>
-      </div>
-      <div class="navigation-buttons">
-        <button class="prev">Prev</button>
-        <button class="next">Next</button>
+        <div class="col-md-3 warranty-item">
+          <h3>3</h3>
+          <p>Free replacement of parts</p>
+        </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        let currentIndex = 0;
-        const totalSlides = $(".slider-item").length;
-
-        function showSlide(index) {
-          $(".slider-wrapper").css("transform", `translateX(${-index * 100}%)`);
-        }
-
-        $(".next").click(function () {
-          currentIndex = (currentIndex + 1) % totalSlides;
-          showSlide(currentIndex);
-        });
-
-        $(".prev").click(function () {
-          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-          showSlide(currentIndex);
-        });
-      });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
