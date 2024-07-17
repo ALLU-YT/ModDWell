@@ -426,3 +426,16 @@ color: #18578c;
 .bi-eye-bold {
   font-weight: bold; /* This might not always work as expected */
 }
+#features_p {
+  margin-top: 15px;
+}
+#features_p p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+#myList101 th {
+  font-size: 13px;
+}
+#myList101 td {
+  font-size: 14px;
+}
