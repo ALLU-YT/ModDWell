@@ -572,8 +572,141 @@
         </div>
       </div>
 
+      <!-- dropDownFeatures -->
+      <div class="container">
+        <div class="row">
+          <div class="btn_container" onclick="toggleListt_1('myList101')">
+            FEATURES<i class="bi bi-caret-down"></i>
+          </div>
+          <div style="width: 100%; height: 10px"></div>
+          <ul class="listt" id="myList101" style="background-color: black">
+            <div class="listt-item" style="padding-top: 1px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  line-height: 0px;
+                  background-color: rgba(255, 255, 255, 0.158);
+                  margin-right: 10px;
+                "
+              >
+                <i
+                  class="bi bi-hand-index"
+                  style="font-size: 30px; padding: 10px"
+                ></i>
+                <p style="padding-top: 20px; padding-left: 10px">
+                  Touch Sensor
+                </p>
+              </div>
+            </div>
+            <div class="listt-item" style="padding-top: 1px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  line-height: 0px;
+                  background-color: rgba(255, 255, 255, 0.158);
+                  margin-right: 10px;
+                "
+              >
+                <i
+                  class="bi bi-hand-index"
+                  style="font-size: 30px; padding: 10px"
+                ></i>
+                <p style="padding-top: 20px; padding-left: 10px">
+                  LED Backlit Front Lit
+                </p>
+              </div>
+            </div>
+            <div class="listt-item" style="padding-top: 1px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  line-height: 0px;
+                  background-color: rgba(255, 255, 255, 0.158);
+                  margin-right: 10px;
+                "
+              >
+                <i
+                  class="bi bi-hand-index"
+                  style="font-size: 30px; padding: 10px"
+                ></i>
+                <p style="padding-top: 20px; padding-left: 10px">Anti Fog</p>
+              </div>
+            </div>
+            <div class="listt-item" style="padding-top: 1px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  line-height: 0px;
+                  background-color: rgba(255, 255, 255, 0.158);
+                  margin-right: 10px;
+                "
+              >
+                <i
+                  class="bi bi-hand-index"
+                  style="font-size: 30px; padding: 10px"
+                ></i>
+                <p style="padding-top: 20px; padding-left: 10px">De-Fogger</p>
+              </div>
+            </div>
+            <div class="listt-item" style="padding-top: 1px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  line-height: 0px;
+                  background-color: rgba(255, 255, 255, 0.158);
+                  margin-right: 10px;
+                "
+              >
+                <i
+                  class="bi bi-hand-index"
+                  style="font-size: 30px; padding: 10px"
+                ></i>
+                <p style="padding-top: 20px; padding-left: 10px">Dimmer</p>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+
       <div style="height: 100px"></div>
+      <style>
+        .btn_container {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+          /* border: 1px solid white; */
+        }
+        /* Style for the list */
+        .listt {
+          display: block;
+          /* Initially hide the list */
+          list-style-type: none;
+          padding: 0;
+          animation: fadeIn 0.5s ease;
+          /* Add animation */
+          border-radius: 5px;
+        }
+        /* Style for list items */
+        .listt-item {
+          margin: 0px;
+          text-align: start;
+          padding-left: 13px;
+          /* font-size: 13px; */
+          /* padding-top: 5px; */
+          color: #fbfbfbb8;
+          /* padding: 5px; */
+        }
+      </style>
       <script>
+        function toggleListt_1(listId) {
+          console.log("clicked");
+          $("#" + listId).toggle();
+        }
         function categoryPage() {
           window.location.href = "categorypage.html";
         }
