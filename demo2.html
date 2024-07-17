@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dropdown Menu</title>
-  <style>
-    .dropdown-button {
-      margin: 0px;
-      cursor: pointer;
-    }
-    .dropdown-list {
-      background-color: black;
-      display: none; /* Hidden by default */
-      list-style-type: none;
-      padding: 0;
-    }
-    .dropdown-item {
-      padding-top: 1px;
-      color: white;
-      padding: 5px 10px;
-    }
-    .dropdown-item:hover {
-      background-color: grey;
-    }
-  </style>
-  <script>
-    function toggleDropdown(id) {
-      var list = document.getElementById(id);
-      if (list.style.display === "none" || list.style.display === "") {
-        list.style.display = "block";
-      } else {
-        list.style.display = "none";
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Image Slider</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      .image-slider_new {
+        width: 80%;
+        overflow: hidden;
+        border: 1px solid #ccc;
       }
-    }
-  </script>
-</head>
-<body>
-  <button class="dropdown-button" onclick="toggleDropdown('dropdownList1')">Products<i class="bi bi-caret-down"></i></button>
-  <div style="width: 100%; height:10px;"></div>
-  <ul class="dropdown-list" id="dropdownList1">
-    <li class="dropdown-item">Home</li>
-    <li class="dropdown-item">Led Mirror</li>
-    <li class="dropdown-item">Mirror cabinet</li>
-    <li class="dropdown-item">Corner Shelf</li>
-    <li class="dropdown-item">Magnetic board</li>
-    <li class="dropdown-item">Glass frames</li>
-  </ul>
-</body>
+
+      .slider-wrapper_new {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider-item_new {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .slider-item_new img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+    <div class="image-slider_new">
+      <div class="slider-wrapper_new">
+        <div class="slider-item_new">
+          <img
+            src="https://ii1.pepperfry.com/assets/6950a5b2-e6b7-49d9-ab43-4ebb524cd238.jpg"
+            alt="Image 1"
+          />
+        </div>
+        <div class="slider-item_new">
+          <img
+            src="https://ii1.pepperfry.com/assets/6950a5b2-e6b7-49d9-ab43-4ebb524cd238.jpg"
+            alt="Image 2"
+          />
+        </div>
+        <div class="slider-item_new">
+          <img
+            src="https://ii1.pepperfry.com/assets/6950a5b2-e6b7-49d9-ab43-4ebb524cd238.jpg"
+            alt="Image 3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".slider-item_new");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        const sliderWrapper = document.querySelector(".slider-wrapper_new");
+        sliderWrapper.style.transform = `translateX(${-index * 100}%)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+  </body>
 </html>

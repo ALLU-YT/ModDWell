@@ -66,3 +66,363 @@
 .tooter_p {
   font-size: 15px;
 }
+/* //Produts detailsPop up Css */
+/* product card */
+
+.product-imagee {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-imagee img {
+  transition: transform 0.3s ease;
+}
+
+.product-imagee:hover img {
+  transform: scale(1.1);
+  /* Adjust the scale factor for desired zoom level */
+}
+
+.product-gridd {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.product-gridd:hover {
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-gridd .product-imagee {
+  position: relative;
+}
+
+.product-gridd .product-imagee a.imagee {
+  display: block;
+}
+
+.product-gridd .product-imagee img {
+  width: 100%;
+  height: auto;
+}
+
+.product-gridd .product-discount-labell {
+  color: #fff;
+  background: #18578c;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+.product-gridd .product-linkss {
+  width: 145px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 26%;
+  right: -175px;
+  transition: all 0.4s ease 0s;
+}
+
+.product-gridd .product-linkss {
+  opacity: 1;
+}
+
+.product-gridd .product-linkss li {
+  display: block;
+  margin: 0 2px;
+}
+
+.product-gridd .product-linkss li button {
+  color: #18578c;
+  background: #fff;
+  font-size: 14px;
+  line-height: 31px;
+
+  width: 31px;
+  height: 29px;
+  border-radius: 50px;
+  display: block;
+  position: relative;
+  transition: all 0.4s ease-out 0s;
+  margin-bottom: 5px;
+}
+
+.product-gridd .product-linkss li button:hover {
+  color: #fff;
+  background: #78a206;
+  box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product-gridd .product-linkss li button:before,
+.product-gridd .product-linkss li buttom:after {
+  content: attr(data-tip);
+  color: #fff;
+  background-color: #555;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  display: none;
+  transform: translateX(-10%);
+  position: absolute;
+  left: -100px;
+  /* Adjusted to position the tooltip to the left */
+  top: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.product-gridd .product-linkss li button:after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  transform: translateX(-50%) rotate(45deg);
+  top: 20px;
+  left: -15px;
+  z-index: 1px;
+}
+*/ .product-gridd .product-linkss li button:hover:before,
+.product-gridd .product-linkss li buttom:hover:after {
+  display: block;
+}
+
+.product-contentt {
+  text-align: start;
+}
+
+.product-gridd .product-contentt {
+  padding: 12px 12px 15px;
+  position: relative;
+}
+
+.product-gridd .rating {
+  padding: 0;
+  margin: 0 0 8px;
+  list-style: none;
+}
+
+.product-gridd .rating li {
+  color: #78a206;
+  font-size: 14px;
+}
+
+.product-gridd .rating .far {
+  color: #808080;
+}
+
+.product-gridd .title {
+  font-size: 11px;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  margin: 0 0 15px;
+}
+
+.product-gridd .title a {
+  color: #2c2c2c;
+  transition: all 0.3s ease 0s;
+}
+
+.product-gridd .title a:hover {
+  color: #78a206;
+}
+
+.product-gridd .price {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  padding-top: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.product-gridd .price span {
+  color: #999;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.product-gridd:hover .price {
+  opacity: 0;
+}
+
+.product-gridd .add-to-cart {
+  color: #fff;
+  background: #18578c;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 31px;
+  width: 90%;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transition: all 0.4s ease-out;
+}
+
+/* .product-grid .add-to-cart:hover {
+background-color: #ffffff;
+color: #18578c;
+} */
+
+.product-gridd .add-to-cart {
+  opacity: 1;
+  bottom: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .product-gridd {
+    margin: 0 0 30px;
+  }
+}
+.product-gridd.title {
+  font-size: 15px;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  margin: 0 0 15px;
+}
+/* popUpSizeContainer */
+
+/* Styles for the modal background */
+/* Size head */
+.modal_1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  /* filter: blur(8px); */
+  /* background-color: rgb(0 0 0 / 60%); */
+}
+
+/* Modal content */
+.modal-content_1 {
+  background: #24272a;
+  /* margin: 8% auto; */
+  /* padding: 17px; */
+  /* padding-top: 19px; */
+  width: 332px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  /* overflow-y: auto; */
+  height: 650px;
+  overflow-x: hidden;
+}
+/* Close button */
+.closemodal_1 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closemodal_1:hover,
+.closemodal_1:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Class to hide overflow on body */
+.modal-openmodal_1 {
+  overflow: hidden;
+}
+.sizehead {
+  font-size: 13px;
+  font-weight: 400;
+  text-align: start;
+  padding-top: 12px;
+  padding-left: 5px;
+}
+.AddToCartPopUp {
+  width: 99%;
+  background: #18578c;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+/* The scroll bar container */
+.modal-content_1::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* The track (background) of the scrollbar */
+.modal-content_1::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* The scrollbar handle (thumb) */
+.modal-content_1::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* The scrollbar handle on hover */
+.modal-content_1::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+.closemodal_1 {
+  position: absolute;
+  top: -5px;
+  right: 3px;
+  font-size: 26px;
+  /* background-color: #18578c; */
+  /* border-radius: 50%; */
+  padding: 5px;
+  width: 31px;
+  height: 23px;
+  /* border: 1px solid whitesmoke; */
+  cursor: pointer;
+  z-index: 36;
+}
+
+@media only screen and (max-width: 600px) {
+  .AddOnContainerBox {
+    width: 96%;
+    margin-top: 10px;
+  }
+  .SizeBox_mobile {
+    margin: 3px;
+    background: #18578c;
+    border: 2px solid #18578c;
+    cursor: pointer;
+    display: flex;
+    width: 142px;
+    font-size: 12px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bi-eye-bold {
+  font-weight: bold; /* This might not always work as expected */
+}

@@ -10,3 +10,19 @@ function closeProfile() {
   const slider = document.getElementById("slider");
   slider.classList.remove("open");
 }
+
+let x = 0;
+const slides = document.querySelectorAll(".slider-item_new");
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  const sliderWrapper = document.querySelector(".slider-wrapper_new");
+  sliderWrapper.style.transform = `translateX(${-index * 100}%)`;
+}
+
+function nextSlide() {
+  x = (x + 1) % totalSlides;
+  showSlide(x);
+}
+
+setInterval(nextSlide, 3000); // Change slide every 3 seconds

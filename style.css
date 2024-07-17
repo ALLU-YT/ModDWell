@@ -2541,18 +2541,27 @@ ul li:nth-child(4) {
   width: 100%;
   margin: 5px;
 }
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+/* homepage image slider */
+.image-slider_new {
+  width: 100%;
   overflow: hidden;
-  margin-bottom: 20px; /* Adjust as needed */
+
+  border: 1px solid #ccc;
 }
 
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
+.slider-wrapper_new {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item_new {
+  min-width: 100%;
+
+  box-sizing: border-box;
+}
+
+.slider-item_new img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video fills the container */
+  display: block;
+  height: 70px;
 }
