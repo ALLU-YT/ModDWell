@@ -626,21 +626,7 @@
                       </div>
                       
                   </div>
-        <script>
-function navToPage(){
-    window.location.href = "ShippingInfo.html";
-}
-// Function to toggle the visibility of the list
-function toggleList_orderDetails(listId) {
-  var list = document.getElementById(listId);
-  if (list.style.display === "none" || list.style.display === "") {
-    // Check for both 'none' and '' (initial)
-    list.style.display = "block";
-  } else {
-    list.style.display = "none";
-  }
-}
-        </script>
+     
         
         <button  class="buttons_OrderDetails"  onclick="toggleList_orderDetails('myList1')">Products<i class="bi bi-caret-down"></i></button>
         <div style="width: 100%; height:10px;"></div>
@@ -704,30 +690,7 @@ function toggleList_orderDetails(listId) {
         
         </div>
         
-        
-<!-- Mobile coupon Code -->
-
-  <script>
-      // Function to set the progress
-      function setProgress(stage) {
-        const dots = document.querySelectorAll(".progress-dot");
-
-        // Ensure the stage is between 1 and 5
-        stage = Math.min(5, Math.max(1, stage));
-
-        // Update the dot classes
-        dots.forEach((dot, index) => {
-          if (index < stage) {
-            dot.classList.add("completed");
-          } else {
-            dot.classList.remove("completed");
-          }
-        });
-      }
-
-      // Example usage: Set the progress to stage 3 (Shipped)
-      setProgress(3);
-    </script>
+ 
 
 
 <div>
@@ -784,47 +747,7 @@ function toggleList_orderDetails(listId) {
 </div>
 
 <hr>
-<!-- mobile footer -->
-<!-- <div style="position: fixed; bottom:45px;background-color: rgb(255, 255, 255); width: 100%;color: black;height: 30px;" class="cartformob">
-<div style="display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 12px;">
-  🎉&nbsp <p style="font-weight:500; font-size: 12px;"> Cheers! &nbsp </p> <span style="font-size: 12px;font-weight: bold; "> You saved ₹1,200</span>
-</div>
-</div>
 
-<div class="cartformob">
-  <div style="position: fixed; bottom: 0px;background-color: black; width: 100%; display: flex;" class="">
-<div style="width: 40%; display: flex;flex-direction: column;">
-<p style="   text-align: center;
-    align-items: center;
-    position: absolute;
-    left: 10px;
-    /* right: 61%; */
-    top:20%;">₹ 1000</p>
-   
-   <p style=" text-align: center;
-    align-items: center;
-    position: absolute;
-    font-size: 12px;
-    left: 10px;
-    /* right: 61%; */
-    top:60%;"">Grand Total</p>
-</div>
-
-    
-<div style="width: 60%;">
-<button style= "   background-color: #18578c;
-    height: 100%;
-    width: 100%;
-    padding: 13px;
-    font-size: 14px;" onclick="ShippingPage();">Continue to Shipping</button>
-</div>
-</div>
-
-</div> -->
                <!-- div.mobileFooter  -->
             
             <!-- MobileLogin -->
@@ -976,7 +899,79 @@ function toggleList_orderDetails(listId) {
       </footer>
   </div>
 
-  <script>
+
+
+ 
+    <!-- CustomHeight -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="details.js"></script>
+    <script src="addToCard.js"></script>
+            
+<!-- Mobile coupon Code -->
+<script>
+  function navToPage(){
+      window.location.href = "ShippingInfo.html";
+  }
+  // Function to toggle the visibility of the list
+  function toggleList_orderDetails(listId) {
+    var list = document.getElementById(listId);
+    if (list.style.display === "none" || list.style.display === "") {
+      // Check for both 'none' and '' (initial)
+      list.style.display = "block";
+    } else {
+      list.style.display = "none";
+    }
+  }
+
+      // Function to set the progress
+      function setProgress(stage) {
+        const dots = document.querySelectorAll(".progress-dot");
+
+        // Ensure the stage is between 1 and 5
+        stage = Math.min(5, Math.max(1, stage));
+
+        // Update the dot classes
+        dots.forEach((dot, index) => {
+          if (index < stage) {
+            dot.classList.add("completed");
+          } else {
+            dot.classList.remove("completed");
+          }
+        });
+      }
+
+      // Example usage: Set the progress to stage 3 (Shipped)
+      setProgress(3);
+  
     function OpenAddToCartPage(){
     window.location.href = "mobileCouponPage.html";
     }
@@ -1026,8 +1021,7 @@ function toggleList(listId) {
   function closeNavSignup() {
     document.getElementById("mySidenavSignUp").style.width = "0";
   }
-  </script>
-  <script>
+
     document.addEventListener("DOMContentLoaded", function() {
       const container = document.querySelector('.scrollable-content');
       let lastScrollTop = 0;
@@ -1050,8 +1044,7 @@ function toggleList(listId) {
         lastScrollTop = st;
       });
     });
-  </script>
-    <script>
+
       function ShippingPage(){
         window.location.href = "checkOut.html";
       }
@@ -1079,38 +1072,5 @@ function toggleList(listId) {
       }
     </script>
 
-    <!-- CustomHeight -->
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Footer -->
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="details.js"></script>
-    <script src="addToCard.js"></script>
   </body>
 </html>

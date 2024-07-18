@@ -272,7 +272,7 @@
       <!-- mobilehead -->
     <header class="header_for_cart" style="width: 100%; background: rgb(0, 0, 0); position: fixed; top: 0; z-index: 1000; padding-top: 2px;">
         <div style="display: flex; align-items: center; padding: 10px;">
-        <a href="addToCartPage.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
+        <a href="checkOut.html"> <i class="bi bi-arrow-left" style="font-size: 25px; color: white;"></i></a>
         <p style="padding-left: 10px; color: white; margin: 0;">Order</p>
         </div>
     </header>
@@ -568,23 +568,7 @@
                      
                       <div style="display: flex; justify-content: center;">
                       <video id="myVideo" style="width: 200px;"  autoplay src="assets/success-3932239-3259598.mp4"></video>
-                      
-                      <script>
-                      // Get the video element
-                      var video = document.getElementById("myVideo");
-                      
-                      // Pause the video after 3 seconds
-                      setTimeout(function() { 
-                          video.pause();
-                      }, 3000); // 3000 milliseconds = 3 seconds
-                      
-                      // Listen for the 'ended' event
-                      video.addEventListener("ended", function() {
-                          // Pause the video when it ends
-                          video.pause();
-                      });
-                      </script>
-                      
+                    
                       
                       </div>
                       
@@ -598,21 +582,7 @@
                   </div>
 
                   
-              <script>
-                function CONTINUE(){
-                  window.location.href = 'index.html';
-                }
-              function ProfilePage(){
-              window.location.href = 'purchaseHistorpage.html';
-              }
-              
-              function navToPage(){
-              window.location.href = "ShippingInfo.html";
-              }
-              
-              </script>
-              
-              
+             
               
               
                 </div>
@@ -738,58 +708,22 @@
           <!-- Copyright -->
       </footer>
   </div>
-  <script>
-function purchaseHistory(){
-  window.location.href = 'profile.html';
-}
-
-    // document.addEventListener("DOMContentLoaded", function() {
-    //   const container = document.querySelector('.scrollable-content');
-    //   let lastScrollTop = 0;
+  <div  style="    display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+ " onclick="home();">
+   
+    <button class="SHOPPING_btn" style="       background:#18578c;
+  width:100%;
+  padding: 10px;
+  /* margin-left: -1px; */
+  font-size: 13px;
+  border-radius: 5px;
+ ">CONTINUE SHOPPING</button>
+  </div>
   
-    //   container.addEventListener('scroll', function() {
-    //     const st = container.scrollTop;
-    //     if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
-    //       // Scrolling down and at the bottom of the container
-    //       window.scrollBy({
-    //         top: 100, // Adjust this value as needed
-    //         behavior: 'smooth'
-    //       });
-    //     } else if (st < lastScrollTop && container.scrollTop === 0) {
-    //       // Scrolling up and at the top of the container
-    //       window.scrollBy({
-    //         top: -100, // Adjust this value as needed
-    //         behavior: 'smooth'
-    //       });
-    //     }
-    //     lastScrollTop = st;
-    //   });
-    // });
-  </script>
-    <script>
-      function change(item) {
-        const buttons = document.querySelectorAll("ion-icon");
-        buttons.forEach(function (obj) {
-          obj.classList.remove("activee");
-        });
-        item.classList.add("activee");
-      }
-
-      function displysignUpForm() {
-        // Assuming there's only one element with each class
-        document.getElementsByClassName("mobileSignup")[0].style.display =
-          "block";
-        document.getElementsByClassName("mobilelogin")[0].style.display =
-          "none";
-      }
-      function displyLoginUpForm() {
-        // Assuming there's only one element with each class
-        document.getElementsByClassName("mobileSignup")[0].style.display =
-          "none";
-        document.getElementsByClassName("mobilelogin")[0].style.display =
-          "block";
-      }
-    </script>
 
     <!-- CustomHeight -->
     
@@ -823,23 +757,63 @@ function purchaseHistory(){
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="det ails.js"></script>
-    <script src="addToCard.js"></script>
+    <script>
+      function purchaseHistory(){
+        window.location.href = 'profile.html';
+      }
+      function home(){
+        window.location.href = 'index.html';
+      }
+       // Get the video element
+       var video = document.getElementById("myVideo");
+                            
+                            // Pause the video after 3 seconds
+                            setTimeout(function() { 
+                                video.pause();
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                            
+                            // Listen for the 'ended' event
+                            video.addEventListener("ended", function() {
+                                // Pause the video when it ends
+                                video.pause();
+                            });
+                      function CONTINUE(){
+                        window.location.href = 'index.html';
+                      }
+                    function ProfilePage(){
+                    window.location.href = 'purchaseHistorpage.html';
+                    }
+                    
+                    function navToPage(){
+                    window.location.href = "ShippingInfo.html";
+                    }
+           
+      
+            function change(item) {
+              const buttons = document.querySelectorAll("ion-icon");
+              buttons.forEach(function (obj) {
+                obj.classList.remove("activee");
+              });
+              item.classList.add("activee");
+            }
+      
+            function displysignUpForm() {
+              // Assuming there's only one element with each class
+              document.getElementsByClassName("mobileSignup")[0].style.display =
+                "block";
+              document.getElementsByClassName("mobilelogin")[0].style.display =
+                "none";
+            }
+            function displyLoginUpForm() {
+              // Assuming there's only one element with each class
+              document.getElementsByClassName("mobileSignup")[0].style.display =
+                "none";
+              document.getElementsByClassName("mobilelogin")[0].style.display =
+                "block";
+            }
+          </script>
     
- <div  style="    display: flex;
- justify-content: space-around;
- position: fixed;
- bottom: 0px;
- width: 100%;
-">
-  
-   <button class="SHOPPING_btn" style="       background:#18578c;
- width:100%;
- padding: 10px;
- /* margin-left: -1px; */
- font-size: 13px;
- border-radius: 5px;
-">CONTINUE SHOPPING</button>
- </div>
+
 
   </body>
 </html>

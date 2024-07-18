@@ -722,61 +722,8 @@ function navToPage(){
       </footer>
   </div>
 
-  <script>
-function goToAddressPage(){
-    window.location.href = 'ShippingInfo.html';
-}
-function ShippingPage(){
-   window.location.href = 'Confirmation.html';
-}
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const container = document.querySelector('.scrollable-content');
-      let lastScrollTop = 0;
   
-      container.addEventListener('scroll', function() {
-        const st = container.scrollTop;
-        if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
-          // Scrolling down and at the bottom of the container
-          window.scrollBy({
-            top: 100, // Adjust this value as needed
-            behavior: 'smooth'
-          });
-        } else if (st < lastScrollTop && container.scrollTop === 0) {
-          // Scrolling up and at the top of the container
-          window.scrollBy({
-            top: -100, // Adjust this value as needed
-            behavior: 'smooth'
-          });
-        }
-        lastScrollTop = st;
-      });
-    });
-  </script>
-    <script>
-      function change(item) {
-        const buttons = document.querySelectorAll("ion-icon");
-        buttons.forEach(function (obj) {
-          obj.classList.remove("activee");
-        });
-        item.classList.add("activee");
-      }
-
-      function displysignUpForm() {
-        // Assuming there's only one element with each class
-        document.getElementsByClassName("mobileSignup")[0].style.display =
-          "block";
-        document.getElementsByClassName("mobilelogin")[0].style.display =
-          "none";
-      }
-      function displyLoginUpForm() {
-        // Assuming there's only one element with each class
-        document.getElementsByClassName("mobileSignup")[0].style.display =
-          "none";
-        document.getElementsByClassName("mobilelogin")[0].style.display =
-          "block";
-      }
-    </script>
 
     <!-- CustomHeight -->
     
@@ -810,6 +757,59 @@ function ShippingPage(){
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="details.js"></script>
-    <script src="addToCard.js"></script>
+    <script>
+      function goToAddressPage(){
+    window.location.href = 'ShippingInfo.html';
+}
+function ShippingPage(){
+   window.location.href = 'Confirmation.html';
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector('.scrollable-content');
+      let lastScrollTop = 0;
+  
+      container.addEventListener('scroll', function() {
+        const st = container.scrollTop;
+        if (st > lastScrollTop && container.scrollHeight - container.scrollTop === container.clientHeight) {
+          // Scrolling down and at the bottom of the container
+          window.scrollBy({
+            top: 100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        } else if (st < lastScrollTop && container.scrollTop === 0) {
+          // Scrolling up and at the top of the container
+          window.scrollBy({
+            top: -100, // Adjust this value as needed
+            behavior: 'smooth'
+          });
+        }
+        lastScrollTop = st;
+      });
+    });
+      function change(item) {
+        const buttons = document.querySelectorAll("ion-icon");
+        buttons.forEach(function (obj) {
+          obj.classList.remove("activee");
+        });
+        item.classList.add("activee");
+      }
+
+      function displysignUpForm() {
+        // Assuming there's only one element with each class
+        document.getElementsByClassName("mobileSignup")[0].style.display =
+          "block";
+        document.getElementsByClassName("mobilelogin")[0].style.display =
+          "none";
+      }
+      function displyLoginUpForm() {
+        // Assuming there's only one element with each class
+        document.getElementsByClassName("mobileSignup")[0].style.display =
+          "none";
+        document.getElementsByClassName("mobilelogin")[0].style.display =
+          "block";
+      }
+    </script>
+   
   </body>
 </html>

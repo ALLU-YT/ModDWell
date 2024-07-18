@@ -26,3 +26,17 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+function homepage() {
+  window.location.href = "index.html";
+}
+function ViewOrderPage() {
+  window.location.href = "MobileOrderDetails.html";
+}
+function bestSeller() {
+  window.location.href = "bestSellerProucts.html";
+}
+
+function cartPage() {
+  window.location.href = "addToCartPage.html";
+}
