@@ -142,41 +142,59 @@
     
       <!-- div.mobileFooter  -->
      
-  <div class="custom_btn_phone">
-    <div class="bottom-bar">
-      <div style="display: block;" >
-        <ion-icon name="cart-outline" class="icon_new" onclick="change(this); openOrderPage();"></ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Orders</p>
+     <!-- div.mobileFooter  -->
+
+     <div class="custom_btn_phone">
+      <div class="bottom-bar">
+        <div style="display: block">
+          <ion-icon
+            name="cart-outline"
+            class="icon_new"
+            onclick="change(this); Orderpage();"
+          ></ion-icon>
+          <p class="bottom_bar_p" style="line-height: 0px">Orders</p>
+        </div>
+
+        <div style="display: block">
+          <ion-icon
+            name="heart-outline"
+            class="icon_new"
+            onclick="change(this); wishListpage();"
+          ></ion-icon>
+          <p class="bottom_bar_p" style="line-height: 0px">Wishlist</p>
+        </div>
+        <div style="display: block">
+          <ion-icon
+            name="home-outline"
+            class="icon_new"
+            onclick="change(this); HomePage();"
+          >
+          </ion-icon>
+
+          <p class="bottom_bar_p" style="line-height: 0px">Home</p>
+        </div>
+        <div style="display: block">
+          <ion-icon
+            name="cart-outline"
+            class="icon_new"
+            onclick="change(this); CartPage();"
+          >
+            <!-- openCartSlider(); -->
+          </ion-icon>
+
+          <p class="bottom_bar_p" style="line-height: 0px">Cart</p>
+        </div>
+        <div style="display: block">
+          <ion-icon
+            name="person-outline"
+            class="icon_new activee"
+            onclick="change(this) ; bestSellerPage();   "
+          >
+          </ion-icon>
+          <p class="bottom_bar_p" style="line-height: 0px">Best Seller</p>
+        </div>
+      </div>
     </div>
-    
-    <div style="display: block;">
-      <ion-icon name="heart-outline" class="icon_new" onclick="change(this); openWishListPage();"></ion-icon>
-      <p class="bottom_bar_p" style="line-height: 0px;">Wishlist</p>
-  </div>
-       <div style="display: block;">
-        <ion-icon name="home-outline" class="icon_new " onclick="change(this);">
-         
-        </ion-icon>
-    
-        <p class="bottom_bar_p" style="line-height: 0px;">Home</p>
-       </div>
-       <div style="display: block;">
-        <ion-icon name="cart-outline" class="icon_new " onclick="change(this); openCartSlider();">
-         
-        </ion-icon>
-    
-        <p class="bottom_bar_p" style="line-height: 0px;">Cart</p>
-       </div>
-       <div style="display: block;">
-        <ion-icon name="person-outline" class="icon_new activee" onclick="change(this) ; goToSellerPage();   ">
-        </ion-icon>
-        <p class="bottom_bar_p" style="line-height: 0px;">Best Seller</p>
-   
-       </div>
-       
-    </div>
-</div>
-      
 
 
 
@@ -244,6 +262,7 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="details.js"></script>
 <script src="profileSlider.js"></script>
+<script src="connection.js"></script>
 </body>
 
 </html>
