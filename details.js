@@ -170,3 +170,26 @@ function mobileWishList() {
 function orders() {
   window.location.href = "addToCartPage.html";
 }
+// Function to close the slider when a close button is clicked
+function closeSlider() {
+  const slider = document.getElementById("mySidenavv");
+  slider.style.transition = "width 0.5s ease"; // Smooth transition effect
+  slider.style.width = "0";
+  setTimeout(() => {
+    slider.classList.remove("open"); // Remove class after transition
+  }, 500); // Delay should match transition duration
+  document.removeEventListener("click", closeNavvv, true); // Remove listener to prevent multiple triggers
+}
+
+// Example of adding a click event to a close button (assuming a button with id="closeButton")
+document.getElementById("closeButton").addEventListener("click", closeSlider);
+function openNavi() {
+  document.getElementById("mySidenavi").style.width = "300px";
+}
+function closeNavi() {
+  document.getElementById("mySidenavi").style.width = "0";
+}
+var btn = document.getElementById("addTicketBtn_1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closemodal_1")[0];

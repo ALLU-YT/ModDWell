@@ -2460,3 +2460,60 @@ input[type="checkbox"] {
 .indicator.active {
   background-color: #333;
 }
+/* The scroll bar container */
+.modal-content_1::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* The track (background) of the scrollbar */
+.modal-content_1::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* The scrollbar handle (thumb) */
+.modal-content_1::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* The scrollbar handle on hover */
+.modal-content_1::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+.closemodal_1 {
+  position: absolute;
+  top: -5px;
+  right: 3px;
+  font-size: 26px;
+  /* background-color: #18578c; */
+  /* border-radius: 50%; */
+  padding: 5px;
+  width: 31px;
+  height: 23px;
+  /* border: 1px solid whitesmoke; */
+  cursor: pointer;
+  z-index: 36;
+}
+
+@media only screen and (max-width: 600px) {
+  .AddOnContainerBox {
+    width: 96%;
+    margin-top: 10px;
+  }
+  .SizeBox_mobile {
+    margin: 3px;
+    background: #18578c;
+    border: 2px solid #18578c;
+    cursor: pointer;
+    display: flex;
+    width: 142px;
+    font-size: 12px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bi-eye-bold {
+  font-weight: bold; /* This might not always work as expected */
+}

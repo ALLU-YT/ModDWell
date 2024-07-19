@@ -27,13 +27,13 @@
 }
 
 .profileimageanaData img {
-width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    margin-left: 8px;
-    margin-top: 10px;
-    border: 2px solid #18578c;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  margin-left: 8px;
+  margin-top: 10px;
+  border: 2px solid #18578c;
 }
 
 .profileimageanaData h3 {

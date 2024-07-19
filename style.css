@@ -2548,7 +2548,7 @@ ul li:nth-child(4) {
   width: 100%;
   overflow: hidden;
 
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 .slider-wrapper_new {

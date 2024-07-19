@@ -90,9 +90,7 @@
   color: white;
   border: none;
 }
-.container {
-  padding-top: 60px; /* Add padding to the top to avoid overlap with the fixed header */
-}
+/*  */
 .item {
   display: flex;
   padding-top: 10px;
@@ -131,9 +129,7 @@
   border: none;
   margin-left: auto;
 }
-.container {
-  padding-top: 60px; /* Add padding to the top to avoid overlap with the fixed header */
-}
+
 .item {
   display: flex;
   padding: 11px 10px 10px 10px;
@@ -187,4 +183,51 @@
 .order-container .order-p {
   margin: 0;
   padding-right: 10px;
+}
+.ProfileDashBoard {
+  width: 280px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.profileHead {
+  /* height: 200px; */
+  background: #000000;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 8px;
+}
+
+.profileimageanaData {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: start;
+  /* padding-top: 20px; */
+}
+
+.profileimageanaData img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  margin-left: 8px;
+  margin-top: 10px;
+  border: 2px solid #18578c;
+}
+
+.profileimageanaData h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.profileimageanaData p {
+  font-size: 14px;
+  margin: 0;
 }
